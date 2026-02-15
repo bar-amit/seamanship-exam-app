@@ -342,15 +342,19 @@ A breakdown of subjects/sub-subjects exists in the syllabus. In future phases, t
 
 1. Sub-question identifiers
 - Do you want stored IDs as Latin (`a`, `b`, `c`, `d`) and UI labels in Hebrew (`א`, `ב`, `ג`, `ד`), or should IDs also be Hebrew?
+    - Normalize to latin IDs (even if current is Hebrew), Hebrew UI.
 
 2. Section score calculation
 - For Navigation A, should each sub-question have equal weight in the total question score?
+    - Yes.
 
 3. Optional partial grading
 - If a Navigation A question has 4 sections and the user marks 3 correct, should that question count as `75%` for scoring, or only `correct/incorrect` at whole-question level?
+    - Do partial grade for these questions. Equal weight. Navigation A should be calculated as such: question_score = succesful_sub_question_answers / sub_questions_amount. All questions have the same weight regardless to how many sub questions there are.
 
 4. Admin editing constraints
 - Should admins be allowed to reorder sub-questions after creation, or is order fixed from import?
+    - Allow reorder.
 
 ## Staging and Deployment Plan
 

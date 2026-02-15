@@ -303,24 +303,32 @@ A breakdown of subjects/sub-subjects exists in the syllabus. In future phases, t
 
 1. Admin identity
 - Which exact Google email(s) should be in the admin allowlist for `dev`?
+    - `bosh44@gmail.com`
 
 2. Legal/privacy scope
 - Should we implement GDPR/CCPA-ready consent and data-deletion flows in MVP, or add legal pages only and defer full compliance mechanics to post-MVP?
+    - Let's start with the simple version and do the full solution later.
 
 3. Recency model
 - Please confirm the recency formula for question selection (for example, prioritize least recently seen questions first).
+    - Prioritize least recently seem first. Keep it simple.
 
 4. Progress for anonymous users
 - Should anonymous progress persist in local storage only, or be session-only?
+    - Use local storage.
 
 5. Navigation A scoring
 - What numeric input should users provide for self-grading (0/1 only, or 0-100)?
+    - The user should give binary grade (correct/incorrect). Some questions in Navigation A are devided into section. That means the user should mark which section he got correct. we need to fix the schema for the questions of this chapter. There should be another field for the 'free text' open question type to specify the sections for each question. See the JSON file `./test_material/questions/navigation_A_quesitons.json`. Pay notice to the `sub_questions` field in the documents.
 
 6. Image metadata mapping
 - How are question-image relations represented in your source files (filename convention, explicit IDs, or another mapping)?
+    - In the JSON file of the questions there is a field named `asset`. It contains the name of the image (i.e. `image_36`). in the `test_images` folder there is a JSON file with the data of the images (i.e. `{ file_name: "image_26.jpg", description: "מחפר ,עם אורות הכוונה לגבי המצאות מכשול." }`). There should be a conection between these two collections in the database. Maybe add the image data to the relevant questions and avoid creating two separate collections. The images themselves are in `./test_material/test_images/images/`.
 
 7. Dashboard MVP
 - For Thursday's MVP, should the dashboard include only per-tag accuracy, or also streaks and completion trends?
+    - Only per tag for now. Keep it simple.
 
 8. Font baseline
 - If no specific font is chosen, is it acceptable to start with `Noto Sans Hebrew` and adjust later?
+    - Yes. Good choice.

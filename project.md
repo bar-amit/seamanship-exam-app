@@ -249,15 +249,18 @@ A breakdown of subjects/sub-subjects exists in the syllabus. In future phases, t
 
 #### Content/Data Model (Draft)
 
-- `questions`: `id`, `subject`, `chapter`, `type` (`mcq` | `free_text`), `text`, `choices[]`, `correct_choice_id`, `tags[]`, `image_ref`, `sub_questions` [`id` (`א`|`ב`|`ג`|`ד`), `text`],`created_at`, `updated_at`, `updated_by`
+- `questions`: `id`, `subject`, `chapter`, `type` (`mcq` | `free_text`), `text`, `choices[]`, `correct_choice_id`, `tags[]`, `image_ref`, `sub_questions[]`, `created_at`, `updated_at`, `updated_by`
+  - `sub_questions[]` is used for section-based free-text questions (Navigation A).
+  - Each `sub_questions[]` item: `id`, `label`, `text`, `order`.
+  - `id` is a stable identifier (for example, `a`, `b`, `c`, `d`) used in grading records.
 - `explanations`: `question_id`, `text`, `last_updated`
 - `materials`: `id`, `title`, `source`, `url`, `tags[]`, `language`, `last_updated`
 - `users`: `uid`, `email`, `display_name`, `role` (`user` | `admin`)
 - `collections`: `id`, `owner_uid`, `name`, `description`, `question_ids[]`, `created_at`, `updated_at`
-- `attempts`: `id`, `uid` (nullable for anonymous), `mode`, `question_ids[]`, `answers[]`, `score_percent`, `self_graded_flags[]`, `created_at`
+- `attempts`: `id`, `uid` (nullable for anonymous), `mode`, `question_ids[]`, `answers[]`, `score_percent`, `self_graded_flags[]`, `sub_question_grades[]`, `created_at`
+  - `sub_question_grades[]` stores section-level self-grading for Navigation A.
+  - Each item: `question_id`, `sub_question_id`, `is_correct` (boolean).
 - `tag_stats`: `uid`, `tag`, `correct_count`, `attempt_count`, `last_attempt_at`
-
-XX: I have added the `sub_questions` field. Needs format. In admin edit mode you should be able to edit/add/remove sub questions.
 
 ### Test Strategy
 
@@ -334,6 +337,20 @@ XX: I have added the `sub_questions` field. Needs format. In admin edit mode you
 
 8. Font baseline
 - Start with `Noto Sans Hebrew`.
+
+## Missing Information Needed
+
+1. Sub-question identifiers
+- Do you want stored IDs as Latin (`a`, `b`, `c`, `d`) and UI labels in Hebrew (`א`, `ב`, `ג`, `ד`), or should IDs also be Hebrew?
+
+2. Section score calculation
+- For Navigation A, should each sub-question have equal weight in the total question score?
+
+3. Optional partial grading
+- If a Navigation A question has 4 sections and the user marks 3 correct, should that question count as `75%` for scoring, or only `correct/incorrect` at whole-question level?
+
+4. Admin editing constraints
+- Should admins be allowed to reorder sub-questions after creation, or is order fixed from import?
 
 ## Staging and Deployment Plan
 

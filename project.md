@@ -249,13 +249,15 @@ A breakdown of subjects/sub-subjects exists in the syllabus. In future phases, t
 
 #### Content/Data Model (Draft)
 
-- `questions`: `id`, `subject`, `chapter`, `type` (`mcq` | `free_text`), `text`, `choices[]`, `correct_choice_id`, `tags[]`, `image_ref`, `created_at`, `updated_at`, `updated_by`
+- `questions`: `id`, `subject`, `chapter`, `type` (`mcq` | `free_text`), `text`, `choices[]`, `correct_choice_id`, `tags[]`, `image_ref`, `sub_questions` [`id` (`א`|`ב`|`ג`|`ד`), `text`],`created_at`, `updated_at`, `updated_by`
 - `explanations`: `question_id`, `text`, `last_updated`
 - `materials`: `id`, `title`, `source`, `url`, `tags[]`, `language`, `last_updated`
 - `users`: `uid`, `email`, `display_name`, `role` (`user` | `admin`)
 - `collections`: `id`, `owner_uid`, `name`, `description`, `question_ids[]`, `created_at`, `updated_at`
 - `attempts`: `id`, `uid` (nullable for anonymous), `mode`, `question_ids[]`, `answers[]`, `score_percent`, `self_graded_flags[]`, `created_at`
 - `tag_stats`: `uid`, `tag`, `correct_count`, `attempt_count`, `last_attempt_at`
+
+XX: I have added the `sub_questions` field. Needs format. In admin edit mode you should be able to edit/add/remove sub questions.
 
 ### Test Strategy
 

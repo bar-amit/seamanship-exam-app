@@ -119,90 +119,208 @@ A breakdown of subjects/sub-subjects exists in the syllabus. In future phases, t
 ### 5. Authentication
 - Google sign-in.
 
-## Open Questions for Planning
+## Planning Decisions
 
 ### 1. Users and Roles
 - Will non-admin users need their own accounts, or is this initially a single-user app plus one admin?
-    Non-admin user won't have to have an account. Only if they want to save a collection.
+  - Decision: Non-admin users can practice anonymously. Authentication is required only for features that save data (for example, collections and progress history).
 
 - Should admin capabilities be controlled by email allowlist, custom claims, or both?
-    Email allow list.
+  - Decision: Admin access is controlled by an email allowlist.
 
 ### 2. Content Model
 - What is the exact question schema (single correct answer, multiple correct answers, free text, media attachments)?
-    For all except for Navigation A this is a multiple choice single correct answer. For Navigation A in will be
-free text.
+  - Decision: Most questions are multiple-choice with a single correct answer. Navigation A questions are free-text and self-evaluated.
 
 - Should tags be hierarchical, flat, or both?
-    Flat.
+  - Decision: Tags are flat.
 - Should collections be private per user, or shared globally?
-    Private.
+  - Decision: Collections are private per user.
 
 ### 3. Test Behavior
 - How should randomization work: fully random, weighted by weak areas, or by recency?
-    By recency.
+  - Decision: Question selection is weighted by recency.
 
 - For timed tests, what are the default durations for 5/10/20-question tests?
-    6 minutes per question. customizable by user.
+  - Decision: Default timing is 6 minutes per question, customizable by the user.
 
 - Should skipped questions be re-queued in the same session?
-    The user should be able to go back to them. I am thinking of a small bar with colored squares where the user can see how many questions he have, which he answered and which he hasn't and navigate to them.
+  - Decision: Users can navigate back to skipped questions in the same session.
+  - UX note: Add a compact question navigator (colored status indicators per question: unanswered, answered, skipped/current).
 
 ### 4. Review and Scoring
 - What score format is needed (percentage, pass/fail threshold, raw score)?
-    Percentage. Even scoring per question.
+  - Decision: Score format is percentage with equal weight per question.
 
 - Should users see explanations immediately after each question, only at the end, or both?
-    Only in review mode after he made an attempt to answer the question.
+  - Decision: Explanations are shown only in review mode after the user attempts an answer.
 
 - For self-evaluated Navigation A questions, how should self-grading affect score history?
-    As a normal grade. The app should accomodate self learning. If someone is cheating it is his problem.
+  - Decision: Self-evaluated grades are treated like regular grades in score history.
+  - Product policy: The app is built for self-learning; self-grading integrity is user-responsibility.
 
 ### 5. Progress and Analytics
 - Should the app track per-tag performance trends over time?
-    Yes.
+  - Decision: Yes.
 
 - Do you need a dashboard for weak topics, streaks, and completion progress?
-    Yes, it would be a good addition.
+  - Decision: Yes.
 
 ### 6. Study Materials
 - What is the minimum metadata for articles and external links (title, source, tags, language, last updated)?
-    Exactly what you suggest.
+  - Decision: Required metadata is `title`, `source`, `tags`, `language`, and `last_updated`.
 
 - Should links open in-app or in a new browser tab?
-    In a new browser tab.
+  - Decision: External links open in a new browser tab.
 
 ### 7. Content Workflow
 - Do you want an import pipeline (CSV/JSON) for questions, or manual admin entry only?
-    You would find JSON files in the test_material/questions and test_material/answers folder. Those should be imported to the app database.
+  - Decision: Import pipeline from local JSON files in `test_material/questions` and `test_material/answers`.
 
 - Should content edits be versioned/audited?
-    I don't want to over think it. What do you suggest?
+  - Recommendation: Keep MVP simple.
+  - Decision proposal: Add only basic audit fields (`created_at`, `updated_at`, `updated_by`) without full version history. Full versioning can be added later.
 
 ### 8. Images and Assets
 - Where are images stored now, and should they move to Firebase Storage?
-    Now they are at test_material/test_images/images folder. Yes, they should be stored online.
+  - Decision: Source images are in `test_material/test_images/images`. Production assets should be uploaded to Firebase Storage.
 
 - Do you need image optimization (size limits, lazy loading, responsive variants)?
-    Yes.
+  - Decision: Yes.
 
 ### 9. Localization and Typography
 - Do you want full RTL-only UI now, or bilingual support (Hebrew/English) later?
-    Only Hebrew.
+  - Decision: Hebrew-only for MVP (RTL-first).
 
 - Any preferred Hebrew fonts and accessibility standards?
-    I don't have any. If you can't find any yourself I would provide it, tell me.
+  - Decision: No fixed font yet. Font/accessibility standards will be selected during design and documented in the UI spec.
 
 ### 10. Compliance and Operations
 - Are there privacy/legal requirements (for example, storing user activity or analytics consent)?
-    Go by EU and US gold legal standard
+  - Requirement: Follow a high standard aligned with EU and US privacy/security expectations.
 
 - Which environments are needed (`dev`, `staging`, `prod`) and who deploys?
-    For now we implement dev and I would like you to plan the others.
+  - Decision: Build `dev` now.
+  - Plan: Add `staging` and `prod` environment design in this planning phase.
 
 ### 11. Quality and Delivery
 - What testing depth is expected initially: unit only, or unit + integration + end-to-end?
-    Full depth. unit + integration + e2e.
+  - Decision: Full depth for MVP: unit, integration, and end-to-end tests.
 
 - What is the target MVP date and the must-have features for that milestone?
-    I want a running website by thursday. Today I only want planing. If I am happy with the plan I might start building the app today.
+  - Target: A running website by Thursday.
+  - Scope policy: Today is planning only. Build starts after plan approval.
+
+## Improved Implementation Plan
+
+### MVP Scope (Must-Have by Thursday)
+
+- Public practice mode without login.
+- Google sign-in for saved user data.
+- Admin-only edit tools protected by email allowlist.
+- Import pipeline from local JSON question/answer files.
+- Core practice flows include random practice tests (5/10/20, timed or untimed), tag-based practice, and Navigation A free-text answers with self-grading in review.
+- Review mode with correct answer, explanation, tags, and related material.
+- Private user collections.
+- Basic progress tracking and per-tag performance.
+- Mobile-first RTL Hebrew UI.
+
+### Post-MVP Scope (Planned Next)
+
+- Weak-topic dashboard enhancements (streaks, deeper analytics).
+- Full content version history and audit trail.
+- Advanced recency/knowledge weighting models.
+- AI-assisted free-text evaluation for Navigation A.
+
+### Proposed Technical Design
+
+#### Frontend
+
+- Next.js (App Router) with RTL-first design.
+- Authentication-aware routing for public practice routes, protected user routes, and admin route groups secured by allowlist middleware.
+- Session state should include current question index, per-question answers, skip state, and a navigator model for quick jumping.
+
+#### Backend and Data
+
+- Firebase Auth (Google provider).
+- Firestore as primary app database.
+- Firebase Storage for question images and media.
+- Cloud Functions (or server actions + Admin SDK) should handle data import jobs and enforce admin-only mutation validation.
+
+#### Content/Data Model (Draft)
+
+- `questions`: `id`, `subject`, `chapter`, `type` (`mcq` | `free_text`), `text`, `choices[]`, `correct_choice_id`, `tags[]`, `image_ref`, `created_at`, `updated_at`, `updated_by`
+- `explanations`: `question_id`, `text`, `last_updated`
+- `materials`: `id`, `title`, `source`, `url`, `tags[]`, `language`, `last_updated`
+- `users`: `uid`, `email`, `display_name`, `role` (`user` | `admin`)
+- `collections`: `id`, `owner_uid`, `name`, `description`, `question_ids[]`, `created_at`, `updated_at`
+- `attempts`: `id`, `uid` (nullable for anonymous), `mode`, `question_ids[]`, `answers[]`, `score_percent`, `self_graded_flags[]`, `created_at`
+- `tag_stats`: `uid`, `tag`, `correct_count`, `attempt_count`, `last_attempt_at`
+
+### Test Strategy
+
+- Unit tests: scoring logic, timer logic, randomization weighting, and import utilities.
+- Integration tests: Firestore operations, auth guards, and admin allowlist checks.
+- End-to-end tests: anonymous practice flow, signed-in collection flow, admin edit flow, and review flow.
+
+### Security Baseline
+
+- Firestore and Storage security rules with least privilege.
+- Admin operations validated server-side (never client-only checks).
+- Input validation and sanitization on imported content.
+- Basic privacy controls include cookie/consent notices and placeholders for privacy policy and terms pending legal review.
+
+### Environment Plan
+
+- `dev`: local and shared development environment.
+- `staging`: production-like environment for UAT and pre-release testing.
+- `prod`: public deployment with strict keys, monitoring, and backups.
+- Environment separation includes independent Firebase projects and service accounts.
+
+### Delivery Plan
+
+### Phase 1: Planning and Data Contract
+- Finalize schema and import mapping.
+- Freeze MVP feature list.
+
+### Phase 2: Foundations
+- Bootstrap Next.js + Firebase.
+- Configure RTL, auth, and route protection.
+
+### Phase 3: Core Learning Flows
+- Build practice, review, and collection features.
+- Implement timing and navigation UI.
+
+### Phase 4: Admin and Import
+- Build admin edit surfaces.
+- Run data import and validation.
+
+### Phase 5: Quality and Release
+- Execute unit/integration/e2e test suites.
+- Deploy to `dev`, then prepare `staging` and `prod` configs.
+
+## Remaining Details Needed
+
+1. Admin identity
+- Which exact Google email(s) should be in the admin allowlist for `dev`?
+
+2. Legal/privacy scope
+- Should we implement GDPR/CCPA-ready consent and data-deletion flows in MVP, or add legal pages only and defer full compliance mechanics to post-MVP?
+
+3. Recency model
+- Please confirm the recency formula for question selection (for example, prioritize least recently seen questions first).
+
+4. Progress for anonymous users
+- Should anonymous progress persist in local storage only, or be session-only?
+
+5. Navigation A scoring
+- What numeric input should users provide for self-grading (0/1 only, or 0-100)?
+
+6. Image metadata mapping
+- How are question-image relations represented in your source files (filename convention, explicit IDs, or another mapping)?
+
+7. Dashboard MVP
+- For Thursday's MVP, should the dashboard include only per-tag accuracy, or also streaks and completion trends?
+
+8. Font baseline
+- If no specific font is chosen, is it acceptable to start with `Noto Sans Hebrew` and adjust later?

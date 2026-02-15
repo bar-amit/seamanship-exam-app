@@ -1,0 +1,506 @@
+[
+    {
+        "file_name": "image_1.jpg",
+        "description": "מפרשית עושה דרכה במים מבט מלפנים."
+    },
+    {
+        "file_name": "image_2.jpg",
+        "description": "כלי שייט שאורכו מעל 50מ' מוגבל בשל שוקע עושה דרכו במים – מבט מלפנים."
+    },
+    {
+        "file_name": "image_3.jpg",
+        "description": "כלי שייט מוגבל בכושרו לתמרן ,מנחה לגבי המצאות מכשול בדופן ימין ,מבט מאחור."
+    },
+    {
+        "file_name": "image_4.jpg",
+        "description": "דייג ,מבט מאחור פורש רשת מצד ימין."
+    },
+    {
+        "file_name": "image_5.jpg",
+        "description": "צוללת מבט מלפנים."
+    },
+    {
+        "file_name": "image_6.jpg",
+        "description": "כלי שייט ,גורר וניגרר ,שאורך המשך ביניהם פחות מ 200-מטר מפליגים שמאלה."
+    },
+    {
+        "file_name": "image_7.jpg",
+        "description": "כלי שייט שאורכו פחות מ 50-מטר על שרטון."
+    },
+    {
+        "file_name": "image_8.jpg",
+        "description": "סירת דייג רשתות ,מבט מלפנים."
+    },
+    {
+        "file_name": "image_9.jpg",
+        "description": "שולת מוקשים מבט מלפנים."
+    },
+    {
+        "file_name": "image_10.jpg",
+        "description": "כלי שייט שיש עליו נתב ,מבט מלפנים."
+    },
+    {
+        "file_name": "image_11.jpg",
+        "description": "כלי שייט גורר וניגרר שאורך המשך ביניהם פחות מ 200-מטר ,מוגבל בכושרו לתמרן ,מפליגים שמאלה."
+    },
+    {
+        "file_name": "image_12.jpg",
+        "description": "כלי שייט ממוכן שאורכו מעל 50מטר )עושה דרכו במים( ,מפליג שמאלה."
+    },
+    {
+        "file_name": "image_13.jpg",
+        "description": "מפרשית )עושה דרכה במים( ,מפליגה שמאלה."
+    },
+    {
+        "file_name": "image_14.jpg",
+        "description": "מפרשית שאורכה מעל 20מטר עושה דרכה במים ,מפליגה ימינה."
+    },
+    {
+        "file_name": "image_15.jpg",
+        "description": "כלי שיט ממוכן שאורכו עד 50מטר )עושה דרכו במים( ,מבט מלפנים."
+    },
+    {
+        "file_name": "image_16.jpg",
+        "description": "כלי שייט מהיר ,חסר הדחק ,עושה דרכו במים ,נראה מלפנים."
+    },
+    {
+        "file_name": "image_17.jpg",
+        "description": "כלי שייט גורר וניגרר ,מבט מאחור."
+    },
+    {
+        "file_name": "image_18.jpg",
+        "description": "כלי שייט מהיר ,חסר הדחק מבט מאחור."
+    },
+    {
+        "file_name": "image_19.jpg",
+        "description": "מכמורתן) ,עושה דרכו במים( ,מפליג ימינה) .לבן סביב חובה מעל 50מטר(."
+    },
+    {
+        "file_name": "image_20.jpg",
+        "description": "כלי שייט ללא שליטה )עושה דרכו במים( מבט מאחור."
+    },
+    {
+        "file_name": "image_21.jpg",
+        "description": "כלי שייט שיש עליו נתב עושה דרכו במים ,מבט מאחור."
+    },
+    {
+        "file_name": "image_22.jpg",
+        "description": "כלי שייט שאורכו מעל 50מטר ומוגבל בכושרו לתמרן ,מפליג שמאלה."
+    },
+    {
+        "file_name": "image_23.jpg",
+        "description": "כלי שייט גורר המוגבל בכושרו לתמרן וניגרר ,מבט מאחור."
+    },
+    {
+        "file_name": "image_24.jpg",
+        "description": "מפרשית שאורכה מעל 20מטר ,מפליגה שמאלה."
+    },
+    {
+        "file_name": "image_25.jpg",
+        "description": "כלי שייט ממוכן שאורכו מעל 50מטר ,מוגבל בשל שוקע ומפליג ימינה."
+    },
+    {
+        "file_name": "image_26.jpg",
+        "description": "מחפר ,עם אורות הכוונה לגבי המצאות מכשול."
+    },
+    {
+        "file_name": "image_27.jpg",
+        "description": "אור ירכתיים /כלי שייט שאורכו קטן מ 7-מטר ומהירותו קטנה מ 7-קשר ,כלי שייט עוגן /סירת משוטים."
+    },
+    {
+        "file_name": "image_28.jpg",
+        "description": "כלי שייט גורר שאורכ מעל 50מ' ושאורך המשך לנגרר פחות מ 200-מטר ,מבט מלפנים."
+    },
+    {
+        "file_name": "image_29.jpg",
+        "description": "מכמורתן ,ופורש רשתות מצד שמאל ,מבט מאחור."
+    },
+    {
+        "file_name": "image_30.jpg",
+        "description": "כלי שייט ממוכן ,שאורכו קטן מ 50-מטר מפליג שמאלה."
+    },
+    {
+        "file_name": "image_31.jpg",
+        "description": "שולת מוקשים ,מפליגה ימינה."
+    },
+    {
+        "file_name": "image_32.jpg",
+        "description": "שולת מוקשים מבט מאחור."
+    },
+    {
+        "file_name": "image_33.jpg",
+        "description": "כלי שייט ללא שליטה מפליג שמאלה."
+    },
+    {
+        "file_name": "image_34.jpg",
+        "description": "כלי שיט שיש עליו נתב ,מפליג ימינה."
+    },
+    {
+        "file_name": "image_35.jpg",
+        "description": "כלי שייט מוגבל בכושרו לתמרן) ,עושה דרכו במים( מבט מלפנים."
+    },
+    {
+        "file_name": "image_36.jpg",
+        "description": "כלי שייט ממוכן שאורכו מעל 50מטר מבט מלפנים."
+    },
+    {
+        "file_name": "image_37.jpg",
+        "description": "מפרשית שאורכה מעל 20מטר עושה דרכה במים מבט מאחור."
+    },
+    {
+        "file_name": "image_38.jpg",
+        "description": "כלי שייט מוגבל בשל שוקע עושה דרכו במים מבט מאחור."
+    },
+    {
+        "file_name": "image_39.jpg",
+        "description": "כלי שייט שאורכו מעל 50מטר ,על שרטון."
+    },
+    {
+        "file_name": "image_40.jpg",
+        "description": "כלי שייט מהיר חסר הדחק מפליג ימינה."
+    },
+    {
+        "file_name": "image_41.jpg",
+        "description": "צוללת מפליגה ימינה."
+    },
+    {
+        "file_name": "image_42.jpg",
+        "description": "כלי שייט מוגבל בכושרו לתמרן ,מבט מאחור."
+    },
+    {
+        "file_name": "image_43.jpg",
+        "description": "כלי שייט ממוכן שאורכו עד 50מטר מפליג ימינה."
+    },
+    {
+        "file_name": "image_44.jpg",
+        "description": "מכמורתן בעבודה מפליג שמאלה."
+    },
+    {
+        "file_name": "image_45.jpg",
+        "description": "כלי שייט ללא שליטה ,עושה דרכו במים מפליג ימינה."
+    },
+    {
+        "file_name": "image_46.jpg",
+        "description": "כלי שייט שיש עליו נתב ,מפליג שמאלה."
+    },
+    {
+        "file_name": "image_47.jpg",
+        "description": "כלי שייט גורר ,שאורך המשך לנגרר מעל 200מטר ,מוגבל בכושרו לתמרן עושה דרכו במים ,מבט מלפנים."
+    },
+    {
+        "file_name": "image_48.jpg",
+        "description": "מפרשית ,מפליגה ימינה."
+    },
+    {
+        "file_name": "image_49.jpg",
+        "description": "כלי שייט ממוכן שאורכו מעל 50מטר מוגבל בשל שוקע ,מפליג שמאלה."
+    },
+    {
+        "file_name": "image_50.jpg",
+        "description": "כלי שייט מוגבל בכושרו לתמרן עושה דרכו במים ,מצביע על מכשול בצד שמאל ,מבט מלפנים."
+    },
+    {
+        "file_name": "image_51.jpg",
+        "description": "כלי שיט העוסק בדייג רשתות ,מפליג ימינה."
+    },
+    {
+        "file_name": "image_52.jpg",
+        "description": "צוללת ,מפליגה שמאלה."
+    },
+    {
+        "file_name": "image_53.jpg",
+        "description": "כלי שייט גורר עם נגרר ,שאורך המשך פחות מטר מ ,200-מפליגים ימינה."
+    },
+    {
+        "file_name": "image_54.jpg",
+        "description": "מחפר מוגבל בכושרו לתמרן הנראה מדופן ימין עם סימון מכשול בדופן זו."
+    },
+    {
+        "file_name": "image_55.jpg",
+        "description": "כלי שייט העוסק בדייג רשתות ,מפליג שמאלה."
+    },
+    {
+        "file_name": "image_56.jpg",
+        "description": "שולת מוקשים ,מפליגה שמאלה."
+    },
+    {
+        "file_name": "image_57.jpg",
+        "description": "כלי שיט ללא שליטה שיש עליו נתב ,מפליג שמאלה."
+    },
+    {
+        "file_name": "image_58.jpg",
+        "description": "מפרשית שאורכה מעל 20מטר )עושה דרכה במים( ,מבט מלפנים."
+    },
+    {
+        "file_name": "image_59.jpg",
+        "description": "כלי שייט גורר ונגרר עם משך שאורכו קטן מ 200 -מטר מוגבל בכושרו לתמרן, מפליגים ימינה."
+    },
+    {
+        "file_name": "image_60.jpg",
+        "description": "כלי שייט גורר וניגרר שאורך המשך ביניהם מעל 200מטר ,מפליג שמאלה."
+    },
+    {
+        "file_name": "image_61.jpg",
+        "description": "כלי שייט שאורכו מעל 50מטר ,עוגן) .דופן ימין(."
+    },
+    {
+        "file_name": "image_62.jpg",
+        "description": "כלי שייט מהיר ,חסר הדחק מפליג שמאלה."
+    },
+    {
+        "file_name": "image_63.jpg",
+        "description": "כלי שייט הדוחף כלי שייט אחר בצדו השמאלי והעושים דרכם במים ,מבט מלפנים."
+    },
+    {
+        "file_name": "image_64.jpg",
+        "description": "מכמורתן בעבודה עושה דרכו במים מבט מלפנים."
+    },
+    {
+        "file_name": "image_65.jpg",
+        "description": "מחפר העושה דרכו במים במבט לדופן שמאל עם הכוונה למעבר בטוח בקרבת דופן שמאל."
+    },
+    {
+        "file_name": "image_66.jpg",
+        "description": "כלי שייט ללא שליטה ,עושה דרכו במים ,מבט מלפנים."
+    },
+    {
+        "file_name": "image_67.jpg",
+        "description": "כלי שייט שאורכו מעל 50מטר המוגבל בכושרו לתמרן ,מפליג ימינה."
+    },
+    {
+        "file_name": "image_68.jpg",
+        "description": "שולת מוקשים עם שליה מצד שמאל."
+    },
+    {
+        "file_name": "image_69.jpg",
+        "description": "כלי שייט ממוכן שאורכו מעל 50מטר ,מפליג ימינה."
+    },
+    {
+        "file_name": "image_70.jpg",
+        "description": "כלי שייט העוסק בצלילה/.עבודות תת מימיות"
+    },
+    {
+        "file_name": "image_71.jpg",
+        "description": "אורות סימון כניסה למעגנה/נמל."
+    },
+    {
+        "file_name": "image_72.jpg",
+        "description": "כלי שייט גורר וניגרר שאורך המשך ביניהם מעל 200מטר – מפליגים ימינה."
+    },
+    {
+        "file_name": "image_73.jpg",
+        "description": "סימון אזהרת מצב ים קשה ביציאה מנמל) .בופור 5ומעלה(."
+    },
+    {
+        "file_name": "image_74.jpg",
+        "description": "אורות סימון יציאה למעגנה/נמל."
+    },
+    {
+        "file_name": "image_75.jpg",
+        "description": "כלי שייט המוגבל בשל שוקע."
+    },
+    {
+        "file_name": "image_76.jpg",
+        "description": "שולת מוקשים בפעולה עם שליה משני צידיה."
+    },
+    {
+        "file_name": "image_77.jpg",
+        "description": "כלי שייט עוגן /אזהרה מטאורולוגית ביציאה מנמל ,כאשר נמצא על מבנה נמל."
+    },
+    {
+        "file_name": "image_78.jpg",
+        "description": "כלי שייט גורר המוגבל בכושרו לתמרן."
+    },
+    {
+        "file_name": "image_79.jpg",
+        "description": "כלי שייט המוגבל בכושרו לתמרן."
+    },
+    {
+        "file_name": "image_80.jpg",
+        "description": "כלי שייט ללא שליטה."
+    },
+    {
+        "file_name": "image_81.jpg",
+        "description": "כלי שייט על שרטון."
+    },
+    {
+        "file_name": "image_82.jpg",
+        "description": "מפרשית המפליגה בעזרת מנוע."
+    },
+    {
+        "file_name": "image_83.jpg",
+        "description": "נמצא במצוקה מבקש עזרה!!!"
+    },
+    {
+        "file_name": "image_84.jpg",
+        "description": "כלי שייט מכמורתן בעבודתו."
+    },
+    {
+        "file_name": "image_85.jpg",
+        "description": "ספינת דייג רשתות ,שאורכו של הציוד אופקית מהספינה מעל 150מ'."
+    },
+    {
+        "file_name": "image_86.jpg",
+        "description": "כלי שייט גורר ,כשאורך המשך לנגרר מעל 200מטר."
+    },
+    {
+        "file_name": "image_87.jpg",
+        "description": "כלי שייט /מחפר מוגבל בכושרו לתמרן עם מכשול בדופן המסומנת בכדורים. עם אפשרות למעבר בטוח בצד המסומן במעויינים."
+    },
+    {
+        "file_name": "image_88.jpg",
+        "description": "כלי שייט /מחפר מוגבל בכושרו לתמרן עם אפשרות למעבר בטוח בצד המסומן ע\"י מעוינים."
+    },
+    {
+        "file_name": "image_89.jpg",
+        "description": "כלי שייט /מחפר מוגבל בכושרו לתמרן עם מכשול בדופן המסומנת ע\"י כדורים."
+    },
+    {
+        "file_name": "image_90.jpg",
+        "description": "כלי שייט/מחפר מוגבל בכושרו לתמרן עם מכשול בדופן המסומנת ע\"י כדורים."
+    },
+    {
+        "file_name": "image_91.jpg",
+        "description": "דגל – Uזהירות הנך מתקדם לקראת סכנה."
+    },
+    {
+        "file_name": "image_92.jpg",
+        "description": "דגל – Nלא )שלילי(."
+    },
+    {
+        "file_name": "image_93.jpg",
+        "description": "דגל – Cכן )חיובי(."
+    },
+    {
+        "file_name": "image_94.jpg",
+        "description": "דגל – Tהתרחק ממני .אני עסוק בגרירת מכמורת זוגית."
+    },
+    {
+        "file_name": "image_95.jpg",
+        "description": "דגל – Bאני טוען פורק או נושא חומרים מסוכנים."
+    },
+    {
+        "file_name": "image_96.jpg",
+        "description": "דגל – Sמכונותי פועלים לאחור."
+    },
+    {
+        "file_name": "image_97.jpg",
+        "description": "דגל – Gמבקש נתב."
+    },
+    {
+        "file_name": "image_98.jpg",
+        "description": "דגל – Aעוסק בצלילה התרחק בזהירות."
+    },
+    {
+        "file_name": "image_99.jpg",
+        "description": "דגל – Kמבקש להתקשר איתך."
+    },
+    {
+        "file_name": "image_100.jpg",
+        "description": "דגל – Hיש נתב באנייתי."
+    },
+    {
+        "file_name": "image_101.jpg",
+        "description": "דגל – Lעליך לעצור ספינתך מייד."
+    },
+    {
+        "file_name": "image_102.jpg",
+        "description": "דגל – Dהתרחק ממני אני .מתמרן בקושי."
+    },
+    {
+        "file_name": "image_103.jpg",
+        "description": "דגל – Iאני משנה אורחי לשמאל."
+    },
+    {
+        "file_name": "image_104.jpg",
+        "description": "דגל – Oאדם בים."
+    },
+    {
+        "file_name": "image_105.jpg",
+        "description": "דגל – Eאני משנה אורחי לימין."
+    },
+    {
+        "file_name": "image_106.jpg",
+        "description": "דגל – Qספינתי בריאה מבקש רשות פעולה חופשית בנמל."
+    },
+    {
+        "file_name": "image_107.jpg",
+        "description": "דגל – Xהפסק פעולתך ושים לב לשידורי."
+    },
+    {
+        "file_name": "image_108.jpg",
+        "description": "דגל - Pעל כל האנשים לחזור לספינה .כאשר על ספינת דייג -רשתותיי נתפסו במכשול."
+    },
+    {
+        "file_name": "image_109.jpg",
+        "description": "דגל – Fאני בצרה התקשר איתי."
+    },
+    {
+        "file_name": "image_110.jpg",
+        "description": "דגל – Vאני מבקש עזרה) .אין כוונה למצוקה(."
+    },
+    {
+        "file_name": "image_111.jpg",
+        "description": "אני משנה אורחי לימין."
+    },
+    {
+        "file_name": "image_112.jpg",
+        "description": "כלי שייט ממוכן עושה דרכו במים בראות מוגבלת."
+    },
+    {
+        "file_name": "image_113.jpg",
+        "description": "כלי שייט ממוכן ,מפעיל מכונות לאחור."
+    },
+    {
+        "file_name": "image_114.jpg",
+        "description": "אני משנה אורחי לשמאל."
+    },
+    {
+        "file_name": "image_115.jpg",
+        "description": "לא מבין כוונותיך בתמרונך."
+    },
+    {
+        "file_name": "image_116.jpg",
+        "description": "אני מתכוון להשיג אותך ולעבור בצדך השמאלי."
+    },
+    {
+        "file_name": "image_117.jpg",
+        "description": "מסכים לבקשתך להשיג אותי."
+    },
+    {
+        "file_name": "image_118.jpg",
+        "description": "כלי שייט ממוכן בדרך בראות מוגבלת שעצר ושאינו עושה דרכו במים."
+    },
+    {
+        "file_name": "image_119.jpg",
+        "description": "אני במצוקה מבקש עזרה מיידית!!!"
+    },
+    {
+        "file_name": "image_120.jpg",
+        "description": "אני טוען נושא או פורק מטענים מסוכנים\\ כלי שיט נגרר."
+    },
+    {
+        "file_name": "image_121.jpg",
+        "description": "מתכוון להשיג אותך ולעבור בצדך הימני."
+    },
+    {
+        "file_name": "image_122.jpg",
+        "description": "כלי שייט מוגבל בכושרו לתמרן /מוגבל בשל שוקע/אין עליו שליטה /מפרשית\\ גוררת בראות מוגבלת עושה דרכו במים."
+    },
+    {
+        "file_name": "image_123.jpg",
+        "description": "מסיחים."
+    },
+    {
+        "file_name": "image_124.jpg",
+        "description": "מסיחים."
+    },
+    {
+        "file_name": "image_125.jpg",
+        "description": "מסיחים."
+    },
+    {
+        "file_name": "image_126.jpg",
+        "description": "מסיחים."
+    }
+]

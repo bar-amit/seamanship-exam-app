@@ -279,56 +279,123 @@ A breakdown of subjects/sub-subjects exists in the syllabus. In future phases, t
 
 ### Delivery Plan
 
-### Phase 1: Planning and Data Contract
+#### Phase 1: Planning and Data Contract
 - Finalize schema and import mapping.
 - Freeze MVP feature list.
 
-### Phase 2: Foundations
+#### Phase 2: Foundations
 - Bootstrap Next.js + Firebase.
 - Configure RTL, auth, and route protection.
 
-### Phase 3: Core Learning Flows
+#### Phase 3: Core Learning Flows
 - Build practice, review, and collection features.
 - Implement timing and navigation UI.
 
-### Phase 4: Admin and Import
+#### Phase 4: Admin and Import
 - Build admin edit surfaces.
 - Run data import and validation.
 
-### Phase 5: Quality and Release
+#### Phase 5: Quality and Release
 - Execute unit/integration/e2e test suites.
 - Deploy to `dev`, then prepare `staging` and `prod` configs.
 
-## Remaining Details Needed
+## Finalized Decisions
 
 1. Admin identity
-- Which exact Google email(s) should be in the admin allowlist for `dev`?
-    - `bosh44@gmail.com`
+- `dev` admin allowlist includes: `bosh44@gmail.com`.
 
 2. Legal/privacy scope
-- Should we implement GDPR/CCPA-ready consent and data-deletion flows in MVP, or add legal pages only and defer full compliance mechanics to post-MVP?
-    - Let's start with the simple version and do the full solution later.
+- MVP uses a simple legal baseline (privacy and terms pages + consent placeholder).
+- Full GDPR/CCPA workflows (data export/deletion lifecycle) move to post-MVP.
 
 3. Recency model
-- Please confirm the recency formula for question selection (for example, prioritize least recently seen questions first).
-    - Prioritize least recently seem first. Keep it simple.
+- Keep the model simple: prioritize least recently seen questions first.
 
-4. Progress for anonymous users
-- Should anonymous progress persist in local storage only, or be session-only?
-    - Use local storage.
+4. Anonymous progress
+- Persist anonymous progress in local storage.
 
-5. Navigation A scoring
-- What numeric input should users provide for self-grading (0/1 only, or 0-100)?
-    - The user should give binary grade (correct/incorrect). Some questions in Navigation A are devided into section. That means the user should mark which section he got correct. we need to fix the schema for the questions of this chapter. There should be another field for the 'free text' open question type to specify the sections for each question. See the JSON file `./test_material/questions/navigation_A_quesitons.json`. Pay notice to the `sub_questions` field in the documents.
+5. Navigation A scoring and schema
+- Self-grading is binary (`correct`/`incorrect`).
+- Navigation A questions can be section-based.
+- Schema update required for free-text questions to include section definitions.
+- Source reference for mapping: `test_material/questions/navigation_A_quesitons.json` using `sub_questions`.
 
 6. Image metadata mapping
-- How are question-image relations represented in your source files (filename convention, explicit IDs, or another mapping)?
-    - In the JSON file of the questions there is a field named `asset`. It contains the name of the image (i.e. `image_36`). in the `test_images` folder there is a JSON file with the data of the images (i.e. `{ file_name: "image_26.jpg", description: "מחפר ,עם אורות הכוונה לגבי המצאות מכשול." }`). There should be a conection between these two collections in the database. Maybe add the image data to the relevant questions and avoid creating two separate collections. The images themselves are in `./test_material/test_images/images/`.
+- Question JSON `asset` field stores the image key (for example, `image_36`).
+- `test_material/test_images` contains image metadata JSON (filename + description).
+- `test_material/test_images/images/` contains image binaries.
+- Decision: store image metadata directly on each question document at import time (denormalized), while files are stored in Firebase Storage.
 
 7. Dashboard MVP
-- For Thursday's MVP, should the dashboard include only per-tag accuracy, or also streaks and completion trends?
-    - Only per tag for now. Keep it simple.
+- Include per-tag accuracy only in MVP.
+- Streaks and completion trends are post-MVP.
 
 8. Font baseline
-- If no specific font is chosen, is it acceptable to start with `Noto Sans Hebrew` and adjust later?
-    - Yes. Good choice.
+- Start with `Noto Sans Hebrew`.
+
+## Staging and Deployment Plan
+
+### Deployment Topology
+
+- Three isolated Firebase projects: `seamanship-dev`, `seamanship-staging`, `seamanship-prod`.
+- One deployment target per environment (hosting + Firestore + Storage + Functions).
+- Separate service accounts and `.env` files per environment.
+
+Reasoning: hard isolation prevents accidental data leaks and lets staging mirror production safely.
+
+### Release Flow
+
+- `main` branch deploys to `staging` automatically after CI passes.
+- `prod` deployment is manual approval from the latest staging tag/commit.
+- Hotfixes go to `main`, then re-promote through `staging` before `prod`.
+
+Reasoning: staging becomes the quality gate; production changes are deliberate and reversible.
+
+### Staging Checklist
+
+- [ ] Create Firebase staging project and enable Auth, Firestore, Storage.
+- [ ] Configure Google Auth OAuth client for staging domain.
+- [ ] Add staging environment variables (`NEXT_PUBLIC_*`, server-only keys).
+- [ ] Apply Firestore indexes and security rules from version-controlled config.
+- [ ] Apply Storage security rules.
+- [ ] Deploy Cloud Functions / server actions config to staging.
+- [ ] Seed staging with representative data import (questions, answers, image metadata, sample assets).
+- [ ] Verify admin allowlist in staging config.
+- [ ] Run full test suite in CI (unit + integration + e2e against staging).
+- [ ] Run smoke tests manually on mobile and desktop (RTL layout, login, practice flow, review flow, admin edits).
+- [ ] Validate performance budget basics (page load, image lazy loading).
+- [ ] Validate error tracking/logging is enabled.
+
+Reasoning: staging must be production-like, with realistic data and complete verification before promotion.
+
+### Production Deployment Checklist
+
+- [ ] Confirm staging build commit hash and tag release.
+- [ ] Verify production Firebase project exists with least-privilege IAM.
+- [ ] Configure production OAuth consent screen/domain and callback URLs.
+- [ ] Set production environment variables and rotate secrets if needed.
+- [ ] Deploy rules first (Firestore/Storage), then Functions, then Hosting.
+- [ ] Run migration/import scripts in production-safe mode (idempotent checks enabled).
+- [ ] Execute post-deploy smoke tests (auth, question load, answer submit, review, admin route access control).
+- [ ] Confirm monitoring/alerts are active (error rate, function failures, auth failures).
+- [ ] Confirm backup/restore plan for Firestore and Storage is enabled.
+- [ ] Announce release notes and keep rollback reference (previous deployment version).
+
+Reasoning: ordered deploy + smoke tests + rollback anchor minimizes outage risk.
+
+### Rollback Checklist
+
+- [ ] Keep previous Hosting release available for instant rollback.
+- [ ] Revert Functions to previous version if server logic causes regressions.
+- [ ] If data migration caused issues, stop writes, restore from backup snapshot, and redeploy prior code.
+- [ ] Re-run smoke tests after rollback.
+
+Reasoning: rollback must restore both code and data integrity, not only UI artifacts.
+
+### Environment Ownership
+
+- `dev`: rapid iteration, local + shared testing, relaxed data requirements.
+- `staging`: release candidate validation, strict parity with production config.
+- `prod`: stable public environment with change control and monitoring.
+
+Reasoning: each environment has a single purpose, which reduces confusion and release risk.

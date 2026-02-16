@@ -11,3 +11,20 @@ Project documentation is split into two source-of-truth files:
 Legacy planning file:
 
 - `project.md` (archived pointer)
+
+## Phase 1 Foundation
+
+This repository now includes Phase 1 MVP foundation:
+
+- Next.js app skeleton (`app/`, `middleware.js`, `next.config.mjs`)
+- Firebase client/admin initialization modules (`src/lib/firebase/`)
+- Auth allowlist and route-guard logic (`src/lib/auth/`)
+- Hebrew RTL baseline layout and typography (`app/layout.js`, `app/globals.css`)
+- Guard unit tests (`tests/`)
+
+## Local Setup
+
+1. Copy `.env.example` to `.env.local` and fill Firebase values.
+2. Install dependencies: `npm install`
+3. Run tests: `npm test`
+4. Run dev server: `npm run dev`

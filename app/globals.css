@@ -1,0 +1,45 @@
+:root {
+  --font-hebrew: "Noto Sans Hebrew", "Noto Sans", "Rubik", sans-serif;
+  --bg: #f7faf7;
+  --fg: #10211a;
+  --muted: #4b5f56;
+  --surface: #ffffff;
+  --line: #d9e5de;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-hebrew);
+  background: linear-gradient(180deg, #eef6f1 0%, var(--bg) 60%);
+  color: var(--fg);
+}
+
+a {
+  color: inherit;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.muted {
+  color: var(--muted);
+}

@@ -1,5 +1,6 @@
 .last_codex_session
 /node_modules
+todo
 
 # Next.js build output
 /.next

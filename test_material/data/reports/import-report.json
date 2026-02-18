@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-02-18T19:07:17.016Z",
-  "dry_run": true,
+  "generated_at": "2026-02-18T19:14:59.223Z",
+  "dry_run": false,
   "input_path": "test_material/data/questions-all.json",
   "manifest_path": "test_material/data/assets/sq5-option-images.json",
   "legacy_sq3_path": "test_material/questions/seamanship_questions.json",
@@ -13,7 +13,7 @@
   "normalized_records": 826,
   "imported_records": 826,
   "referenced_assets": 46,
-  "uploaded_assets": 0,
+  "uploaded_assets": 46,
   "missing_assets": [],
-  "firestore_written": 0
+  "firestore_written": 826
 }

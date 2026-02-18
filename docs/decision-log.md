@@ -142,3 +142,13 @@ Status values: `accepted`, `superseded`.
 - Decision: Keep temporary dual-source asset lookup in importer (`test_material/data/assets` + `test_material/test_images/images`) to support current sq5 and sq3 data.
 - Reason: Current datasets are split between normalized and legacy asset locations.
 - Impact: Add post-MVP task to consolidate all assets into a single canonical source and remove dual-source logic.
+
+### 2026-02-18 - Future Flow Direction for Practice Modes
+
+- Status: `accepted`
+- Decision: Keep future separation between exam-oriented test flow and study-oriented tag flow.
+- Reason: Users need both exam simulation and rapid learning/review loops.
+- Impact:
+- Tag flow should prioritize quick study-aid toggles (for example, explanations).
+- Test flow should default to chapter-first selection with an explicit "all chapters" option.
+- Question randomization/shuffle should primarily execute in backend logic.

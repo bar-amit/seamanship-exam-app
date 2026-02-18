@@ -33,6 +33,9 @@ Related:
 - Full content version history
 - AI-assisted free-text evaluation
 - Full GDPR/CCPA data export and deletion operations
+- Advanced tag-study UX (study-aids toggle-first mode)
+- Chapter-first test configuration defaults
+- Backend-first shuffle/selection service
 
 ## Core Data Contract (MVP)
 
@@ -75,6 +78,13 @@ Scoring rules:
 - Build tag practice flow
 - Build review flow
 - Build in-session question navigator for answered/skipped navigation
+
+Phase-note for later iteration of Flow 2 / Flow 3:
+
+- Tag practice should be closer to review/study mode than exam mode.
+- Users should be able to quickly toggle study aids (especially explanations).
+- Practice test defaults should be chapter-first selection, with "all chapters" as an option.
+- Question shuffle/selection should primarily run in backend services.
 
 ### Phase 4: Saved Features and Admin
 

@@ -28,3 +28,27 @@ This repository now includes Phase 1 MVP foundation:
 2. Install dependencies: `npm install`
 3. Run tests: `npm test`
 4. Run dev server: `npm run dev`
+
+## Phase 2 Import Commands
+
+- Dry-run (no uploads, no Firestore writes):  
+`npm run import:phase2:dry`
+
+- Full import (uploads assets + writes Firestore):  
+`npm run import:phase2`
+
+Script defaults:
+
+- input: `test_material/data/questions-all.json`
+- manifest: `test_material/data/assets/sq5-option-images.json`
+- assets directory: `test_material/data/assets`
+- report output: `test_material/data/reports/import-report.json`
+
+Optional flags for `scripts/import-phase2.js`:
+
+- `--dry-run`
+- `--skip-upload`
+- `--skip-firestore`
+- `--limit <N>`
+- `--collection <name>`
+- `--storage-prefix <path>`

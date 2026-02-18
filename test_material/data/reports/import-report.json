@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-02-18T18:28:04.890Z",
+  "dry_run": true,
+  "input_path": "test_material/data/questions-all.json",
+  "manifest_path": "test_material/data/assets/sq5-option-images.json",
+  "assets_dir": "test_material/data/assets",
+  "collection": "questions",
+  "storage_prefix": "question-assets",
+  "source_records": 826,
+  "normalized_records": 826,
+  "imported_records": 826,
+  "referenced_assets": 8,
+  "uploaded_assets": 0,
+  "missing_assets": [],
+  "firestore_written": 0
+}

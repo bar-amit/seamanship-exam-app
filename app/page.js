@@ -6,6 +6,9 @@ export default function HomePage() {
         <p className="muted">
           שלב 1 הושלם: תשתית Next.js, בסיס RTL, הגדרות Firebase ושומרי נתיבים.
         </p>
+        <p>
+          <a href="/practice">תרגול מבחן</a>
+        </p>
       </section>
     </main>
   );

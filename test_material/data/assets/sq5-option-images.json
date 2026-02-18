@@ -1,0 +1,18 @@
+{
+  "source": "sq5",
+  "page": 16,
+  "files": {
+    "102": {
+      "a": "sq5-option-images/q102-a.jpg",
+      "b": "sq5-option-images/q102-b.jpg",
+      "c": "sq5-option-images/q102-c.jpg",
+      "d": "sq5-option-images/q102-d.jpg"
+    },
+    "103": {
+      "a": "sq5-option-images/q103-a.jpg",
+      "b": "sq5-option-images/q103-b.jpg",
+      "c": "sq5-option-images/q103-c.jpg",
+      "d": "sq5-option-images/q103-d.jpg"
+    }
+  }
+}

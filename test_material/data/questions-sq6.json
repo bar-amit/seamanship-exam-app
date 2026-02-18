@@ -1,0 +1,7746 @@
+[
+  {
+    "id": "sq6-q001",
+    "question_number": 1,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקיד המפוח במנוע דיזל דו פעימתי?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לשאוב את גזי הפליטה מהצילינדר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לספק אוויר בלחץ לצילינדר לשרפת שאריות הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לספק אוויר בלחץ לצילינדר להרחקת אדי הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לספק אויר \"טרי\" בלחץ לצילינדר,לפינוי גזים ולשריפה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 1
+  },
+  {
+    "id": "sq6-q002",
+    "question_number": 2,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה עלול להיגרם כשמרווח השסתומים גדול מדי?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לפעולה רועשת וירידה בהספק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לאיבוד דחיסה ולהתחממות המנוע",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לשריפה מהירה יותר ועליה בהספק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "להתנעה קלה יותר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 2
+  },
+  {
+    "id": "sq6-q003",
+    "question_number": 3,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה עלול לגרום מרווח שסתומים קטן מידי? שריפת שסתום הפליטה.",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שריפה מהירה יותר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "פעולה רועשת.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "שריפת שסתום הפליטה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שריפת שסתום היניקה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 3
+  },
+  {
+    "id": "sq6-q004",
+    "question_number": 4,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "על ידי מה נסגרים פתחי היניקה במנוע בנזין דו פעימתי?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הבוכנה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "השסתומים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "השרוול.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "טבעות האטימה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 4
+  },
+  {
+    "id": "sq6-q005",
+    "question_number": 5,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידה העיקרי של משקולת גל הארכובה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "כוח איזון צנטריפוגלי.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הגדלת משקל גל הארכובה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "כוח איזון ללחץ הבערה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הגדלת מומנט הסיבוב.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 5
+  },
+  {
+    "id": "sq6-q006",
+    "question_number": 6,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה מאפיין את צינוריות הדלק ממשאבת ההזרקה למרססים?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "ישרות ומתוחות.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "חלקות למניעת מפל לחץ.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "בעלות אורך שווה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "עמידות בטמפרטורה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 6
+  },
+  {
+    "id": "sq6-q007",
+    "question_number": 7,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של מרסס הדלק (אינג'קטור)?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לרסס את השמן לדלק (תערובת).",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לרסס את הדלק המוחזר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לרסס את הדלק למשאבת ההזרקה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לרסס את הדלק לתא השריפה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 7
+  },
+  {
+    "id": "sq6-q008",
+    "question_number": 8,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה תהיה ההשפעה על מבנה המנוע ככל שמספר הצילינדרים יגדל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "אין שום השפעה לכמות הצילינדרים,אלא למשקל.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "גלגל התנופה יקטן באופן יחסי למספר הצילינדרים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "גלגל התנופה יגדל באופן יחסי למספר הצילינדרים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כמות הבוכנות תקטן באותו יחס.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 8
+  },
+  {
+    "id": "sq6-q009",
+    "question_number": 9,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו המאפיין העיקרי של מנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מנוע שריפה פנימית והצתה בדחיסה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מנוע שריפה פנימית והצתה בניצוץ.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מנוע שריפה חיצונית והצתה בדחיסה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מנוע שריפה חיצונית של סולר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 9
+  },
+  {
+    "id": "sq6-q010",
+    "question_number": 10,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה נדרש לבצע לפני ההתנעה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "ניקוי ושימון התשלובות.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "חיבור חשמל ובדיקת התמסורות.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "נטרול מערכות ובדיקת הנוזלים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "בדיקת נזילות ותקינות המסבים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 11
+  },
+  {
+    "id": "sq6-q011",
+    "question_number": 11,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה נדרש לבצע אחרי ההתנעה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "בדיקת לחץ שמן ופליטת מי-קירור לים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "ניקוי ושימון מערכות.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "בדיקת מפלס הנוזלים ומילוי בהתאם לצורך (שמן,דלק,מים).",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "ניקוז אויר ומים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 11
+  },
+  {
+    "id": "sq6-q012",
+    "question_number": 12,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהם תפקידי טבעות הבוכנה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "אטימת המרווח שבין הבוכנה לצילינדר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "בלימת מהלך הבוכנה לפני הסיום.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מניעת התרחבות הבוכנה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "וויסות שחיקת הבוכנה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 12
+  },
+  {
+    "id": "sq6-q013",
+    "question_number": 13,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו העיקרי של גלגל התנופה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שמירת אינרציה ויציבות סל\"ד בין הפעימות במחזור הפעולה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "איזון התנועה הסיבובית של המתנע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "נתינת תנופה לתיבת התשלובת.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שמירה על סיבובים קצובים של המדחף.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 13
+  },
+  {
+    "id": "sq6-q014",
+    "question_number": 14,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהם תפקידיו העיקריים של גל הארכובה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הפיכת תנועה סיבובית לקשתית.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הפיכת תנועה קווית לסיבובית.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "האצת תנועת הבוכנות.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "בלימת התנועה המהירה של הבוכנות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 14
+  },
+  {
+    "id": "sq6-q015",
+    "question_number": 15,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד מתבצעת סיכה (שימון) בלחץ?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "על ידי לחץ הידרוסטטי של השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "בעזרת משאבת לחץ שמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "על ידי כוח הגרוויטציה של השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "על ידי לחץ שמן צנטריפוגלי.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 15
+  },
+  {
+    "id": "sq6-q016",
+    "question_number": 16,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו סדר הפעולות במנוע דיזל בעל 4פעימות?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "יניקה,עבודה,דחיסה,פליטה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "דחיסה,עבודה,יניקה,פליטה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "עבודה,יניקה,דחיסה,פליטה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "יניקה,דחיסה,עבודה,פליטה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 16
+  },
+  {
+    "id": "sq6-q017",
+    "question_number": 17,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "איזה מנגנון מבצע (מתזמן) את הפעלת השסתומים?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "גל הזיזים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "גלגל התנופה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "גל הארכובה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שרשרת התזמון.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 17
+  },
+  {
+    "id": "sq6-q018",
+    "question_number": 18,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "לאן מחוברות הבוכנות והטלטל במנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "אל גל הארכובה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "ישירות לציר",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "אל גל הזיזים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אל גלגל התנופה דרך הטלטל.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 18
+  },
+  {
+    "id": "sq6-q019",
+    "question_number": 19,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד משנים את מהירות סיבובי המנוע במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "ע\"י שליטה בווסת הסיבובים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "בעזרת משאבת ההזנה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ע\"י שליטה בווסת האוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "בעזרת משאבת התאוצה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 19
+  },
+  {
+    "id": "sq6-q020",
+    "question_number": 20,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "איזה גלגל שיניים אינו מסתובב בשעת פעולת מנוע רגילה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "של גל התזמון.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "של המתנע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "של מנגנון הבלימה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "של מנגנון האוורור.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 21
+  },
+  {
+    "id": "sq6-q021",
+    "question_number": 21,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "איזה חלק במערכת הדלק קובע את כמות הדלק המוזרק במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "משאבת ההזרקה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "המפלג.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "משאבת אספקת (הזנה) הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "טיימר ההזרקה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 21
+  },
+  {
+    "id": "sq6-q022",
+    "question_number": 22,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "באיזה אזור במנוע נמדד לחץ השמן?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "בקו יניקת השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "אחרי מסנן השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "באגן השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לפני מסנן השמן.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 22
+  },
+  {
+    "id": "sq6-q023",
+    "question_number": 23,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידה של הבוכנה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לאטום את חלל הצילינדר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "להניע את השסתומים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "להפוך את לחץ הבעירה לתנועה קווית.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לינוק את התערובת.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 23
+  },
+  {
+    "id": "sq6-q024",
+    "question_number": 24,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "איך ניצת הדלק במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "על ידי החום שנוצר עקב דחיסת האוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "על ידי ניצוץ חשמלי.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "על ידי החום שנוצר מחיכוך הבוכנה בדפנות הצילינדר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "על ידי ניצוץ אלקטרומכני.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 24
+  },
+  {
+    "id": "sq6-q025",
+    "question_number": 25,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של הטלטל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לרסן את טלטולי הבוכנות.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לקשר בין הבוכנה לגל הארכובה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לטלטל את גל הזיזים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לקשר בין הבוכנה לגל הזיזים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 25
+  },
+  {
+    "id": "sq6-q026",
+    "question_number": 26,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה דוחסת הבוכנה במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "טיפות סולר עם אוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "אוויר עם אדי דלק (תערובת).",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "אדי דלק בלבד.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אוויר בלבד.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 26
+  },
+  {
+    "id": "sq6-q027",
+    "question_number": 27,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה מחובר בקצוות גל הארכובה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "המצמד מצד אחד ומשאבת הדלק והקירור מצד שני.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "משאבת מי הים מצד אחד וגל הזיזים מצד שני.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ציר המדחף ישירות מצד אחד והמתנע מצד שני.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "תיבת התשלובת דרך גלגל התנופה מצד אחד וגלגל רצועות מצד שני.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 27
+  },
+  {
+    "id": "sq6-q028",
+    "question_number": 28,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד מדמימים מנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מפסיקים את הספקת הדלק באמצעות ווסת הסיבובים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מנתקים את אספקת החשמל למשאבת ההזנה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מנתקים את אספקת האוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מנתקים את מנגנון השאיבה על ידי פיקוד מכני.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 28
+  },
+  {
+    "id": "sq6-q029",
+    "question_number": 29,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "היכן מרוכז השמן במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "באגן השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "במשאבה ובצנרת.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "במיכל הקליטה העליון.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "במיכל הקירור.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 29
+  },
+  {
+    "id": "sq6-q030",
+    "question_number": 30,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו העיקרי של מפוח האוויר במנוע דיזל 2פעימות?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "להכניס יותר אוויר לצילינדר לצורך הגברת הספק המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לנצל עד תום את טמפרטורת גזי הפליטה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "להגביר את מהירות המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לדחוס אוויר טרי לצילינדר במקום פעולת היניקה המתרחשת במנוע 4פעימות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 31
+  },
+  {
+    "id": "sq6-q031",
+    "question_number": 31,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של מגדש הטורבו במנוע דיזל 4פעימות:",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "צמצום כמות הדלק המוזרקת ומכך חסכון משמעותי בתצרוכת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הגדלת הספק המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הגדלת מהירות סיבוב המנוע ע\"י לחץ אוויר בדחיסה לצילינדרים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לגדוש יותר אויר המסייע לחימום הדלק.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 31
+  },
+  {
+    "id": "sq6-q032",
+    "question_number": 32,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "במה תלוי שינוי הספקו של מנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "בלחץ ההזרקה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "בסוג הדלק המוזרק.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "בכמות הדלק המוזרקת.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "במהירות המשאבה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 32
+  },
+  {
+    "id": "sq6-q033",
+    "question_number": 33,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו יעודה הבסיסי של משאבה צנטריפוגלית במנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "סחרור דלק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הזרקת שמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "שאיבת מים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "סחרור אוויר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 33
+  },
+  {
+    "id": "sq6-q034",
+    "question_number": 34,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקיד משאבת ההזרקה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הספקת דלק בלחץ ובתזמון למרססי הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הזרקת שמן לבוכנות.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הזרקת מים בלחץ למערכת הקירור",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הזרקת עודפי דלק למיכל.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 34
+  },
+  {
+    "id": "sq6-q035",
+    "question_number": 35,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "למה מסוגלת משאבת בוכנה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מסוגלת לשאוב רק מים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מסוגלת לשאוב אוויר ונוזלים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מסוגלת לשאוב רק דלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "המשאבה חייבת לקבל לחץ ביניקה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 35
+  },
+  {
+    "id": "sq6-q036",
+    "question_number": 36,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו עקרון הפעולה של משאבת בוכנה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "נפח משתנה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "תנועה סיבובית.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לחץ משתנה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שטח משתנה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 36
+  },
+  {
+    "id": "sq6-q037",
+    "question_number": 37,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהם המצבים הנדרשים ממתג ההפעלה של משאבת השיפוליים האוטומטית:",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "כיבוי,תפוקה נמוכה,תפוקה גבוהה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "כיבוי,מופעל ידנית,מופעל אוטומטית (מצוף).",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "כיבוי,מופעל מצוף,מופעל אוטומטית.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כיבוי,נעול,מופעל אוטומטית.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 37
+  },
+  {
+    "id": "sq6-q038",
+    "question_number": 38,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהי התקלה הנפוצה במשאבת מי-ים?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "חדירת אוויר למערכת.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "חסימת פתח היניקה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "חסימת פתח הפליטה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "חוסר סנכרון עם המנוע.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 38
+  },
+  {
+    "id": "sq6-q039",
+    "question_number": 39,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו עקרון הפעולה של משאבה צנטריפוגלית?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "המהירות הצנטריפוגלית הופכת לתנועה סיבובית.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הנוזל נזרק למרכז המשאבה עקב התנועה הסיבובית.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הנוזל נזרק לדפנות המשאבה עקב התנועה הסיבובית.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "המהירות הצנטריפוגלית הופכת לכוח.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 39
+  },
+  {
+    "id": "sq6-q040",
+    "question_number": 40,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו השימוש הנפוץ של משאבת הטבילה הניידת?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שאיבת מי-שתייה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "שאיבת שמן טבול.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "שאיבת דלק בחירום מתחתית המיכל.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שאיבת מי שיפוליים בחירום.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 41
+  },
+  {
+    "id": "sq6-q041",
+    "question_number": 41,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהי משאבת ההזנה הנפוצה במערכת הדלק של המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "משאבת דיאפרגמה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "משאבת רוטור.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "משאבת אימפלר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "משאבת בוכנה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 41
+  },
+  {
+    "id": "sq6-q042",
+    "question_number": 42,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "על איזה עקרון פועלת משאבת אימפלר גומי (ג'בסקו)?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שינוי לחץ.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "שינוי מהירות.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "שינוי נפח.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כוח צנטריפוגלי.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 42
+  },
+  {
+    "id": "sq6-q043",
+    "question_number": 43,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה יכולה להיות הסיבה שמשאבת השיפוליים הצנטריפוגלית איננה מצליחה לפלוט את המים לים?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "ההתנגדות הצנטריפוגלית קטנה מדי.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הלחץ ההידרוסטטי בפליטה נמוך מדי.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "העומס הצנטריפוגלי גדול מדי.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הלחץ ההידרוסטטי בפליטה גבוה מדי.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 43
+  },
+  {
+    "id": "sq6-q044",
+    "question_number": 44,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "במערכת סגורה,מהו תפקידה של משאבת המים המתוקים (מטופלים) במערכת הקירור של המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לקרר את מי הים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לקרר את השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "להחזיר מים ממיכל ההתפשטות.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "להעביר ע\"י המים את חום המנוע במחליף החום אל מי הים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 44
+  },
+  {
+    "id": "sq6-q045",
+    "question_number": 45,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידה של משאבת מי-הים במערכת קירור סגורה.",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לסחרר מים לקירור השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לספק מים לקירור מערכת המים המתוקים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "להזרים מים לקירור הדלק הנכנס.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לספק מים לקירור ישיר לראש המנוע.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 45
+  },
+  {
+    "id": "sq6-q046",
+    "question_number": 46,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כאשר היניקה נקייה מסתימות -והמשאבה צנטריפוגלית אינה מסוגלת לשאוב,מה הסיבה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "אימפלר הגומי נשרף.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "שסתום הביטחון נשאר במצב פתוח.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "אוויר חודר לקו היניקה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הטרמוסטט גרם לניטרול השאיבה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 46
+  },
+  {
+    "id": "sq6-q047",
+    "question_number": 47,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידה של משאבת ההזנה במערכת הדלק?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "להזין את קו העודפים בחזרה למיכל.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "עזרה בניקוז אויר (פריימינג) והעברת דלק ממיכל הדלק למשאבה ההזרקה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "סיוע בהזנת הדלק אל המיכל בעת תדלוק הספינה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "ביצוע סחרור דלק בין מסנני הדלק לצורך סינון מוקדם של הדלק.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 47
+  },
+  {
+    "id": "sq6-q048",
+    "question_number": 48,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "היכן ממוקמת בד\"כ משאבת ההזנה במערכת הדלק?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "אחרי משאבת ההזרקה,בקו החזרה למיכל.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "בין המיכל לבין מסנן הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "בין מסנן השמן ומשאבת ההזרקה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "בתוך מיכל הדלק.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 48
+  },
+  {
+    "id": "sq6-q049",
+    "question_number": 49,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה מעביר את עיקר כוח הדחף של המדחף לספינה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "אום ההידוק של הציר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הקצה הקוני של הציר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "החריץ שבציר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "ברגיי הידוק המדחף.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 49
+  },
+  {
+    "id": "sq6-q050",
+    "question_number": 50,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "למה עלול לגרום חור בצינור הפליטה של המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לפליטת גזים לחלל הספינה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לפליטת טיפות דלק וסכנת שריפה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ליניקת אוויר מוגברת.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לחימום יתר של המנוע.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 51
+  },
+  {
+    "id": "sq6-q051",
+    "question_number": 51,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "על מה מעיד \"שמן חלבי\" (אמולסיה) במנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "אוויר בשמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "דלק בשמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מים בשמן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "סידן בשמן.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 51
+  },
+  {
+    "id": "sq6-q052",
+    "question_number": 52,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "פתחי היניקה במנוע בנזין דו פעימתי נסגרים על ידי:",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הבוכנה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "השסתומים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "השרוול.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "טבעות האטימה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 52
+  },
+  {
+    "id": "sq6-q053",
+    "question_number": 53,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה תהיה ההשפעה,באם נחליף את המדחף למדחף בעל פסיעה גדולה יותר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "העומס על המנוע יגדל.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מהירות הספינה תקטן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "העומס על המנוע יקטן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אין משמעות לפסיעה אלא לקוטר בלבד.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 53
+  },
+  {
+    "id": "sq6-q054",
+    "question_number": 54,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה יש לבדוק מיד לאחר התנעת המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "טמפ',לחץ שמן,סיבובי מדחף.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לחץ השמן,זרימת מי קירור,זרם טעינה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "זרימת מי קירור,זרימת שמן,פליטת גזים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "זרימת שמן,זרם טעינה,וויברציות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 54
+  },
+  {
+    "id": "sq6-q055",
+    "question_number": 55,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהם חלקי החילוף החיוניים למנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מרססים,רצועות,אימפלורים,אטמים,מסננים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מדחף,מסבים רלוונטיים,ברגים,אטמים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "בוכנות,אטמים,צינוריות,אימפלורים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שסתומים,ווסתים,אטמים,רצועות רלוונטיות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 55
+  },
+  {
+    "id": "sq6-q056",
+    "question_number": 56,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהי היחידה למדידת הספק?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "קילוואט שעה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "כוח - סוס בשנייה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "וואט.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מטר כוח - סוס.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 56
+  },
+  {
+    "id": "sq6-q057",
+    "question_number": 57,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד מבוצע שינוי תנועת הספינה \"מקדימה\" ל\"אחורה\"?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שינוי כיוון סיבוב ציר המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "שינוי כיוון סיבוב ציר המדחף.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "שינוי תמסורת בתיבת התשלובת.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הצלבת רצועות ההפעלה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 57
+  },
+  {
+    "id": "sq6-q058",
+    "question_number": 58,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו הנוזל שמוסיפים למצבר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "חומצת מצבר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "חומצה מזוקקת.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מים מהולים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מים מזוקקים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 58
+  },
+  {
+    "id": "sq6-q059",
+    "question_number": 59,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של האבץ המותקן בתחתית הספינה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לכוון את זרימת המים על התחתית.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "למנוע איכול חשמלי של חלקים מתכתיים שבמים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "חיבור הארקת מערכת החשמל לים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "איזון המדחפים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 59
+  },
+  {
+    "id": "sq6-q060",
+    "question_number": 60,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "על מה משפיע שטח הלהבים במדחף הספינה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "עוצמת כוח הדחף המועבר לספינה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "שינוי במהירות המתפתחת.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מידת ההתקדמות בכל סיבוב.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "יחס סיבובי ציר מנוע.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 61
+  },
+  {
+    "id": "sq6-q061",
+    "question_number": 61,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד יש לבדוק אם מגיע דלק למשאבת ההזרקה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שחרור צינורית הדלק מהמיכל.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "שחרור מד הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "פתיחת פקק המסנן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "פתיחת נקז האוויר ביציאת המשאבה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 61
+  },
+  {
+    "id": "sq6-q062",
+    "question_number": 62,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה יגרום לפעולת מנוע דיזל להפוך לבלתי סדירה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "חדירת אוויר לדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "התרופפות הרצועה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "עייפות המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שינויים בלחץ השמן.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 62
+  },
+  {
+    "id": "sq6-q063",
+    "question_number": 63,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מדוע לחץ השמן גבוה מיד לאחר ההתנעה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "במערכת נותר שמן מהפעולה האחרונה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "גובה השמן עדיין מקסימאלי.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "השמן קר וצמיג יותר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "משאבת השמן עדיין לא הגיעה למלוא המהירות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 63
+  },
+  {
+    "id": "sq6-q064",
+    "question_number": 64,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד מסובב המתנע החשמלי את המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "בעזרת רצועת ההתנעה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "בעזרת גלגלי שיניים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "בעזרת שרשרת התזמון.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "בעזרת גל ההתנעה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 64
+  },
+  {
+    "id": "sq6-q065",
+    "question_number": 65,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה מאפיין מערכת קירור משולבת (סגורה)?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "המנוע מקורר ע\"י מים מטופלים המקוררים ע\"י מי ים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "המנוע מקורר על ידי מי הים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מי הים מסתחררים במעגל סגור.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "המערכת סגורה על ידי פתח הרמטי לחלוטין.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 65
+  },
+  {
+    "id": "sq6-q066",
+    "question_number": 66,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד יש לכבות דליקה בתא המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "ניתוק דלק ואוויר וכיבוי על ידי אוורור.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "ניתוק דלק וחשמל,פתיחת התא וכיבוי בעזרת מטפה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "סגירת דלק,אטימת פתחי האוורור לחניקת האש והפעלת מטפה דרך חרך צר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הצפה מיידית של תא המנוע במי ים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 66
+  },
+  {
+    "id": "sq6-q067",
+    "question_number": 67,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "באיזה יחידות נמדד \"הספק\"?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "וואט.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "ק\"ג כפול מטר/שנייה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "כוח סוס.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 67
+  },
+  {
+    "id": "sq6-q068",
+    "question_number": 68,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו הנפח של מטר מעוקב מים?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "11.ליטרים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "1,111.ליטרים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "111.ליטרים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "11,111.ליטרים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 68
+  },
+  {
+    "id": "sq6-q069",
+    "question_number": 69,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "באיזה סוג של מערכת קירור יופיעו צלעות קירור ומקרן?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "סגורה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "אוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "פתוחה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 69
+  },
+  {
+    "id": "sq6-q070",
+    "question_number": 70,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "במיכל נותר רבע מטר מעוקב סולר.המנוע צורך 8ליטרים דלק בשעה.כמה זמן בקירוב ניתן עוד להפעיל את המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שעות.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "שעות.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "שעות.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שעות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 71
+  },
+  {
+    "id": "sq6-q071",
+    "question_number": 71,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "האם יש צורך להפעיל את המנוע כדי להפעיל את מדלה העוגן החשמלי?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לא,הוא עלול רק להפריע.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "רצוי,כדי לעזור באספקת הזרם.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לא,חבל העוגן עלול להסתבך במדחף.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כן,כדי למתוח את שרשרת העוגן בעזרת המדחף.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 71
+  },
+  {
+    "id": "sq6-q072",
+    "question_number": 72,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה עשויים להיות המשקעים במערכת הדלק?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "חלקיקי שמן כבדים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "חלקיקים מוצקים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "חלקיקי דלק כבדים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "חלקיקי כימיקלים כבדים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 72
+  },
+  {
+    "id": "sq6-q073",
+    "question_number": 73,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מתי יהיה לחץ השמן גבוה יותר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "כאשר המנוע מותנע קר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "כאשר המנוע עובד חם.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לפני ההתנעה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "בהתנעה האחרונה (השמן צמיג יותר).",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 73
+  },
+  {
+    "id": "sq6-q074",
+    "question_number": 74,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "היכן מורכב מסנן האוויר במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "אחרי משאבת האוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "בתוך משאבת האוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "על המאייד.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "על סעפת היניקה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 74
+  },
+  {
+    "id": "sq6-q075",
+    "question_number": 75,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו העיקרי של השמן במנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "להגדיל את צמיגות הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לשפר את האטימה בין הבוכנה לראש המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "להרטיב את החלקים ולמנוע חימום.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "להקטין את הבלאי ואת החיכוך.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 75
+  },
+  {
+    "id": "sq6-q076",
+    "question_number": 76,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהי התופעה הנגרמת בפעימת הדחיסה במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "עלית הלחץ והטמפרטורה של התערובת.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לשפר את האטימה בין הבוכנה לראש המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "עלית הלחץ והטמפרטורה של האוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "להקטין את הבלאי ואת החיכוך.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 76
+  },
+  {
+    "id": "sq6-q077",
+    "question_number": 77,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של מרסס הדלק במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לפרק את הדלק לתרסיס ולרססו לחלל השריפה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לספק לצילינדרים דלק בלחץ.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לספק למשאבה רסיסי דלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לקבוע את כמות הדלק המרוסס.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 77
+  },
+  {
+    "id": "sq6-q078",
+    "question_number": 78,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של ווסת הסיבובים במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לווסת ולייצב את פעולת הבוכנות.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לווסת את פעולת משאבת ההזנה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לווסת ולתזמן את פעולת מרססי הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לשמור על מהירות סיבובי מנוע רצויים ויציבים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 78
+  },
+  {
+    "id": "sq6-q079",
+    "question_number": 79,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידה העיקרי של מערכת הדלק במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לאייד את הדלק בתזמון וכמות מדויקת.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לרסס דלק לחלל השריפה בתזמון וכמות מדויקת.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ליצור תערובת מדויקת של דלק ואוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "ליצור תערובת מדויקת של דלק ושמן.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 79
+  },
+  {
+    "id": "sq6-q080",
+    "question_number": 80,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד ניתן לבדוק את כמות השמן באגן השמן?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "באמצעות שעון גובה השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "באמצעות המדיד.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "באמצעות מד לחץ השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "באמצעות צינורית שקופה (כלים שלובים).",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 81
+  },
+  {
+    "id": "sq6-q081",
+    "question_number": 81,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו הזרם החשמלי המופק מהמצבר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "זרם ישר חד - פאזי.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "זרם חילופין חד - פאזי.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "זרם ישר פועם.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "זרם ישר רגיל.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 81
+  },
+  {
+    "id": "sq6-q082",
+    "question_number": 82,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד ניתן להבחין בין הקוטב החיובי לבין הקוטב השלילי במצבר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הקוטב החיובי דק יותר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הקוטב החיובי תמיד בצד ימין.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הקוטב החיובי עבה יותר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הקוטב החיובי תמיד צבוע באדום.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 82
+  },
+  {
+    "id": "sq6-q083",
+    "question_number": 83,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "למה משמש ההידרומטר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "צפיפות התמיסה במצבר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "את כמות המים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "טמפרטורת החומצה במצבר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מתח המצבר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 83
+  },
+  {
+    "id": "sq6-q084",
+    "question_number": 84,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "אם לא רשום! כיצד ניתן לדעת מהו המתח שהמצבר מסוגל לספק?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "בעזרת אמפרמטר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לפי מספר התאים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "בעזרת מיקרומטר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לפי גודל המצבר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 84
+  },
+  {
+    "id": "sq6-q085",
+    "question_number": 85,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה מגן על מערכת החשמל מעומס יתר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הבולם.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "המפלג.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הווסת.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הנתיך.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 85
+  },
+  {
+    "id": "sq6-q086",
+    "question_number": 86,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד יש לפעול כאשר המתח המופק מהאלטרנאטור איננו יציב?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לנתק את האלטרנאטור.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לבדוק את רצועת ההנעה של האלטרנאטור.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "להעלות את סיבובי המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לנתק את המצבר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 86
+  },
+  {
+    "id": "sq6-q087",
+    "question_number": 87,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "באיזה יחידות נמדדת קיבולת המצבר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "וואט שעה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "וולט.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "אמפר שעה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "קילו וואט שעה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 87
+  },
+  {
+    "id": "sq6-q088",
+    "question_number": 88,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של המצבר בספינה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "להפוך אנרגיה תרמית לאנרגיה חשמלית.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "להפוך אנרגיה כימית לאנרגיה חשמלית.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לספק אנרגיה חשמלית למנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לספק אנרגיה חשמלית להפעלת מערכות החשמל.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 88
+  },
+  {
+    "id": "sq6-q089",
+    "question_number": 89,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "בשעות היום,כשהמנוע עובד ללא שימוש בצרכני חשמל,מד הזרם מראה 5אמפר לאורך זמן,מה המשמעות?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "זה לא משנה כל עוד המכשירים עובדים כהלכה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "תיתכן זליגה/קצר במערכת החשמל.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "המצבר בטעינה תקינה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "המצבר מלא.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 89
+  },
+  {
+    "id": "sq6-q090",
+    "question_number": 90,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "בעת הפעלה ושידור במכשירי קשר,מד המתח יורד מ - 13.5וולט ל - 12.5וולט,מה המשמעות?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "האלטרנאטור אינו טוען כהלכה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "המגע של מכשיר הקשר רופף.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "המצברים תקינים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "ווסת המתח אינו תקין.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 91
+  },
+  {
+    "id": "sq6-q091",
+    "question_number": 91,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של \"המרווח\" שבין השסתומים לבין הנדנדים במנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "למנוע חיכוך יתר של הנדנדים,על ידי גזי השריפה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לאפשר את הקירור של שסתומי היניקה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לאפשר התפשטות טרמית של מנגנוני הפעלת השסתומים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לווסת את זרימת גזי השריפה ואת תערובת הדלק.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 91
+  },
+  {
+    "id": "sq6-q092",
+    "question_number": 92,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "הטמפרטורה היא 176מעלות פרנהייט,מהי הטמפרטורה בקירוב במעלות צלזיוס?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מעלות.C",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מעלות.C",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מעלות.C",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מעלות.C",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 92
+  },
+  {
+    "id": "sq6-q093",
+    "question_number": 93,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מתי תהיה סכנת פיצוץ במיכל הדלק,גדולה יותר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "כאשר המיכל כמעט ריק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "כאשר המיכל מלא במחציתו.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "כאשר המיכל מלא.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 93
+  },
+  {
+    "id": "sq6-q094",
+    "question_number": 94,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהם המשקעים העשויים להיות בד\"כ במיכל הדלק של מנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "חלקיקי שמן כבדים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "בקטריות ופטריות שהתפתחו במיכל הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "חלקיקי דלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "חלקיקי פיח כבדים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 94
+  },
+  {
+    "id": "sq6-q095",
+    "question_number": 95,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מד הטמפרטורה במנוע דיזל מראה - 213מעלות,Fמה נדרש לעשות?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "המנוע במצב רתיחה,יש להדמים ולבדוק הסיבה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "יש להאיץ מיידית את המנוע ולהעלות את לחץ מי הקירור.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הכול תקין,אין לעשות דבר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "להחליף את מסנן הדלק הראשוני.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 95
+  },
+  {
+    "id": "sq6-q096",
+    "question_number": 96,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מד החום של מי הקירור במנוע מראה 181מעלות,Cמהי המשמעות?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הטמפרטורה גבוהה מידי.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הטמפרטורה סבירה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הטמפרטורה נמוכה מידי.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מד החום כנראה מקולקל.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 96
+  },
+  {
+    "id": "sq6-q097",
+    "question_number": 97,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו העיקרי של \"השגם\" בקצה ציר המדחף?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "משמש כמעביר כוח עיקרי למדחף.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "משמש ככוח איזון צנטריפוגלי.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "משמש בעיקר לבקרה על נעילת וחיזוק המדחף לציר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "להגדלת מומנט הסיבוב.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 97
+  },
+  {
+    "id": "sq6-q098",
+    "question_number": 98,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד משומנים חלקי המנוע,במנוע בנזין חיצוני דו פעימתי?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "על ידי שמן המעורב בדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "על ידי התזת שמן הנמצא באגן השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "בעזרת משאבת שמן מכאנית.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "בהזרקה ממיכל שמן חיצוני.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 98
+  },
+  {
+    "id": "sq6-q099",
+    "question_number": 99,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה מאפיין בדרך כלל את הצינוריות המובילות דלק ממשאבת ההזרקה למרססים?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הן ישרות ומתוחות.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הן לרוב שוות באורכן ועמידות בלחץ גבוה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הן עשויות מפלדה,חלקות ושטוחות למניעת מפל לחץ.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הן עמידות בטמפרטורה של עד 911מעלות צלסיוס.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 99
+  },
+  {
+    "id": "sq6-q100",
+    "question_number": 100,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו צבע השמן המעיד על חדירת מים לשמן המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "אדמדם.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "סגלגל.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לבנבן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שחרחר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 111
+  },
+  {
+    "id": "sq6-q101",
+    "question_number": 101,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "על מה עשויה להעיד עליה במפלס השמן בתוך אגן השמן?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "על חדירת אוויר לשמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "על חדירת דלק לשמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "על חור בסעפת הפליטה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "על שימוש ממושך בשמן.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 111
+  },
+  {
+    "id": "sq6-q102",
+    "question_number": 102,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה תפקידה העיקרי של תיבת התשלובת ברוב כלי השייט?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "התאמת המנוע לעומס הקיים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לאפשר שינוי כיוון הסיבוב של המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לאפשר שינוי במהירות של הציר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לאפשר שינוי כיוון הסיבוב של ציר המדחף.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 112
+  },
+  {
+    "id": "sq6-q103",
+    "question_number": 103,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהיכן מקבל המתנע את הכוח החשמלי להפעלתו?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מהדינמו.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מהאלטרנאטור.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מהמצבר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מהגנרטור.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 113
+  },
+  {
+    "id": "sq6-q104",
+    "question_number": 104,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של מיסב הלחץ במערכת גל המדחף?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "יצירת לחץ על תיבת התשלובת עקב פעולת המדחף.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "העברת כוח הדחף מהמדחף אל הספינה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הקטנת לחץ המנוע על תיבת התשלובת.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "בלימת הלחץ הצנטריפוגלי של המדחף.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 114
+  },
+  {
+    "id": "sq6-q105",
+    "question_number": 105,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "לאחר הפלגה בעומס ובעת התקשרות לרציף,לאחר הורדת סיבובי המנוע,התרעת לחץ שמן נדלקת,מהי התגובה הנדרשת?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "יש להדמים מיד את המנוע,אחרת הוא ייהרס לחלוטין.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "יש להעלות את הסיבובים,כדי שלחץ שמן מנוע יעלה שוב.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "יש לסיים ההתקשרות בזריזות ולדומם את המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "יש להפסיק את ההתקשרות,לצאת שוב מהנמל ולבדוק את התקלה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 115
+  },
+  {
+    "id": "sq6-q106",
+    "question_number": 106,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של צינור האוורור המורכב על מיכל הדלק?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לאפשר שחרור ופליטת אדי מים לחלל האטמוספרה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לאפשר נשימת מיכל הדלק ולאפשר השוואת הלחץ במיכל,ללחץ האטמוספרי.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לאפשר את ניקוי המיכל ממשקעים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 116
+  },
+  {
+    "id": "sq6-q107",
+    "question_number": 107,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו ההבדל העקרוני בין מנוע בנזין למנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "סוג הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "יחס הדחיסה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "שיטת הצתת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 117
+  },
+  {
+    "id": "sq6-q108",
+    "question_number": 108,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד מתלקח הדלק במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מחממים את הדלק לפני שמזריקים אותו לתוך הצילינדר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הוא מתלקח על ידי מצת חשמלי.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הוא מתלקח עקב המגע באוויר הדחוס והחום שבצילינדר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אף תשובה אינה נכונה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 118
+  },
+  {
+    "id": "sq6-q109",
+    "question_number": 109,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה יקרה אם נפעיל משאבת ג'בסקו כששסתום היניקה שלה סגור?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "תת הלחץ ביניקה יעלה למקסימום והמשאבה תתפרק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "האימפלר יישרף ויינזק.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "שסתום הביטחון של המשאבה ייפתח.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אף תשובה אינה נכונה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 119
+  },
+  {
+    "id": "sq6-q110",
+    "question_number": 110,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידם של אצבעות האבץ במערכת קירור מי הים?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "למנוע סתימת המצננים והצינורות על ידי משקעי מלח.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "למנוע היווצרות חלודה במצננים ובצינורות.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "למנוע קורוזיה גלוונית בחלקי מערכת מי הים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 111
+  },
+  {
+    "id": "sq6-q111",
+    "question_number": 111,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "אם משאבת ההזנה מסוג דיאפרגמה אינה שואבת מהי הסיבה האפשרית?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "פיקת ההפעלה של המשאבה נמצאת בשיאה ויש לסובב את המנוע חצי סיבוב.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הדיאפרגמה קרועה או שסתומי המשאבה פגומים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מסנן הרשת בתוך המשאבה סתום.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 111
+  },
+  {
+    "id": "sq6-q112",
+    "question_number": 112,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של השסתום בפקק של מיכל ההתפשטות?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לאטום את המכסה מפני דליפות.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לשמור על לחץ מים גבוה במערכת ולהעלות את נקודת הרתיחה שלהם.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "להוריד את לחץ המים במערכת ואת נקודת הרתיחה שלהם.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "תשובות א' וג' נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 112
+  },
+  {
+    "id": "sq6-q113",
+    "question_number": 113,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "תוך כדי בדיקת שמן מנוע התגלה כי הצבע שלו שחור,מה נדרש לעשות?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "יש להחליף מיד את השמן כי הדבר מצביע על תקלה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "אין צורך לעשות דבר,תפקיד השמן הוא גם לקלוט חלקיקי פיח.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "השמן אינו מתאים למנוע ויש להחליפו בסוג אחר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "צריך בדחיפות להחליף את מסנן השמן לחדש.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 113
+  },
+  {
+    "id": "sq6-q114",
+    "question_number": 114,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה פירוש \"טעינת יתר\")?(turbo charge",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הכנסת נפח גדול יותר של אוויר לצילינדר בעל נפח נתון.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "ניצול גזי השריפה להכנסת אוויר בנפח גדול יותר לצילינדר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הכנסת משקל גדול יותר של אוויר לצילינדר בעל נפח נתון.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מחזור לחץ גזי השריפה הנפלטים מן הצילינדר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 114
+  },
+  {
+    "id": "sq6-q115",
+    "question_number": 115,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מדוע כל מנוע מאבד שמן סיכה תוך כדי עבודתו?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "כי השמן באגן מתנדף אפילו בטמפרטורת הסביבה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "כי חלק מן השמן המשמן את טבעות הבוכנה נשרף בסופו של דבר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "כי אין מנוע אפילו החדש ביותר שאין לו נזילות שמן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 115
+  },
+  {
+    "id": "sq6-q116",
+    "question_number": 116,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מדוע אסור לעשן בסמוך למצבר חשמלי הנמצא בטעינה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "העשן מזיק למצבר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "תערובת העשן והגזים שמשתחררים מהמצבר בעת הטעינה מזיקים למטען.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "המימן הנפלט מהמצבר בעת הטעינה,עלול להתפוצץ.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 116
+  },
+  {
+    "id": "sq6-q117",
+    "question_number": 117,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה נדרש לבדוק בעת טעינת המצבר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שנחירי האוורור שבפקקים יהיו פתוחים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "את ניתוק המצבר ממערכת החשמל.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "שפקקי האוורור יהיו סגורים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שהמצבר לא יספק בו זמנית מתח לצרכנים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 117
+  },
+  {
+    "id": "sq6-q118",
+    "question_number": 118,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "בעת ניסיון התנעה של מנוע דיזל המנוע מסתובב היטב אך לא מותנע,מה עשויה להיות הסיבה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לחץ השמן נמוך.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מגעי החשמל בממסר של המתנע אינם תקינים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לא מגיע דלק למרססים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 118
+  },
+  {
+    "id": "sq6-q119",
+    "question_number": 119,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "התנעת מנוע דיזל ולאחר דקות אחדות המנוע כבה מאליו,מה עשויה להיות הסיבה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שכחת לחבר את המפסק החשמלי הראשי.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "האלטרנאטור שתפקידו לטעון את המצבר אינו תקין.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "חוסר דלק או תקלה במערכת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "המצבר התרוקן.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 119
+  },
+  {
+    "id": "sq6-q120",
+    "question_number": 120,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מדוע הפעלת המנוע במהירות נמוכה לאורך זמן אינה רצויה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "עלול לחדור אוויר למערכת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "המנוע אינו מקבל קירור יעיל כי משאבות המים מסתובבות לאט.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "פיח עלול להצטבר על הבוכנה,השסתומים ועל קצה מרסס הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 121
+  },
+  {
+    "id": "sq6-q121",
+    "question_number": 121,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "על פי אילו סימנים ניתן לאבחן,אם המנוע עובד בעומס יתר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "טמפרטורת מי קירור נמוכה מדי ועשן שחור בפליטה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "טמפרטורת מי קירור גבוהה מדי ועשן שחור בפליטה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לא ניתן להעלות את מהירות סיבובי המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "תשובות א' ו-ג' נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 121
+  },
+  {
+    "id": "sq6-q122",
+    "question_number": 122,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "תוך כדי פעולת המנוע הוא מתחיל \"לגמגם\",מה עשויה להיות הסיבה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שסתום יניקת מי הים נסגר בטעות.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "כנראה מיכל הדלק התרוקן ומשאבת ההזנה שואבת גם אוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "המנוע מתאמץ כתוצאה מעומס יתר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לא בוצע ניקוז אוויר למערכת הדלק כפי שצריך לעשות לפני כל התנעה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 122
+  },
+  {
+    "id": "sq6-q123",
+    "question_number": 123,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "תוך כדי הפלגה נגמר הדלק במיכל והמנוע כבה,מהו הצעד הבא?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "גלון.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "ליטרים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ליטר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "ליטרים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 123
+  },
+  {
+    "id": "sq6-q124",
+    "question_number": 124,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "הספק של 251כוחות סוס שווים בקירוב ל:",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "קילוואט.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "קילוואט.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "קילוואט.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "קילוואט.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 125
+  },
+  {
+    "id": "sq6-q125",
+    "question_number": 125,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מתי יש לבדוק את מפלס גובה השמן במנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לפני התנעת המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "אחרי הפעלת המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "כאשר המנוע בפעולה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לדבר אין חשיבות כי בכל מצב המדידה זהה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 126
+  },
+  {
+    "id": "sq6-q126",
+    "question_number": 126,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה מודד בדרך כלל מד החום במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "את חום הסולר בקו העודפים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "את חום השמן באגן השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "את חום המים במערכת השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "את חום המים היוצא מראש המנוע.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 127
+  },
+  {
+    "id": "sq6-q127",
+    "question_number": 127,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד מדוממים בשגרה מנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מפסיקים את הספקת הדלק על ידי מוט השליטה המחובר לווסת הסיבובים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מנתקים את אספקת החשמל למשאבת ההזנה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מנתקים את אספקת האוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מנתקים את מנגנון השאיבה על ידי פיקוד מכני.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 128
+  },
+  {
+    "id": "sq6-q128",
+    "question_number": 128,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה עלולה לגרום רצועת מנוע רפויה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לזיוף בפעולת המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לירידה בלחץ השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לטעינת מצברים לקויה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לירידה בספיקת הדלק.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 129
+  },
+  {
+    "id": "sq6-q129",
+    "question_number": 129,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה תהיה ההשפעה באם נחליף בספינתנו את המדחף למדחף בעל קוטר זהה ובעל פסיעה קטנה יותר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "העומס על המנוע יגדל.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מהירות הספינה תגדל.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "העומס על המנוע יקטן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אין משמעות לפסיעה אלא לקוטר בלבד.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 131
+  },
+  {
+    "id": "sq6-q130",
+    "question_number": 130,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "על מה מצביעה פסיעת המדחף?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "על עוצמת הכוח בכל סיבוב.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "על עוצמת הלחץ בכל סיבוב.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "על מידת ההתקדמות התיאורטית של הספינה בכל סיבוב.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "על התנגדות לחץ המים הבולמת את הספינה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 131
+  },
+  {
+    "id": "sq6-q131",
+    "question_number": 131,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהי ההשפעה העיקרית הנובעת ממידת קוטר המדחף?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "על עוצמת כוח הדחף המועבר לספינה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "על מידת התקדמות הספינה בכל סיבוב.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "על מידת הלחץ האנכי בכל סיבוב.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "על מידת אורך הציר הנדרש.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 132
+  },
+  {
+    "id": "sq6-q132",
+    "question_number": 132,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מדוע קוטר הבוכנה קטן מקוטר הצילינדר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לאפשר התפשטות טרמית.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "ליצירת לחץ",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "בשביל לאפשר לאויר לעבור",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אין מרווח בין הצילינדר לבוכנה",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 133
+  },
+  {
+    "id": "sq6-q133",
+    "question_number": 133,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד נקראת הנקודה הכי נמוכה שאליה הבוכנה מגיעה במהלך עבודה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "נקודת התחתית.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "נקודה מתה תחתונה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "נקודה מתה עליונה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מינימום בוכנה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 134
+  },
+  {
+    "id": "sq6-q134",
+    "question_number": 134,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד משומנת התשלובת במנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "בעזרת שמן תשלובת.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "בעזרת המים הזורמים בה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "אין שמן בתשלובת.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "ממערכת השמן של המנוע.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 135
+  },
+  {
+    "id": "sq6-q135",
+    "question_number": 135,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהם תפקידי השמן במנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לקרר את המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לשמן את חלקי המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לנקות את הפיח.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 136
+  },
+  {
+    "id": "sq6-q136",
+    "question_number": 136,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "על מה שולטת ידית ההדממה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "ברז הדלק במיכל.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "ווסת הסיבובים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "סגירת האוויר למנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "משאבת ההזנה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 137
+  },
+  {
+    "id": "sq6-q137",
+    "question_number": 137,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "על מה שולטת המצערת?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הגיר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "המצבר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ווסת הסיבובים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "תשובות א' וג' נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 138
+  },
+  {
+    "id": "sq6-q138",
+    "question_number": 138,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "אילו חיוויים חייבים להיות בלוח הבקרה (פאנל) של המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לחץ שמן,חום מנוע,סל\"ד מנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "אך ורק לחץ שמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "כמות דלק,טמפ' גזי פליטה,חום מנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לחץ שמן,סל\"ד מנוע,מצב הגיר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 139
+  },
+  {
+    "id": "sq6-q139",
+    "question_number": 139,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידה של משאבת ההזרקה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לספק למרססים דלק בלחץ גבוה,בכמות משתנה ובתזמון מדויק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לספק דלק למרססים לפי סדר הזרקה ובצורת טיפות זעירות.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לשנות את לחץ הדלק ולשמור על מהירות מנוע יציבה וקבועה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לספק דלק בצורת טיפות זעירות למרססי הדלק.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 140
+  },
+  {
+    "id": "sq6-q140",
+    "question_number": 140,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהם התנאים הבסיסיים הנדרשים להתלקחות שריפה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "חומר דליק,חמצן,חום.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "אדים,טמפ',אוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "נוזל,חמצן,טמפ'.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "חומר דליק,טמפ',לחץ.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 141
+  },
+  {
+    "id": "sq6-q141",
+    "question_number": 141,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה נדרש לבדוק,לפני התנעת המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "כמות דלק,מנוע מנוטרל יציאת מי-ים ולחץ שמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "גובה שמן,מנוע מנוטרל חשמל ואויר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מנוע מנוטרל טמפ',לחץ שמן,כמות דלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "גובה שמן,כמות דלק,כמות מי קירור ומנוע מנוטרל.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 142
+  },
+  {
+    "id": "sq6-q142",
+    "question_number": 142,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד יש לפעול כאשר המנוע מתחמם יתר על המידה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הורדת עומס ואיתור תקלה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הוספת מים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "קירור המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "בדיקת גובה מי-הים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 143
+  },
+  {
+    "id": "sq6-q143",
+    "question_number": 143,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה עלול לגרום לירידה משמעותית ואיבוד מהיר בכמות נוזל הקירור,במערכת קירור סגורה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "התקררות המנוע והתכווצות המים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "התחממות המנוע ורתיחתו.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מהירות סיבוב גבוהה מהרגיל.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "נזילות במערכת הקירור הפתוחה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 144
+  },
+  {
+    "id": "sq6-q144",
+    "question_number": 144,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו המכלול שגורם לסגירת פתחי כניסת האויר,במנוע בנזין דו פעימתי?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הבוכנה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "השרוול.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "השסתומים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "טבעות האטימה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 145
+  },
+  {
+    "id": "sq6-q145",
+    "question_number": 145,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהי התקלה הנפוצה במנועי דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "חדירת אוויר למערכת השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "חדירת אוויר למערכת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "חדירת מים למערכת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "חדירת מים למערכת האוויר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 146
+  },
+  {
+    "id": "sq6-q146",
+    "question_number": 146,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה עלול לגרום לתופעת \"שמן דליל\" במנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "ערבוב אוויר בשמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "חדירת מים לשמן.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "חדירת דלק לשמן.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "חדירת גזי שריפה קרים לשמן.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 147
+  },
+  {
+    "id": "sq6-q147",
+    "question_number": 147,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה מגן על המכשור החשמלי כתוצאה מזרם יתר או מקצר חשמלי?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "המצבר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "האלטרנטור.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מפסק מתח חוף",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הנתיך.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 148
+  },
+  {
+    "id": "sq6-q148",
+    "question_number": 148,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהן התופעות הנובעות ממסנן שמן מזוהם?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "ירידה בלחץ השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "עליה בלחץ השמן (אין יציאה).",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ירידה בקומפרסיה (אין שמן).",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "עליה בקומפרסיה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 149
+  },
+  {
+    "id": "sq6-q149",
+    "question_number": 149,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה גורם להצתת הדלק בתא השריפה של מנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "ניצוץ חשמלי במתח גבוה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "האוויר הלוהט הנדחס בצילינדר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מנגנון הצתה כימי.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מנגנון הצתה טורבו אלקטרי.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 151
+  },
+  {
+    "id": "sq6-q150",
+    "question_number": 150,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד יש לפעול במקרה של התראת לחץ שמן נמוך?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לבדוק מיידית את קריאת מד לחץ השמן.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "להדמים מיידית המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "להגביר את מהירות הסיבוב (עליה בלחץ).",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "להוריד את מהירות הסיבוב (קירור השמן).",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 151
+  },
+  {
+    "id": "sq6-q151",
+    "question_number": 151,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד מועבר עיקר מומנט הפיתול של הציר אל המדחף?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "ע\"י אום ההידוק בקצהו של הציר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "ע\"י \"השגם\" שבציר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ע\"י הקצה הקוני של הציר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "ע\"י בירגי הידוק של המדחף.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 152
+  },
+  {
+    "id": "sq6-q152",
+    "question_number": 152,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה גורם להצתת הדלק במנוע בנזין דו פעימתי?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מצת חשמלי.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מצת אלקטרוכימי.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "הלחץ והחום הנוצרים בתא השרפה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הלחץ והחום של התערובת בפעולת הדחיסה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 153
+  },
+  {
+    "id": "sq6-q153",
+    "question_number": 153,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של הנשם,המורכב במיכל הדלק?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "להכניס אוויר קר למיכל,על מנת למנוע פיצוץ.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לשחרר אדי מים לאטמוספרה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לאפשר למיכל לדלק ל\"נשום ולפצות באויר\" בעת תדלוק או שאיבת דלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "להוציא את עודפי הדלק ממיכל הדלק דרך קו העודפים.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 154
+  },
+  {
+    "id": "sq6-q154",
+    "question_number": 154,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של הטרמוסטט המורכב במערכת הקירור של המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לאפשר עבודת מנוע בטמפרטורה יציבה וקבועה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לאפשר קירור מהיר של המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לשמור על טמפרטורה הדלק היוצא.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לשמור על טמפרטורה הדלק הנכנס.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 155
+  },
+  {
+    "id": "sq6-q155",
+    "question_number": 155,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "הטרמוסטט במערכת הקירור נתפס במצב פתוח,מה עשויות להיות השפעות לכך?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "אין לכך שום השפעה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "המנוע עלול לרתוח כתוצאה מכך.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לאורך זמן יגרם נזק,כי המנוע יעבוד בטמפרטורה נמוכה מהמומלץ.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הבוכנות עלולות להיתפס עקב חוסר יציבות בטמפרטורות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 156
+  },
+  {
+    "id": "sq6-q156",
+    "question_number": 156,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "באיזו תדירות מומלץ לבדוק את מפלס מי הקירור? לפני כל הפעלת מנוע.",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מערכת קירור סגורה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מערכת קירור פתוחה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מערכת קירור אוויר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מערכת קירור מים בהקרנה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 157
+  },
+  {
+    "id": "sq6-q157",
+    "question_number": 157,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו עיקרון הפעולה של מנוע בנזין?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שריפה פנימית והצתה בדחיסה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "שריפה חיצונית והצתה בדחיסה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "שריפה פנימית והצתה בניצוץ.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שריפה חיצונית של סולר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 159
+  },
+  {
+    "id": "sq6-q158",
+    "question_number": 158,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מתי יהיה לחץ השמן נמוך מהרגיל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "כאשר יש חוסר שמן במערכת.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לאחר פעולה ממושכת בעומס והתחממות המנוע מעל לחום הרגיל.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "כאשר המנוע מותנע קר.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כאשר יש חדירת אוויר בלחץ לתוך מערכת השמן.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 161
+  },
+  {
+    "id": "sq6-q159",
+    "question_number": 159,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "בהתנעה,מנוע הדיזל מסתובב,ואיננו מצליח להתניע,מה יכולה להיות הסיבה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "יש אוויר במערכת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "תקלה חשמלית (אין הצתה).",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "קיימת דליפת דלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "לחץ השמן נמוך.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 161
+  },
+  {
+    "id": "sq6-q160",
+    "question_number": 160,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד יש לפעול לאחר גילוי אוויר במערכת הדלק?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "יניקת האוויר מהדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "כיבוי והתנעה מחדש.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ניקוז האוויר ממערכת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "הוספת דלק למערכת (למניעת כניסת אוויר).",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 162
+  },
+  {
+    "id": "sq6-q161",
+    "question_number": 161,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "כיצד יש לפעול כאשר סיבובי מנוע דיזל עולים ללא שליטה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "הדממה מיידית של המנוע ע\"י חניקת האויר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "כוונון ווסת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "סגירה מיידית של ברז הדלק על המיכל.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כוונון ווסת האוויר.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 163
+  },
+  {
+    "id": "sq6-q162",
+    "question_number": 162,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידו של ווסת הסיבובים במנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "נותן פקודות \"לטרוטל\" לשמור על מהירות מנוע רצויה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "שומר על מהירות(סל\"ד) מנוע רצויה,ע\"י מתן פקודות למשאבת ההזרקה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "נותן פקודות למשאבת ההזנה,לשנות את כמות הדלק המוזרקת.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שומר על מהירות מנוע רצויה,ע\"י מתן פקודות למרססי הדלק.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 164
+  },
+  {
+    "id": "sq6-q163",
+    "question_number": 163,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "היכן מורכב בדרך כלל הטרמוסטט במערכת הקירור של המנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "מורכב ביציאת מי הקירור,מראש המנוע.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מורכב בכניסת מי הקירור אל בלוק הצילינדר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מורכב בפתח היציאה של משאבת מי הים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אף תשובה אינה נכונה",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 165
+  },
+  {
+    "id": "sq6-q164",
+    "question_number": 164,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "המנוע פועל כראוי במצב מנוטרל,אולם מודמם בעת שילוב קדימה,מה לדעתך קרה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "חבל או ניילון נתפסו במדחף.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "יש עודף שמן בתיבת התשלובת.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "חדר אוויר למערכת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "חדרו מים למערכת הדלק.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 166
+  },
+  {
+    "id": "sq6-q165",
+    "question_number": 165,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה נדרש לעשות בשגרה בכדי להדמים מנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "חייבים להעביר את הטרוטל(מוט המצערת)למצב \"אמצע\",אחרת המנוע לא יודמם.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מנתקים את הדלק למרססים ע\"י משיכת ידית ההדממה המתחברת לווסת הדלק.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "סוגרים את שסתום אספקת הדלק על המיכל.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "מזיזים את הטרוטל אחורה עד הסוף ומושכים בידית ההדממה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 167
+  },
+  {
+    "id": "sq6-q166",
+    "question_number": 166,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהם הסימנים העשויים להצביע על חוסר קוויות((lineשל גל המדחף?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "רעידות של גוף הספינה.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "רעידות של המנוע והתשלובת.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "דליפת מים גדולה מדי מגובתת המילוא.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 168
+  },
+  {
+    "id": "sq6-q167",
+    "question_number": 167,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה נדרש כדי לבצע \"פריימינג\" (ניקוז אויר) לצינוריות של מרססי הדלק.",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "צריך לסובב את המנוע ברציפות (את גל הארכובה)ולשחרר מחברי הצינוריות על המרססים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "צריך להפעיל ידנית את משאבת ההזנה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "רצוי להעביר את \"הטרוטל\"(מצערת הדלק) למצב מנוע מודמם.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "תשובות א' ו-ג' נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "b",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 169
+  },
+  {
+    "id": "sq6-q168",
+    "question_number": 168,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידה העיקרי של משאבת הקירור במערכת המים המתוקים?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לספק מים לקירור מצנן שמן התשלובת.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לספק מים לקירור מצנן מי הים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לשאוב מים ממיכל ההתפשטות,הנמצא במקום הכי גבוה במערכת.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אף תשובה אינה נכונה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 171
+  },
+  {
+    "id": "sq6-q169",
+    "question_number": 169,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מה תפקיד שמן הסיכה במנוע?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "להקטין את החיכוך בין החלקים הנעים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "לסייע במניעת חלודה.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לקרר את המיסבים,הבוכנות וחלקים נעים אחרים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "a",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 171
+  },
+  {
+    "id": "sq6-q170",
+    "question_number": 170,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו תפקידה של גובתת המילוא (גלאנד),במערכת גל (ציר) המדחף.",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לשאת את משקל גל המדחף במקום בו הוא יוצא מן הספינה למים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "למנוע דליפת מי-שיפוליים מלוכלכים מן הספינה לים.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "למנוע חדירת מי-ים לספינה דרך פתח יציאת גל המדחף לים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אף תשובה אינה נכונה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 172
+  },
+  {
+    "id": "sq6-q171",
+    "question_number": 171,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "באילו יחידות נמדדת הקיבולת של מצבר?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "וולט.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "אמפר.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ואט-שעה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אמפר-שעה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 173
+  },
+  {
+    "id": "sq6-q172",
+    "question_number": 172,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהי המשמעות הנובעת שבעת הפעלת תאורת הנווט,המתח הנמדד על הקטבים במצבר הוא 11וולט?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "חיבורי החשמל של מכשיר הקשר אינם תקינים.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "זהו מצב טבעי,המצבר תקין.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מכשיר הקשר עובד על 6וולט ולכן לא קיימת בעיה.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "המצבר חלש וכנראה אינו תקין.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 174
+  },
+  {
+    "id": "sq6-q173",
+    "question_number": 173,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "מהו אחד מהתנאים הנדרשים,בכדי להתניע מנוע דיזל?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "יש להזריק אוויר חם בלחץ גבוה,אשר יצית את הדלק הנמצא בצילינדר.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "מספיק להזריק דלק לצילינדרים כדי שהמנוע יותנע.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "חייבים לסובב במהירות את גל הארכובה בדרך כלשהי.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "אף תשובה אינה נכונה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 175
+  },
+  {
+    "id": "sq6-q174",
+    "question_number": 174,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "בעת ההתנעה נשמעת נקישה מן המתנע,אך המנוע אינו מסתובב.מה עשויה להיות הסיבה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "המצבר חלש.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "המנוע תפוס ואינו יכול להסתובב.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "מגעי החשמל בסולנואיד(ממסר) של המתנע אינם תקינים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "כל התשובות נכונות.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 176
+  },
+  {
+    "id": "sq6-q175",
+    "question_number": 175,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "בעת ההתנעה,המנוע מסתובב לאט מדי ולא \"מותנע\".מהי הסיבה האפשרית?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "לחץ שמן נמוך מדי.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "הדקי המצבר אינם מחוברים כהלכה,או שהמצבר חלש.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "ידית ההדממה במצב מודמם.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "תקלה במפסק ההתנעה (.)switch",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "c",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 177
+  },
+  {
+    "id": "sq6-q176",
+    "question_number": 176,
+    "subject": "mechanics",
+    "chapter": "mechanics",
+    "type": "mcq",
+    "text": "התנעת את המנוע,ואתה מגלה שמים אינם נפלטים מצינור הפליטה.מה עשויה להיות הסיבה?",
+    "choices": [
+      {
+        "id": "a",
+        "label": "א",
+        "text": "שסתום כניסת מי-ים במצב סגור.",
+        "image_ref": null
+      },
+      {
+        "id": "b",
+        "label": "ב",
+        "text": "חוסר מים במיכל התפשטות.",
+        "image_ref": null
+      },
+      {
+        "id": "c",
+        "label": "ג",
+        "text": "לא צריכים לצאת מים מצינור הפליטה,אלא רק גזים.",
+        "image_ref": null
+      },
+      {
+        "id": "d",
+        "label": "ד",
+        "text": "שכחת לבדוק את גובה מי-הים,בטרם ההתנעה.",
+        "image_ref": null
+      }
+    ],
+    "correct_choice_id": "d",
+    "tags": [],
+    "image_ref": null,
+    "sub_questions": [],
+    "created_at": "2026-02-18T17:42:42+00:00",
+    "updated_at": "2026-02-18T17:42:42+00:00",
+    "updated_by": "data-pipeline-v1",
+    "source_pdf": "sq6.pdf",
+    "source_file": "sq6",
+    "source_question_number": 178
+  }
+]

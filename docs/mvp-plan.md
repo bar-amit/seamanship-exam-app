@@ -1,6 +1,6 @@
 # Seamanship Exam App - MVP Plan
 
-Last updated: 2026-02-15  
+Last updated: 2026-02-18  
 Owner: Bar Amit
 Target launch: Thursday, 2026-02-19
 
@@ -21,7 +21,7 @@ Related:
 - Import pipeline from local JSON files
 - Random practice tests (5/10/20 questions, timed or untimed)
 - Tag-based practice mode
-- Navigation A free-text answers with section-based self-grading
+- Navigation A open-text answers with section-based self-grading
 - Review mode with answers, explanations, tags, and related material
 - Private user collections
 - Basic progress tracking with per-tag accuracy
@@ -37,9 +37,13 @@ Related:
 ## Core Data Contract (MVP)
 
 - `questions`: `id`, `subject`, `chapter`, `type`, `text`, `choices[]`, `correct_choice_id`, `tags[]`, `image_ref`, `sub_questions[]`, `created_at`, `updated_at`, `updated_by`
+- `type` values used by current dataset: `mcq`, `open_text`
 - `sub_questions[]` item: `id`, `label`, `text`, `order`
 - Import rule: normalize `sub_questions[].id` to lowercase Latin (`a`, `b`, `c`, `d`)
 - UI rule: render Hebrew labels (`א`, `ב`, `ג`, `ד`) via `label`
+- Tag baseline rule for MVP: every question gets a default chapter tag (`seamanship`, `navigation a`, `navigation b`, `mechanics`)
+- `sq4-q096` is excluded from import (repeated/source-broken question)
+- `sq5-q102` and `sq5-q103` use per-choice image refs from `test_material/data/assets/sq5-option-images.json`
 - `attempts`: `id`, `uid` (nullable), `mode`, `question_ids[]`, `answers[]`, `self_graded_flags[]`, `sub_question_grades[]`, `score_percent`, `created_at`
 - `sub_question_grades[]` item: `question_id`, `sub_question_id`, `is_correct`
 
@@ -59,10 +63,10 @@ Scoring rules:
 
 ### Phase 2: Data and Import
 
-- Build importer for questions and answers from `test_material`
-- Join image metadata from `test_material/test_images`
+- Build importer from normalized data files under `test_material/data`
+- Join image-option metadata from `test_material/data/assets/sq5-option-images.json`
 - Upload image assets to Firebase Storage
-- Denormalize image metadata into question documents
+- Denormalize image metadata into question documents and choice records
 
 ### Phase 3: Core Flows
 

@@ -1,6 +1,6 @@
 # Seamanship Exam App - Decision Log
 
-Last updated: 2026-02-15  
+Last updated: 2026-02-18  
 Owner: Bar Amit
 
 ## Purpose
@@ -107,3 +107,31 @@ Status values: `accepted`, `superseded`.
 - Decision: Use isolated `dev`/`staging`/`prod` projects; auto-deploy to staging after CI; manual promote to production.
 - Reason: Balance deployment speed and production safety.
 - Impact: CI/CD pipeline must implement gating and rollback-ready release process.
+
+### 2026-02-18 - Canonical Question Type Uses `open_text`
+
+- Status: `accepted`
+- Decision: Use `open_text` as the normalized question type for Navigation A records.
+- Reason: Align implementation and docs with current generated dataset.
+- Impact: Importer, validation, and UI filters should treat `open_text` as the free-response type.
+
+### 2026-02-18 - Default Chapter Tag Applied to Every Question
+
+- Status: `accepted`
+- Decision: For MVP, each question gets one baseline tag derived from chapter (`seamanship`, `navigation a`, `navigation b`, `mechanics`).
+- Reason: Enable immediate tag-based practice without waiting for full taxonomy enrichment.
+- Impact: Import step normalizes empty tags to a deterministic chapter tag.
+
+### 2026-02-18 - Remove `sq4-q096` from Final Dataset
+
+- Status: `accepted`
+- Decision: Exclude question `sq4-q096` from import-ready datasets.
+- Reason: Question is repeated/source-broken and should not appear in user flows.
+- Impact: Total canonical record count reduced by one.
+
+### 2026-02-18 - Apply sq5 q102/q103 Choice Image Refs from Manifest
+
+- Status: `accepted`
+- Decision: Fill `choices[].image_ref` for `sq5-q102` and `sq5-q103` using `test_material/data/assets/sq5-option-images.json`.
+- Reason: These questions are image-option MCQs and require per-choice assets.
+- Impact: Importer must upload and persist per-choice image refs for these records.

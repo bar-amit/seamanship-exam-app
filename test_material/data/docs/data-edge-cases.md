@@ -15,7 +15,7 @@ Handling:
 
 - Keep question type as `mcq`.
 - Store option labels and text placeholders (`"איור א"`, etc.).
-- Attach per-choice image references via `choices[].image_ref`.
+- Attach per-choice image references via `choices[].image_ref` using `data/assets/sq5-option-images.json`.
 
 Generated assets:
 
@@ -54,7 +54,7 @@ Handling:
   - `set.accept_missing_sub_questions = true`
 - Build excludes these from queue and validation errors for `missing_sub_questions`.
 
-## 3) Source-broken question to ignore (sq4 q96)
+## 3) Source-broken repeated question removed (sq4 q96)
 
 Problem:
 
@@ -62,9 +62,8 @@ Problem:
 
 Handling:
 
-- Add override flag:
-  - `set.skip_question = true`
-- Build removes question from exported data, queue, and validation.
+- Final import-ready datasets exclude this question.
+- Current canonical outputs (`questions-sq4.json`, `questions-all.json`) do not contain `sq4-q096`.
 
 ## 4) Missing open prompt default (sq4)
 

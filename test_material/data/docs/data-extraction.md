@@ -91,6 +91,19 @@ Normalized output follows the MVP core contract fields:
 
 `sub_questions[]` are normalized to lowercase Latin IDs (`a,b,c,d`) and keep Hebrew label in `label`.
 
+Current normalized type values:
+
+- `mcq`
+- `open_text`
+
+Tag baseline for MVP imports:
+
+- `tags[]` is populated with one chapter-derived tag per question:
+  - `seamanship`
+  - `navigation a`
+  - `navigation b`
+  - `mechanics`
+
 Additional provenance fields are included for traceability:
 
 - `source_pdf`
@@ -99,6 +112,7 @@ Additional provenance fields are included for traceability:
 
 For open questions (`sq4`), `model_answer` is included from extracted answer blocks.
 For rare image-option MCQ, `choices[]` may include optional `image_ref`.
+`sq5` questions `102-103` are expected to include per-choice `image_ref` from `data/assets/sq5-option-images.json`.
 
 ## Review queue policy (answer to your item 1)
 

@@ -1,6 +1,6 @@
 # Seamanship Exam App - Product Plan
 
-Last updated: 2026-02-15  
+Last updated: 2026-02-18  
 Owner: Bar Amit
 
 ## Purpose
@@ -75,10 +75,12 @@ Current data status:
 
 Source data location:
 
-- `test_material/questions`
-- `test_material/answers`
-- `test_material/test_images`
-- `test_material/test_images/images`
+- `test_material/data/questions-all.json` (canonical)
+- `test_material/data/questions-sq3.json`
+- `test_material/data/questions-sq4.json`
+- `test_material/data/questions-sq5.json`
+- `test_material/data/questions-sq6.json`
+- `test_material/data/assets/`
 
 Subject scope:
 
@@ -87,7 +89,7 @@ Subject scope:
 ### Navigation
 
 - Two chapters: Navigation A and Navigation B.
-- Navigation A uses open free-text answers and user self-evaluation.
+- Navigation A uses open-text answers and user self-evaluation.
 - Navigation B uses standard multiple-choice questions.
 - Navigation A can include section-based sub-questions (`sub_questions`).
 

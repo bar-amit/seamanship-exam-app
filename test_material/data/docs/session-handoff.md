@@ -16,9 +16,10 @@ Last updated: 2026-02-18
 - Source of truth remains PDF files.
 - All newly generated/normalized data is written under `data/`.
 - `sq6-answers.csv` is authoritative for `sq6` answers in range `1..176`.
-- `sq4` question `96` is skipped (`skip_question=true`) due to source issue.
+- `sq4` question `96` is removed from final import datasets due to repeat/source issue.
 - `sq4` intentional no-sub-question cases are supported (`accept_missing_sub_questions=true`).
-- `sq5` questions `102-103` support image-based options via `image_ref` metadata.
+- `sq5` questions `102-103` include per-choice `image_ref` from `data/assets/sq5-option-images.json`.
+- Baseline chapter tags are applied to every question (`seamanship`, `navigation a`, `navigation b`, `mechanics`).
 
 ## Known Follow-up (Not Blocking)
 

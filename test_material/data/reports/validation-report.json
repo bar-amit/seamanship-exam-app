@@ -1,9 +1,9 @@
 {
-  "total_records": 827,
+  "total_records": 826,
   "errors_count": 0,
   "records_per_source": {
     "sq3": 362,
-    "sq4": 96,
+    "sq4": 95,
     "sq5": 193,
     "sq6": 176
   },

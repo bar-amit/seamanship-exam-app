@@ -52,6 +52,10 @@ Inspect override application status:
 - `set.skip_question = true`
   - Exclude source-broken question from output/queue/validation.
 
+Current status note:
+
+- `sq4-q096` is already excluded from the current canonical output datasets.
+
 Each override should include:
 
 - source question number

@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start",
     "test": "node --test",
-    "import:phase2:dry": "node scripts/import-phase2.js --dry-run --skip-upload --skip-firestore",
-    "import:phase2": "node scripts/import-phase2.js"
+    "import:phase2:dry": "node --env-file=.env.local scripts/import-phase2.js --dry-run --skip-upload --skip-firestore",
+    "import:phase2": "node --env-file=.env.local scripts/import-phase2.js"
   },
   "dependencies": {
     "firebase": "^11.1.0",

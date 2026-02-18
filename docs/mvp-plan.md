@@ -44,6 +44,7 @@ Related:
 - Tag baseline rule for MVP: every question gets a default chapter tag (`seamanship`, `navigation a`, `navigation b`, `mechanics`)
 - `sq4-q096` is excluded from import (repeated/source-broken question)
 - `sq5-q102` and `sq5-q103` use per-choice image refs from `test_material/data/assets/sq5-option-images.json`
+- Temporary asset dual-source note: importer currently reads from both `test_material/data/assets` and `test_material/test_images/images` (sq3 legacy). Post-MVP task: consolidate to one canonical assets source.
 - `attempts`: `id`, `uid` (nullable), `mode`, `question_ids[]`, `answers[]`, `self_graded_flags[]`, `sub_question_grades[]`, `score_percent`, `created_at`
 - `sub_question_grades[]` item: `question_id`, `sub_question_id`, `is_correct`
 

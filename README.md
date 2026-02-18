@@ -41,7 +41,10 @@ Script defaults:
 
 - input: `test_material/data/questions-all.json`
 - manifest: `test_material/data/assets/sq5-option-images.json`
-- assets directory: `test_material/data/assets`
+- data assets directory: `test_material/data/assets`
+- legacy sq3 source: `test_material/questions/seamanship_questions.json`
+- legacy image metadata: `test_material/test_images/images.json`
+- legacy image files: `test_material/test_images/images`
 - report output: `test_material/data/reports/import-report.json`
 
 Optional flags for `scripts/import-phase2.js`:
@@ -52,3 +55,6 @@ Optional flags for `scripts/import-phase2.js`:
 - `--limit <N>`
 - `--collection <name>`
 - `--storage-prefix <path>`
+- `--legacy-sq3 <path>`
+- `--legacy-images-metadata <path>`
+- `--legacy-images-dir <path>`

@@ -34,6 +34,8 @@ function normalizeChoice(choice, manifestRef, storagePrefix) {
 export function normalizeQuestionForImport(question, options = {}) {
   const {
     sq5ChoiceImageMap = {},
+    sq3AssetByQuestionNumber = {},
+    legacyImageDescriptionByFile = {},
     storagePrefix = "question-assets",
     skipIds = new Set(["sq4-q096"])
   } = options;
@@ -49,21 +51,35 @@ export function normalizeQuestionForImport(question, options = {}) {
   const chapterTag = toChapterTag(question.chapter);
   const tags = Array.isArray(question.tags) && question.tags.length > 0 ? question.tags : [chapterTag];
 
+  let topLevelImageRef = question.image_ref;
+  let imageDescription = question.image_description ?? null;
+  if (!topLevelImageRef && question.source_file === "sq3") {
+    const sq3File = sq3AssetByQuestionNumber[String(question.question_number)] ?? null;
+    if (sq3File) {
+      topLevelImageRef = `legacy-images/${sq3File}`;
+      imageDescription = legacyImageDescriptionByFile[sq3File] ?? imageDescription;
+    }
+  }
+
   const sq5Map = sq5ChoiceImageMap[String(question.question_number)] ?? {};
   const choices = Array.isArray(question.choices)
     ? question.choices.map((choice) => normalizeChoice(choice, sq5Map[String(choice.id)] ?? null, storagePrefix))
     : [];
 
-  return {
+  const normalized = {
     ...question,
     tags,
+    image_ref: topLevelImageRef,
+    image_description: imageDescription,
     choices,
-    image_storage_path: toStoragePath(question.image_ref, storagePrefix),
+    image_storage_path: toStoragePath(topLevelImageRef, storagePrefix),
     import_meta: {
       normalized_at: new Date().toISOString(),
       source: "phase2-importer-v1"
     }
   };
+
+  return normalized;
 }
 
 export function collectReferencedAssets(questions) {

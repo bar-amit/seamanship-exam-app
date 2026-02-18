@@ -135,3 +135,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Fill `choices[].image_ref` for `sq5-q102` and `sq5-q103` using `test_material/data/assets/sq5-option-images.json`.
 - Reason: These questions are image-option MCQs and require per-choice assets.
 - Impact: Importer must upload and persist per-choice image refs for these records.
+
+### 2026-02-18 - Temporary Dual Asset Sources
+
+- Status: `accepted`
+- Decision: Keep temporary dual-source asset lookup in importer (`test_material/data/assets` + `test_material/test_images/images`) to support current sq5 and sq3 data.
+- Reason: Current datasets are split between normalized and legacy asset locations.
+- Impact: Add post-MVP task to consolidate all assets into a single canonical source and remove dual-source logic.

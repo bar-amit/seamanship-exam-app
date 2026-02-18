@@ -74,6 +74,29 @@ test("normalizeQuestionForImport skips q96 safety rule", () => {
   assert.equal(normalized, null);
 });
 
+test("normalizeQuestionForImport backfills sq3 image ref and description from legacy maps", () => {
+  const q = {
+    id: "sq3-q001",
+    source_file: "sq3",
+    question_number: 1,
+    chapter: "seamanship",
+    type: "mcq",
+    choices: [],
+    tags: [],
+    image_ref: null
+  };
+
+  const normalized = normalizeQuestionForImport(q, {
+    sq3AssetByQuestionNumber: { "1": "image_36.jpg" },
+    legacyImageDescriptionByFile: { "image_36.jpg": "desc" },
+    storagePrefix: "question-assets"
+  });
+
+  assert.equal(normalized.image_ref, "legacy-images/image_36.jpg");
+  assert.equal(normalized.image_storage_path, "question-assets/legacy-images/image_36.jpg");
+  assert.equal(normalized.image_description, "desc");
+});
+
 test("collectReferencedAssets and upload plan include question + choice refs", () => {
   const questions = [
     {

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-02-18T18:28:04.890Z",
-  "dry_run": true,
+  "generated_at": "2026-02-18T18:59:45.800Z",
+  "dry_run": false,
   "input_path": "test_material/data/questions-all.json",
   "manifest_path": "test_material/data/assets/sq5-option-images.json",
   "assets_dir": "test_material/data/assets",
@@ -10,7 +10,7 @@
   "normalized_records": 826,
   "imported_records": 826,
   "referenced_assets": 8,
-  "uploaded_assets": 0,
+  "uploaded_assets": 8,
   "missing_assets": [],
-  "firestore_written": 0
+  "firestore_written": 826
 }

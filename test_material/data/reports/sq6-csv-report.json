@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-02-18T17:42:42+00:00",
+  "csv_path": "sq6-answers.csv",
+  "exists": true,
+  "used_count_q1_176": 176,
+  "invalid_rows": [],
+  "out_of_range_rows": [
+    {
+      "row": 177,
+      "question_number": 177,
+      "answer": "ב"
+    },
+    {
+      "row": 178,
+      "question_number": 178,
+      "answer": "א"
+    }
+  ],
+  "duplicate_qnums": []
+}

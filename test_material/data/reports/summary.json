@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-02-18T17:42:42+00:00",
+  "output_files": [
+    "data/questions-sq3.json",
+    "data/questions-sq4.json",
+    "data/questions-sq5.json",
+    "data/questions-sq6.json",
+    "data/questions-all.json",
+    "data/reports/validation-report.json",
+    "data/reports/review-queue.json",
+    "data/reports/ocr-autofill-report.json",
+    "data/reports/sq6-csv-report.json",
+    "data/reports/overrides-report.json"
+  ],
+  "validation_errors": 0,
+  "review_queue_items": 0,
+  "ocr_autofills": 0,
+  "overrides_applied": 62
+}

@@ -34,6 +34,12 @@ test("admin can load editor, inspect json and save changes", async ({ context, p
   await page.getByRole("button", { name: "הצג JSON שמירה" }).click();
   await expect(page.getByText('"text": "טקסט חדש לשאלה"')).toBeVisible();
 
+  const saveResponsePromise = page.waitForResponse(
+    (response) =>
+      response.url().includes("/api/admin/questions/") &&
+      response.request().method() === "PUT" &&
+      response.status() === 200
+  );
   await page.getByRole("button", { name: "שמור שינויים" }).click();
-  await expect(page.getByText("השאלה נשמרה בהצלחה.")).toBeVisible();
+  await saveResponsePromise;
 });

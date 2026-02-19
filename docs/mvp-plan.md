@@ -94,6 +94,11 @@ Phase-note for later iteration of Flow 2 / Flow 3:
 - Build collections (private per user)
 - Build per-tag progress tracking
 - Build admin editing for questions, explanations, tags, and sub-questions
+- Admin editor UX requirements:
+- Paginated search results (server-driven page/pageSize)
+- Search list includes short question-text preview
+- Editing support includes MCQ options and correct answer id, plus open-text sub-questions
+- Editor includes JSON toggles for loaded question document and outbound save payload
 
 ### Phase 5: Quality and Release
 

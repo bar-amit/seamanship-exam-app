@@ -166,3 +166,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Test flow keeps explanations in review mode only; tag-study flow allows optional quick reveal via study aids toggle.
 - Reason: Preserve exam simulation integrity while supporting faster study loops in tag practice.
 - Impact: Shared docs and future implementation must treat explanation visibility as flow-dependent, not global.
+
+### 2026-02-19 - Admin Editor Scope for MVP
+
+- Status: `accepted`
+- Decision: Admin editor includes paginated search, text preview in result list, edit support for MCQ options/correct answer and open-text sub-questions, plus JSON toggles.
+- Reason: Keep moderation workflow usable on large datasets and make data-level edits auditable during QA.
+- Impact: Admin APIs support page/pageSize and editor sends structured patch payloads for both MCQ and open-text records.

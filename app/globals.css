@@ -56,7 +56,7 @@ main {
 }
 
 .practice-block select,
-.practice-block input[type="number"],
+.practice-block input:not([type="checkbox"]):not([type="radio"]),
 .practice-block textarea {
   border: 1px solid var(--line);
   border-radius: 8px;

@@ -9,7 +9,12 @@ test("normalizeAdminQuestionUpdate normalizes text, model answer and tags", () =
     chapter: "navigation_a",
     text: "old",
     model_answer: "old explain",
-    tags: ["navigation a"]
+    tags: ["navigation a"],
+    choices: [
+      { id: "a", label: "א", text: "one" },
+      { id: "b", label: "ב", text: "two" }
+    ],
+    correct_choice_id: "a"
   };
 
   const out = normalizeAdminQuestionUpdate(
@@ -24,6 +29,40 @@ test("normalizeAdminQuestionUpdate normalizes text, model answer and tags", () =
   assert.equal(out.text, "Updated text");
   assert.equal(out.model_answer, "Updated explanation");
   assert.deepEqual(out.tags, ["navigation a", "seamanship"]);
+  assert.deepEqual(out.choices, [
+    { id: "a", label: "א", text: "one", image_ref: null, image_storage_path: null },
+    { id: "b", label: "ב", text: "two", image_ref: null, image_storage_path: null }
+  ]);
+  assert.equal(out.correct_choice_id, "a");
+});
+
+test("normalizeAdminQuestionUpdate validates mcq correct choice id", () => {
+  const existing = {
+    id: "sq1-q002",
+    type: "mcq",
+    text: "q",
+    choices: [
+      { id: "a", label: "א", text: "one" },
+      { id: "b", label: "ב", text: "two" }
+    ],
+    correct_choice_id: "a"
+  };
+
+  assert.throws(
+    () =>
+      normalizeAdminQuestionUpdate(
+        {
+          text: "q",
+          choices: [
+            { id: "a", text: "first" },
+            { id: "b", text: "second" }
+          ],
+          correct_choice_id: "c"
+        },
+        existing
+      ),
+    /must match/i
+  );
 });
 
 test("normalizeAdminQuestionUpdate normalizes open-text sub questions", () => {

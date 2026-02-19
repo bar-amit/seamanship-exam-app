@@ -9,6 +9,13 @@ function normalizeText(value) {
   return String(value ?? "").trim();
 }
 
+function toStoragePath(imageRef, storagePrefix = "question-assets") {
+  if (!imageRef) {
+    return null;
+  }
+  return `${storagePrefix}/${imageRef}`.replace(/\/+/g, "/");
+}
+
 function normalizeTagList(value, chapter) {
   let rawTags = [];
   if (Array.isArray(value)) {
@@ -68,6 +75,47 @@ function normalizeSubQuestions(subQuestions) {
   return out;
 }
 
+function normalizeChoiceId(value, index) {
+  const parsed = normalizeText(value).toLowerCase();
+  if (parsed) {
+    return parsed;
+  }
+  return String.fromCharCode("a".charCodeAt(0) + index);
+}
+
+function normalizeChoices(choices) {
+  const rows = Array.isArray(choices) ? choices : [];
+  const map = new Map();
+  let index = 0;
+
+  for (const row of rows) {
+    const text = normalizeText(row?.text);
+    const label = normalizeText(row?.label);
+    const imageRef = normalizeText(row?.image_ref);
+
+    // Ignore fully empty draft rows.
+    if (!text && !label && !normalizeText(row?.id) && !imageRef) {
+      continue;
+    }
+
+    if (!text) {
+      throw new Error("Each choice must include text.");
+    }
+
+    const id = normalizeChoiceId(row?.id, index);
+    index += 1;
+    map.set(id, {
+      id,
+      label: label || id.toUpperCase(),
+      text,
+      image_ref: imageRef || null,
+      image_storage_path: imageRef ? toStoragePath(imageRef) : null
+    });
+  }
+
+  return Array.from(map.values());
+}
+
 export function normalizeAdminQuestionUpdate(input, existingQuestion) {
   const text = normalizeText(input?.text ?? existingQuestion?.text);
   if (!text) {
@@ -90,6 +138,26 @@ export function normalizeAdminQuestionUpdate(input, existingQuestion) {
       throw new Error("Open-text question requires at least one sub-question.");
     }
     update.sub_questions = subQuestions;
+  }
+
+  if (existingQuestion?.type === "mcq") {
+    const choices = normalizeChoices(input?.choices ?? existingQuestion?.choices ?? []);
+    if (choices.length < 2) {
+      throw new Error("MCQ requires at least two choices.");
+    }
+
+    const correctChoiceId = normalizeText(
+      input?.correct_choice_id ?? existingQuestion?.correct_choice_id
+    ).toLowerCase();
+    if (!correctChoiceId) {
+      throw new Error("Correct choice id is required.");
+    }
+    if (!choices.some((choice) => choice.id === correctChoiceId)) {
+      throw new Error("Correct choice id must match one of the choices.");
+    }
+
+    update.choices = choices;
+    update.correct_choice_id = correctChoiceId;
   }
 
   return update;

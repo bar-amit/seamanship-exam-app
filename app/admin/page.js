@@ -32,7 +32,7 @@ function parseTags(tags) {
 export default function AdminPage() {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(20);
+  const [pageSize, setPageSize] = useState(5);
   const [total, setTotal] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
   const [isLoadingList, setIsLoadingList] = useState(false);
@@ -247,9 +247,9 @@ export default function AdminPage() {
                 fetchList(query, 1, nextSize);
               }}
             >
+              <option value={5}>5</option>
               <option value={10}>10</option>
               <option value={20}>20</option>
-              <option value={50}>50</option>
             </select>
           </label>
           <span className="muted">
@@ -273,15 +273,17 @@ export default function AdminPage() {
 
         <div className="review-list">
           {questions.map((q) => (
-            <article key={q.id} className="review-item">
+            <article key={q.id} className="review-item admin-search-item">
               <button
                 type="button"
-                className={`navigator-dot ${selectedId === q.id ? "status-current" : "status-unanswered"}`}
+                className={`navigator-dot admin-result-id ${
+                  selectedId === q.id ? "status-current" : "status-unanswered"
+                }`}
                 onClick={() => setSelectedId(q.id)}
               >
                 {q.id}
               </button>
-              <p className="muted">{q.text_preview || "-"}</p>
+              <p className="muted admin-result-preview">{q.text_preview || "-"}</p>
             </article>
           ))}
           {!isLoadingList && questions.length === 0 && <p className="muted">לא נמצאו תוצאות.</p>}

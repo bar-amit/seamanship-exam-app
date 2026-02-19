@@ -171,6 +171,27 @@ main {
   padding: 12px;
 }
 
+.admin-search-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+.admin-result-id {
+  min-width: 112px;
+  max-width: 112px;
+  padding: 6px 8px;
+}
+
+.admin-result-preview {
+  margin: 0;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .review-status {
   margin: 0 0 8px;
   font-size: 0.9rem;

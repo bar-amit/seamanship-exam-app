@@ -7,6 +7,7 @@ import {
   scoreQuestion,
   scoreSession
 } from "../../src/lib/practice/session.js";
+import StorageImage from "../../src/components/storage-image.js";
 
 function formatSeconds(totalSeconds) {
   const safe = Math.max(0, totalSeconds);
@@ -176,6 +177,12 @@ export default function PracticePage() {
               {timed && <strong>זמן נותר: {formatSeconds(timeLeft)}</strong>}
             </div>
             <p>{currentQuestion.text}</p>
+            <StorageImage
+              imageStoragePath={currentQuestion.image_storage_path}
+              imageRef={currentQuestion.image_ref}
+              alt={`תמונה לשאלה ${currentQuestion.id}`}
+              className="question-image"
+            />
 
             {currentQuestion.type === "mcq" && (
               <div className="choices-list">
@@ -190,6 +197,12 @@ export default function PracticePage() {
                     <span>
                       {choice.label}. {choice.text}
                     </span>
+                    <StorageImage
+                      imageStoragePath={choice.image_storage_path}
+                      imageRef={choice.image_ref}
+                      alt={`תמונה לאפשרות ${choice.label}`}
+                      className="choice-image"
+                    />
                   </label>
                 ))}
               </div>
@@ -256,6 +269,12 @@ export default function PracticePage() {
                   <h3>
                     {idx + 1}. {q.text}
                   </h3>
+                  <StorageImage
+                    imageStoragePath={q.image_storage_path}
+                    imageRef={q.image_ref}
+                    alt={`תמונה לשאלה ${q.id}`}
+                    className="question-image"
+                  />
                   <p>תגיות: {(q.tags ?? []).join(", ") || "-"}</p>
                   <p>ציון לשאלה: {perQuestionScore.toFixed(1)}%</p>
 

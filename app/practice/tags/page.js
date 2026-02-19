@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { CHAPTER_TAG_OPTIONS, normalizeSelectedTags } from "../../../src/lib/practice/tags.js";
 import { scoreQuestion } from "../../../src/lib/practice/session.js";
+import StorageImage from "../../../src/components/storage-image.js";
 
 function createResponse(question) {
   if (question.type === "open_text") {
@@ -185,6 +186,12 @@ export default function TagPracticePage() {
             </label>
 
             <p>{currentQuestion.text}</p>
+            <StorageImage
+              imageStoragePath={currentQuestion.image_storage_path}
+              imageRef={currentQuestion.image_ref}
+              alt={`תמונה לשאלה ${currentQuestion.id}`}
+              className="question-image"
+            />
 
             {currentQuestion.type === "mcq" && (
               <div className="choices-list">
@@ -199,6 +206,12 @@ export default function TagPracticePage() {
                     <span>
                       {choice.label}. {choice.text}
                     </span>
+                    <StorageImage
+                      imageStoragePath={choice.image_storage_path}
+                      imageRef={choice.image_ref}
+                      alt={`תמונה לאפשרות ${choice.label}`}
+                      className="choice-image"
+                    />
                   </label>
                 ))}
               </div>
@@ -236,12 +249,28 @@ export default function TagPracticePage() {
 
             {(showStudyAids || currentResponse?.revealed) && (
               <div className="review-item">
+                <StorageImage
+                  imageStoragePath={currentQuestion.image_storage_path}
+                  imageRef={currentQuestion.image_ref}
+                  alt={`תמונה לשאלה ${currentQuestion.id}`}
+                  className="question-image"
+                />
                 <p>
                   <strong>תשובה נכונה:</strong>{" "}
                   {currentQuestion.type === "mcq"
                     ? currentQuestion.correct_choice_id
                     : "בדיקה עצמית לפי הסעיפים"}
                 </p>
+                {currentQuestion.type === "mcq" &&
+                  currentQuestion.choices?.map((choice) => (
+                    <StorageImage
+                      key={`${currentQuestion.id}-choice-${choice.id}`}
+                      imageStoragePath={choice.image_storage_path}
+                      imageRef={choice.image_ref}
+                      alt={`תמונה לאפשרות ${choice.label}`}
+                      className="choice-image"
+                    />
+                  ))}
                 {currentQuestion.model_answer && (
                   <>
                     <strong>הסבר:</strong>

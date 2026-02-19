@@ -144,6 +144,22 @@ main {
   padding: 12px;
 }
 
+.question-image {
+  width: 100%;
+  max-width: 560px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: block;
+}
+
+.choice-image {
+  width: 100%;
+  max-width: 260px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: block;
+}
+
 .error {
   color: #9d1f1f;
   margin: 0;

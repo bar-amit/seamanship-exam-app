@@ -16,6 +16,7 @@ test("protected user path redirects when unauthenticated", () => {
   const decision = evaluateAccess({
     pathname: "/dashboard",
     userEmail: null,
+    hasSession: false,
     allowlistRaw: "admin@example.com"
   });
 
@@ -26,6 +27,7 @@ test("protected user path allows signed-in user", () => {
   const decision = evaluateAccess({
     pathname: "/dashboard",
     userEmail: "user@example.com",
+    hasSession: true,
     allowlistRaw: "admin@example.com"
   });
 
@@ -36,6 +38,7 @@ test("admin path redirects signed-in user not in allowlist", () => {
   const decision = evaluateAccess({
     pathname: "/admin",
     userEmail: "user@example.com",
+    hasSession: true,
     allowlistRaw: "admin@example.com"
   });
 
@@ -46,8 +49,20 @@ test("admin path allows allowlisted user", () => {
   const decision = evaluateAccess({
     pathname: "/admin",
     userEmail: "admin@example.com",
+    hasSession: true,
     allowlistRaw: "admin@example.com"
   });
 
   assert.deepEqual(decision, { action: "next" });
+});
+
+test("protected path redirects when user_email exists but session cookie missing", () => {
+  const decision = evaluateAccess({
+    pathname: "/collections",
+    userEmail: "user@example.com",
+    hasSession: false,
+    allowlistRaw: "admin@example.com"
+  });
+
+  assert.deepEqual(decision, { action: "redirect", destination: "/" });
 });

@@ -19,3 +19,5 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 /coverage
+/playwright-report
+/test-results

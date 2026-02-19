@@ -29,6 +29,25 @@ This repository now includes Phase 1 MVP foundation:
 3. Run tests: `npm test`
 4. Run dev server: `npm run dev`
 
+## E2E Tests (Phase 5 Prep)
+
+Playwright E2E scenarios are under `e2e/` and cover:
+
+- Anonymous practice flow
+- Authenticated collections/progress flow
+- Admin editor flow
+- Review flow controls
+
+Setup once:
+
+1. `npm install`
+2. `npx playwright install --with-deps chromium`
+
+Run E2E:
+
+- Headless: `npm run test:e2e`
+- Headed: `npm run test:e2e:headed`
+
 ## Phase 2 Import Commands
 
 - Dry-run (no uploads, no Firestore writes):  

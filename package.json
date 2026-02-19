@@ -8,8 +8,13 @@
     "build": "next build",
     "start": "next start",
     "test": "node --test",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
     "import:phase2:dry": "node --env-file=.env.local scripts/import-phase2.js --dry-run --skip-upload --skip-firestore",
     "import:phase2": "node --env-file=.env.local scripts/import-phase2.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
   },
   "dependencies": {
     "firebase": "^11.1.0",

@@ -12,6 +12,7 @@ Related:
 
 - Long-term product plan: `docs/product-plan.md`
 - Decision history: `docs/decision-log.md`
+- Staging execution checklist: `docs/staging-prerequisites.md`
 
 ## In Scope (MVP)
 
@@ -107,7 +108,7 @@ Implementation status (current):
 - [x] Per-tag progress persistence API and protected progress page
 - [x] Dashboard summary for collections and per-tag accuracy
 - [x] Admin editor with paginated search, preview, MCQ/open-text editing, JSON toggles
-- [ ] Google sign-in/sign-out UI flow (client + session cookie wiring)
+- [x] Google sign-in/sign-out UI flow (client + session cookie wiring)
 
 ### Phase 5: Quality and Release
 

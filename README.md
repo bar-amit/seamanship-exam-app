@@ -48,6 +48,12 @@ Run E2E:
 - Headless: `npm run test:e2e`
 - Headed: `npm run test:e2e:headed`
 
+## Staging Prerequisites
+
+- Execution checklist: `docs/staging-prerequisites.md`
+- Env template: `.env.staging.example`
+- Validate staging env locally: `npm run validate:env:staging`
+
 ## Phase 2 Import Commands
 
 - Dry-run (no uploads, no Firestore writes):  

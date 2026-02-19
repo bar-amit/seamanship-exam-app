@@ -2,11 +2,28 @@
 
 import { useEffect, useState } from "react";
 
+function idsToDraft(ids) {
+  return Array.isArray(ids) ? ids.join(", ") : "";
+}
+
+function parseIds(draft) {
+  return Array.from(
+    new Set(
+      String(draft ?? "")
+        .split(",")
+        .map((id) => id.trim())
+        .filter(Boolean)
+    )
+  );
+}
+
 export default function CollectionsPage() {
   const [collections, setCollections] = useState([]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [saveBusyId, setSaveBusyId] = useState("");
+  const [editById, setEditById] = useState({});
   const [error, setError] = useState("");
 
   async function fetchCollections() {
@@ -18,7 +35,21 @@ export default function CollectionsPage() {
       if (!res.ok || !data.ok) {
         throw new Error(data.error || "Failed to fetch collections");
       }
-      setCollections(data.collections);
+      const rows = data.collections ?? [];
+      setCollections(rows);
+      setEditById((prev) => {
+        const next = { ...prev };
+        for (const col of rows) {
+          if (!next[col.id]) {
+            next[col.id] = {
+              name: col.name ?? "",
+              description: col.description ?? "",
+              questionIds: idsToDraft(col.question_ids)
+            };
+          }
+        }
+        return next;
+      });
     } catch (err) {
       setError(err.message);
     } finally {
@@ -65,6 +96,46 @@ export default function CollectionsPage() {
     }
   }
 
+  function updateDraft(id, field, value) {
+    setEditById((prev) => ({
+      ...prev,
+      [id]: {
+        ...(prev[id] ?? { name: "", description: "", questionIds: "" }),
+        [field]: value
+      }
+    }));
+  }
+
+  async function saveCollection(id) {
+    const draft = editById[id];
+    if (!draft) {
+      return;
+    }
+
+    setSaveBusyId(id);
+    setError("");
+    try {
+      const res = await fetch(`/api/collections/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: draft.name,
+          description: draft.description,
+          questionIds: parseIds(draft.questionIds)
+        })
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || "Failed to update collection");
+      }
+      await fetchCollections();
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setSaveBusyId("");
+    }
+  }
+
   return (
     <main>
       <section className="card">
@@ -98,9 +169,38 @@ export default function CollectionsPage() {
               <h3>{col.name}</h3>
               <p className="muted">{col.description || "ללא תיאור"}</p>
               <p>מספר שאלות: {(col.question_ids ?? []).length}</p>
-              <button type="button" onClick={() => removeCollection(col.id)}>
-                מחק אוסף
-              </button>
+              <label>
+                שם אוסף
+                <input
+                  value={editById[col.id]?.name ?? ""}
+                  onChange={(e) => updateDraft(col.id, "name", e.target.value)}
+                />
+              </label>
+              <label>
+                תיאור
+                <textarea
+                  rows={2}
+                  value={editById[col.id]?.description ?? ""}
+                  onChange={(e) => updateDraft(col.id, "description", e.target.value)}
+                />
+              </label>
+              <label>
+                מזהי שאלות (פסיקים)
+                <textarea
+                  rows={2}
+                  value={editById[col.id]?.questionIds ?? ""}
+                  onChange={(e) => updateDraft(col.id, "questionIds", e.target.value)}
+                  placeholder="לדוגמה: sq1-q001, sq3-q084"
+                />
+              </label>
+              <div className="practice-actions">
+                <button type="button" onClick={() => saveCollection(col.id)} disabled={saveBusyId === col.id}>
+                  {saveBusyId === col.id ? "שומר..." : "שמור"}
+                </button>
+                <button type="button" onClick={() => removeCollection(col.id)}>
+                  מחק אוסף
+                </button>
+              </div>
             </article>
           ))}
         </div>

@@ -10,6 +10,8 @@ import {
   saveTagPracticeSession
 } from "../../../src/lib/practice/persistence.js";
 import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
+import ReviewSummary from "../../../src/components/practice/review-summary.js";
+import ReviewStatusBadge from "../../../src/components/practice/review-status-badge.js";
 
 function createResponse(question) {
   if (question.type === "open_text") {
@@ -298,6 +300,7 @@ export default function TagPracticePage() {
 
             {(showStudyAids || currentResponse?.revealed) && (
               <div className="review-item">
+                <ReviewStatusBadge status={getReviewStatus(currentQuestion, currentResponse)} />
                 <p>
                   <strong>תשובה נכונה:</strong>{" "}
                   {currentQuestion.type === "mcq"
@@ -336,13 +339,7 @@ export default function TagPracticePage() {
                 );
               })}
             </div>
-            <div className="review-summary">
-              <span>נכונות: {reviewSummary.correct}</span>
-              <span>חלקיות: {reviewSummary.partial}</span>
-              <span>שגויות: {reviewSummary.incorrect}</span>
-              <span>דילוגים: {reviewSummary.skipped}</span>
-              <span>ללא מענה: {reviewSummary.unanswered}</span>
-            </div>
+            <ReviewSummary summary={reviewSummary} />
             <p>
               ניקוד ממוצע: <strong>{averageReviewedScore.toFixed(1)}%</strong>
             </p>

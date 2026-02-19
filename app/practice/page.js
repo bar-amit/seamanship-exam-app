@@ -18,6 +18,9 @@ import {
   savePracticeTestSession
 } from "../../src/lib/practice/persistence.js";
 import ClickableStorageImage from "../../src/components/clickable-storage-image.js";
+import ReviewSummary from "../../src/components/practice/review-summary.js";
+import ReviewControls from "../../src/components/practice/review-controls.js";
+import ReviewStatusBadge from "../../src/components/practice/review-status-badge.js";
 
 function formatSeconds(totalSeconds) {
   const safe = Math.max(0, totalSeconds);
@@ -370,34 +373,13 @@ export default function PracticePage() {
           <p>
             ציון סופי: <strong>{overallScore.toFixed(1)}%</strong>
           </p>
-          {reviewSummary && (
-            <div className="review-summary">
-              <span>נכונות: {reviewSummary.correct}</span>
-              <span>חלקיות: {reviewSummary.partial}</span>
-              <span>שגויות: {reviewSummary.incorrect}</span>
-              <span>דילוגים: {reviewSummary.skipped}</span>
-              <span>ללא מענה: {reviewSummary.unanswered}</span>
-            </div>
-          )}
-          <div className="review-controls">
-            <label>
-              סינון
-              <select value={reviewFilter} onChange={(e) => setReviewFilter(e.target.value)}>
-                <option value="all">הכל</option>
-                <option value="mistakes">טעויות וחלקיות</option>
-                <option value="skipped">דילוגים</option>
-                <option value="correct">נכונות</option>
-              </select>
-            </label>
-            <label className="practice-inline">
-              <input
-                type="checkbox"
-                checked={showExplanations}
-                onChange={(e) => setShowExplanations(e.target.checked)}
-              />
-              הצג הסברים
-            </label>
-          </div>
+          <ReviewSummary summary={reviewSummary} />
+          <ReviewControls
+            reviewFilter={reviewFilter}
+            setReviewFilter={setReviewFilter}
+            showExplanations={showExplanations}
+            setShowExplanations={setShowExplanations}
+          />
           <div className="review-list">
             {reviewIndexes.map((idx) => {
               const q = questions[idx];
@@ -407,7 +389,7 @@ export default function PracticePage() {
               const reviewStatus = getReviewStatus(q, response);
               return (
                 <article key={q.id} className="review-item">
-                  <p className="muted">סטטוס: {reviewStatus}</p>
+                  <ReviewStatusBadge status={reviewStatus} />
                   <div className="prompt-row">
                     <h3>
                       {idx + 1}. {q.text}

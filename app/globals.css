@@ -132,6 +132,10 @@ main {
   background: #ffe8c9;
 }
 
+.status-partial {
+  background: #fff3c6;
+}
+
 .status-current {
   background: #d2e8ff;
   border-color: #6ca5de;
@@ -165,6 +169,11 @@ main {
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 12px;
+}
+
+.review-status {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
 }
 
 .question-image {

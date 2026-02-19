@@ -17,6 +17,7 @@ import {
   loadPracticeTestSession,
   savePracticeTestSession
 } from "../../src/lib/practice/persistence.js";
+import { buildPracticeTestSummary, pushTestSummary } from "../../src/lib/practice/analytics.js";
 import ClickableStorageImage from "../../src/components/clickable-storage-image.js";
 import ReviewSummary from "../../src/components/practice/review-summary.js";
 import ReviewControls from "../../src/components/practice/review-controls.js";
@@ -58,6 +59,8 @@ export default function PracticePage() {
   const [hydrated, setHydrated] = useState(false);
   const [reviewFilter, setReviewFilter] = useState("all");
   const [showExplanations, setShowExplanations] = useState(true);
+  const [sessionStartedAt, setSessionStartedAt] = useState(null);
+  const [summarySaved, setSummarySaved] = useState(false);
 
   const currentQuestion = questions[currentIndex];
   const currentResponse = responses[currentIndex];
@@ -92,6 +95,7 @@ export default function PracticePage() {
         Math.max(0, Math.min(restored.currentIndex, Math.max(0, restored.questions.length - 1)))
       );
       setTimeLeft(Math.max(0, restored.timeLeft));
+      setSessionStartedAt(restored.sessionStartedAt ?? Date.now());
     }
     setHydrated(true);
   }, []);
@@ -109,7 +113,8 @@ export default function PracticePage() {
         questions,
         responses,
         currentIndex,
-        timeLeft
+        timeLeft,
+        sessionStartedAt
       });
     }, 150);
     return () => clearTimeout(timer);
@@ -122,8 +127,25 @@ export default function PracticePage() {
     questions,
     responses,
     currentIndex,
-    timeLeft
+    timeLeft,
+    sessionStartedAt
   ]);
+
+  useEffect(() => {
+    if (!hydrated || phase !== "review" || summarySaved || typeof window === "undefined") {
+      return;
+    }
+    const startedAt = sessionStartedAt ?? Date.now();
+    const endedAt = Date.now();
+    const summary = buildPracticeTestSummary({
+      questions,
+      responses,
+      startedAt,
+      endedAt
+    });
+    pushTestSummary(window.localStorage, summary);
+    setSummarySaved(true);
+  }, [hydrated, phase, summarySaved, questions, responses, sessionStartedAt]);
 
   const overallScore = useMemo(() => {
     if (phase !== "review") {
@@ -170,6 +192,8 @@ export default function PracticePage() {
       setResponses(data.questions.map((q) => setupResponse(q)));
       setCurrentIndex(0);
       setTimeLeft(questionCount * safeMinutes * 60);
+      setSessionStartedAt(Date.now());
+      setSummarySaved(false);
       setPhase("active");
     } catch (err) {
       setError(err.message);
@@ -221,6 +245,8 @@ export default function PracticePage() {
     setTimeLeft(0);
     setError("");
     setMinutesHint("");
+    setSessionStartedAt(null);
+    setSummarySaved(false);
     if (typeof window !== "undefined") {
       clearPersistedPracticeTest(window.localStorage);
     }

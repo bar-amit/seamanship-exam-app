@@ -44,7 +44,8 @@ export function savePracticeTestSession(storage, state, nowMs = Date.now()) {
     questions: state.questions,
     responses: state.responses,
     currentIndex: state.currentIndex,
-    timeLeft: state.timeLeft
+    timeLeft: state.timeLeft,
+    sessionStartedAt: state.sessionStartedAt ?? null
   };
 
   if (state.timed && state.phase === "active") {
@@ -83,7 +84,8 @@ export function loadPracticeTestSession(storage, nowMs = Date.now(), maxAgeMs = 
     questions: Array.isArray(parsed.questions) ? parsed.questions : [],
     responses: Array.isArray(parsed.responses) ? parsed.responses : [],
     currentIndex: Number(parsed.currentIndex ?? 0),
-    timeLeft: Number(parsed.timeLeft ?? 0)
+    timeLeft: Number(parsed.timeLeft ?? 0),
+    sessionStartedAt: parsed.sessionStartedAt ?? null
   };
 
   if (restored.timed && restored.phase === "active" && typeof parsed.endsAt === "number") {

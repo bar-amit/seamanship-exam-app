@@ -9,6 +9,10 @@ import {
   loadTagPracticeSession,
   saveTagPracticeSession
 } from "../../../src/lib/practice/persistence.js";
+import {
+  buildTagProgressSnapshot,
+  saveTagProgressSnapshot
+} from "../../../src/lib/practice/analytics.js";
 import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
 import ReviewSummary from "../../../src/components/practice/review-summary.js";
 import ReviewStatusBadge from "../../../src/components/practice/review-status-badge.js";
@@ -89,6 +93,21 @@ export default function TagPracticePage() {
     }, 150);
     return () => clearTimeout(timer);
   }, [hydrated, selectedTags, count, showStudyAids, questions, responses, currentIndex]);
+
+  useEffect(() => {
+    if (!hydrated || typeof window === "undefined") {
+      return;
+    }
+    const timer = setTimeout(() => {
+      const snapshot = buildTagProgressSnapshot({
+        questions,
+        responses,
+        selectedTags
+      });
+      saveTagProgressSnapshot(window.localStorage, snapshot);
+    }, 250);
+    return () => clearTimeout(timer);
+  }, [hydrated, questions, responses, selectedTags]);
 
   function toggleTag(tagId) {
     setSelectedTags((prev) =>

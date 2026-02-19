@@ -12,6 +12,12 @@ export default function HomePage() {
         <p>
           <a href="/practice/tags">תרגול לפי תגית</a>
         </p>
+        <p>
+          <a href="/collections">האוספים שלי</a>
+        </p>
+        <p>
+          <a href="/progress">התקדמות</a>
+        </p>
       </section>
     </main>
   );

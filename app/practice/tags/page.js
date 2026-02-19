@@ -58,6 +58,15 @@ export default function TagPracticePage() {
     () => buildReviewSummary(questions, responses),
     [questions, responses]
   );
+  const progressSnapshot = useMemo(
+    () =>
+      buildTagProgressSnapshot({
+        questions,
+        responses,
+        selectedTags
+      }),
+    [questions, responses, selectedTags]
+  );
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -99,15 +108,31 @@ export default function TagPracticePage() {
       return;
     }
     const timer = setTimeout(() => {
-      const snapshot = buildTagProgressSnapshot({
-        questions,
-        responses,
-        selectedTags
-      });
-      saveTagProgressSnapshot(window.localStorage, snapshot);
+      saveTagProgressSnapshot(window.localStorage, progressSnapshot);
     }, 250);
     return () => clearTimeout(timer);
-  }, [hydrated, questions, responses, selectedTags]);
+  }, [hydrated, progressSnapshot]);
+
+  useEffect(() => {
+    if (!hydrated) {
+      return;
+    }
+
+    // Best-effort server sync for authenticated users.
+    const timer = setTimeout(async () => {
+      try {
+        await fetch("/api/progress/tag", {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(progressSnapshot)
+        });
+      } catch {
+        // Ignore sync errors during practice; local snapshot remains source of truth.
+      }
+    }, 900);
+
+    return () => clearTimeout(timer);
+  }, [hydrated, progressSnapshot]);
 
   function toggleTag(tagId) {
     setSelectedTags((prev) =>

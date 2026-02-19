@@ -103,7 +103,11 @@ main {
 .choice-item {
   display: flex;
   gap: 8px;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.choice-text {
+  flex: 1;
 }
 
 .navigator-grid {
@@ -158,6 +162,26 @@ main {
   border: 1px solid var(--line);
   border-radius: 8px;
   display: block;
+}
+
+.inline-thumb {
+  width: 84px;
+  min-width: 84px;
+  max-width: 84px;
+  height: 56px;
+  object-fit: cover;
+}
+
+.prompt-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prompt-row p,
+.prompt-row h3 {
+  margin: 0;
+  flex: 1;
 }
 
 .error {

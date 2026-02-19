@@ -176,13 +176,15 @@ export default function PracticePage() {
               </strong>
               {timed && <strong>זמן נותר: {formatSeconds(timeLeft)}</strong>}
             </div>
-            <p>{currentQuestion.text}</p>
-            <StorageImage
-              imageStoragePath={currentQuestion.image_storage_path}
-              imageRef={currentQuestion.image_ref}
-              alt={`תמונה לשאלה ${currentQuestion.id}`}
-              className="question-image"
-            />
+            <div className="prompt-row">
+              <p>{currentQuestion.text}</p>
+              <StorageImage
+                imageStoragePath={currentQuestion.image_storage_path}
+                imageRef={currentQuestion.image_ref}
+                alt={`תמונה לשאלה ${currentQuestion.id}`}
+                className="question-image inline-thumb"
+              />
+            </div>
 
             {currentQuestion.type === "mcq" && (
               <div className="choices-list">
@@ -194,14 +196,14 @@ export default function PracticePage() {
                       checked={currentResponse?.choiceId === choice.id}
                       onChange={() => updateCurrentResponse({ choiceId: choice.id, skipped: false })}
                     />
-                    <span>
+                    <span className="choice-text">
                       {choice.label}. {choice.text}
                     </span>
                     <StorageImage
                       imageStoragePath={choice.image_storage_path}
                       imageRef={choice.image_ref}
                       alt={`תמונה לאפשרות ${choice.label}`}
-                      className="choice-image"
+                      className="choice-image inline-thumb"
                     />
                   </label>
                 ))}
@@ -266,15 +268,17 @@ export default function PracticePage() {
               const perQuestionScore = scoreQuestion(q, response);
               return (
                 <article key={q.id} className="review-item">
-                  <h3>
-                    {idx + 1}. {q.text}
-                  </h3>
-                  <StorageImage
-                    imageStoragePath={q.image_storage_path}
-                    imageRef={q.image_ref}
-                    alt={`תמונה לשאלה ${q.id}`}
-                    className="question-image"
-                  />
+                  <div className="prompt-row">
+                    <h3>
+                      {idx + 1}. {q.text}
+                    </h3>
+                    <StorageImage
+                      imageStoragePath={q.image_storage_path}
+                      imageRef={q.image_ref}
+                      alt={`תמונה לשאלה ${q.id}`}
+                      className="question-image inline-thumb"
+                    />
+                  </div>
                   <p>תגיות: {(q.tags ?? []).join(", ") || "-"}</p>
                   <p>ציון לשאלה: {perQuestionScore.toFixed(1)}%</p>
 
@@ -282,6 +286,15 @@ export default function PracticePage() {
                     <>
                       <p>התשובת שלך: {response?.choiceId || "לא נענה"}</p>
                       {attempted && <p>התשובה הנכונה: {q.correct_choice_id}</p>}
+                      {q.choices?.map((choice) => (
+                        <StorageImage
+                          key={`${q.id}-review-choice-${choice.id}`}
+                          imageStoragePath={choice.image_storage_path}
+                          imageRef={choice.image_ref}
+                          alt={`תמונה לאפשרות ${choice.label}`}
+                          className="choice-image inline-thumb"
+                        />
+                      ))}
                     </>
                   )}
 

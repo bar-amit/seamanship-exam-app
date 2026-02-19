@@ -185,13 +185,15 @@ export default function TagPracticePage() {
               הצג עזרי לימוד
             </label>
 
-            <p>{currentQuestion.text}</p>
-            <StorageImage
-              imageStoragePath={currentQuestion.image_storage_path}
-              imageRef={currentQuestion.image_ref}
-              alt={`תמונה לשאלה ${currentQuestion.id}`}
-              className="question-image"
-            />
+            <div className="prompt-row">
+              <p>{currentQuestion.text}</p>
+              <StorageImage
+                imageStoragePath={currentQuestion.image_storage_path}
+                imageRef={currentQuestion.image_ref}
+                alt={`תמונה לשאלה ${currentQuestion.id}`}
+                className="question-image inline-thumb"
+              />
+            </div>
 
             {currentQuestion.type === "mcq" && (
               <div className="choices-list">
@@ -203,14 +205,14 @@ export default function TagPracticePage() {
                       checked={currentResponse?.choiceId === choice.id}
                       onChange={() => updateCurrentResponse({ choiceId: choice.id, skipped: false })}
                     />
-                    <span>
+                    <span className="choice-text">
                       {choice.label}. {choice.text}
                     </span>
                     <StorageImage
                       imageStoragePath={choice.image_storage_path}
                       imageRef={choice.image_ref}
                       alt={`תמונה לאפשרות ${choice.label}`}
-                      className="choice-image"
+                      className="choice-image inline-thumb"
                     />
                   </label>
                 ))}
@@ -249,28 +251,12 @@ export default function TagPracticePage() {
 
             {(showStudyAids || currentResponse?.revealed) && (
               <div className="review-item">
-                <StorageImage
-                  imageStoragePath={currentQuestion.image_storage_path}
-                  imageRef={currentQuestion.image_ref}
-                  alt={`תמונה לשאלה ${currentQuestion.id}`}
-                  className="question-image"
-                />
                 <p>
                   <strong>תשובה נכונה:</strong>{" "}
                   {currentQuestion.type === "mcq"
                     ? currentQuestion.correct_choice_id
                     : "בדיקה עצמית לפי הסעיפים"}
                 </p>
-                {currentQuestion.type === "mcq" &&
-                  currentQuestion.choices?.map((choice) => (
-                    <StorageImage
-                      key={`${currentQuestion.id}-choice-${choice.id}`}
-                      imageStoragePath={choice.image_storage_path}
-                      imageRef={choice.image_ref}
-                      alt={`תמונה לאפשרות ${choice.label}`}
-                      className="choice-image"
-                    />
-                  ))}
                 {currentQuestion.model_answer && (
                   <>
                     <strong>הסבר:</strong>

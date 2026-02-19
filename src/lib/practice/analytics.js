@@ -73,16 +73,22 @@ export function saveTagProgressSnapshot(storage, snapshot) {
 }
 
 export function buildTagProgressSnapshot({ questions, responses, selectedTags }) {
+  const reviewedItems = questions
+    .map((q, idx) => ({ q, r: responses[idx] }))
+    .filter((item) => item.r?.revealed || item.r?.skipped);
+
+  const reviewedAverage =
+    reviewedItems.length > 0
+      ? reviewedItems.reduce((sum, item) => sum + scoreQuestion(item.q, item.r), 0) / reviewedItems.length
+      : 0;
+
   return {
     mode: "tag_practice",
     savedAt: Date.now(),
     selectedTags: selectedTags ?? [],
     questionCount: questions.length,
-    reviewedCount: responses.filter((r) => r?.revealed || r?.skipped).length,
-    averageReviewedScore:
-      questions.length > 0
-        ? questions.reduce((sum, q, idx) => sum + scoreQuestion(q, responses[idx]), 0) / questions.length
-        : 0,
+    reviewedCount: reviewedItems.length,
+    averageReviewedScore: reviewedAverage,
     perTag: buildTagStats(questions, responses)
   };
 }

@@ -37,6 +37,23 @@ function clampMinutes(value) {
   return Math.min(20, Math.max(1, Math.round(value)));
 }
 
+function normalizeQuestionCount(value) {
+  const allowed = [5, 10, 20];
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed)) {
+    return 10;
+  }
+  if (allowed.includes(parsed)) {
+    return parsed;
+  }
+  // Choose nearest supported option.
+  return allowed.reduce(
+    (closest, current) =>
+      Math.abs(current - parsed) < Math.abs(closest - parsed) ? current : closest,
+    allowed[0]
+  );
+}
+
 function setupResponse(question) {
   if (question.type === "open_text") {
     return { text: "", subGrades: {}, skipped: false };
@@ -86,7 +103,7 @@ export default function PracticePage() {
     const restored = loadPracticeTestSession(window.localStorage);
     if (restored) {
       setPhase(restored.phase);
-      setQuestionCount(clampMinutes(restored.questionCount));
+      setQuestionCount(normalizeQuestionCount(restored.questionCount));
       setTimed(restored.timed);
       setMinutesPerQuestion(clampMinutes(restored.minutesPerQuestion));
       setQuestions(restored.questions);
@@ -96,6 +113,9 @@ export default function PracticePage() {
       );
       setTimeLeft(Math.max(0, restored.timeLeft));
       setSessionStartedAt(restored.sessionStartedAt ?? Date.now());
+      if (restored.phase === "review") {
+        setSummarySaved(true);
+      }
     }
     setHydrated(true);
   }, []);

@@ -123,6 +123,14 @@ Implementation status (current):
 - Integration tests for Firestore rules, auth guards, and admin checks
 - End-to-end tests for anonymous flow, authenticated collections flow, admin flow, and review flow
 
+## Security Model (MVP)
+
+- Middleware is a UX gate for route navigation and fast redirects.
+- API routes are the authoritative security boundary.
+- Protected APIs must verify Firebase session cookie (`auth_session`) server-side on every request.
+- Admin APIs must enforce allowlist authorization using the verified email claim, not client-provided data.
+- `user_email` cookie is non-authoritative convenience metadata and must not be trusted for authorization decisions.
+
 ## Staging and Deployment
 
 ### Topology

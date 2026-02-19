@@ -173,3 +173,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Admin editor includes paginated search, text preview in result list, edit support for MCQ options/correct answer and open-text sub-questions, plus JSON toggles.
 - Reason: Keep moderation workflow usable on large datasets and make data-level edits auditable during QA.
 - Impact: Admin APIs support page/pageSize and editor sends structured patch payloads for both MCQ and open-text records.
+
+### 2026-02-19 - Authoritative Server-Side Session Verification
+
+- Status: `accepted`
+- Decision: Protected APIs verify Firebase `auth_session` cookie server-side for authentication; admin authorization uses allowlist against verified email claim.
+- Reason: Prevent cookie-tampering bypass where client-controlled metadata could influence authorization.
+- Impact: Middleware is treated as UX gating only; API handlers remain the source of truth for auth and authorization.

@@ -1,8 +1,13 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CHAPTER_TAG_OPTIONS, normalizeSelectedTags } from "../../../src/lib/practice/tags.js";
 import { scoreQuestion } from "../../../src/lib/practice/session.js";
+import {
+  clearPersistedTagPractice,
+  loadTagPracticeSession,
+  saveTagPracticeSession
+} from "../../../src/lib/practice/persistence.js";
 import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
 
 function createResponse(question) {
@@ -21,6 +26,7 @@ export default function TagPracticePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showStudyAids, setShowStudyAids] = useState(false);
   const [count, setCount] = useState(30);
+  const [hydrated, setHydrated] = useState(false);
 
   const currentQuestion = questions[currentIndex];
   const currentResponse = responses[currentIndex];
@@ -40,6 +46,41 @@ export default function TagPracticePage() {
     const total = reviewed.reduce((sum, item) => sum + scoreQuestion(item.q, item.r), 0);
     return total / reviewed.length;
   }, [questions, responses]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+    const restored = loadTagPracticeSession(window.localStorage);
+    if (restored) {
+      setSelectedTags(restored.selectedTags);
+      setCount(Math.max(5, Math.min(200, restored.count)));
+      setShowStudyAids(restored.showStudyAids);
+      setQuestions(restored.questions);
+      setResponses(restored.responses);
+      setCurrentIndex(
+        Math.max(0, Math.min(restored.currentIndex, Math.max(0, restored.questions.length - 1)))
+      );
+    }
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated || typeof window === "undefined") {
+      return;
+    }
+    const timer = setTimeout(() => {
+      saveTagPracticeSession(window.localStorage, {
+        selectedTags,
+        count,
+        showStudyAids,
+        questions,
+        responses,
+        currentIndex
+      });
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [hydrated, selectedTags, count, showStudyAids, questions, responses, currentIndex]);
 
   function toggleTag(tagId) {
     setSelectedTags((prev) =>

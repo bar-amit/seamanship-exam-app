@@ -7,6 +7,11 @@ import {
   scoreQuestion,
   scoreSession
 } from "../../src/lib/practice/session.js";
+import {
+  clearPersistedPracticeTest,
+  loadPracticeTestSession,
+  savePracticeTestSession
+} from "../../src/lib/practice/persistence.js";
 import ClickableStorageImage from "../../src/components/clickable-storage-image.js";
 
 function formatSeconds(totalSeconds) {
@@ -42,6 +47,7 @@ export default function PracticePage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [timeLeft, setTimeLeft] = useState(0);
+  const [hydrated, setHydrated] = useState(false);
 
   const currentQuestion = questions[currentIndex];
   const currentResponse = responses[currentIndex];
@@ -59,6 +65,55 @@ export default function PracticePage() {
     }, 1000);
     return () => clearInterval(timer);
   }, [phase, timed, timeLeft]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+    const restored = loadPracticeTestSession(window.localStorage);
+    if (restored) {
+      setPhase(restored.phase);
+      setQuestionCount(clampMinutes(restored.questionCount));
+      setTimed(restored.timed);
+      setMinutesPerQuestion(clampMinutes(restored.minutesPerQuestion));
+      setQuestions(restored.questions);
+      setResponses(restored.responses);
+      setCurrentIndex(
+        Math.max(0, Math.min(restored.currentIndex, Math.max(0, restored.questions.length - 1)))
+      );
+      setTimeLeft(Math.max(0, restored.timeLeft));
+    }
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated || typeof window === "undefined") {
+      return;
+    }
+    const timer = setTimeout(() => {
+      savePracticeTestSession(window.localStorage, {
+        phase,
+        questionCount,
+        timed,
+        minutesPerQuestion,
+        questions,
+        responses,
+        currentIndex,
+        timeLeft
+      });
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [
+    hydrated,
+    phase,
+    questionCount,
+    timed,
+    minutesPerQuestion,
+    questions,
+    responses,
+    currentIndex,
+    timeLeft
+  ]);
 
   const overallScore = useMemo(() => {
     if (phase !== "review") {
@@ -136,6 +191,10 @@ export default function PracticePage() {
     setCurrentIndex(0);
     setTimeLeft(0);
     setError("");
+    setMinutesHint("");
+    if (typeof window !== "undefined") {
+      clearPersistedPracticeTest(window.localStorage);
+    }
   }
 
   return (

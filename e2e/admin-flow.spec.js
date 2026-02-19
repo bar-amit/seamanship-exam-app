@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { mockAdminApi } from "./helpers/mock-routes.js";
+import { mockAdminApi, mockAuthSessionSyncNoop } from "./helpers/mock-routes.js";
 
 async function setAdminCookies(context) {
   await context.addCookies([
@@ -18,11 +18,12 @@ async function setAdminCookies(context) {
 
 test("admin can load editor, inspect json and save changes", async ({ context, page }) => {
   await setAdminCookies(context);
+  await mockAuthSessionSyncNoop(page);
   await mockAdminApi(page);
 
   await page.goto("/admin");
   await expect(page.getByRole("heading", { name: "ניהול תוכן" })).toBeVisible();
-  await expect(page.getByText("sq1-q001")).toBeVisible();
+  await expect(page.getByRole("button", { name: "sq1-q001" })).toBeVisible();
 
   await page.getByRole("button", { name: "sq1-q001" }).click();
   await page.getByLabel("טקסט שאלה").fill("טקסט חדש לשאלה");

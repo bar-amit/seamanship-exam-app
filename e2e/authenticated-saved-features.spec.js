@@ -1,5 +1,9 @@
 import { expect, test } from "@playwright/test";
-import { mockCollectionsApi, mockProgressApi } from "./helpers/mock-routes.js";
+import {
+  mockAuthSessionSyncNoop,
+  mockCollectionsApi,
+  mockProgressApi
+} from "./helpers/mock-routes.js";
 
 async function setUserCookies(context, email) {
   await context.addCookies([
@@ -18,6 +22,7 @@ async function setUserCookies(context, email) {
 
 test("authenticated user can access dashboard, collections and progress", async ({ context, page }) => {
   await setUserCookies(context, "tester@example.com");
+  await mockAuthSessionSyncNoop(page);
   await mockCollectionsApi(page);
   await mockProgressApi(page);
 

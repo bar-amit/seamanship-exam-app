@@ -27,6 +27,21 @@ export async function mockPracticeApi(page) {
   });
 }
 
+export async function mockAuthSessionSyncNoop(page) {
+  await page.route("**/api/auth/session", async (route) => {
+    const request = route.request();
+    if (request.method() === "POST") {
+      await fulfillJson(route, { ok: true, email: "tester@example.com" });
+      return;
+    }
+    if (request.method() === "DELETE") {
+      await fulfillJson(route, { ok: true });
+      return;
+    }
+    await fulfillJson(route, { ok: false, error: "Unsupported method" }, 405);
+  });
+}
+
 export async function mockCollectionsApi(page) {
   let collections = [...COLLECTIONS_FIXTURE];
 

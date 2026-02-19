@@ -16,9 +16,16 @@ function resolveStoragePath(imageStoragePath, imageRef) {
   return null;
 }
 
-export default function StorageImage({ imageStoragePath, imageRef, alt, className }) {
+export default function ClickableStorageImage({
+  imageStoragePath,
+  imageRef,
+  alt,
+  className,
+  modalAlt
+}) {
   const [url, setUrl] = useState("");
   const [failed, setFailed] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const path = resolveStoragePath(imageStoragePath, imageRef);
@@ -57,6 +64,19 @@ export default function StorageImage({ imageStoragePath, imageRef, alt, classNam
     };
   }, [imageStoragePath, imageRef]);
 
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen]);
+
   if (!imageStoragePath && !imageRef) {
     return null;
   }
@@ -65,5 +85,21 @@ export default function StorageImage({ imageStoragePath, imageRef, alt, classNam
     return <p className="muted">התמונה לא זמינה כרגע.</p>;
   }
 
-  return <img src={url} alt={alt} className={className} />;
+  return (
+    <>
+      <button type="button" className="image-button" onClick={() => setIsOpen(true)}>
+        <img src={url} alt={alt} className={className} />
+      </button>
+      {isOpen && (
+        <div className="image-modal-backdrop" onClick={() => setIsOpen(false)}>
+          <div className="image-modal" role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
+            <button type="button" className="image-modal-close" onClick={() => setIsOpen(false)}>
+              ×
+            </button>
+            <img src={url} alt={modalAlt || alt} className="image-modal-img" />
+          </div>
+        </div>
+      )}
+    </>
+  );
 }

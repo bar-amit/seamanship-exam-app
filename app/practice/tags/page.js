@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { CHAPTER_TAG_OPTIONS, normalizeSelectedTags } from "../../../src/lib/practice/tags.js";
 import { scoreQuestion } from "../../../src/lib/practice/session.js";
-import StorageImage from "../../../src/components/storage-image.js";
+import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
 
 function createResponse(question) {
   if (question.type === "open_text") {
@@ -187,7 +187,7 @@ export default function TagPracticePage() {
 
             <div className="prompt-row">
               <p>{currentQuestion.text}</p>
-              <StorageImage
+              <ClickableStorageImage
                 imageStoragePath={currentQuestion.image_storage_path}
                 imageRef={currentQuestion.image_ref}
                 alt={`תמונה לשאלה ${currentQuestion.id}`}
@@ -208,7 +208,7 @@ export default function TagPracticePage() {
                     <span className="choice-text">
                       {choice.label}. {choice.text}
                     </span>
-                    <StorageImage
+                    <ClickableStorageImage
                       imageStoragePath={choice.image_storage_path}
                       imageRef={choice.image_ref}
                       alt={`תמונה לאפשרות ${choice.label}`}

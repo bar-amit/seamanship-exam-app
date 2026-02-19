@@ -7,7 +7,7 @@ import {
   scoreQuestion,
   scoreSession
 } from "../../src/lib/practice/session.js";
-import StorageImage from "../../src/components/storage-image.js";
+import ClickableStorageImage from "../../src/components/clickable-storage-image.js";
 
 function formatSeconds(totalSeconds) {
   const safe = Math.max(0, totalSeconds);
@@ -178,7 +178,7 @@ export default function PracticePage() {
             </div>
             <div className="prompt-row">
               <p>{currentQuestion.text}</p>
-              <StorageImage
+              <ClickableStorageImage
                 imageStoragePath={currentQuestion.image_storage_path}
                 imageRef={currentQuestion.image_ref}
                 alt={`תמונה לשאלה ${currentQuestion.id}`}
@@ -199,7 +199,7 @@ export default function PracticePage() {
                     <span className="choice-text">
                       {choice.label}. {choice.text}
                     </span>
-                    <StorageImage
+                    <ClickableStorageImage
                       imageStoragePath={choice.image_storage_path}
                       imageRef={choice.image_ref}
                       alt={`תמונה לאפשרות ${choice.label}`}
@@ -272,7 +272,7 @@ export default function PracticePage() {
                     <h3>
                       {idx + 1}. {q.text}
                     </h3>
-                    <StorageImage
+                    <ClickableStorageImage
                       imageStoragePath={q.image_storage_path}
                       imageRef={q.image_ref}
                       alt={`תמונה לשאלה ${q.id}`}
@@ -287,7 +287,7 @@ export default function PracticePage() {
                       <p>התשובת שלך: {response?.choiceId || "לא נענה"}</p>
                       {attempted && <p>התשובה הנכונה: {q.correct_choice_id}</p>}
                       {q.choices?.map((choice) => (
-                        <StorageImage
+                        <ClickableStorageImage
                           key={`${q.id}-review-choice-${choice.id}`}
                           imageStoragePath={choice.image_storage_path}
                           imageRef={choice.image_ref}

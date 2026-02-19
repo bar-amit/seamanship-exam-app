@@ -184,6 +184,53 @@ main {
   flex: 1;
 }
 
+.image-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: zoom-in;
+  display: inline-flex;
+}
+
+.image-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.image-modal {
+  position: relative;
+  max-width: min(92vw, 980px);
+  max-height: 90vh;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid #d6dde0;
+  background: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.image-modal-img {
+  max-width: 100%;
+  max-height: 86vh;
+  border-radius: 10px;
+  border: 1px solid #d6dde0;
+  background: #fff;
+}
+
 .error {
   color: #9d1f1f;
   margin: 0;

@@ -13,17 +13,27 @@ export function requiresAuth(pathname) {
   );
 }
 
-export function canAccessPath({ pathname, userEmail, allowlistRaw = process.env.ADMIN_ALLOWLIST }) {
+export function canAccessPath({
+  pathname,
+  userEmail,
+  hasSession = Boolean(userEmail),
+  allowlistRaw = process.env.ADMIN_ALLOWLIST
+}) {
+
   if (!requiresAuth(pathname)) {
     return true;
   }
 
-  if (!userEmail) {
+  if (!hasSession) {
     return false;
   }
 
   if (!isAdminPath(pathname)) {
     return true;
+  }
+
+  if (!userEmail) {
+    return false;
   }
 
   const allowlist = parseAdminAllowlist(allowlistRaw);

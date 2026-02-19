@@ -1,33 +1,7 @@
 import { NextResponse } from "next/server";
 import { firebaseAdminDb } from "../../../../../src/lib/firebase/admin.js";
-import { getUserEmailFromRequest } from "../../../../../src/lib/auth/session.js";
-import {
-  parseAdminAllowlist,
-  isAllowlistedAdmin
-} from "../../../../../src/lib/auth/allowlist.js";
+import { authorizeAdminRequest } from "../../../../../src/lib/auth/server-session.js";
 import { normalizeAdminQuestionUpdate } from "../../../../../src/lib/admin/question-edit.js";
-
-function unauthorized() {
-  return NextResponse.json({ ok: false, error: "Authentication required." }, { status: 401 });
-}
-
-function forbidden() {
-  return NextResponse.json({ ok: false, error: "Admin access required." }, { status: 403 });
-}
-
-function requireAdminEmail(request) {
-  const userEmail = getUserEmailFromRequest(request);
-  if (!userEmail) {
-    return { ok: false, response: unauthorized() };
-  }
-
-  const allowlist = parseAdminAllowlist(process.env.ADMIN_ALLOWLIST);
-  if (!isAllowlistedAdmin(userEmail, allowlist)) {
-    return { ok: false, response: forbidden() };
-  }
-
-  return { ok: true, userEmail };
-}
 
 async function loadQuestionDoc(id) {
   const ref = firebaseAdminDb.collection("questions").doc(id);
@@ -40,9 +14,9 @@ async function loadQuestionDoc(id) {
 
 export async function GET(request, { params }) {
   try {
-    const auth = requireAdminEmail(request);
+    const auth = await authorizeAdminRequest(request);
     if (!auth.ok) {
-      return auth.response;
+      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
     }
 
     const { id } = await params;
@@ -58,9 +32,9 @@ export async function GET(request, { params }) {
 
 export async function PUT(request, { params }) {
   try {
-    const auth = requireAdminEmail(request);
+    const auth = await authorizeAdminRequest(request);
     if (!auth.ok) {
-      return auth.response;
+      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
     }
 
     const { id } = await params;

@@ -1,35 +1,12 @@
 import { NextResponse } from "next/server";
 import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
-import { getUserEmailFromRequest } from "../../../../src/lib/auth/session.js";
-import { parseAdminAllowlist, isAllowlistedAdmin } from "../../../../src/lib/auth/allowlist.js";
-
-function unauthorized() {
-  return NextResponse.json({ ok: false, error: "Authentication required." }, { status: 401 });
-}
-
-function forbidden() {
-  return NextResponse.json({ ok: false, error: "Admin access required." }, { status: 403 });
-}
-
-function requireAdminEmail(request) {
-  const userEmail = getUserEmailFromRequest(request);
-  if (!userEmail) {
-    return { ok: false, response: unauthorized() };
-  }
-
-  const allowlist = parseAdminAllowlist(process.env.ADMIN_ALLOWLIST);
-  if (!isAllowlistedAdmin(userEmail, allowlist)) {
-    return { ok: false, response: forbidden() };
-  }
-
-  return { ok: true, userEmail };
-}
+import { authorizeAdminRequest } from "../../../../src/lib/auth/server-session.js";
 
 export async function GET(request) {
   try {
-    const auth = requireAdminEmail(request);
+    const auth = await authorizeAdminRequest(request);
     if (!auth.ok) {
-      return auth.response;
+      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
     }
 
     const url = new URL(request.url);

@@ -1,21 +1,18 @@
 import { NextResponse } from "next/server";
 import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
-import { getUserEmailFromRequest } from "../../../../src/lib/auth/session.js";
+import { authenticateRequest } from "../../../../src/lib/auth/server-session.js";
 import {
   normalizeTagProgressSnapshot,
   buildTagProgressDoc
 } from "../../../../src/lib/progress/tag-progress.js";
 
-function unauthorized() {
-  return NextResponse.json({ ok: false, error: "Authentication required." }, { status: 401 });
-}
-
 export async function GET(request) {
   try {
-    const userEmail = getUserEmailFromRequest(request);
-    if (!userEmail) {
-      return unauthorized();
+    const auth = await authenticateRequest(request);
+    if (!auth.ok) {
+      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
     }
+    const userEmail = auth.userEmail;
 
     const ref = firebaseAdminDb.collection("tag_progress").doc(userEmail);
     const snap = await ref.get();
@@ -35,10 +32,11 @@ export async function GET(request) {
 
 export async function PUT(request) {
   try {
-    const userEmail = getUserEmailFromRequest(request);
-    if (!userEmail) {
-      return unauthorized();
+    const auth = await authenticateRequest(request);
+    if (!auth.ok) {
+      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
     }
+    const userEmail = auth.userEmail;
 
     const body = await request.json();
     const snapshot = normalizeTagProgressSnapshot(body);

@@ -1,14 +1,16 @@
 import { NextResponse } from "next/server";
-import { getUserEmailFromRequest } from "./src/lib/auth/session.js";
+import { getSessionCookieFromRequest, getUserEmailFromRequest } from "./src/lib/auth/session.js";
 import { evaluateAccess } from "./src/lib/auth/middleware-policy.js";
 
 export function middleware(request) {
   const pathname = request.nextUrl.pathname;
   const userEmail = getUserEmailFromRequest(request);
+  const hasSession = Boolean(getSessionCookieFromRequest(request));
 
   const decision = evaluateAccess({
     pathname,
     userEmail,
+    hasSession,
     allowlistRaw: process.env.ADMIN_ALLOWLIST
   });
 

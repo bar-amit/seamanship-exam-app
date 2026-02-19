@@ -1,34 +1,49 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { getUserEmailFromRequest, USER_EMAIL_COOKIE } from "../src/lib/auth/session.js";
+import {
+  AUTH_SESSION_COOKIE,
+  USER_EMAIL_COOKIE,
+  getSessionCookieFromRequest,
+  getUserEmailFromRequest
+} from "../src/lib/auth/session.js";
 
-function makeRequestWithCookie(cookieValue) {
+function makeRequestWithCookies({ userEmail, authSession } = {}) {
   return {
     cookies: {
       get(name) {
-        if (name !== USER_EMAIL_COOKIE) {
-          return undefined;
+        if (name === USER_EMAIL_COOKIE && userEmail !== undefined) {
+          return { value: userEmail };
         }
-        if (cookieValue === undefined) {
-          return undefined;
+        if (name === AUTH_SESSION_COOKIE && authSession !== undefined) {
+          return { value: authSession };
         }
-        return { value: cookieValue };
+        return undefined;
       }
     }
   };
 }
 
 test("returns null when user email cookie is missing", () => {
-  const request = makeRequestWithCookie(undefined);
+  const request = makeRequestWithCookies();
   assert.equal(getUserEmailFromRequest(request), null);
 });
 
 test("returns null when user email cookie is empty", () => {
-  const request = makeRequestWithCookie("");
+  const request = makeRequestWithCookies({ userEmail: "" });
   assert.equal(getUserEmailFromRequest(request), null);
 });
 
 test("normalizes cookie value by trimming and lowering case", () => {
-  const request = makeRequestWithCookie("  USER@Example.COM  ");
+  const request = makeRequestWithCookies({ userEmail: "  USER@Example.COM  " });
   assert.equal(getUserEmailFromRequest(request), "user@example.com");
+});
+
+test("returns null when session cookie is missing", () => {
+  const request = makeRequestWithCookies();
+  assert.equal(getSessionCookieFromRequest(request), null);
+});
+
+test("returns trimmed session cookie value", () => {
+  const request = makeRequestWithCookies({ authSession: "  abc.def.ghi  " });
+  assert.equal(getSessionCookieFromRequest(request), "abc.def.ghi");
 });

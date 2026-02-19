@@ -1,15 +1,7 @@
 import { NextResponse } from "next/server";
 import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
+import { authenticateRequest } from "../../../../src/lib/auth/server-session.js";
 import { normalizeCollectionInput } from "../../../../src/lib/collections/schema.js";
-
-function getUserEmail(request) {
-  const email = request.cookies.get("user_email")?.value?.trim().toLowerCase();
-  return email || null;
-}
-
-function unauthorized() {
-  return NextResponse.json({ ok: false, error: "Authentication required." }, { status: 401 });
-}
 
 async function loadOwnedCollection(id, userEmail) {
   const ref = firebaseAdminDb.collection("collections").doc(id);
@@ -26,10 +18,11 @@ async function loadOwnedCollection(id, userEmail) {
 
 export async function PUT(request, { params }) {
   try {
-    const userEmail = getUserEmail(request);
-    if (!userEmail) {
-      return unauthorized();
+    const auth = await authenticateRequest(request);
+    if (!auth.ok) {
+      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
     }
+    const userEmail = auth.userEmail;
     const { id } = await params;
     const { ref, data } = await loadOwnedCollection(id, userEmail);
     if (!data) {
@@ -55,10 +48,11 @@ export async function PUT(request, { params }) {
 
 export async function DELETE(request, { params }) {
   try {
-    const userEmail = getUserEmail(request);
-    if (!userEmail) {
-      return unauthorized();
+    const auth = await authenticateRequest(request);
+    if (!auth.ok) {
+      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
     }
+    const userEmail = auth.userEmail;
     const { id } = await params;
     const { ref, data } = await loadOwnedCollection(id, userEmail);
     if (!data) {

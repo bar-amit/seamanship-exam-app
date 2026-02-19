@@ -1,23 +1,16 @@
 import { NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
 import { firebaseAdminDb } from "../../../src/lib/firebase/admin.js";
+import { authenticateRequest } from "../../../src/lib/auth/server-session.js";
 import { normalizeCollectionInput, buildCollectionDoc } from "../../../src/lib/collections/schema.js";
-
-function getUserEmail(request) {
-  const email = request.cookies.get("user_email")?.value?.trim().toLowerCase();
-  return email || null;
-}
-
-function unauthorized() {
-  return NextResponse.json({ ok: false, error: "Authentication required." }, { status: 401 });
-}
 
 export async function GET(request) {
   try {
-    const userEmail = getUserEmail(request);
-    if (!userEmail) {
-      return unauthorized();
+    const auth = await authenticateRequest(request);
+    if (!auth.ok) {
+      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
     }
+    const userEmail = auth.userEmail;
 
     const snapshot = await firebaseAdminDb
       .collection("collections")
@@ -36,10 +29,11 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
-    const userEmail = getUserEmail(request);
-    if (!userEmail) {
-      return unauthorized();
+    const auth = await authenticateRequest(request);
+    if (!auth.ok) {
+      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
     }
+    const userEmail = auth.userEmail;
 
     const body = await request.json();
     const normalized = normalizeCollectionInput(body);

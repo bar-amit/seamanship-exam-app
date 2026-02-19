@@ -142,6 +142,25 @@ main {
   gap: 12px;
 }
 
+.review-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.review-controls label {
+  display: grid;
+  gap: 6px;
+}
+
+.review-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
 .review-item {
   border: 1px solid var(--line);
   border-radius: 10px;

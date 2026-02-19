@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { CHAPTER_TAG_OPTIONS, normalizeSelectedTags } from "../../../src/lib/practice/tags.js";
 import { scoreQuestion } from "../../../src/lib/practice/session.js";
+import { buildReviewSummary, getReviewStatus } from "../../../src/lib/practice/review.js";
 import {
   clearPersistedTagPractice,
   loadTagPracticeSession,
@@ -46,6 +47,11 @@ export default function TagPracticePage() {
     const total = reviewed.reduce((sum, item) => sum + scoreQuestion(item.q, item.r), 0);
     return total / reviewed.length;
   }, [questions, responses]);
+
+  const reviewSummary = useMemo(
+    () => buildReviewSummary(questions, responses),
+    [questions, responses]
+  );
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -318,14 +324,7 @@ export default function TagPracticePage() {
             <h3>ניווט מהיר</h3>
             <div className="navigator-grid">
               {questions.map((q, idx) => {
-                const status =
-                  idx === currentIndex
-                    ? "current"
-                    : responses[idx]?.skipped
-                      ? "skipped"
-                      : responses[idx]?.revealed
-                        ? "answered"
-                        : "unanswered";
+                const status = idx === currentIndex ? "current" : getReviewStatus(q, responses[idx]);
                 return (
                   <button
                     key={q.id}
@@ -336,6 +335,13 @@ export default function TagPracticePage() {
                   </button>
                 );
               })}
+            </div>
+            <div className="review-summary">
+              <span>נכונות: {reviewSummary.correct}</span>
+              <span>חלקיות: {reviewSummary.partial}</span>
+              <span>שגויות: {reviewSummary.incorrect}</span>
+              <span>דילוגים: {reviewSummary.skipped}</span>
+              <span>ללא מענה: {reviewSummary.unanswered}</span>
             </div>
             <p>
               ניקוד ממוצע: <strong>{averageReviewedScore.toFixed(1)}%</strong>

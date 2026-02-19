@@ -8,6 +8,11 @@ import {
   scoreSession
 } from "../../src/lib/practice/session.js";
 import {
+  buildReviewSummary,
+  getReviewStatus,
+  shouldIncludeByFilter
+} from "../../src/lib/practice/review.js";
+import {
   clearPersistedPracticeTest,
   loadPracticeTestSession,
   savePracticeTestSession
@@ -48,6 +53,8 @@ export default function PracticePage() {
   const [error, setError] = useState("");
   const [timeLeft, setTimeLeft] = useState(0);
   const [hydrated, setHydrated] = useState(false);
+  const [reviewFilter, setReviewFilter] = useState("all");
+  const [showExplanations, setShowExplanations] = useState(true);
 
   const currentQuestion = questions[currentIndex];
   const currentResponse = responses[currentIndex];
@@ -121,6 +128,25 @@ export default function PracticePage() {
     }
     return scoreSession(questions, responses);
   }, [phase, questions, responses]);
+
+  const reviewSummary = useMemo(
+    () => (phase === "review" ? buildReviewSummary(questions, responses) : null),
+    [phase, questions, responses]
+  );
+
+  const reviewIndexes = useMemo(() => {
+    if (phase !== "review") {
+      return [];
+    }
+    const indexes = [];
+    for (let i = 0; i < questions.length; i += 1) {
+      const status = getReviewStatus(questions[i], responses[i]);
+      if (shouldIncludeByFilter(status, reviewFilter)) {
+        indexes.push(i);
+      }
+    }
+    return indexes;
+  }, [phase, questions, responses, reviewFilter]);
 
   async function startPractice() {
     setIsLoading(true);
@@ -344,13 +370,44 @@ export default function PracticePage() {
           <p>
             ציון סופי: <strong>{overallScore.toFixed(1)}%</strong>
           </p>
+          {reviewSummary && (
+            <div className="review-summary">
+              <span>נכונות: {reviewSummary.correct}</span>
+              <span>חלקיות: {reviewSummary.partial}</span>
+              <span>שגויות: {reviewSummary.incorrect}</span>
+              <span>דילוגים: {reviewSummary.skipped}</span>
+              <span>ללא מענה: {reviewSummary.unanswered}</span>
+            </div>
+          )}
+          <div className="review-controls">
+            <label>
+              סינון
+              <select value={reviewFilter} onChange={(e) => setReviewFilter(e.target.value)}>
+                <option value="all">הכל</option>
+                <option value="mistakes">טעויות וחלקיות</option>
+                <option value="skipped">דילוגים</option>
+                <option value="correct">נכונות</option>
+              </select>
+            </label>
+            <label className="practice-inline">
+              <input
+                type="checkbox"
+                checked={showExplanations}
+                onChange={(e) => setShowExplanations(e.target.checked)}
+              />
+              הצג הסברים
+            </label>
+          </div>
           <div className="review-list">
-            {questions.map((q, idx) => {
+            {reviewIndexes.map((idx) => {
+              const q = questions[idx];
               const response = responses[idx];
               const attempted = hasAttempt(q, response);
               const perQuestionScore = scoreQuestion(q, response);
+              const reviewStatus = getReviewStatus(q, response);
               return (
                 <article key={q.id} className="review-item">
+                  <p className="muted">סטטוס: {reviewStatus}</p>
                   <div className="prompt-row">
                     <h3>
                       {idx + 1}. {q.text}
@@ -403,7 +460,7 @@ export default function PracticePage() {
                     </>
                   )}
 
-                  {attempted && q.model_answer && (
+                  {showExplanations && attempted && q.model_answer && (
                     <div>
                       <strong>הסבר/פתרון:</strong>
                       <p>{q.model_answer}</p>

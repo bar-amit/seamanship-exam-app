@@ -30,7 +30,7 @@ export async function PUT(request, { params }) {
     if (!userEmail) {
       return unauthorized();
     }
-    const { id } = params;
+    const { id } = await params;
     const { ref, data } = await loadOwnedCollection(id, userEmail);
     if (!data) {
       return NextResponse.json({ ok: false, error: "Collection not found." }, { status: 404 });
@@ -59,7 +59,7 @@ export async function DELETE(request, { params }) {
     if (!userEmail) {
       return unauthorized();
     }
-    const { id } = params;
+    const { id } = await params;
     const { ref, data } = await loadOwnedCollection(id, userEmail);
     if (!data) {
       return NextResponse.json({ ok: false, error: "Collection not found." }, { status: 404 });

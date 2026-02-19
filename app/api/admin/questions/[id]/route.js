@@ -45,7 +45,7 @@ export async function GET(request, { params }) {
       return auth.response;
     }
 
-    const { id } = params;
+    const { id } = await params;
     const loaded = await loadQuestionDoc(id);
     if (!loaded.data) {
       return NextResponse.json({ ok: false, error: "Question not found." }, { status: 404 });
@@ -63,7 +63,7 @@ export async function PUT(request, { params }) {
       return auth.response;
     }
 
-    const { id } = params;
+    const { id } = await params;
     const loaded = await loadQuestionDoc(id);
     if (!loaded.data) {
       return NextResponse.json({ ok: false, error: "Question not found." }, { status: 404 });

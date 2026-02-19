@@ -16,6 +16,13 @@ function formatSeconds(totalSeconds) {
   return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }
 
+function clampMinutes(value) {
+  if (!Number.isFinite(value)) {
+    return 6;
+  }
+  return Math.min(20, Math.max(1, Math.round(value)));
+}
+
 function setupResponse(question) {
   if (question.type === "open_text") {
     return { text: "", subGrades: {}, skipped: false };
@@ -28,6 +35,7 @@ export default function PracticePage() {
   const [questionCount, setQuestionCount] = useState(10);
   const [timed, setTimed] = useState(true);
   const [minutesPerQuestion, setMinutesPerQuestion] = useState(6);
+  const [minutesHint, setMinutesHint] = useState("");
   const [questions, setQuestions] = useState([]);
   const [responses, setResponses] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,7 +70,13 @@ export default function PracticePage() {
   async function startPractice() {
     setIsLoading(true);
     setError("");
+    setMinutesHint("");
     try {
+      const safeMinutes = clampMinutes(minutesPerQuestion);
+      if (safeMinutes !== minutesPerQuestion) {
+        setMinutesPerQuestion(safeMinutes);
+        setMinutesHint("זמן לשאלה צריך להיות בטווח של 1-20 דקות.");
+      }
       const res = await fetch(`/api/practice/questions?count=${questionCount}`);
       const data = await res.json();
       if (!res.ok || !data.ok) {
@@ -71,7 +85,7 @@ export default function PracticePage() {
       setQuestions(data.questions);
       setResponses(data.questions.map((q) => setupResponse(q)));
       setCurrentIndex(0);
-      setTimeLeft(questionCount * minutesPerQuestion * 60);
+      setTimeLeft(questionCount * safeMinutes * 60);
       setPhase("active");
     } catch (err) {
       setError(err.message);
@@ -154,12 +168,22 @@ export default function PracticePage() {
             <input
               type="number"
               min={1}
-              max={30}
+              max={20}
               value={minutesPerQuestion}
-              onChange={(e) => setMinutesPerQuestion(Number(e.target.value))}
+              onChange={(e) => {
+                const raw = Number(e.target.value);
+                const safe = clampMinutes(raw);
+                setMinutesPerQuestion(safe);
+                if (!Number.isFinite(raw) || safe !== raw) {
+                  setMinutesHint("זמן לשאלה חייב להיות בין 1 ל-20 דקות.");
+                } else {
+                  setMinutesHint("");
+                }
+              }}
               disabled={!timed}
             />
           </label>
+          {minutesHint && <p className="muted">{minutesHint}</p>}
           <button disabled={isLoading} onClick={startPractice}>
             {isLoading ? "טוען שאלות..." : "התחל"}
           </button>

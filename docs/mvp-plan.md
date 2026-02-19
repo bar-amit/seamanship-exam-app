@@ -1,6 +1,6 @@
 # Seamanship Exam App - MVP Plan
 
-Last updated: 2026-02-18  
+Last updated: 2026-02-19  
 Owner: Bar Amit
 Target launch: Thursday, 2026-02-19
 
@@ -33,6 +33,7 @@ Related:
 - Full content version history
 - AI-assisted free-text evaluation
 - Full GDPR/CCPA data export and deletion operations
+- Recency-based question selection algorithm (least-seen-first)
 - Advanced tag-study UX (study-aids toggle-first mode)
 - Chapter-first test configuration defaults
 - Backend-first shuffle/selection service
@@ -83,8 +84,10 @@ Phase-note for later iteration of Flow 2 / Flow 3:
 
 - Tag practice should be closer to review/study mode than exam mode.
 - Users should be able to quickly toggle study aids (especially explanations).
+- Explanation visibility rule is mode-specific: strict review-only in test flow, optional quick reveal in tag-study flow.
 - Practice test defaults should be chapter-first selection, with "all chapters" as an option.
 - Question shuffle/selection should primarily run in backend services.
+- MVP currently uses backend random selection for question picking.
 
 ### Phase 4: Saved Features and Admin
 
@@ -101,7 +104,7 @@ Phase-note for later iteration of Flow 2 / Flow 3:
 
 ## Test Requirements
 
-- Unit tests for scoring, recency weighting, timer behavior, and import parsing
+- Unit tests for scoring, timer behavior, and import parsing
 - Unit tests for mixed Navigation A section counts (for example, 2 vs 4 sub-questions) to verify equal per-question weighting
 - Integration tests for Firestore rules, auth guards, and admin checks
 - End-to-end tests for anonymous flow, authenticated collections flow, admin flow, and review flow

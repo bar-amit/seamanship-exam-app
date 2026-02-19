@@ -1,6 +1,6 @@
 # Seamanship Exam App - Decision Log
 
-Last updated: 2026-02-18  
+Last updated: 2026-02-19  
 Owner: Bar Amit
 
 ## Purpose
@@ -26,7 +26,7 @@ Status values: `accepted`, `superseded`.
 
 ### 2026-02-15 - Question Selection by Recency
 
-- Status: `accepted`
+- Status: `superseded`
 - Decision: Prioritize least recently seen questions first.
 - Reason: Keep algorithm simple and useful for revision coverage.
 - Impact: Attempt history must store timestamps usable for recency sorting.
@@ -40,7 +40,7 @@ Status values: `accepted`, `superseded`.
 
 ### 2026-02-15 - Explanation Visibility Rule
 
-- Status: `accepted`
+- Status: `superseded`
 - Decision: Explanations appear only in review mode after answer attempt.
 - Reason: Preserve assessment flow and avoid answer leakage during solving.
 - Impact: UI state must gate explanations by attempt status.
@@ -152,3 +152,17 @@ Status values: `accepted`, `superseded`.
 - Tag flow should prioritize quick study-aid toggles (for example, explanations).
 - Test flow should default to chapter-first selection with an explicit "all chapters" option.
 - Question randomization/shuffle should primarily execute in backend logic.
+
+### 2026-02-19 - MVP Question Selection Uses Random Backend Shuffle
+
+- Status: `accepted`
+- Decision: MVP keeps random question selection in backend APIs; recency-based selection is postponed to post-MVP.
+- Reason: Keep implementation simple for MVP while preserving a clear upgrade path.
+- Impact: Current practice APIs use random shuffle; recency weighting remains a later enhancement.
+
+### 2026-02-19 - Explanation Visibility Is Mode-Specific
+
+- Status: `accepted`
+- Decision: Test flow keeps explanations in review mode only; tag-study flow allows optional quick reveal via study aids toggle.
+- Reason: Preserve exam simulation integrity while supporting faster study loops in tag practice.
+- Impact: Shared docs and future implementation must treat explanation visibility as flow-dependent, not global.

@@ -100,6 +100,15 @@ Phase-note for later iteration of Flow 2 / Flow 3:
 - Editing support includes MCQ options and correct answer id, plus open-text sub-questions
 - Editor includes JSON toggles for loaded question document and outbound save payload
 
+Implementation status (current):
+
+- [x] Collections CRUD (private per user)
+- [x] Collections UI includes create/delete/edit and question-id list updates
+- [x] Per-tag progress persistence API and protected progress page
+- [x] Dashboard summary for collections and per-tag accuracy
+- [x] Admin editor with paginated search, preview, MCQ/open-text editing, JSON toggles
+- [ ] Google sign-in/sign-out UI flow (client + session cookie wiring)
+
 ### Phase 5: Quality and Release
 
 - Run unit, integration, and end-to-end suites

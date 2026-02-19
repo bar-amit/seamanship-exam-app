@@ -127,7 +127,10 @@ export default function PracticePage() {
     <main>
       <section className="card">
         <h1>תרגול מבחן</h1>
-        <p className="muted">זרימת מבחן מלאה: הקמה, מענה, ניווט, הגשה ובדיקה.</p>
+
+        <p>
+          <a href="/practice/tags">מעבר לתרגול לפי תגית</a>
+        </p>
       </section>
 
       {phase === "setup" && (

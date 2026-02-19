@@ -9,6 +9,9 @@ export default function HomePage() {
         <p>
           <a href="/practice">תרגול מבחן</a>
         </p>
+        <p>
+          <a href="/practice/tags">תרגול לפי תגית</a>
+        </p>
       </section>
     </main>
   );

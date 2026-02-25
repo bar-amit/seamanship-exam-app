@@ -1,6 +1,6 @@
 # Seamanship Exam App - MVP Plan
 
-Last updated: 2026-02-19  
+Last updated: 2026-02-25  
 Owner: Bar Amit
 Target launch: Thursday, 2026-02-19
 
@@ -73,6 +73,11 @@ Scoring rules:
 - Join image-option metadata from `test_material/data/assets/sq5-option-images.json`
 - Upload image assets to Firebase Storage
 - Denormalize image metadata into question documents and choice records
+
+Data lifecycle note:
+
+- Day-to-day content updates should use live admin tools (Firestore-backed).
+- Importer is retained for bootstrap, environment seeding, and recovery scenarios.
 
 ### Phase 3: Core Flows
 

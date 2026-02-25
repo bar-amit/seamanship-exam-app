@@ -1,6 +1,6 @@
 # Seamanship Exam App - Decision Log
 
-Last updated: 2026-02-19  
+Last updated: 2026-02-25  
 Owner: Bar Amit
 
 ## Purpose
@@ -180,3 +180,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Protected APIs verify Firebase `auth_session` cookie server-side for authentication; admin authorization uses allowlist against verified email claim.
 - Reason: Prevent cookie-tampering bypass where client-controlled metadata could influence authorization.
 - Impact: Middleware is treated as UX gating only; API handlers remain the source of truth for auth and authorization.
+
+### 2026-02-25 - Live Firestore as Operational Content Source
+
+- Status: `accepted`
+- Decision: Day-to-day question/content updates are done in the live app (Firestore). Importer remains for bootstrap/recovery/migrations, not routine editing.
+- Reason: Admin editor is now available and better matches operational content workflows.
+- Impact: Keep importer scripts maintained and runnable for environment seeding and disaster recovery; document that normal content changes should go through admin tools.

@@ -34,7 +34,7 @@ test("authenticated user can access dashboard, collections and progress", async 
   await expect(page.getByRole("heading", { name: "האוספים שלי" })).toBeVisible();
   await page.getByLabel("שם האוסף").fill("אוסף חדש");
   await page.getByRole("button", { name: "צור אוסף" }).click();
-  await expect(page.getByText("אוסף חדש")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "אוסף חדש", exact: true })).toBeVisible();
 
   await page.goto("/progress");
   await expect(page.getByRole("heading", { name: "התקדמות לפי תגיות" })).toBeVisible();

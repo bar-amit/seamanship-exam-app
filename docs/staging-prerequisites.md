@@ -42,6 +42,14 @@ Notes:
   - `auth_session` is verified server-side in protected APIs.
   - `user_email` is non-authoritative metadata only.
 - [ ] Validate admin route access with allowlisted and non-allowlisted users.
+- [ ] Deploy Firebase rules from repo:
+  - `firebase deploy --project <staging-project-id> --only firestore:rules,storage`
+
+Rules files in this repo:
+
+- Firestore: `firestore.rules`
+- Storage: `storage.rules`
+- Firebase config: `firebase.json`
 
 ## Data and Assets
 

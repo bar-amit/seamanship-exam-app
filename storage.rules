@@ -1,0 +1,15 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Public read for imported question assets used in practice/review flows.
+    match /question-assets/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Deny all other storage access by default.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

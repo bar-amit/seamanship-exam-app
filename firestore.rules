@@ -1,0 +1,53 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function signedInEmail() {
+      return request.auth.token.email;
+    }
+
+    function isOwnerByEmail(existingOwnerEmail) {
+      return isSignedIn() &&
+        signedInEmail() != null &&
+        signedInEmail() == existingOwnerEmail;
+    }
+
+    function isCreateOwnerByEmail() {
+      return isSignedIn() &&
+        signedInEmail() != null &&
+        request.resource.data.owner_email == signedInEmail();
+    }
+
+    // Public exam content is read-only from client perspective.
+    match /questions/{questionId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // User-owned saved collections.
+    match /collections/{collectionId} {
+      allow create: if isCreateOwnerByEmail();
+      allow read, update, delete: if isOwnerByEmail(resource.data.owner_email);
+    }
+
+    // User-owned tag progress snapshot.
+    match /tag_progress/{docId} {
+      allow create: if isCreateOwnerByEmail();
+      allow read, update, delete: if isOwnerByEmail(resource.data.owner_email);
+    }
+
+    // Optional future collection; keep owner constraints if used.
+    match /attempts/{attemptId} {
+      allow create: if isCreateOwnerByEmail();
+      allow read, update, delete: if isOwnerByEmail(resource.data.owner_email);
+    }
+
+    // Deny everything else by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

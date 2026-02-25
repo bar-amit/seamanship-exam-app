@@ -66,3 +66,14 @@ test("protected path redirects when user_email exists but session cookie missing
 
   assert.deepEqual(decision, { action: "redirect", destination: "/" });
 });
+
+test("uppercase protected path redirects when unauthenticated", () => {
+  const decision = evaluateAccess({
+    pathname: "/PROGRESS",
+    userEmail: null,
+    hasSession: false,
+    allowlistRaw: "admin@example.com"
+  });
+
+  assert.deepEqual(decision, { action: "redirect", destination: "/" });
+});

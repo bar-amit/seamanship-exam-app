@@ -3,13 +3,19 @@ import { isAllowlistedAdmin, parseAdminAllowlist } from "./allowlist.js";
 const ADMIN_PREFIX = "/admin";
 const AUTH_REQUIRED_PREFIXES = ["/dashboard", "/collections", "/progress", ADMIN_PREFIX];
 
+function normalizePathname(pathname) {
+  return String(pathname ?? "").toLowerCase();
+}
+
 export function isAdminPath(pathname) {
-  return pathname === ADMIN_PREFIX || pathname.startsWith(`${ADMIN_PREFIX}/`);
+  const normalized = normalizePathname(pathname);
+  return normalized === ADMIN_PREFIX || normalized.startsWith(`${ADMIN_PREFIX}/`);
 }
 
 export function requiresAuth(pathname) {
+  const normalized = normalizePathname(pathname);
   return AUTH_REQUIRED_PREFIXES.some(
-    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`)
+    (prefix) => normalized === prefix || normalized.startsWith(`${prefix}/`)
   );
 }
 

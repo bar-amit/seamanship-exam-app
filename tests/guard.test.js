@@ -10,12 +10,14 @@ test("requiresAuth returns false for public routes", () => {
 test("requiresAuth returns true for protected routes", () => {
   assert.equal(requiresAuth("/dashboard"), true);
   assert.equal(requiresAuth("/dashboard/stats"), true);
+  assert.equal(requiresAuth("/PROGRESS"), true);
   assert.equal(requiresAuth("/admin"), true);
 });
 
 test("isAdminPath identifies admin routes", () => {
   assert.equal(isAdminPath("/admin"), true);
   assert.equal(isAdminPath("/admin/questions"), true);
+  assert.equal(isAdminPath("/ADMIN/questions"), true);
   assert.equal(isAdminPath("/dashboard"), false);
 });
 

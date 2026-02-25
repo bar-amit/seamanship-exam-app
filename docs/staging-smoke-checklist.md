@@ -7,44 +7,44 @@ Run this after staging deploy + data import.
 
 ## Preconditions
 
-- [ ] Staging env validated: `npm run validate:env:staging`
-- [ ] Firestore/Storage rules deployed
-- [ ] Staging data imported
+- [-] Staging env validated: `npm run validate:env:staging`
+- [-] Firestore/Storage rules deployed
+- [-] Staging data imported
 
 ## Auth and Access
 
-- [ ] Home page loads (`/`)
-- [ ] Google login works
-- [ ] Logout works
-- [ ] Protected routes require auth when logged out:
+- [-] Home page loads (`/`)
+- [-] Google login works
+- [-] Logout works
+- [-] Protected routes require auth when logged out:
   - `/dashboard`
   - `/collections`
   - `/progress`
-- [ ] Admin route blocked for non-allowlisted user (`/admin`)
-- [ ] Admin route accessible for allowlisted user (`/admin`)
+- [-] Admin route blocked for non-allowlisted user (`/admin`)
+- [-] Admin route accessible for allowlisted user (`/admin`)
 
 ## Practice Flows
 
-- [ ] Practice test flow (`/practice`):
+- [-] Practice test flow (`/practice`):
   - Start test
   - Answer at least one question
   - Enter review
   - New test reset works
-- [ ] Tag practice flow (`/practice/tags`):
+- [-] Tag practice flow (`/practice/tags`):
   - Start tag session
   - Toggle study aids
   - Mark reviewed/skipped
-- [ ] Refresh persistence works in both flows
+- [-] Refresh persistence works in both flows
 
 ## Saved Features
 
-- [ ] Collections (`/collections`):
+- [-] Collections (`/collections`):
   - Create collection
   - Edit collection name/description/question ids
   - Delete collection
-- [ ] Progress (`/progress`):
+- [-] Progress (`/progress`):
   - Shows per-tag stats after tag practice
-- [ ] Dashboard (`/dashboard`):
+- [-] Dashboard (`/dashboard`):
   - Shows collections and progress summary
 
 ## Admin Editing

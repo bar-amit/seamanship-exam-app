@@ -7,11 +7,11 @@ This checklist is the execution companion for the staging section in `docs/mvp-p
 
 ## Required Inputs (Fill First)
 
-- [ ] Staging Firebase project id (expected: `seamanship-staging`)
-- [ ] Staging web domain (example: `staging.example.com`)
-- [ ] Admin allowlist emails for staging
-- [ ] Service account key for staging project (`FIREBASE_CLIENT_EMAIL`, `FIREBASE_PRIVATE_KEY`)
-- [ ] Confirm where staging env vars are stored (CI/CD secrets manager)
+- [-] Staging Firebase project id (expected: `seamanship-staging`)
+- [-] Staging web domain (example: `staging.example.com`)
+- [-] Admin allowlist emails for staging
+- [-] Service account key for staging project (`FIREBASE_CLIENT_EMAIL`, `FIREBASE_PRIVATE_KEY`)
+- [-] Confirm where staging env vars are stored (CI/CD secrets manager)
 
 ## Environment Files and Validation
 
@@ -28,21 +28,21 @@ Notes:
 
 ## Firebase Project Setup
 
-- [ ] Create/select staging Firebase project.
-- [ ] Enable Firebase Authentication, Firestore, and Storage.
-- [ ] Enable Google provider in Authentication.
-- [ ] Add authorized domains for staging and local test domains:
+- [-] Create/select staging Firebase project.
+- [-] Enable Firebase Authentication, Firestore, and Storage.
+- [-] Enable Google provider in Authentication.
+- [-] Add authorized domains for staging and local test domains:
   - `localhost`
   - staging domain
 
 ## Security and Access
 
-- [ ] Configure `ADMIN_ALLOWLIST` for staging.
-- [ ] Confirm API auth model:
+- [-] Configure `ADMIN_ALLOWLIST` for staging.
+- [-] Confirm API auth model:
   - `auth_session` is verified server-side in protected APIs.
   - `user_email` is non-authoritative metadata only.
-- [ ] Validate admin route access with allowlisted and non-allowlisted users.
-- [ ] Deploy Firebase rules from repo:
+- [-] Validate admin route access with allowlisted and non-allowlisted users.
+- [-] Deploy Firebase rules from repo:
   - `firebase deploy --project <staging-project-id> --only firestore:rules,storage`
 
 Rules files in this repo:
@@ -53,22 +53,26 @@ Rules files in this repo:
 
 ## Data and Assets
 
-- [ ] Dry-run importer with staging env settings first:
+- [-] Dry-run importer with staging env settings first:
   - `npm run import:phase2:dry`
-- [ ] Run full importer against staging project:
+- [-] Run full importer against staging project:
   - `npm run import:phase2`
-- [ ] Confirm expected question count and sample image accessibility.
+- [-] Confirm expected question count and sample image accessibility.
 
 ## Quality Gates Before Promote
 
-- [ ] Unit tests pass:
+- [-] Unit tests pass:
   - `npm test`
 - [ ] E2E tests pass:
   - `npm run test:e2e`
-- [ ] Build passes:
+- [-] Build passes:
   - `npm run build`
 - [ ] Smoke pass on staging (desktop + mobile)
 - [ ] Logging/error monitoring receives staging events
+
+Smoke checklist document:
+
+- `docs/staging-smoke-checklist.md`
 
 ## Sign-off
 

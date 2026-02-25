@@ -63,7 +63,7 @@ Rules files in this repo:
 
 - [-] Unit tests pass:
   - `npm test`
-- [ ] E2E tests pass:
+- [-] E2E tests pass:
   - `npm run test:e2e`
 - [-] Build passes:
   - `npm run build`

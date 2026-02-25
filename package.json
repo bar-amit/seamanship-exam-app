@@ -10,6 +10,8 @@
     "test": "node --test",
     "validate:env:staging": "node --env-file=.env.staging scripts/validate-env.js --env=staging",
     "validate:env:prod": "node --env-file=.env.production scripts/validate-env.js --env=prod",
+    "import:phase2:staging:dry": "node --env-file=.env.staging scripts/import-phase2.js --dry-run --skip-upload --skip-firestore",
+    "import:phase2:staging": "node --env-file=.env.staging scripts/import-phase2.js",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",
     "import:phase2:dry": "node --env-file=.env.local scripts/import-phase2.js --dry-run --skip-upload --skip-firestore",

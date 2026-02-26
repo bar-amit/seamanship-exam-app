@@ -15,9 +15,6 @@ todo
 .env.test.local
 .env.production.local
 
-apphosting.staging.yaml
-apphosting.yaml
-
 # Logs and reports
 npm-debug.log*
 yarn-debug.log*

@@ -1,0 +1,9 @@
+# Base Firebase App Hosting configuration.
+# Keep this file environment-agnostic; use apphosting.<env>.yaml for overrides.
+
+runConfig:
+  minInstances: 0
+  maxInstances: 5
+  cpu: 1
+  memoryMiB: 512
+  concurrency: 20

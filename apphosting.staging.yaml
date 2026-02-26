@@ -37,14 +37,17 @@ env:
   - variable: FIREBASE_PROJECT_ID
     value: "seamanship-exam-app-staging"
     availability:
+      - BUILD
       - RUNTIME
   - variable: FIREBASE_CLIENT_EMAIL
     value: "firebase-adminsdk-fbsvc@seamanship-exam-app-staging.iam.gserviceaccount.com"
     availability:
+      - BUILD
       - RUNTIME
   - variable: FIREBASE_PRIVATE_KEY
     secret: FIREBASE_PRIVATE_KEY
     availability:
+      - BUILD
       - RUNTIME
   - variable: ADMIN_ALLOWLIST
     value: "bosh44@gmail.com,bar.amit@outlook.com"

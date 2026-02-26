@@ -1,6 +1,6 @@
 # Seamanship Exam App - Decision Log
 
-Last updated: 2026-02-25  
+Last updated: 2026-02-26  
 Owner: Bar Amit
 
 ## Purpose
@@ -187,3 +187,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Day-to-day question/content updates are done in the live app (Firestore). Importer remains for bootstrap/recovery/migrations, not routine editing.
 - Reason: Admin editor is now available and better matches operational content workflows.
 - Impact: Keep importer scripts maintained and runnable for environment seeding and disaster recovery; document that normal content changes should go through admin tools.
+
+### 2026-02-26 - Centralized UI String Management
+
+- Status: `accepted`
+- Decision: All user-facing UI strings are stored in a single source file (`src/content/strings.js`) and consumed by pages/components.
+- Reason: Make text updates fast and consistent, and prevent scattered hardcoded labels in UI markup.
+- Impact: UI files import string keys/functions instead of embedding raw text; future UI features must add new labels in the central string source.

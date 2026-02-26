@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { mockAdminApi, mockAuthSessionSyncNoop } from "./helpers/mock-routes.js";
+import { uiText } from "../src/content/strings.js";
 
 async function setAdminCookies(context) {
   await context.addCookies([
@@ -22,16 +23,16 @@ test("admin can load editor, inspect json and save changes", async ({ context, p
   await mockAdminApi(page);
 
   await page.goto("/admin");
-  await expect(page.getByRole("heading", { name: "ניהול תוכן" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: uiText.admin.title })).toBeVisible();
   await expect(page.getByRole("button", { name: "sq1-q001" })).toBeVisible();
 
   await page.getByRole("button", { name: "sq1-q001" }).click();
-  await page.getByLabel("טקסט שאלה").fill("טקסט חדש לשאלה");
+  await page.getByLabel(uiText.admin.questionTextLabel).fill("טקסט חדש לשאלה");
 
-  await page.getByRole("button", { name: "הצג JSON שאלה" }).click();
+  await page.getByRole("button", { name: uiText.admin.showQuestionJson }).click();
   await expect(page.getByText('"id": "sq1-q001"')).toBeVisible();
 
-  await page.getByRole("button", { name: "הצג JSON שמירה" }).click();
+  await page.getByRole("button", { name: uiText.admin.showPayloadJson }).click();
   await expect(page.getByText('"text": "טקסט חדש לשאלה"')).toBeVisible();
 
   const saveResponsePromise = page.waitForResponse(
@@ -40,6 +41,6 @@ test("admin can load editor, inspect json and save changes", async ({ context, p
       response.request().method() === "PUT" &&
       response.status() === 200
   );
-  await page.getByRole("button", { name: "שמור שינויים" }).click();
+  await page.getByRole("button", { name: uiText.admin.saveChanges }).click();
   await saveResponsePromise;
 });

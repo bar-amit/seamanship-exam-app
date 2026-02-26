@@ -1,14 +1,11 @@
 "use client";
 
-const STATUS_LABEL = {
-  correct: "נכונה",
-  partial: "חלקית",
-  incorrect: "שגויה",
-  skipped: "דולגה",
-  unanswered: "ללא מענה",
-  current: "נוכחית"
-};
+import { uiText } from "../../content/strings.js";
 
 export default function ReviewStatusBadge({ status }) {
-  return <p className={`review-status status-${status}`}>סטטוס: {STATUS_LABEL[status] ?? status}</p>;
+  return (
+    <p className={`review-status status-${status}`}>
+      {uiText.review.status.prefix} {uiText.review.status.labels[status] ?? status}
+    </p>
+  );
 }

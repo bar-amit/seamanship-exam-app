@@ -1,9 +1,6 @@
-export const CHAPTER_TAG_OPTIONS = [
-  { id: "seamanship", label: "ימאות" },
-  { id: "navigation a", label: "ניווט חופי" },
-  { id: "navigation b", label: "ניווט מכשירים" },
-  { id: "mechanics", label: "מכונאות" }
-];
+import { uiText } from "../../content/strings.js";
+
+export const CHAPTER_TAG_OPTIONS = uiText.practiceTags.tagOptions;
 
 export function normalizeSelectedTags(selectedTags = []) {
   const cleaned = Array.from(

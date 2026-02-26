@@ -22,6 +22,7 @@ import ClickableStorageImage from "../../src/components/clickable-storage-image.
 import ReviewSummary from "../../src/components/practice/review-summary.js";
 import ReviewControls from "../../src/components/practice/review-controls.js";
 import ReviewStatusBadge from "../../src/components/practice/review-status-badge.js";
+import { uiText } from "../../src/content/strings.js";
 
 function formatSeconds(totalSeconds) {
   const safe = Math.max(0, totalSeconds);
@@ -201,12 +202,12 @@ export default function PracticePage() {
       const safeMinutes = clampMinutes(minutesPerQuestion);
       if (safeMinutes !== minutesPerQuestion) {
         setMinutesPerQuestion(safeMinutes);
-        setMinutesHint("זמן לשאלה צריך להיות בטווח של 1-20 דקות.");
+        setMinutesHint(uiText.practice.minutesRangeHint);
       }
       const res = await fetch(`/api/practice/questions?count=${questionCount}`);
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        throw new Error(data.error || "Failed to load practice questions");
+        throw new Error(data.error || uiText.practice.errors.loadQuestionsFailed);
       }
       setQuestions(data.questions);
       setResponses(data.questions.map((q) => setupResponse(q)));
@@ -275,18 +276,18 @@ export default function PracticePage() {
   return (
     <main>
       <section className="card">
-        <h1>תרגול מבחן</h1>
+        <h1>{uiText.practice.title}</h1>
 
         <p>
-          <a href="/practice/tags">מעבר לתרגול לפי תגית</a>
+          <a href="/practice/tags">{uiText.practice.switchToTagPractice}</a>
         </p>
       </section>
 
       {phase === "setup" && (
         <section className="card practice-block">
-          <h2>הגדרות מבחן</h2>
+          <h2>{uiText.practice.setupTitle}</h2>
           <label>
-            מספר שאלות
+            {uiText.practice.questionCountLabel}
             <select value={questionCount} onChange={(e) => setQuestionCount(Number(e.target.value))}>
               <option value={5}>5</option>
               <option value={10}>10</option>
@@ -295,10 +296,10 @@ export default function PracticePage() {
           </label>
           <label className="practice-inline">
             <input type="checkbox" checked={timed} onChange={(e) => setTimed(e.target.checked)} />
-            מבחן עם טיימר
+            {uiText.practice.timedLabel}
           </label>
           <label>
-            זמן מענה לשאלה (דקות)
+            {uiText.practice.minutesPerQuestionLabel}
             <input
               type="number"
               min={1}
@@ -309,7 +310,7 @@ export default function PracticePage() {
                 const safe = clampMinutes(raw);
                 setMinutesPerQuestion(safe);
                 if (!Number.isFinite(raw) || safe !== raw) {
-                  setMinutesHint("זמן לשאלה חייב להיות בין 1 ל-20 דקות.");
+                  setMinutesHint(uiText.practice.minutesInputHint);
                 } else {
                   setMinutesHint("");
                 }
@@ -319,7 +320,7 @@ export default function PracticePage() {
           </label>
           {minutesHint && <p className="muted">{minutesHint}</p>}
           <button disabled={isLoading} onClick={startPractice}>
-            {isLoading ? "טוען שאלות..." : "התחל"}
+            {isLoading ? uiText.practice.startLoading : uiText.practice.start}
           </button>
           {error && <p className="error">{error}</p>}
         </section>
@@ -330,16 +331,17 @@ export default function PracticePage() {
           <section className="card practice-block">
             <div className="practice-topbar">
               <strong>
-                שאלה {currentIndex + 1} מתוך {questions.length}
+                {uiText.practice.questionProgressPrefix} {currentIndex + 1} {uiText.practice.questionProgressOutOf}{" "}
+                {questions.length}
               </strong>
-              {timed && <strong>זמן נותר: {formatSeconds(timeLeft)}</strong>}
+              {timed && <strong>{uiText.practice.timeLeftLabel} {formatSeconds(timeLeft)}</strong>}
             </div>
             <div className="prompt-row">
               <p>{currentQuestion.text}</p>
               <ClickableStorageImage
                 imageStoragePath={currentQuestion.image_storage_path}
                 imageRef={currentQuestion.image_ref}
-                alt={`תמונה לשאלה ${currentQuestion.id}`}
+                alt={uiText.practice.altQuestionImage(currentQuestion.id)}
                 className="question-image inline-thumb"
               />
             </div>
@@ -360,7 +362,7 @@ export default function PracticePage() {
                     <ClickableStorageImage
                       imageStoragePath={choice.image_storage_path}
                       imageRef={choice.image_ref}
-                      alt={`תמונה לאפשרות ${choice.label}`}
+                      alt={uiText.practice.altChoiceImage(choice.label)}
                       className="choice-image inline-thumb"
                     />
                   </label>
@@ -374,26 +376,26 @@ export default function PracticePage() {
                   rows={5}
                   value={currentResponse?.text ?? ""}
                   onChange={(e) => updateCurrentResponse({ text: e.target.value, skipped: false })}
-                  placeholder="הקלד תשובה..."
+                  placeholder={uiText.practice.openTextPlaceholder}
                 />
               </div>
             )}
 
             <div className="practice-actions">
               <button type="button" onClick={skipCurrent}>
-                דלג
+                {uiText.practice.buttons.skip}
               </button>
               <button type="button" onClick={finalizeCurrent}>
-                שמור והמשך
+                {uiText.practice.buttons.saveAndNext}
               </button>
               <button type="button" onClick={() => setPhase("review")}>
-                סיים ועבור לבדיקה
+                {uiText.practice.buttons.finishAndReview}
               </button>
             </div>
           </section>
 
           <section className="card practice-block">
-            <h3>ניווט שאלות</h3>
+            <h3>{uiText.practice.navigationTitle}</h3>
             <div className="navigator-grid">
               {questions.map((q, idx) => {
                 const status = getQuestionStatus(q, responses[idx], idx === currentIndex);
@@ -402,7 +404,7 @@ export default function PracticePage() {
                     key={q.id}
                     className={`navigator-dot status-${status}`}
                     onClick={() => setCurrentIndex(idx)}
-                    aria-label={`שאלה ${idx + 1}`}
+                    aria-label={uiText.practice.ariaQuestion(idx + 1)}
                   >
                     {idx + 1}
                   </button>
@@ -415,9 +417,9 @@ export default function PracticePage() {
 
       {phase === "review" && (
         <section className="card practice-block">
-          <h2>בדיקה וסיכום</h2>
+          <h2>{uiText.practice.reviewTitle}</h2>
           <p>
-            ציון סופי: <strong>{overallScore.toFixed(1)}%</strong>
+            {uiText.practice.finalScoreLabel} <strong>{overallScore.toFixed(1)}%</strong>
           </p>
           <ReviewSummary summary={reviewSummary} />
           <ReviewControls
@@ -443,23 +445,23 @@ export default function PracticePage() {
                     <ClickableStorageImage
                       imageStoragePath={q.image_storage_path}
                       imageRef={q.image_ref}
-                      alt={`תמונה לשאלה ${q.id}`}
+                      alt={uiText.practice.altQuestionImage(q.id)}
                       className="question-image inline-thumb"
                     />
                   </div>
-                  <p>תגיות: {(q.tags ?? []).join(", ") || "-"}</p>
-                  <p>ציון לשאלה: {perQuestionScore.toFixed(1)}%</p>
+                  <p>{uiText.practice.tagsLabel} {(q.tags ?? []).join(", ") || uiText.common.notAvailable}</p>
+                  <p>{uiText.practice.questionScoreLabel} {perQuestionScore.toFixed(1)}%</p>
 
                   {q.type === "mcq" && (
                     <>
-                      <p>התשובת שלך: {response?.choiceId || "לא נענה"}</p>
-                      {attempted && <p>התשובה הנכונה: {q.correct_choice_id}</p>}
+                      <p>{uiText.practice.yourAnswerMcqLabel} {response?.choiceId || uiText.practice.unanswered}</p>
+                      {attempted && <p>{uiText.practice.correctAnswerLabel} {q.correct_choice_id}</p>}
                       {q.choices?.map((choice) => (
                         <ClickableStorageImage
                           key={`${q.id}-review-choice-${choice.id}`}
                           imageStoragePath={choice.image_storage_path}
                           imageRef={choice.image_ref}
-                          alt={`תמונה לאפשרות ${choice.label}`}
+                          alt={uiText.practice.altChoiceImage(choice.label)}
                           className="choice-image inline-thumb"
                         />
                       ))}
@@ -468,9 +470,9 @@ export default function PracticePage() {
 
                   {q.type === "open_text" && (
                     <>
-                      <p>התשובה שלך: {response?.text?.trim() || "לא נענה"}</p>
+                      <p>{uiText.practice.yourAnswerLabel} {response?.text?.trim() || uiText.practice.unanswered}</p>
                       <div className="subgrade-list">
-                        <strong>סימון סעיפים נכונים:</strong>
+                        <strong>{uiText.practice.subGradesLabel}</strong>
                         {(q.sub_questions ?? []).map((sub) => (
                           <label key={sub.id} className="practice-inline">
                             <input
@@ -490,7 +492,7 @@ export default function PracticePage() {
 
                   {showExplanations && attempted && q.model_answer && (
                     <div>
-                      <strong>הסבר/פתרון:</strong>
+                      <strong>{uiText.practice.explanationLabel}</strong>
                       <p>{q.model_answer}</p>
                     </div>
                   )}
@@ -499,7 +501,7 @@ export default function PracticePage() {
             })}
           </div>
           <button type="button" onClick={resetToSetup}>
-            מבחן חדש
+            {uiText.practice.buttons.newTest}
           </button>
         </section>
       )}

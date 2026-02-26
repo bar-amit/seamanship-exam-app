@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { uiText } from "../src/content/strings.js";
 
 export default async function HomePage() {
   const cookieStore = await cookies();
@@ -7,27 +8,25 @@ export default async function HomePage() {
   return (
     <main>
       <section className="card">
-        <h1>אפליקציית הכנה למבחן משיט</h1>
-        <p className="muted">
-          שלב 1 הושלם: תשתית Next.js, בסיס RTL, הגדרות Firebase ושומרי נתיבים.
+        <h1>{uiText.home.title}</h1>
+        <p className="muted">{uiText.home.subtitle}</p>
+        <p>
+          <a href="/practice">{uiText.home.links.practice}</a>
         </p>
         <p>
-          <a href="/practice">תרגול מבחן</a>
-        </p>
-        <p>
-          <a href="/practice/tags">תרגול לפי תגית</a>
+          <a href="/practice/tags">{uiText.home.links.tagPractice}</a>
         </p>
         {hasSession ? (
           <>
             <p>
-              <a href="/collections">האוספים שלי</a>
+              <a href="/collections">{uiText.home.links.collections}</a>
             </p>
             <p>
-              <a href="/progress">התקדמות</a>
+              <a href="/progress">{uiText.home.links.progress}</a>
             </p>
           </>
         ) : (
-          <p className="muted">יש להתחבר כדי לראות קישורים לאזור האישי.</p>
+          <p className="muted">{uiText.home.loginHint}</p>
         )}
       </section>
     </main>

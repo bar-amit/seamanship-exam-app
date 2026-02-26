@@ -1,18 +1,27 @@
 import { expect, test } from "@playwright/test";
 import { mockPracticeApi } from "./helpers/mock-routes.js";
+import { uiText } from "../src/content/strings.js";
 
 test("anonymous user can complete practice test flow", async ({ page }) => {
   await mockPracticeApi(page);
   await page.goto("/practice");
 
-  await page.getByRole("button", { name: "התחל" }).click();
-  await expect(page.getByText("שאלה 1 מתוך 2")).toBeVisible();
+  await page.getByRole("button", { name: uiText.practice.start }).click();
+  await expect(
+    page.getByText(
+      `${uiText.practice.questionProgressPrefix} 1 ${uiText.practice.questionProgressOutOf} 2`
+    )
+  ).toBeVisible();
 
   await page.locator('input[type="radio"]').first().check();
-  await page.getByRole("button", { name: "שמור והמשך" }).click();
-  await expect(page.getByText("שאלה 2 מתוך 2")).toBeVisible();
+  await page.getByRole("button", { name: uiText.practice.buttons.saveAndNext }).click();
+  await expect(
+    page.getByText(
+      `${uiText.practice.questionProgressPrefix} 2 ${uiText.practice.questionProgressOutOf} 2`
+    )
+  ).toBeVisible();
 
-  await page.getByRole("button", { name: "סיים ועבור לבדיקה" }).click();
-  await expect(page.getByRole("heading", { name: "בדיקה וסיכום" })).toBeVisible();
-  await expect(page.getByText("ציון סופי:")).toBeVisible();
+  await page.getByRole("button", { name: uiText.practice.buttons.finishAndReview }).click();
+  await expect(page.getByRole("heading", { name: uiText.practice.reviewTitle })).toBeVisible();
+  await expect(page.getByText(uiText.practice.finalScoreLabel)).toBeVisible();
 });

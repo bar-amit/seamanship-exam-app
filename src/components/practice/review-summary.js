@@ -1,12 +1,6 @@
 "use client";
 
-const LABELS = {
-  correct: "נכונות",
-  partial: "חלקיות",
-  incorrect: "שגויות",
-  skipped: "דילוגים",
-  unanswered: "ללא מענה"
-};
+import { uiText } from "../../content/strings.js";
 
 export default function ReviewSummary({ summary }) {
   if (!summary) {
@@ -15,11 +9,11 @@ export default function ReviewSummary({ summary }) {
 
   return (
     <div className="review-summary">
-      <span>{LABELS.correct}: {summary.correct}</span>
-      <span>{LABELS.partial}: {summary.partial}</span>
-      <span>{LABELS.incorrect}: {summary.incorrect}</span>
-      <span>{LABELS.skipped}: {summary.skipped}</span>
-      <span>{LABELS.unanswered}: {summary.unanswered}</span>
+      <span>{uiText.review.summary.labels.correct}: {summary.correct}</span>
+      <span>{uiText.review.summary.labels.partial}: {summary.partial}</span>
+      <span>{uiText.review.summary.labels.incorrect}: {summary.incorrect}</span>
+      <span>{uiText.review.summary.labels.skipped}: {summary.skipped}</span>
+      <span>{uiText.review.summary.labels.unanswered}: {summary.unanswered}</span>
     </div>
   );
 }

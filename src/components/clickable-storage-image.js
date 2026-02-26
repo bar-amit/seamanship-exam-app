@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getDownloadURL, ref } from "firebase/storage";
 import { firebaseStorage } from "../lib/firebase/client.js";
+import { uiText } from "../content/strings.js";
 
 const urlCache = new Map();
 
@@ -82,7 +83,7 @@ export default function ClickableStorageImage({
   }
 
   if (failed || !url) {
-    return <p className="muted">התמונה לא זמינה כרגע.</p>;
+    return <p className="muted">{uiText.image.unavailable}</p>;
   }
 
   return (

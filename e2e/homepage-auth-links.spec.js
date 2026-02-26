@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { mockAuthSessionSyncNoop } from "./helpers/mock-routes.js";
+import { uiText } from "../src/content/strings.js";
 
 async function setUserCookies(context, email) {
   await context.addCookies([
@@ -20,11 +21,11 @@ test("homepage hides protected links when logged out", async ({ page }) => {
   await mockAuthSessionSyncNoop(page);
   await page.goto("/");
 
-  await expect(page.getByRole("link", { name: "תרגול מבחן" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "תרגול לפי תגית" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "האוספים שלי" })).toHaveCount(0);
-  await expect(page.getByRole("link", { name: "התקדמות" })).toHaveCount(0);
-  await expect(page.getByText("יש להתחבר כדי לראות קישורים לאזור האישי.")).toBeVisible();
+  await expect(page.getByRole("link", { name: uiText.home.links.practice })).toBeVisible();
+  await expect(page.getByRole("link", { name: uiText.home.links.tagPractice })).toBeVisible();
+  await expect(page.getByRole("link", { name: uiText.home.links.collections })).toHaveCount(0);
+  await expect(page.getByRole("link", { name: uiText.home.links.progress })).toHaveCount(0);
+  await expect(page.getByText(uiText.home.loginHint)).toBeVisible();
 });
 
 test("homepage shows protected links when logged in", async ({ context, page }) => {
@@ -32,7 +33,7 @@ test("homepage shows protected links when logged in", async ({ context, page }) 
   await mockAuthSessionSyncNoop(page);
   await page.goto("/");
 
-  await expect(page.getByRole("link", { name: "האוספים שלי" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "התקדמות" })).toBeVisible();
-  await expect(page.getByText("יש להתחבר כדי לראות קישורים לאזור האישי.")).toHaveCount(0);
+  await expect(page.getByRole("link", { name: uiText.home.links.collections })).toBeVisible();
+  await expect(page.getByRole("link", { name: uiText.home.links.progress })).toBeVisible();
+  await expect(page.getByText(uiText.home.loginHint)).toHaveCount(0);
 });

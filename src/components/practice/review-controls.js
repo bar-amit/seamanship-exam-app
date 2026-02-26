@@ -1,5 +1,7 @@
 "use client";
 
+import { uiText } from "../../content/strings.js";
+
 export default function ReviewControls({
   reviewFilter,
   setReviewFilter,
@@ -9,12 +11,12 @@ export default function ReviewControls({
   return (
     <div className="review-controls">
       <label>
-        סינון
+        {uiText.review.controls.filterLabel}
         <select value={reviewFilter} onChange={(e) => setReviewFilter(e.target.value)}>
-          <option value="all">הכל</option>
-          <option value="mistakes">טעויות וחלקיות</option>
-          <option value="skipped">דילוגים</option>
-          <option value="correct">נכונות</option>
+          <option value="all">{uiText.review.controls.options.all}</option>
+          <option value="mistakes">{uiText.review.controls.options.mistakes}</option>
+          <option value="skipped">{uiText.review.controls.options.skipped}</option>
+          <option value="correct">{uiText.review.controls.options.correct}</option>
         </select>
       </label>
       <label className="practice-inline">
@@ -23,7 +25,7 @@ export default function ReviewControls({
           checked={showExplanations}
           onChange={(e) => setShowExplanations(e.target.checked)}
         />
-        הצג הסברים
+        {uiText.review.controls.showExplanations}
       </label>
     </div>
   );

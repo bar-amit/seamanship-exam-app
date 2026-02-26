@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { uiText } from "../../src/content/strings.js";
 
 function formatPercent(value) {
   return `${Number(value ?? 0).toFixed(1)}%`;
@@ -19,7 +20,7 @@ export default function ProgressPage() {
         const res = await fetch("/api/progress/tag");
         const data = await res.json();
         if (!res.ok || !data.ok) {
-          throw new Error(data.error || "Failed to load progress");
+          throw new Error(data.error || uiText.progress.errors.loadFailed);
         }
         setProgress(data.progress);
       } catch (err) {
@@ -36,32 +37,35 @@ export default function ProgressPage() {
   return (
     <main>
       <section className="card">
-        <h1>התקדמות לפי תגיות</h1>
-        <p className="muted">הנתונים נשמרים למשתמש המחובר ומעודכנים מתרגול לפי תגיות.</p>
+        <h1>{uiText.progress.title}</h1>
+        <p className="muted">{uiText.progress.subtitle}</p>
       </section>
 
       <section className="card practice-block">
-        {isLoading && <p className="muted">טוען...</p>}
+        {isLoading && <p className="muted">{uiText.common.loading}</p>}
         {error && <p className="error">{error}</p>}
 
         {!isLoading && !error && !progress && (
-          <p className="muted">אין נתוני התקדמות שמורים עדיין. בצע תרגול לפי תגיות כדי ליצור נתונים.</p>
+          <p className="muted">{uiText.progress.emptyState}</p>
         )}
 
         {!isLoading && !error && progress && (
           <>
             <p>
-              <strong>שאלות בתרגול האחרון:</strong> {progress.questionCount ?? 0}
+              <strong>{uiText.progress.lastPracticeCountLabel}</strong> {progress.questionCount ?? 0}
             </p>
             <p>
-              <strong>שאלות שנסקרו:</strong> {progress.reviewedCount ?? 0}
+              <strong>{uiText.progress.reviewedCountLabel}</strong> {progress.reviewedCount ?? 0}
             </p>
             <p>
-              <strong>ציון ממוצע (נסקרו):</strong> {formatPercent(progress.averageReviewedScore)}
+              <strong>{uiText.progress.averageReviewedScoreLabel}</strong>{" "}
+              {formatPercent(progress.averageReviewedScore)}
             </p>
             <p className="muted">
-              עודכן לאחרונה:{" "}
-              {progress.updated_at ? new Date(progress.updated_at).toLocaleString("he-IL") : "לא זמין"}
+              {uiText.progress.updatedAtLabel}{" "}
+              {progress.updated_at
+                ? new Date(progress.updated_at).toLocaleString("he-IL")
+                : uiText.progress.updatedAtUnavailable}
             </p>
 
             <div className="review-list">
@@ -69,10 +73,10 @@ export default function ProgressPage() {
                 <article key={row.tag} className="review-item">
                   <h3>{row.tag}</h3>
                   <p>
-                    <strong>ניסיונות:</strong> {row.attempts}
+                    <strong>{uiText.progress.attemptsLabel}</strong> {row.attempts}
                   </p>
                   <p>
-                    <strong>ציון ממוצע:</strong> {formatPercent(row.averageScore)}
+                    <strong>{uiText.progress.averageScoreLabel}</strong> {formatPercent(row.averageScore)}
                   </p>
                 </article>
               ))}

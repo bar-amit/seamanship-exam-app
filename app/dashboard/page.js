@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { uiText } from "../../src/content/strings.js";
 
 function formatPercent(value) {
   return `${Number(value ?? 0).toFixed(1)}%`;
@@ -25,10 +26,10 @@ export default function DashboardPage() {
         const progressData = await progressRes.json();
 
         if (!collectionsRes.ok || !collectionsData.ok) {
-          throw new Error(collectionsData.error || "Failed to load collections summary");
+          throw new Error(collectionsData.error || uiText.dashboard.errors.collectionsSummaryFailed);
         }
         if (!progressRes.ok || !progressData.ok) {
-          throw new Error(progressData.error || "Failed to load progress summary");
+          throw new Error(progressData.error || uiText.dashboard.errors.progressSummaryFailed);
         }
 
         setCollectionsCount((collectionsData.collections ?? []).length);
@@ -48,36 +49,37 @@ export default function DashboardPage() {
   return (
     <main>
       <section className="card">
-        <h1>לוח משתמש</h1>
-        <p className="muted">תקציר מהיר של האוספים והתקדמות לפי תגיות.</p>
+        <h1>{uiText.dashboard.title}</h1>
+        <p className="muted">{uiText.dashboard.subtitle}</p>
       </section>
 
       <section className="card practice-block">
-        {isLoading && <p className="muted">טוען...</p>}
+        {isLoading && <p className="muted">{uiText.common.loading}</p>}
         {error && <p className="error">{error}</p>}
         {!isLoading && !error && (
           <>
             <div className="review-list">
               <article className="review-item">
-                <h3>אוספים</h3>
+                <h3>{uiText.dashboard.cards.collectionsTitle}</h3>
                 <p>
-                  <strong>סה״כ אוספים:</strong> {collectionsCount}
+                  <strong>{uiText.dashboard.cards.collectionsCountLabel}</strong> {collectionsCount}
                 </p>
                 <p>
-                  <a href="/collections">מעבר לאוספים</a>
+                  <a href="/collections">{uiText.dashboard.cards.collectionsLink}</a>
                 </p>
               </article>
 
               <article className="review-item">
-                <h3>התקדמות לפי תגיות</h3>
-                {!progress && <p className="muted">אין נתוני התקדמות שמורים עדיין.</p>}
+                <h3>{uiText.dashboard.cards.progressTitle}</h3>
+                {!progress && <p className="muted">{uiText.dashboard.cards.noProgress}</p>}
                 {progress && (
                   <>
                     <p>
-                      <strong>שאלות שנסקרו:</strong> {progress.reviewedCount ?? 0}
+                      <strong>{uiText.dashboard.cards.reviewedLabel}</strong> {progress.reviewedCount ?? 0}
                     </p>
                     <p>
-                      <strong>ממוצע נסקרות:</strong> {formatPercent(progress.averageReviewedScore)}
+                      <strong>{uiText.dashboard.cards.reviewedAverageLabel}</strong>{" "}
+                      {formatPercent(progress.averageReviewedScore)}
                     </p>
                     {topTags.map((tag) => (
                       <p key={tag.tag}>
@@ -87,7 +89,7 @@ export default function DashboardPage() {
                   </>
                 )}
                 <p>
-                  <a href="/progress">מעבר להתקדמות מלאה</a>
+                  <a href="/progress">{uiText.dashboard.cards.progressLink}</a>
                 </p>
               </article>
             </div>

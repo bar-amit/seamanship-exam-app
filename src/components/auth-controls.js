@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import { firebaseAuth } from "../lib/firebase/client.js";
+import { uiText } from "../content/strings.js";
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
@@ -17,7 +18,7 @@ async function setSessionFromUser(user) {
   });
   if (!res.ok) {
     const data = await res.json().catch(() => ({}));
-    throw new Error(data.error || "Failed to create session");
+    throw new Error(data.error || uiText.auth.errors.sessionCreateFailed);
   }
 }
 
@@ -51,7 +52,7 @@ export default function AuthControls() {
         }
         router.refresh();
       } catch (err) {
-        setError(err.message || "Auth session sync failed.");
+        setError(err.message || uiText.auth.errors.sessionSyncFailed);
       } finally {
         if (active) {
           setBusy(false);
@@ -74,7 +75,7 @@ export default function AuthControls() {
       setEmail(result.user.email ?? "");
       router.refresh();
     } catch (err) {
-      setError(err.message || "Login failed.");
+      setError(err.message || uiText.auth.errors.loginFailed);
     } finally {
       setBusy(false);
     }
@@ -89,7 +90,7 @@ export default function AuthControls() {
       setEmail("");
       router.refresh();
     } catch (err) {
-      setError(err.message || "Logout failed.");
+      setError(err.message || uiText.auth.errors.logoutFailed);
     } finally {
       setBusy(false);
     }
@@ -100,14 +101,16 @@ export default function AuthControls() {
       <div className="auth-main">
         {email ? (
           <>
-            <span className="muted">מחובר: {email}</span>
+            <span className="muted">
+              {uiText.auth.signedInPrefix} {email}
+            </span>
             <button type="button" onClick={handleLogout} disabled={busy}>
-              {busy ? "מתנתק..." : "התנתק"}
+              {busy ? uiText.auth.logoutBusy : uiText.auth.logout}
             </button>
           </>
         ) : (
           <button type="button" onClick={handleLogin} disabled={busy}>
-            {busy ? "מתחבר..." : "התחברות עם Google"}
+            {busy ? uiText.auth.loginBusy : uiText.auth.login}
           </button>
         )}
       </div>

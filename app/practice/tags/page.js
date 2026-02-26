@@ -16,6 +16,7 @@ import {
 import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
 import ReviewSummary from "../../../src/components/practice/review-summary.js";
 import ReviewStatusBadge from "../../../src/components/practice/review-status-badge.js";
+import { uiText } from "../../../src/content/strings.js";
 
 function createResponse(question) {
   if (question.type === "open_text") {
@@ -155,7 +156,7 @@ export default function TagPracticePage() {
       const res = await fetch(`/api/practice/tag-questions?${query.toString()}`);
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        throw new Error(data.error || "Failed to load tag practice questions");
+        throw new Error(data.error || uiText.practiceTags.errors.loadQuestionsFailed);
       }
       setQuestions(data.questions);
       setResponses(data.questions.map((q) => createResponse(q)));
@@ -208,16 +209,13 @@ export default function TagPracticePage() {
   return (
     <main>
       <section className="card">
-        <h1>תרגול לפי תגיות (מצב לימוד)</h1>
-        <p className="muted">
-          עזרי לימוד מוסתרים כברירת מחדל, עם חשיפה מהירה במהלך תרגול.
-        </p>
+        <h1>{uiText.practiceTags.title}</h1>
       </section>
 
       <section className="card practice-block">
-        <h2>הגדרות תרגול</h2>
+        <h2>{uiText.practiceTags.setupTitle}</h2>
         <label>
-          מספר שאלות
+          {uiText.practiceTags.countLabel}
           <input
             type="number"
             min={5}
@@ -228,7 +226,7 @@ export default function TagPracticePage() {
         </label>
 
         <div>
-          <strong>בחר תגיות</strong>
+          <strong>{uiText.practiceTags.selectTagsLabel}</strong>
           <div className="choices-list">
             {CHAPTER_TAG_OPTIONS.map((tag) => (
               <label className="practice-inline" key={tag.id}>
@@ -246,13 +244,13 @@ export default function TagPracticePage() {
                 checked={selectedTags.length === 0}
                 onChange={() => setSelectedTags([])}
               />
-              כל התגיות
+              {uiText.practiceTags.allTags}
             </label>
           </div>
         </div>
 
         <button onClick={startTagPractice} disabled={isLoading}>
-          {isLoading ? "טוען..." : "התחל תרגול תגיות"}
+          {isLoading ? uiText.practiceTags.startLoading : uiText.practiceTags.start}
         </button>
         {error && <p className="error">{error}</p>}
       </section>
@@ -262,10 +260,11 @@ export default function TagPracticePage() {
           <section className="card practice-block">
             <div className="practice-topbar">
               <strong>
-                שאלה {currentIndex + 1} מתוך {questions.length}
+                {uiText.practiceTags.questionProgressPrefix} {currentIndex + 1}{" "}
+                {uiText.practiceTags.questionProgressOutOf} {questions.length}
               </strong>
               <span>
-                נסקרו {reviewedCount}/{questions.length}
+                {uiText.practiceTags.reviewedPrefix} {reviewedCount}/{questions.length}
               </span>
             </div>
 
@@ -275,7 +274,7 @@ export default function TagPracticePage() {
                 checked={showStudyAids}
                 onChange={(e) => setShowStudyAids(e.target.checked)}
               />
-              הצג עזרי לימוד
+              {uiText.practiceTags.showStudyAids}
             </label>
 
             <div className="prompt-row">
@@ -283,7 +282,7 @@ export default function TagPracticePage() {
               <ClickableStorageImage
                 imageStoragePath={currentQuestion.image_storage_path}
                 imageRef={currentQuestion.image_ref}
-                alt={`תמונה לשאלה ${currentQuestion.id}`}
+                alt={uiText.practiceTags.altQuestionImage(currentQuestion.id)}
                 className="question-image inline-thumb"
               />
             </div>
@@ -304,7 +303,7 @@ export default function TagPracticePage() {
                     <ClickableStorageImage
                       imageStoragePath={choice.image_storage_path}
                       imageRef={choice.image_ref}
-                      alt={`תמונה לאפשרות ${choice.label}`}
+                      alt={uiText.practiceTags.altChoiceImage(choice.label)}
                       className="choice-image inline-thumb"
                     />
                   </label>
@@ -318,10 +317,10 @@ export default function TagPracticePage() {
                   rows={5}
                   value={currentResponse?.text ?? ""}
                   onChange={(e) => updateCurrentResponse({ text: e.target.value, skipped: false })}
-                  placeholder="כתוב תשובה חופשית"
+                  placeholder={uiText.practiceTags.openTextPlaceholder}
                 />
                 <div className="subgrade-list">
-                  <strong>סמן סעיפים שנענו נכונה (לבדיקה עצמית)</strong>
+                  <strong>{uiText.practiceTags.subGradeInstruction}</strong>
                   {(currentQuestion.sub_questions ?? []).map((sub) => (
                     <label key={sub.id} className="practice-inline">
                       <input
@@ -337,38 +336,39 @@ export default function TagPracticePage() {
             )}
 
             <div className="practice-actions">
-              <button onClick={markReviewed}>בדוק שאלה</button>
-              <button onClick={markSkipped}>דלג</button>
-              <button onClick={nextQuestion}>הבא</button>
+              <button onClick={markReviewed}>{uiText.practiceTags.buttons.markReviewed}</button>
+              <button onClick={markSkipped}>{uiText.practiceTags.buttons.skip}</button>
+              <button onClick={nextQuestion}>{uiText.practiceTags.buttons.next}</button>
             </div>
 
             {(showStudyAids || currentResponse?.revealed) && (
               <div className="review-item">
                 <ReviewStatusBadge status={getReviewStatus(currentQuestion, currentResponse)} />
                 <p>
-                  <strong>תשובה נכונה:</strong>{" "}
+                  <strong>{uiText.practiceTags.correctAnswerLabel}</strong>{" "}
                   {currentQuestion.type === "mcq"
                     ? currentQuestion.correct_choice_id
-                    : "בדיקה עצמית לפי הסעיפים"}
+                    : uiText.practiceTags.openTextCorrectAnswerFallback}
                 </p>
                 {currentQuestion.model_answer && (
                   <>
-                    <strong>הסבר:</strong>
+                    <strong>{uiText.practiceTags.explanationLabel}</strong>
                     <p>{currentQuestion.model_answer}</p>
                   </>
                 )}
                 <p>
-                  <strong>תגיות:</strong> {(currentQuestion.tags ?? []).join(", ")}
+                  <strong>{uiText.practiceTags.tagsLabel}</strong> {(currentQuestion.tags ?? []).join(", ")}
                 </p>
                 <p>
-                  <strong>ניקוד לשאלה:</strong> {scoreQuestion(currentQuestion, currentResponse).toFixed(1)}%
+                  <strong>{uiText.practiceTags.questionScoreLabel}</strong>{" "}
+                  {scoreQuestion(currentQuestion, currentResponse).toFixed(1)}%
                 </p>
               </div>
             )}
           </section>
 
           <section className="card practice-block">
-            <h3>ניווט מהיר</h3>
+            <h3>{uiText.practiceTags.quickNavTitle}</h3>
             <div className="navigator-grid">
               {questions.map((q, idx) => {
                 const status = idx === currentIndex ? "current" : getReviewStatus(q, responses[idx]);
@@ -385,7 +385,7 @@ export default function TagPracticePage() {
             </div>
             <ReviewSummary summary={reviewSummary} />
             <p>
-              ניקוד ממוצע: <strong>{averageReviewedScore.toFixed(1)}%</strong>
+              {uiText.practiceTags.averageScoreLabel} <strong>{averageReviewedScore.toFixed(1)}%</strong>
             </p>
           </section>
         </>

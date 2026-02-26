@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { uiText } from "../../src/content/strings.js";
 
 function idsToDraft(ids) {
   return Array.isArray(ids) ? ids.join(", ") : "";
@@ -33,7 +34,7 @@ export default function CollectionsPage() {
       const res = await fetch("/api/collections");
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        throw new Error(data.error || "Failed to fetch collections");
+        throw new Error(data.error || uiText.collections.errors.fetchFailed);
       }
       const rows = data.collections ?? [];
       setCollections(rows);
@@ -72,7 +73,7 @@ export default function CollectionsPage() {
       });
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        throw new Error(data.error || "Failed to create collection");
+        throw new Error(data.error || uiText.collections.errors.createFailed);
       }
       setName("");
       setDescription("");
@@ -88,7 +89,7 @@ export default function CollectionsPage() {
       const res = await fetch(`/api/collections/${id}`, { method: "DELETE" });
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        throw new Error(data.error || "Failed to delete collection");
+        throw new Error(data.error || uiText.collections.errors.deleteFailed);
       }
       await fetchCollections();
     } catch (err) {
@@ -126,7 +127,7 @@ export default function CollectionsPage() {
       });
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        throw new Error(data.error || "Failed to update collection");
+        throw new Error(data.error || uiText.collections.errors.updateFailed);
       }
       await fetchCollections();
     } catch (err) {
@@ -139,45 +140,47 @@ export default function CollectionsPage() {
   return (
     <main>
       <section className="card">
-        <h1>האוספים שלי</h1>
-        <p className="muted">ניהול אוספים פרטיים למשתמש המחובר.</p>
+        <h1>{uiText.collections.title}</h1>
+        <p className="muted">{uiText.collections.subtitle}</p>
       </section>
 
       <section className="card practice-block">
-        <h2>יצירת אוסף חדש</h2>
+        <h2>{uiText.collections.createTitle}</h2>
         <form className="practice-block" onSubmit={createCollection}>
           <label>
-            שם האוסף
+            {uiText.collections.fields.name}
             <input value={name} onChange={(e) => setName(e.target.value)} required />
           </label>
           <label>
-            תיאור (אופציונלי)
+            {uiText.collections.fields.descriptionOptional}
             <textarea rows={3} value={description} onChange={(e) => setDescription(e.target.value)} />
           </label>
-          <button type="submit">צור אוסף</button>
+          <button type="submit">{uiText.collections.buttons.create}</button>
         </form>
       </section>
 
       <section className="card practice-block">
-        <h2>רשימת אוספים</h2>
-        {isLoading && <p className="muted">טוען...</p>}
+        <h2>{uiText.collections.listTitle}</h2>
+        {isLoading && <p className="muted">{uiText.common.loading}</p>}
         {error && <p className="error">{error}</p>}
-        {!isLoading && collections.length === 0 && <p className="muted">אין אוספים עדיין.</p>}
+        {!isLoading && collections.length === 0 && <p className="muted">{uiText.collections.emptyState}</p>}
         <div className="review-list">
           {collections.map((col) => (
             <article key={col.id} className="review-item">
               <h3>{col.name}</h3>
-              <p className="muted">{col.description || "ללא תיאור"}</p>
-              <p>מספר שאלות: {(col.question_ids ?? []).length}</p>
+              <p className="muted">{col.description || uiText.collections.noDescription}</p>
+              <p>
+                {uiText.collections.questionCountPrefix} {(col.question_ids ?? []).length}
+              </p>
               <label>
-                שם אוסף
+                {uiText.collections.fields.name}
                 <input
                   value={editById[col.id]?.name ?? ""}
                   onChange={(e) => updateDraft(col.id, "name", e.target.value)}
                 />
               </label>
               <label>
-                תיאור
+                {uiText.collections.fields.description}
                 <textarea
                   rows={2}
                   value={editById[col.id]?.description ?? ""}
@@ -185,20 +188,20 @@ export default function CollectionsPage() {
                 />
               </label>
               <label>
-                מזהי שאלות (פסיקים)
+                {uiText.collections.fields.questionIdsCsv}
                 <textarea
                   rows={2}
                   value={editById[col.id]?.questionIds ?? ""}
                   onChange={(e) => updateDraft(col.id, "questionIds", e.target.value)}
-                  placeholder="לדוגמה: sq1-q001, sq3-q084"
+                  placeholder={uiText.collections.questionIdsPlaceholder}
                 />
               </label>
               <div className="practice-actions">
                 <button type="button" onClick={() => saveCollection(col.id)} disabled={saveBusyId === col.id}>
-                  {saveBusyId === col.id ? "שומר..." : "שמור"}
+                  {saveBusyId === col.id ? uiText.collections.buttons.saveBusy : uiText.collections.buttons.save}
                 </button>
                 <button type="button" onClick={() => removeCollection(col.id)}>
-                  מחק אוסף
+                  {uiText.collections.buttons.delete}
                 </button>
               </div>
             </article>

@@ -4,6 +4,7 @@ import {
   mockCollectionsApi,
   mockProgressApi
 } from "./helpers/mock-routes.js";
+import { uiText } from "../src/content/strings.js";
 
 async function setUserCookies(context, email) {
   await context.addCookies([
@@ -27,16 +28,16 @@ test("authenticated user can access dashboard, collections and progress", async 
   await mockProgressApi(page);
 
   await page.goto("/dashboard");
-  await expect(page.getByRole("heading", { name: "לוח משתמש" })).toBeVisible();
-  await expect(page.getByText("סה״כ אוספים:")).toBeVisible();
+  await expect(page.getByRole("heading", { name: uiText.dashboard.title })).toBeVisible();
+  await expect(page.getByText(uiText.dashboard.cards.collectionsCountLabel)).toBeVisible();
 
   await page.goto("/collections");
-  await expect(page.getByRole("heading", { name: "האוספים שלי" })).toBeVisible();
-  await page.getByLabel("שם האוסף").fill("אוסף חדש");
-  await page.getByRole("button", { name: "צור אוסף" }).click();
+  await expect(page.getByRole("heading", { name: uiText.collections.title })).toBeVisible();
+  await page.getByLabel(uiText.collections.fields.name).fill("אוסף חדש");
+  await page.getByRole("button", { name: uiText.collections.buttons.create }).click();
   await expect(page.getByRole("heading", { name: "אוסף חדש", exact: true })).toBeVisible();
 
   await page.goto("/progress");
-  await expect(page.getByRole("heading", { name: "התקדמות לפי תגיות" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: uiText.progress.title })).toBeVisible();
   await expect(page.getByText("seamanship")).toBeVisible();
 });

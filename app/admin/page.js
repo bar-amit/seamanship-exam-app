@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { uiText } from "../../src/content/strings.js";
 
 function subQuestionsToDraft(subQuestions) {
   const rows = Array.isArray(subQuestions) ? subQuestions : [];
@@ -68,7 +69,7 @@ export default function AdminPage() {
       const res = await fetch(`/api/admin/questions?${params.toString()}`);
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        throw new Error(data.error || "Failed to load questions");
+        throw new Error(data.error || uiText.admin.errors.loadQuestionsFailed);
       }
 
       setQuestions(data.questions ?? []);
@@ -101,7 +102,7 @@ export default function AdminPage() {
       const res = await fetch(`/api/admin/questions/${id}`);
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        throw new Error(data.error || "Failed to load question");
+        throw new Error(data.error || uiText.admin.errors.loadQuestionFailed);
       }
       const q = data.question;
       setLoadedQuestion(q);
@@ -203,9 +204,9 @@ export default function AdminPage() {
       });
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        throw new Error(data.error || "Failed to save question");
+        throw new Error(data.error || uiText.admin.errors.saveQuestionFailed);
       }
-      setNotice("השאלה נשמרה בהצלחה.");
+      setNotice(uiText.admin.saveSuccess);
       await fetchList(query, page, pageSize);
       await loadQuestion(selectedId);
     } catch (err) {
@@ -218,27 +219,25 @@ export default function AdminPage() {
   return (
     <main>
       <section className="card">
-        <h1>ניהול תוכן</h1>
-        <p className="muted">
-          עורך אדמין עם חיפוש מדורג, תצוגה מקדימה, עריכת אפשרויות/תשובות וחשיפת JSON.
-        </p>
+        <h1>{uiText.admin.title}</h1>
+        <p className="muted">{uiText.admin.subtitle}</p>
       </section>
 
       <section className="card practice-block">
-        <h2>איתור שאלות</h2>
+        <h2>{uiText.admin.searchTitle}</h2>
         <div className="practice-actions">
           <input
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="חיפוש לפי מזהה או טקסט"
+            placeholder={uiText.admin.searchPlaceholder}
           />
           <button type="button" onClick={() => fetchList(query, 1, pageSize)} disabled={isLoadingList}>
-            {isLoadingList ? "טוען..." : "חפש"}
+            {isLoadingList ? uiText.common.loading : uiText.admin.search}
           </button>
         </div>
         <div className="practice-actions">
           <label>
-            תוצאות בעמוד
+            {uiText.admin.pageSizeLabel}
             <select
               value={pageSize}
               onChange={(e) => {
@@ -253,21 +252,21 @@ export default function AdminPage() {
             </select>
           </label>
           <span className="muted">
-            עמוד {page} מתוך {totalPages} | סה״כ {total}
+            {uiText.admin.pageCounter(page, totalPages, total)}
           </span>
           <button
             type="button"
             onClick={() => fetchList(query, page - 1, pageSize)}
             disabled={isLoadingList || page <= 1}
           >
-            הקודם
+            {uiText.admin.previous}
           </button>
           <button
             type="button"
             onClick={() => fetchList(query, page + 1, pageSize)}
             disabled={isLoadingList || page >= totalPages}
           >
-            הבא
+            {uiText.admin.next}
           </button>
         </div>
 
@@ -283,77 +282,77 @@ export default function AdminPage() {
               >
                 {q.id}
               </button>
-              <p className="muted admin-result-preview">{q.text_preview || "-"}</p>
+              <p className="muted admin-result-preview">{q.text_preview || uiText.common.notAvailable}</p>
             </article>
           ))}
-          {!isLoadingList && questions.length === 0 && <p className="muted">לא נמצאו תוצאות.</p>}
+          {!isLoadingList && questions.length === 0 && <p className="muted">{uiText.admin.emptyResults}</p>}
         </div>
       </section>
 
       <section className="card practice-block">
-        <h2>עורך שאלה</h2>
-        {!selectedId && <p className="muted">לא נבחרה שאלה.</p>}
-        {isLoadingQuestion && <p className="muted">טוען שאלה...</p>}
+        <h2>{uiText.admin.editorTitle}</h2>
+        {!selectedId && <p className="muted">{uiText.admin.noQuestionSelected}</p>}
+        {isLoadingQuestion && <p className="muted">{uiText.admin.loadingQuestion}</p>}
         {error && <p className="error">{error}</p>}
         {notice && <p className="muted">{notice}</p>}
 
         {selectedId && !isLoadingQuestion && (
           <>
             <p>
-              <strong>מזהה:</strong> {selectedId}
+              <strong>{uiText.admin.idLabel}</strong> {selectedId}
             </p>
             <p>
-              <strong>סוג:</strong> {questionType || "-"}
+              <strong>{uiText.admin.typeLabel}</strong> {questionType || uiText.common.notAvailable}
             </p>
             <p>
-              <strong>פרק:</strong> {selectedSummary?.chapter ?? "-"}
+              <strong>{uiText.admin.chapterLabel}</strong> {selectedSummary?.chapter ?? uiText.common.notAvailable}
             </p>
 
             <label>
-              טקסט שאלה
+              {uiText.admin.questionTextLabel}
               <textarea rows={5} value={questionText} onChange={(e) => setQuestionText(e.target.value)} />
             </label>
 
             <label>
-              הסבר/תשובת מודל
+              {uiText.admin.modelAnswerLabel}
               <textarea rows={5} value={modelAnswer} onChange={(e) => setModelAnswer(e.target.value)} />
             </label>
 
             <label>
-              תגיות (מופרדות בפסיק)
+              {uiText.admin.tagsLabel}
               <input value={tagsDraft} onChange={(e) => setTagsDraft(e.target.value)} />
             </label>
 
             {questionType === "mcq" && (
               <div className="practice-block">
-                <h3>אפשרויות ותשובה נכונה</h3>
+                <h3>{uiText.admin.mcqTitle}</h3>
                 <label>
-                  מזהה תשובה נכונה
+                  {uiText.admin.correctChoiceIdLabel}
                   <input
                     value={correctChoiceId}
                     onChange={(e) => setCorrectChoiceId(e.target.value)}
-                    placeholder="לדוגמה: a"
+                    placeholder={uiText.admin.correctChoiceIdPlaceholder}
                   />
                 </label>
                 {choicesDraft.map((choice, index) => (
                   <article key={`${choice.id}-${index}`} className="review-item">
                     <div className="practice-actions">
                       <label>
-                        מזהה
+                        {uiText.admin.choiceIdLabel}
                         <input
                           value={choice.id}
                           onChange={(e) => updateChoiceField(index, "id", e.target.value)}
                         />
                       </label>
                       <label>
-                        תווית
+                        {uiText.admin.choiceLabelLabel}
                         <input
                           value={choice.label}
                           onChange={(e) => updateChoiceField(index, "label", e.target.value)}
                         />
                       </label>
                       <label>
-                        קובץ תמונה (image_ref)
+                        {uiText.admin.choiceImageRefLabel}
                         <input
                           value={choice.image_ref}
                           onChange={(e) => updateChoiceField(index, "image_ref", e.target.value)}
@@ -361,7 +360,7 @@ export default function AdminPage() {
                       </label>
                     </div>
                     <label>
-                      טקסט אפשרות
+                      {uiText.admin.choiceTextLabel}
                       <textarea
                         rows={3}
                         value={choice.text}
@@ -369,38 +368,38 @@ export default function AdminPage() {
                       />
                     </label>
                     <button type="button" onClick={() => removeChoiceRow(index)}>
-                      מחק אפשרות
+                      {uiText.admin.removeChoice}
                     </button>
                   </article>
                 ))}
                 <button type="button" onClick={addChoiceRow}>
-                  הוסף אפשרות
+                  {uiText.admin.addChoice}
                 </button>
               </div>
             )}
 
             {questionType === "open_text" && (
               <div className="practice-block">
-                <h3>סעיפים</h3>
+                <h3>{uiText.admin.subQuestionsTitle}</h3>
                 {subQuestionsDraft.map((sub, index) => (
                   <article key={`${sub.id}-${index}`} className="review-item">
                     <div className="practice-actions">
                       <label>
-                        מזהה
+                        {uiText.admin.subQuestionIdLabel}
                         <input
                           value={sub.id}
                           onChange={(e) => updateSubQuestionField(index, "id", e.target.value)}
                         />
                       </label>
                       <label>
-                        תווית
+                        {uiText.admin.subQuestionLabelLabel}
                         <input
                           value={sub.label}
                           onChange={(e) => updateSubQuestionField(index, "label", e.target.value)}
                         />
                       </label>
                       <label>
-                        סדר
+                        {uiText.admin.subQuestionOrderLabel}
                         <input
                           type="number"
                           min={1}
@@ -410,7 +409,7 @@ export default function AdminPage() {
                       </label>
                     </div>
                     <label>
-                      טקסט סעיף
+                      {uiText.admin.subQuestionTextLabel}
                       <textarea
                         rows={3}
                         value={sub.text}
@@ -418,28 +417,28 @@ export default function AdminPage() {
                       />
                     </label>
                     <button type="button" onClick={() => removeSubQuestionRow(index)}>
-                      מחק סעיף
+                      {uiText.admin.removeSubQuestion}
                     </button>
                   </article>
                 ))}
                 <button type="button" onClick={addSubQuestionRow}>
-                  הוסף סעיף
+                  {uiText.admin.addSubQuestion}
                 </button>
               </div>
             )}
 
             <div className="practice-actions">
               <button type="button" onClick={saveChanges} disabled={saveBusy}>
-                {saveBusy ? "שומר..." : "שמור שינויים"}
+                {saveBusy ? uiText.admin.saveChangesBusy : uiText.admin.saveChanges}
               </button>
               <button type="button" onClick={() => loadQuestion(selectedId)} disabled={isLoadingQuestion}>
-                טען מחדש
+                {uiText.admin.reload}
               </button>
               <button type="button" onClick={() => setShowQuestionJson((prev) => !prev)}>
-                {showQuestionJson ? "הסתר JSON שאלה" : "הצג JSON שאלה"}
+                {showQuestionJson ? uiText.admin.hideQuestionJson : uiText.admin.showQuestionJson}
               </button>
               <button type="button" onClick={() => setShowPayloadJson((prev) => !prev)}>
-                {showPayloadJson ? "הסתר JSON שמירה" : "הצג JSON שמירה"}
+                {showPayloadJson ? uiText.admin.hidePayloadJson : uiText.admin.showPayloadJson}
               </button>
             </div>
 

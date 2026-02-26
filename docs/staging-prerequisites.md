@@ -35,6 +35,18 @@ Notes:
   - `localhost`
   - staging domain
 
+## Firebase App Hosting (Staging)
+
+- [-] Ensure Firebase CLI is recent (`firebase --version`, recommended >= 14.4.0).
+- [-] Initialize App Hosting once in this repo:
+  - `firebase init apphosting`
+- [-] Create/configure staging backend to use `apphosting.staging.yaml`.
+- [-] Fill `apphosting.staging.yaml` placeholders (`__REPLACE_ME__`) with staging values.
+- [-] Set staging secret for private key:
+  - `firebase apphosting:secrets:set FIREBASE_PRIVATE_KEY`
+- [-] Deploy app to staging:
+  - `firebase deploy --project <staging-project-id>`
+
 ## Security and Access
 
 - [-] Configure `ADMIN_ALLOWLIST` for staging.

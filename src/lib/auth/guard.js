@@ -1,7 +1,7 @@
 import { isAllowlistedAdmin, parseAdminAllowlist } from "./allowlist.js";
 
 const ADMIN_PREFIX = "/admin";
-const AUTH_REQUIRED_PREFIXES = ["/dashboard", "/collections", "/progress", ADMIN_PREFIX];
+const AUTH_REQUIRED_PREFIXES = ["/dashboard", "/collections", ADMIN_PREFIX];
 
 function normalizePathname(pathname) {
   return String(pathname ?? "").toLowerCase();

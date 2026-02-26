@@ -22,7 +22,7 @@ export default async function HomePage() {
               <a href="/collections">{uiText.home.links.collections}</a>
             </p>
             <p>
-              <a href="/progress">{uiText.home.links.progress}</a>
+              <a href="/dashboard">{uiText.home.links.dashboard}</a>
             </p>
           </>
         ) : (

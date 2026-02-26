@@ -194,3 +194,10 @@ Status values: `accepted`, `superseded`.
 - Decision: All user-facing UI strings are stored in a single source file (`src/content/strings.js`) and consumed by pages/components.
 - Reason: Make text updates fast and consistent, and prevent scattered hardcoded labels in UI markup.
 - Impact: UI files import string keys/functions instead of embedding raw text; future UI features must add new labels in the central string source.
+
+### 2026-02-26 - Progress Is Part of Dashboard
+
+- Status: `accepted`
+- Decision: Progress view is merged into dashboard; homepage points users to `/dashboard` ("אזור אישי") instead of a dedicated progress page.
+- Reason: Reduce navigation depth and keep personal insights in one place.
+- Impact: UI navigation should treat dashboard as the personal area entry point.

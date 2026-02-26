@@ -10,7 +10,7 @@ test("requiresAuth returns false for public routes", () => {
 test("requiresAuth returns true for protected routes", () => {
   assert.equal(requiresAuth("/dashboard"), true);
   assert.equal(requiresAuth("/dashboard/stats"), true);
-  assert.equal(requiresAuth("/PROGRESS"), true);
+  assert.equal(requiresAuth("/DASHBOARD"), true);
   assert.equal(requiresAuth("/admin"), true);
 });
 

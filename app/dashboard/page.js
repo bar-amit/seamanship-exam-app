@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { uiText } from "../../src/content/strings.js";
 
 function formatPercent(value) {
@@ -44,7 +44,7 @@ export default function DashboardPage() {
     load();
   }, []);
 
-  const topTags = (progress?.perTag ?? []).slice(0, 3);
+  const perTag = useMemo(() => progress?.perTag ?? [], [progress]);
 
   return (
     <main>
@@ -75,22 +75,36 @@ export default function DashboardPage() {
                 {progress && (
                   <>
                     <p>
+                      <strong>{uiText.dashboard.cards.lastPracticeCountLabel}</strong>{" "}
+                      {progress.questionCount ?? 0}
+                    </p>
+                    <p>
                       <strong>{uiText.dashboard.cards.reviewedLabel}</strong> {progress.reviewedCount ?? 0}
                     </p>
                     <p>
                       <strong>{uiText.dashboard.cards.reviewedAverageLabel}</strong>{" "}
                       {formatPercent(progress.averageReviewedScore)}
                     </p>
-                    {topTags.map((tag) => (
-                      <p key={tag.tag}>
-                        {tag.tag}: {formatPercent(tag.averageScore)}
-                      </p>
+                    <p className="muted">
+                      {uiText.dashboard.cards.updatedAtLabel}{" "}
+                      {progress.updated_at
+                        ? new Date(progress.updated_at).toLocaleString("he-IL")
+                        : uiText.dashboard.cards.updatedAtUnavailable}
+                    </p>
+                    {perTag.map((tag) => (
+                      <article key={tag.tag} className="review-item">
+                        <h4>{tag.tag}</h4>
+                        <p>
+                          <strong>{uiText.dashboard.cards.attemptsLabel}</strong> {tag.attempts}
+                        </p>
+                        <p>
+                          <strong>{uiText.dashboard.cards.averageScoreLabel}</strong>{" "}
+                          {formatPercent(tag.averageScore)}
+                        </p>
+                      </article>
                     ))}
                   </>
                 )}
-                <p>
-                  <a href="/progress">{uiText.dashboard.cards.progressLink}</a>
-                </p>
               </article>
             </div>
           </>

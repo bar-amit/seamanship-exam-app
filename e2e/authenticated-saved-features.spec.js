@@ -21,7 +21,7 @@ async function setUserCookies(context, email) {
   ]);
 }
 
-test("authenticated user can access dashboard, collections and progress", async ({ context, page }) => {
+test("authenticated user can access dashboard and collections", async ({ context, page }) => {
   await setUserCookies(context, "tester@example.com");
   await mockAuthSessionSyncNoop(page);
   await mockCollectionsApi(page);
@@ -30,14 +30,11 @@ test("authenticated user can access dashboard, collections and progress", async 
   await page.goto("/dashboard");
   await expect(page.getByRole("heading", { name: uiText.dashboard.title })).toBeVisible();
   await expect(page.getByText(uiText.dashboard.cards.collectionsCountLabel)).toBeVisible();
+  await expect(page.getByText(uiText.dashboard.cards.progressTitle)).toBeVisible();
 
   await page.goto("/collections");
   await expect(page.getByRole("heading", { name: uiText.collections.title })).toBeVisible();
   await page.getByLabel(uiText.collections.fields.name).fill("אוסף חדש");
   await page.getByRole("button", { name: uiText.collections.buttons.create }).click();
   await expect(page.getByRole("heading", { name: "אוסף חדש", exact: true })).toBeVisible();
-
-  await page.goto("/progress");
-  await expect(page.getByRole("heading", { name: uiText.progress.title })).toBeVisible();
-  await expect(page.getByText("seamanship")).toBeVisible();
 });

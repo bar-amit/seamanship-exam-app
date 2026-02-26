@@ -69,7 +69,7 @@ test("protected path redirects when user_email exists but session cookie missing
 
 test("uppercase protected path redirects when unauthenticated", () => {
   const decision = evaluateAccess({
-    pathname: "/PROGRESS",
+    pathname: "/DASHBOARD",
     userEmail: null,
     hasSession: false,
     allowlistRaw: "admin@example.com"

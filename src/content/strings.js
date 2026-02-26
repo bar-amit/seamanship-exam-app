@@ -10,6 +10,7 @@ export const uiText = {
       practice: "תרגול מבחן",
       tagPractice: "תרגול חופשי",
       collections: "האוספים שלי",
+      dashboard: "אזור אישי",
       progress: "אזור אישי"
     },
     loginHint: "יש להתחבר כדי ללהכנס לאזור האישי."
@@ -64,9 +65,13 @@ export const uiText = {
       collectionsLink: "מעבר לאוספים",
       progressTitle: "התקדמות לפי תגיות",
       noProgress: "אין נתונים עדיין.",
+      lastPracticeCountLabel: "שאלות בתרגול האחרון:",
       reviewedLabel: "שאלות שנסקרו:",
       reviewedAverageLabel: "ממוצע:",
-      progressLink: "מעבר להתקדמות מלאה"
+      updatedAtLabel: "עודכן לאחרונה:",
+      updatedAtUnavailable: "לא זמין",
+      attemptsLabel: "ניסיונות:",
+      averageScoreLabel: "ציון ממוצע:"
     },
     errors: {
       collectionsSummaryFailed: "Failed to load collections summary",

@@ -24,7 +24,7 @@ test("homepage hides protected links when logged out", async ({ page }) => {
   await expect(page.getByRole("link", { name: uiText.home.links.practice })).toBeVisible();
   await expect(page.getByRole("link", { name: uiText.home.links.tagPractice })).toBeVisible();
   await expect(page.getByRole("link", { name: uiText.home.links.collections })).toHaveCount(0);
-  await expect(page.getByRole("link", { name: uiText.home.links.progress })).toHaveCount(0);
+  await expect(page.getByRole("link", { name: uiText.home.links.dashboard })).toHaveCount(0);
   await expect(page.getByText(uiText.home.loginHint)).toBeVisible();
 });
 
@@ -34,6 +34,6 @@ test("homepage shows protected links when logged in", async ({ context, page }) 
   await page.goto("/");
 
   await expect(page.getByRole("link", { name: uiText.home.links.collections })).toBeVisible();
-  await expect(page.getByRole("link", { name: uiText.home.links.progress })).toBeVisible();
+  await expect(page.getByRole("link", { name: uiText.home.links.dashboard })).toBeVisible();
   await expect(page.getByText(uiText.home.loginHint)).toHaveCount(0);
 });

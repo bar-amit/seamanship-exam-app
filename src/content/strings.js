@@ -140,6 +140,7 @@ export const uiText = {
     selectTagsLabel: "בחר תגיות",
     allTags: "כל התגיות",
     showStudyAids: "הצג עזרי לימוד",
+    hideStudyAids: "הסתר עזרי לימוד",
     start: "התחל תרגול תגיות",
     startLoading: "בטעינה...",
     questionProgressPrefix: "שאלה",
@@ -150,7 +151,8 @@ export const uiText = {
     buttons: {
       markReviewed: "בדוק שאלה",
       skip: "דלג",
-      next: "הבא"
+      next: "הבא",
+      resetToSetup: "חזרה להגדרות"
     },
     correctAnswerLabel: "תשובה נכונה:",
     openTextCorrectAnswerFallback: "בדיקה עצמית לפי הסעיפים",

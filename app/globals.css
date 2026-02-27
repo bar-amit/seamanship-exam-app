@@ -167,6 +167,140 @@ main {
   min-width: 140px;
 }
 
+.tag-setup-group {
+  display: grid;
+  gap: 10px;
+  max-width: 540px;
+}
+
+.tag-setup-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #24324a;
+}
+
+.tag-chip-list {
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 7px;
+}
+
+.tag-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #c7d0dc;
+  border-radius: 8px;
+  background: #f7f9fc;
+  color: #233147;
+  padding: 9px 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.tag-chip input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.tag-chip:has(input[type="checkbox"]:checked) {
+  background: #e8effd;
+  border-color: #3f66b3;
+  color: #1f3f86;
+  box-shadow: inset 3px 0 0 #3f66b3;
+}
+
+.tag-chip:has(input[type="checkbox"]:focus-visible) {
+  box-shadow: 0 0 0 3px rgba(63, 102, 179, 0.24);
+}
+
+.tag-chip-divider {
+  height: 1px;
+  background: #d6dde8;
+  margin: 2px 0 0;
+}
+
+.tag-chip-select-all {
+  display: grid;
+  margin-top: 2px;
+}
+
+.tag-chip-all {
+  border-style: dashed;
+  background: #fff9e6;
+  border-color: #d4b24a;
+  color: #5a450f;
+}
+
+.tag-chip-all:has(input[type="checkbox"]:checked) {
+  background: #f2d67a;
+  border-color: #c3931f;
+  color: #4d3300;
+  box-shadow: inset 3px 0 0 #c3931f;
+  border-style: solid;
+}
+
+.tag-chip-all:has(input[type="checkbox"]:focus-visible) {
+  box-shadow: 0 0 0 3px rgba(195, 147, 31, 0.28);
+}
+
+.study-aids-toggle {
+  width: fit-content;
+  border: 1px solid #86a1d0;
+  border-radius: 999px;
+  background: #eef4ff;
+  color: #2d466f;
+  padding: 8px 14px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.study-aids-toggle:hover {
+  background: #dfeafc;
+}
+
+.study-aids-toggle.is-active {
+  background: #2d466f;
+  border-color: #2d466f;
+  color: #f4f8ff;
+}
+
+.study-aids-toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(45, 70, 111, 0.28);
+}
+
+.study-aids-toggle.is-secondary {
+  border-color: #b9c4d8;
+  background: #f5f7fb;
+  color: #3a4a66;
+}
+
+.study-aids-toggle.is-secondary:hover {
+  background: #ebf0f8;
+}
+
+.study-tools-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
 .practice-inline input[type="checkbox"] {
   width: 16px;
   height: 16px;
@@ -499,5 +633,26 @@ main {
   .setup-controls + button {
     width: 100%;
     min-width: 0;
+  }
+
+  .tag-setup-group {
+    gap: 8px;
+  }
+
+  .tag-setup-title {
+    font-size: 0.93rem;
+  }
+
+  .tag-chip {
+    width: 100%;
+  }
+
+  .study-aids-toggle {
+    width: 100%;
+  }
+
+  .study-tools-row {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

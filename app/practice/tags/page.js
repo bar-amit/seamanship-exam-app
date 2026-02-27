@@ -20,9 +20,9 @@ import { uiText } from "../../../src/content/strings.js";
 
 function createResponse(question) {
   if (question.type === "open_text") {
-    return { text: "", subGrades: {}, revealed: false, skipped: false };
+    return { text: "", subGrades: {}, revealed: false, skipped: false, studyAidsOpen: false };
   }
-  return { choiceId: "", revealed: false, skipped: false };
+  return { choiceId: "", revealed: false, skipped: false, studyAidsOpen: false };
 }
 
 export default function TagPracticePage() {
@@ -32,12 +32,13 @@ export default function TagPracticePage() {
   const [questions, setQuestions] = useState([]);
   const [responses, setResponses] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showStudyAids, setShowStudyAids] = useState(false);
   const [count, setCount] = useState(30);
   const [hydrated, setHydrated] = useState(false);
 
   const currentQuestion = questions[currentIndex];
   const currentResponse = responses[currentIndex];
+  const showStudyAids = Boolean(currentResponse?.studyAidsOpen);
+  const hasStartedSession = questions.length > 0;
 
   const reviewedCount = useMemo(
     () => responses.filter((r) => r?.revealed || r?.skipped).length,
@@ -77,9 +78,13 @@ export default function TagPracticePage() {
     if (restored) {
       setSelectedTags(restored.selectedTags);
       setCount(Math.max(5, Math.min(200, restored.count)));
-      setShowStudyAids(restored.showStudyAids);
       setQuestions(restored.questions);
-      setResponses(restored.responses);
+      setResponses(
+        (restored.responses ?? []).map((response) => ({
+          ...response,
+          studyAidsOpen: Boolean(response?.studyAidsOpen)
+        }))
+      );
       setCurrentIndex(
         Math.max(0, Math.min(restored.currentIndex, Math.max(0, restored.questions.length - 1)))
       );
@@ -95,14 +100,13 @@ export default function TagPracticePage() {
       saveTagPracticeSession(window.localStorage, {
         selectedTags,
         count,
-        showStudyAids,
         questions,
         responses,
         currentIndex
       });
     }, 150);
     return () => clearTimeout(timer);
-  }, [hydrated, selectedTags, count, showStudyAids, questions, responses, currentIndex]);
+  }, [hydrated, selectedTags, count, questions, responses, currentIndex]);
 
   useEffect(() => {
     if (!hydrated || typeof window === "undefined") {
@@ -161,7 +165,6 @@ export default function TagPracticePage() {
       setQuestions(data.questions);
       setResponses(data.questions.map((q) => createResponse(q)));
       setCurrentIndex(0);
-      setShowStudyAids(false);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -206,54 +209,82 @@ export default function TagPracticePage() {
     }
   }
 
+  function resetToSetup() {
+    setQuestions([]);
+    setResponses([]);
+    setCurrentIndex(0);
+    setError("");
+    if (typeof window !== "undefined") {
+      clearPersistedTagPractice(window.localStorage);
+    }
+  }
+
+  function toggleCurrentStudyAids() {
+    setResponses((prev) =>
+      prev.map((r, idx) =>
+        idx === currentIndex
+          ? {
+              ...r,
+              studyAidsOpen: !Boolean(r?.studyAidsOpen)
+            }
+          : r
+      )
+    );
+  }
+
   return (
     <main>
       <section className="card">
         <h1>{uiText.practiceTags.title}</h1>
       </section>
 
-      <section className="card practice-block">
-        <h2>{uiText.practiceTags.setupTitle}</h2>
-        <label>
-          {uiText.practiceTags.countLabel}
-          <input
-            type="number"
-            min={5}
-            max={200}
-            value={count}
-            onChange={(e) => setCount(Number(e.target.value))}
-          />
-        </label>
+      {!hasStartedSession && (
+        <section className="card practice-block">
+          <h2>{uiText.practiceTags.setupTitle}</h2>
+          <label>
+            {uiText.practiceTags.countLabel}
+            <input
+              type="number"
+              min={5}
+              max={200}
+              value={count}
+              onChange={(e) => setCount(Number(e.target.value))}
+            />
+          </label>
 
-        <div>
-          <strong>{uiText.practiceTags.selectTagsLabel}</strong>
-          <div className="choices-list">
-            {CHAPTER_TAG_OPTIONS.map((tag) => (
-              <label className="practice-inline" key={tag.id}>
+          <div className="tag-setup-group">
+            <strong className="tag-setup-title">{uiText.practiceTags.selectTagsLabel}</strong>
+            <div className="choices-list tag-chip-list">
+              {CHAPTER_TAG_OPTIONS.map((tag) => (
+                <label className="tag-chip" key={tag.id}>
+                  <input
+                    type="checkbox"
+                    checked={selectedTags.includes(tag.id)}
+                    onChange={() => toggleTag(tag.id)}
+                  />
+                  {tag.label}
+                </label>
+              ))}
+            </div>
+            <div className="tag-chip-divider" />
+            <div className="tag-chip-select-all">
+              <label className="tag-chip tag-chip-all">
                 <input
                   type="checkbox"
-                  checked={selectedTags.includes(tag.id)}
-                  onChange={() => toggleTag(tag.id)}
+                  checked={selectedTags.length === 0}
+                  onChange={() => setSelectedTags([])}
                 />
-                {tag.label}
+                {uiText.practiceTags.allTags}
               </label>
-            ))}
-            <label className="practice-inline">
-              <input
-                type="checkbox"
-                checked={selectedTags.length === 0}
-                onChange={() => setSelectedTags([])}
-              />
-              {uiText.practiceTags.allTags}
-            </label>
+            </div>
           </div>
-        </div>
 
-        <button onClick={startTagPractice} disabled={isLoading}>
-          {isLoading ? uiText.practiceTags.startLoading : uiText.practiceTags.start}
-        </button>
-        {error && <p className="error">{error}</p>}
-      </section>
+          <button onClick={startTagPractice} disabled={isLoading}>
+            {isLoading ? uiText.practiceTags.startLoading : uiText.practiceTags.start}
+          </button>
+          {error && <p className="error">{error}</p>}
+        </section>
+      )}
 
       {currentQuestion && (
         <>
@@ -267,16 +298,18 @@ export default function TagPracticePage() {
                 {uiText.practiceTags.reviewedPrefix} {reviewedCount}/{questions.length}
               </span>
             </div>
-
-            <label className="practice-inline">
-              <input
-                type="checkbox"
-                checked={showStudyAids}
-                onChange={(e) => setShowStudyAids(e.target.checked)}
-              />
-              {uiText.practiceTags.showStudyAids}
-            </label>
-
+            <div className="study-tools-row">
+              <button
+                type="button"
+                className={`study-aids-toggle${showStudyAids ? " is-active" : ""}`}
+                onClick={toggleCurrentStudyAids}
+              >
+                {showStudyAids ? uiText.practiceTags.hideStudyAids : uiText.practiceTags.showStudyAids}
+              </button>
+              <button type="button" className="study-aids-toggle is-secondary" onClick={resetToSetup}>
+                {uiText.practiceTags.buttons.resetToSetup}
+              </button>
+            </div>
             <div className="prompt-row">
               <p>{currentQuestion.text}</p>
               <ClickableStorageImage

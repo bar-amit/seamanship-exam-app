@@ -16,12 +16,30 @@ export default function PageHeader({ title, subtitle = "", children = null }) {
   const [hasSession, setHasSession] = useState(false);
   const menuRef = useRef(null);
 
-  useEffect(() => {
+  function readHasSessionCookie() {
     if (typeof document === "undefined") {
-      return;
+      return false;
     }
-    // `auth_session` is HttpOnly and not readable in JS. UI gating uses metadata cookie.
-    setHasSession(document.cookie.includes("user_email="));
+    const match = document.cookie.match(/(?:^|;\s*)user_email=([^;]+)/);
+    return Boolean(match?.[1]?.trim());
+  }
+
+  useEffect(() => {
+    function syncFromCookie() {
+      setHasSession(readHasSessionCookie());
+    }
+    syncFromCookie();
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("auth-ui-changed", syncFromCookie);
+      window.addEventListener("focus", syncFromCookie);
+    }
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("auth-ui-changed", syncFromCookie);
+        window.removeEventListener("focus", syncFromCookie);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -62,7 +80,10 @@ export default function PageHeader({ title, subtitle = "", children = null }) {
             className="page-menu-button"
             aria-label={uiText.nav.menuAriaLabel}
             aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((prev) => !prev)}
+            onClick={() => {
+              setHasSession(readHasSessionCookie());
+              setMenuOpen((prev) => !prev);
+            }}
           >
             <span className="page-menu-icon" aria-hidden="true">
               &#9776;

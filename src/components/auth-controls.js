@@ -26,6 +26,13 @@ async function clearSession() {
   await fetch("/api/auth/session", { method: "DELETE" });
 }
 
+function emitAuthUiChanged() {
+  if (typeof window === "undefined") {
+    return;
+  }
+  window.dispatchEvent(new Event("auth-ui-changed"));
+}
+
 export default function AuthControls() {
   const router = useRouter();
   const [busy, setBusy] = useState(false);
@@ -50,6 +57,7 @@ export default function AuthControls() {
           setEmail("");
           await clearSession();
         }
+        emitAuthUiChanged();
         router.refresh();
       } catch (err) {
         setError(err.message || uiText.auth.errors.sessionSyncFailed);
@@ -73,6 +81,7 @@ export default function AuthControls() {
       const result = await signInWithPopup(firebaseAuth, provider);
       await setSessionFromUser(result.user);
       setEmail(result.user.email ?? "");
+      emitAuthUiChanged();
       router.refresh();
     } catch (err) {
       setError(err.message || uiText.auth.errors.loginFailed);
@@ -88,6 +97,7 @@ export default function AuthControls() {
       await signOut(firebaseAuth);
       await clearSession();
       setEmail("");
+      emitAuthUiChanged();
       router.refresh();
     } catch (err) {
       setError(err.message || uiText.auth.errors.logoutFailed);

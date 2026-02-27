@@ -4,11 +4,24 @@ import { AUTH_SESSION_COOKIE, USER_EMAIL_COOKIE } from "../../../../src/lib/auth
 
 function cookieOptions() {
   return {
-    httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
     path: "/",
     maxAge: 60 * 60 * 24 * 7
+  };
+}
+
+function sessionCookieOptions() {
+  return {
+    ...cookieOptions(),
+    httpOnly: true
+  };
+}
+
+function userEmailCookieOptions() {
+  return {
+    ...cookieOptions(),
+    httpOnly: false
   };
 }
 
@@ -32,8 +45,8 @@ export async function POST(request) {
     });
 
     const response = NextResponse.json({ ok: true, email });
-    response.cookies.set(AUTH_SESSION_COOKIE, sessionCookie, cookieOptions());
-    response.cookies.set(USER_EMAIL_COOKIE, email, cookieOptions());
+    response.cookies.set(AUTH_SESSION_COOKIE, sessionCookie, sessionCookieOptions());
+    response.cookies.set(USER_EMAIL_COOKIE, email, userEmailCookieOptions());
     return response;
   } catch (error) {
     return NextResponse.json({ ok: false, error: error.message }, { status: 401 });
@@ -43,11 +56,11 @@ export async function POST(request) {
 export async function DELETE() {
   const response = NextResponse.json({ ok: true });
   response.cookies.set(AUTH_SESSION_COOKIE, "", {
-    ...cookieOptions(),
+    ...sessionCookieOptions(),
     maxAge: 0
   });
   response.cookies.set(USER_EMAIL_COOKIE, "", {
-    ...cookieOptions(),
+    ...userEmailCookieOptions(),
     maxAge: 0
   });
   return response;

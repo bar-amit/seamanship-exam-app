@@ -82,6 +82,8 @@ export default function PracticePage() {
 
   const currentQuestion = questions[currentIndex];
   const currentResponse = responses[currentIndex];
+  const isLastQuestion = currentIndex === questions.length - 1;
+  const canSubmitCurrent = Boolean(currentQuestion) && hasAttempt(currentQuestion, currentResponse);
 
   useEffect(() => {
     if (phase !== "active" || !timed) {
@@ -258,6 +260,16 @@ export default function PracticePage() {
     }
   }
 
+  function finalizeAndReview() {
+    updateCurrentResponse({ skipped: false });
+    setPhase("review");
+  }
+
+  function skipAndReview() {
+    updateCurrentResponse({ skipped: true });
+    setPhase("review");
+  }
+
   function resetToSetup() {
     setPhase("setup");
     setQuestions([]);
@@ -387,15 +399,25 @@ export default function PracticePage() {
             )}
 
             <div className="practice-actions">
-              <button type="button" onClick={skipCurrent}>
-                {uiText.practice.buttons.skip}
-              </button>
-              <button type="button" onClick={finalizeCurrent}>
-                {uiText.practice.buttons.saveAndNext}
-              </button>
-              <button type="button" onClick={() => setPhase("review")}>
-                {uiText.practice.buttons.finishAndReview}
-              </button>
+              {isLastQuestion ? (
+                <>
+                  <button type="button" onClick={skipAndReview}>
+                    {uiText.practice.buttons.skipAndFinish}
+                  </button>
+                  <button type="button" onClick={finalizeAndReview} disabled={!canSubmitCurrent}>
+                    {uiText.practice.buttons.finishAndReview}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button type="button" onClick={skipCurrent}>
+                    {uiText.practice.buttons.skip}
+                  </button>
+                  <button type="button" onClick={finalizeCurrent} disabled={!canSubmitCurrent}>
+                    {uiText.practice.buttons.saveAndNext}
+                  </button>
+                </>
+              )}
             </div>
           </section>
 

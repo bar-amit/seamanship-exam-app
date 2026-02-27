@@ -110,6 +110,7 @@ export const uiText = {
     openTextPlaceholder: "הקלד תשובה...",
     buttons: {
       skip: "דלג",
+      skipAndFinish: "דלג וסיים",
       saveAndNext: "שמור והמשך",
       finishAndReview: "סיים ועבור לבדיקה",
       newTest: "מבחן חדש"

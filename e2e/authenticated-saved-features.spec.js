@@ -30,11 +30,14 @@ test("authenticated user can access dashboard and collections", async ({ context
   await page.goto("/dashboard");
   await expect(page.getByRole("heading", { name: uiText.dashboard.title })).toBeVisible();
   await expect(page.getByText(uiText.dashboard.cards.collectionsCountLabel)).toBeVisible();
-  await expect(page.getByText(uiText.dashboard.cards.progressTitle)).toBeVisible();
+  await expect(page.getByRole("heading", { name: uiText.dashboard.cards.progressTitle })).toBeVisible();
 
   await page.goto("/collections");
   await expect(page.getByRole("heading", { name: uiText.collections.title })).toBeVisible();
-  await page.getByLabel(uiText.collections.fields.name).fill("אוסף חדש");
-  await page.getByRole("button", { name: uiText.collections.buttons.create }).click();
-  await expect(page.getByRole("heading", { name: "אוסף חדש", exact: true })).toBeVisible();
+  const createSection = page
+    .locator("section.card.practice-block")
+    .filter({ has: page.getByRole("heading", { name: uiText.collections.createTitle }) });
+  await createSection.getByLabel(uiText.collections.fields.name).fill("אוסף חדש");
+  await createSection.getByRole("button", { name: uiText.collections.buttons.create }).click();
+  await expect(page.locator(".review-list").getByRole("heading", { name: "אוסף חדש", exact: true })).toBeVisible();
 });

@@ -483,15 +483,30 @@ export default function PracticePage() {
                     <>
                       <p>{uiText.practice.yourAnswerMcqLabel} {response?.choiceId || uiText.practice.unanswered}</p>
                       {attempted && <p>{uiText.practice.correctAnswerLabel} {q.correct_choice_id}</p>}
-                      {q.choices?.map((choice) => (
-                        <ClickableStorageImage
-                          key={`${q.id}-review-choice-${choice.id}`}
-                          imageStoragePath={choice.image_storage_path}
-                          imageRef={choice.image_ref}
-                          alt={uiText.practice.altChoiceImage(choice.label)}
-                          className="choice-image inline-thumb"
-                        />
-                      ))}
+                      <div className="review-choice-list">
+                        {q.choices?.map((choice) => {
+                          const isCorrect = choice.id === q.correct_choice_id;
+                          const isSelected = choice.id === response?.choiceId;
+                          return (
+                            <div
+                              key={`${q.id}-review-choice-${choice.id}`}
+                              className={`review-choice-bar${isCorrect ? " is-correct" : ""}${
+                                isSelected ? " is-selected" : ""
+                              }`}
+                            >
+                              <span className="choice-text">
+                                {choice.label}. {choice.text}
+                              </span>
+                              <ClickableStorageImage
+                                imageStoragePath={choice.image_storage_path}
+                                imageRef={choice.image_ref}
+                                alt={uiText.practice.altChoiceImage(choice.label)}
+                                className="choice-image inline-thumb"
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
                     </>
                   )}
 

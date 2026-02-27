@@ -302,6 +302,36 @@ main {
   gap: 12px;
 }
 
+.review-choice-list {
+  display: grid;
+  gap: 8px;
+}
+
+.review-choice-bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #c7d9cf;
+  border-radius: 10px;
+  background: #f8fcf9;
+  padding: 10px 12px;
+}
+
+.review-choice-bar.is-selected {
+  border-color: #3f80c7;
+  background: #eaf2fc;
+}
+
+.review-choice-bar.is-correct {
+  border-color: #2e7456;
+  background: #eaf6ef;
+}
+
+.review-choice-bar.is-selected.is-correct {
+  border-width: 2px;
+}
+
 .review-controls {
   display: flex;
   flex-wrap: wrap;

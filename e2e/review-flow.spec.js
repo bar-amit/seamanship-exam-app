@@ -9,7 +9,7 @@ test("review mode supports filter controls", async ({ page }) => {
 
   await page.locator(".choice-item").nth(1).click();
   await page.getByRole("button", { name: uiText.practice.buttons.saveAndNext }).click();
-  await page.getByRole("button", { name: uiText.practice.buttons.finishAndReview }).click();
+  await page.getByRole("button", { name: uiText.practice.buttons.skipAndFinish }).click();
 
   await expect(page.getByRole("heading", { name: uiText.practice.reviewTitle })).toBeVisible();
 

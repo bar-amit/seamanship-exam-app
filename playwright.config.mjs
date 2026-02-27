@@ -25,7 +25,8 @@ export default defineConfig({
     env: {
       ADMIN_ALLOWLIST: "admin@example.com"
     },
-    reuseExistingServer: true,
+    // Keep E2E deterministic: always boot a fresh server with this env.
+    reuseExistingServer: false,
     timeout: 120_000
   }
 });

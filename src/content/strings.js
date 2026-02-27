@@ -98,10 +98,10 @@ export const uiText = {
     switchToTagPractice: "מעבר לתרגול חופשי",
     setupTitle: "הגדרות מבחן",
     questionCountLabel: "מספר השאלות",
-    timedLabel: "הפעל טיימר",
-    minutesPerQuestionLabel: "זמן מענה לשאלה (דקות)",
+    minutesPerQuestionLabel: "תרגל עם זמן",
     minutesRangeHint: "זמן לשאלה צריך להיות בטווח של 1-20 דקות.",
     minutesInputHint: "זמן לשאלה חייב להיות בין 1 ל-20 דקות.",
+    minutesText: (min)=>`${min} דקות לשאלה`,
     start: "התחל",
     startLoading: "טוען שאלות...",
     questionProgressPrefix: "שאלה",
@@ -110,6 +110,7 @@ export const uiText = {
     openTextPlaceholder: "הקלד תשובה...",
     buttons: {
       skip: "דלג",
+      skipAndFinish: "דלג וסיים",
       saveAndNext: "שמור והמשך",
       finishAndReview: "סיים ועבור לבדיקה",
       newTest: "מבחן חדש"
@@ -139,6 +140,7 @@ export const uiText = {
     selectTagsLabel: "בחר תגיות",
     allTags: "כל התגיות",
     showStudyAids: "הצג עזרי לימוד",
+    hideStudyAids: "הסתר עזרי לימוד",
     start: "התחל תרגול תגיות",
     startLoading: "בטעינה...",
     questionProgressPrefix: "שאלה",
@@ -149,7 +151,8 @@ export const uiText = {
     buttons: {
       markReviewed: "בדוק שאלה",
       skip: "דלג",
-      next: "הבא"
+      next: "הבא",
+      resetToSetup: "חזרה להגדרות"
     },
     correctAnswerLabel: "תשובה נכונה:",
     openTextCorrectAnswerFallback: "בדיקה עצמית לפי הסעיפים",

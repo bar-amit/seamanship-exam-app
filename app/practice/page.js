@@ -22,6 +22,7 @@ import ClickableStorageImage from "../../src/components/clickable-storage-image.
 import ReviewSummary from "../../src/components/practice/review-summary.js";
 import ReviewControls from "../../src/components/practice/review-controls.js";
 import ReviewStatusBadge from "../../src/components/practice/review-status-badge.js";
+import AddToCollectionModal from "../../src/components/add-to-collection-modal.js";
 import { uiText } from "../../src/content/strings.js";
 
 function formatSeconds(totalSeconds) {
@@ -79,6 +80,7 @@ export default function PracticePage() {
   const [showExplanations, setShowExplanations] = useState(true);
   const [sessionStartedAt, setSessionStartedAt] = useState(null);
   const [summarySaved, setSummarySaved] = useState(false);
+  const [collectionTargetQuestionId, setCollectionTargetQuestionId] = useState("");
 
   const currentQuestion = questions[currentIndex];
   const currentResponse = responses[currentIndex];
@@ -478,6 +480,9 @@ export default function PracticePage() {
                   </div>
                   <p>{uiText.practice.tagsLabel} {(q.tags ?? []).join(", ") || uiText.common.notAvailable}</p>
                   <p>{uiText.practice.questionScoreLabel} {perQuestionScore.toFixed(1)}%</p>
+                  <button type="button" onClick={() => setCollectionTargetQuestionId(q.id)}>
+                    {uiText.collections.addModal.trigger}
+                  </button>
 
                   {q.type === "mcq" && (
                     <>
@@ -547,6 +552,11 @@ export default function PracticePage() {
           </button>
         </section>
       )}
+      <AddToCollectionModal
+        isOpen={Boolean(collectionTargetQuestionId)}
+        questionId={collectionTargetQuestionId}
+        onClose={() => setCollectionTargetQuestionId("")}
+      />
     </main>
   );
 }

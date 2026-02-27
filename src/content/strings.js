@@ -54,6 +54,28 @@ export const uiText = {
       createFailed: "Failed to create collection",
       updateFailed: "Failed to update collection",
       deleteFailed: "Failed to delete collection"
+    },
+    addModal: {
+      trigger: "הוסף לאוסף",
+      title: "הוספת שאלה לאוסף",
+      close: "סגור",
+      loading: "טוען אוספים...",
+      empty: "אין אוספים עדיין. אפשר ליצור אוסף חדש כאן.",
+      addToCollection: "הוסף",
+      alreadyInCollection: "כבר קיים באוסף",
+      createTitle: "יצירת אוסף חדש והוספת שאלה",
+      createNameLabel: "שם האוסף",
+      createDescriptionLabel: "תיאור (אופציונלי)",
+      createAction: "צור והוסף",
+      createActionBusy: "יוצר...",
+      addActionBusy: "מוסיף...",
+      addedSuccess: "השאלה נוספה לאוסף.",
+      createdSuccess: "האוסף נוצר והשאלה נוספה.",
+      errors: {
+        fetchFailed: "Failed to load collections",
+        addFailed: "Failed to add question to collection",
+        createFailed: "Failed to create collection"
+      }
     }
   },
   dashboard: {

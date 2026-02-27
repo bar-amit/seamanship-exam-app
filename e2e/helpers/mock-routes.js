@@ -42,8 +42,8 @@ export async function mockAuthSessionSyncNoop(page) {
   });
 }
 
-export async function mockCollectionsApi(page) {
-  let collections = [...COLLECTIONS_FIXTURE];
+export async function mockCollectionsApi(page, options = {}) {
+  let collections = [...(options.collections ?? COLLECTIONS_FIXTURE)];
 
   await page.route("**/api/collections", async (route) => {
     const request = route.request();

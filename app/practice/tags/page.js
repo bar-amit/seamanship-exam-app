@@ -16,6 +16,7 @@ import {
 import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
 import ReviewSummary from "../../../src/components/practice/review-summary.js";
 import ReviewStatusBadge from "../../../src/components/practice/review-status-badge.js";
+import AddToCollectionModal from "../../../src/components/add-to-collection-modal.js";
 import { uiText } from "../../../src/content/strings.js";
 
 function createResponse(question) {
@@ -34,6 +35,7 @@ export default function TagPracticePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [count, setCount] = useState(30);
   const [hydrated, setHydrated] = useState(false);
+  const [collectionTargetQuestionId, setCollectionTargetQuestionId] = useState("");
 
   const currentQuestion = questions[currentIndex];
   const currentResponse = responses[currentIndex];
@@ -396,6 +398,9 @@ export default function TagPracticePage() {
                   <strong>{uiText.practiceTags.questionScoreLabel}</strong>{" "}
                   {scoreQuestion(currentQuestion, currentResponse).toFixed(1)}%
                 </p>
+                <button type="button" onClick={() => setCollectionTargetQuestionId(currentQuestion.id)}>
+                  {uiText.collections.addModal.trigger}
+                </button>
               </div>
             )}
           </section>
@@ -423,6 +428,11 @@ export default function TagPracticePage() {
           </section>
         </>
       )}
+      <AddToCollectionModal
+        isOpen={Boolean(collectionTargetQuestionId)}
+        questionId={collectionTargetQuestionId}
+        onClose={() => setCollectionTargetQuestionId("")}
+      />
     </main>
   );
 }

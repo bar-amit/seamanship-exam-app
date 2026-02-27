@@ -110,6 +110,7 @@ Implementation status (current):
 
 - [x] Collections CRUD (private per user)
 - [x] Collections UI includes create/delete/edit and question-id list updates
+- [x] Review-mode quick action to add a question to an existing/new collection (test + tag practice)
 - [x] Per-tag progress persistence API and protected progress page
 - [x] Dashboard summary for collections and per-tag accuracy
 - [x] Admin editor with paginated search, preview, MCQ/open-text editing, JSON toggles

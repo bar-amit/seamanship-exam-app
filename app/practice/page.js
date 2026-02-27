@@ -286,39 +286,44 @@ export default function PracticePage() {
       {phase === "setup" && (
         <section className="card practice-block">
           <h2>{uiText.practice.setupTitle}</h2>
-          <label>
-            {uiText.practice.questionCountLabel}
-            <select value={questionCount} onChange={(e) => setQuestionCount(Number(e.target.value))}>
-              <option value={5}>5</option>
-              <option value={10}>10</option>
-              <option value={20}>20</option>
-            </select>
-          </label>
-          <label className="practice-inline">
-            <input type="checkbox" checked={timed} onChange={(e) => setTimed(e.target.checked)} />
-            {uiText.practice.timedLabel}
-          </label>
-          <label>
-            {uiText.practice.minutesPerQuestionLabel}
-            <input
-              type="number"
-              min={1}
-              max={20}
-              value={minutesPerQuestion}
-              onChange={(e) => {
-                const raw = Number(e.target.value);
-                const safe = clampMinutes(raw);
-                setMinutesPerQuestion(safe);
-                if (!Number.isFinite(raw) || safe !== raw) {
-                  setMinutesHint(uiText.practice.minutesInputHint);
-                } else {
-                  setMinutesHint("");
-                }
-              }}
-              disabled={!timed}
-            />
-          </label>
-          {minutesHint && <p className="muted">{minutesHint}</p>}
+          <div className="setup-controls">
+            <label>
+              {uiText.practice.questionCountLabel}
+              <select value={questionCount} onChange={(e) => setQuestionCount(Number(e.target.value))}>
+                <option value={5}>5</option>
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+              </select>
+            </label>
+
+            <div className="timer-setting-container">
+              <label className="timer-toggle">
+                <input type="checkbox" checked={timed} onChange={(e) => setTimed(e.target.checked)} />
+                {uiText.practice.minutesPerQuestionLabel}
+              </label>
+              <label className="timer-label">
+                <p className="minutes-toast">{uiText.practice.minutesText(minutesPerQuestion)}</p>
+                <input
+                  type="range"
+                  min={1}
+                  max={20}
+                  value={minutesPerQuestion}
+                  onChange={(e) => {
+                    const raw = Number(e.target.value);
+                    const safe = clampMinutes(raw);
+                    setMinutesPerQuestion(safe);
+                    if (!Number.isFinite(raw) || safe !== raw) {
+                      setMinutesHint(uiText.practice.minutesInputHint);
+                    } else {
+                      setMinutesHint("");
+                    }
+                  }}
+                  disabled={!timed}
+                />
+              </label>
+            </div>
+            {minutesHint && <p className="muted">{minutesHint}</p>}
+          </div>
           <button disabled={isLoading} onClick={startPractice}>
             {isLoading ? uiText.practice.startLoading : uiText.practice.start}
           </button>

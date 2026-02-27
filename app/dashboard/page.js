@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { uiText } from "../../src/content/strings.js";
+import PageHeader from "../../src/components/page-header.js";
 
 function formatPercent(value) {
   return `${Number(value ?? 0).toFixed(1)}%`;
@@ -48,10 +49,7 @@ export default function DashboardPage() {
 
   return (
     <main>
-      <section className="card">
-        <h1>{uiText.dashboard.title}</h1>
-        <p className="muted">{uiText.dashboard.subtitle}</p>
-      </section>
+      <PageHeader title={uiText.dashboard.title} subtitle={uiText.dashboard.subtitle} />
 
       <section className="card practice-block">
         {isLoading && <p className="muted">{uiText.common.loading}</p>}

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { uiText } from "../../src/content/strings.js";
+import PageHeader from "../../src/components/page-header.js";
 
 function subQuestionsToDraft(subQuestions) {
   const rows = Array.isArray(subQuestions) ? subQuestions : [];
@@ -218,10 +219,7 @@ export default function AdminPage() {
 
   return (
     <main>
-      <section className="card">
-        <h1>{uiText.admin.title}</h1>
-        <p className="muted">{uiText.admin.subtitle}</p>
-      </section>
+      <PageHeader title={uiText.admin.title} subtitle={uiText.admin.subtitle} />
 
       <section className="card practice-block">
         <h2>{uiText.admin.searchTitle}</h2>

@@ -23,6 +23,7 @@ import ReviewSummary from "../../src/components/practice/review-summary.js";
 import ReviewControls from "../../src/components/practice/review-controls.js";
 import ReviewStatusBadge from "../../src/components/practice/review-status-badge.js";
 import AddToCollectionModal from "../../src/components/add-to-collection-modal.js";
+import PageHeader from "../../src/components/page-header.js";
 import { uiText } from "../../src/content/strings.js";
 
 function formatSeconds(totalSeconds) {
@@ -289,13 +290,11 @@ export default function PracticePage() {
 
   return (
     <main>
-      <section className="card">
-        <h1>{uiText.practice.title}</h1>
-
+      <PageHeader title={uiText.practice.title}>
         <p>
           <a href="/practice/tags">{uiText.practice.switchToTagPractice}</a>
         </p>
-      </section>
+      </PageHeader>
 
       {phase === "setup" && (
         <section className="card practice-block">

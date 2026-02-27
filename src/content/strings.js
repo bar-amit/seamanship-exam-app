@@ -3,6 +3,16 @@ export const uiText = {
     loading: "בטעינה...",
     notAvailable: "-"
   },
+  nav: {
+    menuAriaLabel: "תפריט ניווט",
+    links: {
+      home: "דף הבית",
+      practice: "תרגול מבחן",
+      tagPractice: "תרגול חופשי",
+      dashboard: "אזור אישי",
+      collections: "האוספים שלי",
+    }
+  },
   home: {
     title: "אפליקציית הכנה למבחן משיט",
     subtitle: "תרגול שאלות למבחני ימאות, מכונאות וניווט.",

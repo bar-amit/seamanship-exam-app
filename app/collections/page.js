@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { uiText } from "../../src/content/strings.js";
+import PageHeader from "../../src/components/page-header.js";
 
 function idsToDraft(ids) {
   return Array.isArray(ids) ? ids.join(", ") : "";
@@ -139,10 +140,7 @@ export default function CollectionsPage() {
 
   return (
     <main>
-      <section className="card">
-        <h1>{uiText.collections.title}</h1>
-        <p className="muted">{uiText.collections.subtitle}</p>
-      </section>
+      <PageHeader title={uiText.collections.title} subtitle={uiText.collections.subtitle} />
 
       <section className="card practice-block">
         <h2>{uiText.collections.createTitle}</h2>

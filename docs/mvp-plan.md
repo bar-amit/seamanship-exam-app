@@ -85,6 +85,7 @@ Data lifecycle note:
 - Build tag practice flow
 - Build review flow
 - Build in-session question navigator for answered/skipped navigation
+- Global non-home hamburger navigation for quick page switching
 
 Phase-note for later iteration of Flow 2 / Flow 3:
 

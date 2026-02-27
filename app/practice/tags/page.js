@@ -17,6 +17,7 @@ import ClickableStorageImage from "../../../src/components/clickable-storage-ima
 import ReviewSummary from "../../../src/components/practice/review-summary.js";
 import ReviewStatusBadge from "../../../src/components/practice/review-status-badge.js";
 import AddToCollectionModal from "../../../src/components/add-to-collection-modal.js";
+import PageHeader from "../../../src/components/page-header.js";
 import { uiText } from "../../../src/content/strings.js";
 
 function createResponse(question) {
@@ -236,9 +237,7 @@ export default function TagPracticePage() {
 
   return (
     <main>
-      <section className="card">
-        <h1>{uiText.practiceTags.title}</h1>
-      </section>
+      <PageHeader title={uiText.practiceTags.title} />
 
       {!hasStartedSession && (
         <section className="card practice-block">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { CHAPTER_TAG_OPTIONS, normalizeSelectedTags } from "../../../src/lib/practice/tags.js";
+import { CHAPTER_TAG_OPTIONS, normalizeSelectedTags } from "../../../src/features/tag-practice/tags.js";
 import {
   createQuestionResponses,
   scoreQuestion,

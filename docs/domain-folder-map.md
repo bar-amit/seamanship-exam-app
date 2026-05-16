@@ -58,12 +58,23 @@ Canonical modules:
 
 Compatibility re-exports remain under `src/lib/admin/*` so old imports continue to work during the M2 migration.
 
+### Tag Practice
+
+Status: partially migrated.
+
+Canonical modules:
+
+- `src/features/tag-practice/tags.js`
+
+Compatibility re-export remains at `src/lib/practice/tags.js` so old imports continue to work during the M2 migration.
+
 ### Remaining Domains
 
 Status: pending.
 
 - Practice test logic currently lives under `src/lib/practice` and `app/practice/page.js`.
-- Tag practice logic currently shares `src/lib/practice` and `app/practice/tags/page.js`.
+- Shared practice logic currently lives under `src/lib/practice` and is used by both practice modes.
+- Tag practice page wiring currently lives in `app/practice/tags/page.js`.
 
 ## Migration Rules
 

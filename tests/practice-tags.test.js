@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {
   normalizeSelectedTags,
   filterQuestionsByTags
-} from "../src/lib/practice/tags.js";
+} from "../src/features/tag-practice/tags.js";
 
 test("normalizeSelectedTags returns empty filter when all is selected", () => {
   assert.deepEqual(normalizeSelectedTags(["all", "seamanship"]), []);

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
-import { filterQuestionsByTags, normalizeSelectedTags } from "../../../../src/lib/practice/tags.js";
+import { filterQuestionsByTags, normalizeSelectedTags } from "../../../../src/features/tag-practice/tags.js";
 
 function shuffle(items) {
   const out = [...items];

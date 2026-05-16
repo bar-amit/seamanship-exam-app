@@ -38,9 +38,9 @@ Related:
 
 Deliverables:
 
-- Updated CI quality checks
+- Updated CI quality checks (`.github/workflows/ci.yml`)
 - Baseline smoke suite and stability report (`docs/refactor-smoke-baseline.md`)
-- Refactor PR template/checklist
+- Refactor PR template/checklist (`.github/pull_request_template.md`)
 
 ### M2: Domain-Oriented Structure
 
@@ -193,6 +193,8 @@ Each refactor PR should include:
 3. Collections and admin API controller/service standardization.
 
 ## Initial Small-Step Sequence
+
+Status: completed on 2026-05-16. The sequence established baseline gates, stabilized auth/session sync, extracted shared practice response logic, and split collections/admin API route handlers into service modules.
 
 ### Step 1: M1 Operating Baseline
 

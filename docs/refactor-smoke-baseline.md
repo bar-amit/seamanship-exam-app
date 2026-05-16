@@ -35,6 +35,10 @@ Run the smoke command on refactor branches that touch:
 
 For lower-level pure module changes, run the targeted unit tests first and add the smoke command when browser wiring or user-visible flow risk exists.
 
+## CI Policy
+
+The smoke suite runs in `.github/workflows/ci.yml` after unit tests and build checks. This keeps pull requests from merging when a critical browser path breaks.
+
 ## Stability Notes
 
 - Specs use Playwright route mocks for Firebase-backed APIs, so they do not require live Firebase credentials.

@@ -208,3 +208,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Treat `docs/refactor-plan.md` as the active implementation roadmap after the MVP baseline, with small short-lived branches from `staging`.
 - Reason: MVP feature scope is complete enough that the next valuable work is maintainability, testability, and release reliability.
 - Impact: Refactor work should preserve current product behavior, document each branch scope, run the relevant validation gates, and update roadmap/decision docs when architecture or workflow changes.
+
+### 2026-05-16 - Refactor PRs Use CI Quality Gates
+
+- Status: `accepted`
+- Decision: Pull requests run unit tests, production build, and the critical Playwright smoke suite through GitHub Actions.
+- Reason: The initial refactor sequence changed internal structure while preserving behavior, so future refactors need automated gates that protect core flows.
+- Impact: Refactor PRs should keep `npm test`, `npm run build`, and `npm run test:e2e:smoke` green or document an explicit blocker before merge.

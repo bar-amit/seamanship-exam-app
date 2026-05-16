@@ -9,18 +9,21 @@ import {
   scoreSession,
   setSubGradeAtIndex,
   updateResponseAtIndex
-} from "../../src/lib/practice/session.js";
+} from "../../src/features/practice-test/session.js";
 import {
   buildReviewSummary,
   getReviewStatus,
   shouldIncludeByFilter
-} from "../../src/lib/practice/review.js";
+} from "../../src/features/practice-test/review.js";
 import {
   clearPersistedPracticeTest,
   loadPracticeTestSession,
   savePracticeTestSession
-} from "../../src/lib/practice/persistence.js";
-import { buildPracticeTestSummary, pushTestSummary } from "../../src/lib/practice/analytics.js";
+} from "../../src/features/practice-test/persistence.js";
+import {
+  buildPracticeTestSummary,
+  pushTestSummary
+} from "../../src/features/practice-test/analytics.js";
 import ClickableStorageImage from "../../src/components/clickable-storage-image.js";
 import ReviewSummary from "../../src/components/practice/review-summary.js";
 import ReviewControls from "../../src/components/practice/review-controls.js";

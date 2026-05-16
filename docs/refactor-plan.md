@@ -63,6 +63,7 @@ Initial migration branch:
 - `refactor/m2-feature-collections-domain`: moves collection modules to `src/features/collections` and keeps `src/lib/collections/*` compatibility re-exports.
 - `refactor/m2-feature-admin-domain`: moves admin modules to `src/features/admin` and keeps `src/lib/admin/*` compatibility re-exports.
 - `refactor/m2-feature-practice-domains`: starts tag-practice migration by moving tag selection/filter helpers to `src/features/tag-practice`.
+- `refactor/m2-feature-practice-test-domain`: moves shared practice test session/review/persistence/analytics helpers to `src/features/practice-test` and keeps `src/lib/practice/*` compatibility re-exports.
 
 ### M3: UI vs Logic Separation
 

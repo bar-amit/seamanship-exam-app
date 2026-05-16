@@ -1,6 +1,6 @@
 # Seamanship Exam App - Refactor Plan
 
-Last updated: 2026-02-27  
+Last updated: 2026-05-16  
 Owner: Bar Amit
 
 ## Purpose
@@ -155,11 +155,134 @@ For each milestone:
 4. Update docs and decisions.
 5. Merge only when acceptance checklist is green.
 
+## Branch Strategy
+
+Use short-lived branches from `staging`, one branch per behavior-preserving slice. Prefer branch names that include the milestone and the concrete area touched:
+
+- `refactor/m1-operating-baseline`
+- `refactor/m1-smoke-suite`
+- `refactor/m2-feature-folders-auth`
+- `refactor/m3-practice-session-logic`
+- `refactor/m4-collections-api-service`
+- `refactor/m4-admin-api-service`
+
+Branch rules:
+
+- Keep each branch reviewable in one sitting.
+- Move files separately from behavior changes where possible.
+- Do not mix unrelated cleanup with a domain refactor.
+- Keep public route paths and API behavior stable unless a behavior change is explicitly approved.
+- Include validation results in the PR notes.
+- Update this plan when the sequence changes.
+
+## Refactor PR Checklist
+
+Each refactor PR should include:
+
+- Scope: milestone, feature/domain, and what stayed intentionally unchanged.
+- Behavior lock: tests added or identified as protecting the current behavior.
+- Security check: confirmation that protected APIs still verify `auth_session` server-side and admin APIs still use the verified email allowlist.
+- Validation: `npm test`, `npm run build`, and targeted E2E when the touched flow needs it.
+- Docs: updated plan/decision entries if scope, architecture, or workflow changed.
+- Risk: short list of remaining risks or follow-up branches.
+
 ## First Priority Slices
 
 1. Auth/session synchronization cleanup.
 2. Practice flow state logic extraction to pure modules.
 3. Collections and admin API controller/service standardization.
+
+## Initial Small-Step Sequence
+
+### Step 1: M1 Operating Baseline
+
+Branch: `refactor/m1-operating-baseline`
+
+Scope:
+
+- Document branch strategy and PR checklist.
+- Confirm current scripts and test entry points.
+- No product behavior or code structure changes.
+
+Validation:
+
+- `npm test`
+- `npm run build`
+
+### Step 2: M1 Critical Smoke Baseline
+
+Branch: `refactor/m1-smoke-suite`
+
+Scope:
+
+- Identify the smallest E2E set that locks anonymous practice, authenticated saved features, admin access, and review flow.
+- Add a short stability note with commands and any known environment assumptions.
+- No product behavior changes.
+
+Validation:
+
+- `npm test`
+- Targeted Playwright smoke specs
+
+### Step 3: M5 Auth/Session Inventory and Cleanup
+
+Branch: `refactor/m5-auth-session-source-of-truth`
+
+Scope:
+
+- Inventory login, logout, refresh, middleware, and server verification paths.
+- Consolidate duplicated client auth state handling only after tests cover current behavior.
+- Preserve API route authorization boundaries.
+
+Validation:
+
+- `npm test -- tests/session.test.js tests/server-session.test.js tests/guard.test.js tests/middleware-policy.test.js`
+- `npm run build`
+
+### Step 4: M3 Practice Session Logic Extraction
+
+Branch: `refactor/m3-practice-session-logic`
+
+Scope:
+
+- Extract practice flow state transitions into pure modules or reducers.
+- Keep page/component behavior stable.
+- Add focused unit coverage for extracted logic.
+
+Validation:
+
+- `npm test -- tests/practice-session.test.js tests/practice-review.test.js tests/practice-persistence.test.js`
+- Targeted anonymous practice/review E2E if UI wiring changes.
+
+### Step 5: M4 Collections API Service Split
+
+Branch: `refactor/m4-collections-api-service`
+
+Scope:
+
+- Split collection route handlers into thin route/controller code and domain services.
+- Keep request/response shapes stable.
+- Preserve server-side `auth_session` verification.
+
+Validation:
+
+- `npm test -- tests/collections-route.test.js tests/collections-schema.test.js tests/add-to-collection.test.js`
+- `npm run build`
+
+### Step 6: M4 Admin API Service Split
+
+Branch: `refactor/m4-admin-api-service`
+
+Scope:
+
+- Split admin question route handlers into route/controller code and admin domain services.
+- Keep admin allowlist checks based on verified email claims.
+- Keep editor payload shape stable.
+
+Validation:
+
+- `npm test -- tests/admin-question-edit.test.js tests/allowlist.test.js tests/server-session.test.js`
+- Targeted admin E2E when route wiring changes.
 
 ## Definition of Done (Refactor PR)
 

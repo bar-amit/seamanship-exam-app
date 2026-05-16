@@ -1,6 +1,6 @@
 # Seamanship Exam App - Decision Log
 
-Last updated: 2026-02-26  
+Last updated: 2026-05-16  
 Owner: Bar Amit
 
 ## Purpose
@@ -201,3 +201,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Progress view is merged into dashboard; homepage points users to `/dashboard` ("אזור אישי") instead of a dedicated progress page.
 - Reason: Reduce navigation depth and keep personal insights in one place.
 - Impact: UI navigation should treat dashboard as the personal area entry point.
+
+### 2026-05-16 - Active Work Moves From MVP Plan to Refactor Plan
+
+- Status: `accepted`
+- Decision: Treat `docs/refactor-plan.md` as the active implementation roadmap after the MVP baseline, with small short-lived branches from `staging`.
+- Reason: MVP feature scope is complete enough that the next valuable work is maintainability, testability, and release reliability.
+- Impact: Refactor work should preserve current product behavior, document each branch scope, run the relevant validation gates, and update roadmap/decision docs when architecture or workflow changes.

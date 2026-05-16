@@ -1,12 +1,12 @@
 # Seamanship Exam App - MVP Plan
 
-Last updated: 2026-02-25  
+Last updated: 2026-05-16  
 Owner: Bar Amit
 Target launch: Thursday, 2026-02-19
 
 ## Purpose
 
-This document is the execution plan for the MVP only. It defines what must be built now, what is explicitly out of scope, and how release is validated.
+This document records the MVP scope and release validation baseline. Active post-MVP implementation work should use `docs/refactor-plan.md` unless a task explicitly targets an MVP defect or release follow-up.
 
 Related:
 
@@ -61,6 +61,8 @@ Scoring rules:
 - Final test scoring keeps equal overall weight per question.
 
 ## Implementation Plan
+
+Status: MVP implementation scope is complete enough to move active development into the post-MVP refactor roadmap. The checked items below remain as the historical MVP baseline and behavior contract for refactor work.
 
 ### Phase 1: Foundations
 

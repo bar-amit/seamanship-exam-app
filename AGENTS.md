@@ -5,7 +5,8 @@ Purpose: quick operational instructions for coding agents working in this reposi
 ## Source Of Truth
 
 - Strategy and long-term scope: `docs/product-plan.md`
-- Current implementation scope: `docs/mvp-plan.md`
+- Current implementation scope: `docs/refactor-plan.md`
+- MVP baseline and behavior contract: `docs/mvp-plan.md`
 - Post-MVP refactor roadmap: `docs/refactor-plan.md`
 - Decisions and tradeoffs: `docs/decision-log.md`
 - Agent workflow references:
@@ -17,7 +18,7 @@ Purpose: quick operational instructions for coding agents working in this reposi
 
 ## Working Rules
 
-- Implement only requested phase/scope from `docs/mvp-plan.md`.
+- Implement only requested phase/scope from `docs/refactor-plan.md` unless the task explicitly targets an MVP defect or release follow-up.
 - Respect `Out of Scope` items.
 - Update docs when behavior/scope changes.
 - Add decision entries for new technical/product decisions.

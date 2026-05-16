@@ -282,10 +282,11 @@ Scope:
 - Split admin question route handlers into route/controller code and admin domain services.
 - Keep admin allowlist checks based on verified email claims.
 - Keep editor payload shape stable.
+- Consolidate admin question list/get/update operations in `src/lib/admin/service.js`.
 
 Validation:
 
-- `npm test -- tests/admin-question-edit.test.js tests/allowlist.test.js tests/server-session.test.js`
+- `npm test -- tests/admin-service.test.js tests/admin-question-edit.test.js tests/allowlist.test.js tests/server-session.test.js`
 - Targeted admin E2E when route wiring changes.
 
 ## Definition of Done (Refactor PR)

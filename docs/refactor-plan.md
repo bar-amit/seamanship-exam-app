@@ -39,7 +39,7 @@ Related:
 Deliverables:
 
 - Updated CI quality checks
-- Baseline smoke suite and stability report
+- Baseline smoke suite and stability report (`docs/refactor-smoke-baseline.md`)
 - Refactor PR template/checklist
 
 ### M2: Domain-Oriented Structure
@@ -217,12 +217,13 @@ Scope:
 
 - Identify the smallest E2E set that locks anonymous practice, authenticated saved features, admin access, and review flow.
 - Add a short stability note with commands and any known environment assumptions.
+- Add a dedicated smoke command for the selected specs.
 - No product behavior changes.
 
 Validation:
 
 - `npm test`
-- Targeted Playwright smoke specs
+- `npm run test:e2e:smoke`
 
 ### Step 3: M5 Auth/Session Inventory and Cleanup
 

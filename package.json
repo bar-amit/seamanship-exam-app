@@ -13,6 +13,7 @@
     "import:phase2:staging:dry": "node --env-file=.env.staging scripts/import-phase2.js --dry-run --skip-upload --skip-firestore",
     "import:phase2:staging": "node --env-file=.env.staging scripts/import-phase2.js",
     "test:e2e": "playwright test",
+    "test:e2e:smoke": "playwright test e2e/anonymous-practice.spec.js e2e/authenticated-saved-features.spec.js e2e/admin-flow.spec.js e2e/review-flow.spec.js",
     "test:e2e:headed": "playwright test --headed",
     "import:phase2:dry": "node --env-file=.env.local scripts/import-phase2.js --dry-run --skip-upload --skip-firestore",
     "import:phase2": "node --env-file=.env.local scripts/import-phase2.js"

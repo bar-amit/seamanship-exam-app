@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
 import { authorizeAdminRequest } from "../../../../src/features/auth/server-session.js";
-import { executeListAdminQuestions } from "../../../../src/lib/admin/service.js";
+import { executeListAdminQuestions } from "../../../../src/features/admin/service.js";
 
 export async function GET(request) {
   try {

@@ -4,7 +4,7 @@ import { authorizeAdminRequest } from "../../../../../src/features/auth/server-s
 import {
   executeGetAdminQuestion,
   executeUpdateAdminQuestion
-} from "../../../../../src/lib/admin/service.js";
+} from "../../../../../src/features/admin/service.js";
 
 export async function GET(request, { params }) {
   try {

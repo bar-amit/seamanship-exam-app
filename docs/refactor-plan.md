@@ -61,6 +61,7 @@ Initial migration branch:
 
 - `refactor/m2-feature-auth-domain`: moves auth/session modules to `src/features/auth` and keeps `src/lib/auth/*` compatibility re-exports.
 - `refactor/m2-feature-collections-domain`: moves collection modules to `src/features/collections` and keeps `src/lib/collections/*` compatibility re-exports.
+- `refactor/m2-feature-admin-domain`: moves admin modules to `src/features/admin` and keeps `src/lib/admin/*` compatibility re-exports.
 
 ### M3: UI vs Logic Separation
 

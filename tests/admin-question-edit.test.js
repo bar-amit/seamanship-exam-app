@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { normalizeAdminQuestionUpdate } from "../src/lib/admin/question-edit.js";
+import { normalizeAdminQuestionUpdate } from "../src/features/admin/question-edit.js";
 
 test("normalizeAdminQuestionUpdate normalizes text, model answer and tags", () => {
   const existing = {

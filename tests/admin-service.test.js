@@ -4,7 +4,7 @@ import {
   executeGetAdminQuestion,
   executeListAdminQuestions,
   executeUpdateAdminQuestion
-} from "../src/lib/admin/service.js";
+} from "../src/features/admin/service.js";
 
 function makeQuestionDoc(id, data) {
   return {

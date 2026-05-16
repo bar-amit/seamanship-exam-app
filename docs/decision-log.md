@@ -219,6 +219,6 @@ Status values: `accepted`, `superseded`.
 ### 2026-05-16 - Domain Modules Move Under `src/features`
 
 - Status: `accepted`
-- Decision: Feature-owned business logic should move from `src/lib` into `src/features/<domain>` in small branches, starting with auth/session and collections modules.
+- Decision: Feature-owned business logic should move from `src/lib` into `src/features/<domain>` in small branches, starting with auth/session, collections, and admin modules.
 - Reason: The refactor roadmap targets lower coupling and clearer ownership boundaries.
-- Impact: `src/features/auth` and `src/features/collections` are canonical for those domains. Temporary `src/lib/<domain>/*` re-exports remain during migration to avoid broad import churn.
+- Impact: `src/features/auth`, `src/features/collections`, and `src/features/admin` are canonical for those domains. Temporary `src/lib/<domain>/*` re-exports remain during migration to avoid broad import churn.

@@ -1,9 +1,10 @@
 import { cookies } from "next/headers";
 import { uiText } from "../src/content/strings.js";
+import { AUTH_SESSION_COOKIE } from "../src/lib/auth/session.js";
 
 export default async function HomePage() {
   const cookieStore = await cookies();
-  const hasSession = Boolean(cookieStore.get("auth_session")?.value);
+  const hasSession = Boolean(cookieStore.get(AUTH_SESSION_COOKIE)?.value);
 
   return (
     <main>

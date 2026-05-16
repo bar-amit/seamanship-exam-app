@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { uiText } from "../content/strings.js";
+import { AUTH_UI_CHANGED_EVENT } from "../lib/auth/client-session.js";
+import { USER_EMAIL_COOKIE } from "../lib/auth/session.js";
 
 const NAV_LINKS = [
   { href: "/", label: uiText.nav.links.home },
@@ -20,7 +22,7 @@ export default function PageHeader({ title, subtitle = "", children = null }) {
     if (typeof document === "undefined") {
       return false;
     }
-    const match = document.cookie.match(/(?:^|;\s*)user_email=([^;]+)/);
+    const match = document.cookie.match(new RegExp(`(?:^|;\\s*)${USER_EMAIL_COOKIE}=([^;]+)`));
     return Boolean(match?.[1]?.trim());
   }
 
@@ -31,12 +33,12 @@ export default function PageHeader({ title, subtitle = "", children = null }) {
     syncFromCookie();
 
     if (typeof window !== "undefined") {
-      window.addEventListener("auth-ui-changed", syncFromCookie);
+      window.addEventListener(AUTH_UI_CHANGED_EVENT, syncFromCookie);
       window.addEventListener("focus", syncFromCookie);
     }
     return () => {
       if (typeof window !== "undefined") {
-        window.removeEventListener("auth-ui-changed", syncFromCookie);
+        window.removeEventListener(AUTH_UI_CHANGED_EVENT, syncFromCookie);
         window.removeEventListener("focus", syncFromCookie);
       }
     };

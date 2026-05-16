@@ -233,11 +233,12 @@ Scope:
 
 - Inventory login, logout, refresh, middleware, and server verification paths.
 - Consolidate duplicated client auth state handling only after tests cover current behavior.
+- Record auth/session source-of-truth notes in `docs/auth-session-refactor-notes.md`.
 - Preserve API route authorization boundaries.
 
 Validation:
 
-- `npm test -- tests/session.test.js tests/server-session.test.js tests/guard.test.js tests/middleware-policy.test.js`
+- `npm test -- tests/client-session.test.js tests/session.test.js tests/server-session.test.js tests/guard.test.js tests/middleware-policy.test.js`
 - `npm run build`
 
 ### Step 4: M3 Practice Session Logic Extraction

@@ -4,34 +4,14 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import { firebaseAuth } from "../lib/firebase/client.js";
+import {
+  emitAuthUiChanged,
+  syncServerSessionForFirebaseUser
+} from "../lib/auth/client-session.js";
 import { uiText } from "../content/strings.js";
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
-
-async function setSessionFromUser(user) {
-  const idToken = await user.getIdToken();
-  const res = await fetch("/api/auth/session", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ idToken })
-  });
-  if (!res.ok) {
-    const data = await res.json().catch(() => ({}));
-    throw new Error(data.error || uiText.auth.errors.sessionCreateFailed);
-  }
-}
-
-async function clearSession() {
-  await fetch("/api/auth/session", { method: "DELETE" });
-}
-
-function emitAuthUiChanged() {
-  if (typeof window === "undefined") {
-    return;
-  }
-  window.dispatchEvent(new Event("auth-ui-changed"));
-}
 
 export default function AuthControls() {
   const router = useRouter();
@@ -50,13 +30,8 @@ export default function AuthControls() {
       setError("");
 
       try {
-        if (user) {
-          setEmail(user.email ?? "");
-          await setSessionFromUser(user);
-        } else {
-          setEmail("");
-          await clearSession();
-        }
+        const nextState = await syncServerSessionForFirebaseUser(user);
+        setEmail(nextState.email);
         emitAuthUiChanged();
         router.refresh();
       } catch (err) {
@@ -78,11 +53,7 @@ export default function AuthControls() {
     setBusy(true);
     setError("");
     try {
-      const result = await signInWithPopup(firebaseAuth, provider);
-      await setSessionFromUser(result.user);
-      setEmail(result.user.email ?? "");
-      emitAuthUiChanged();
-      router.refresh();
+      await signInWithPopup(firebaseAuth, provider);
     } catch (err) {
       setError(err.message || uiText.auth.errors.loginFailed);
     } finally {
@@ -95,10 +66,6 @@ export default function AuthControls() {
     setError("");
     try {
       await signOut(firebaseAuth);
-      await clearSession();
-      setEmail("");
-      emitAuthUiChanged();
-      router.refresh();
     } catch (err) {
       setError(err.message || uiText.auth.errors.logoutFailed);
     } finally {

@@ -4,7 +4,7 @@ import { authenticateRequest } from "../../../../src/features/auth/server-sessio
 import {
   executeDeleteCollection,
   executeUpdateCollection
-} from "../../../../src/lib/collections/service.js";
+} from "../../../../src/features/collections/service.js";
 
 export async function putCollectionHandler(request, { params }, deps = {}) {
   const authFn = deps.authenticateRequestFn ?? authenticateRequest;

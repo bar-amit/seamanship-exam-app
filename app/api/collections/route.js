@@ -4,7 +4,7 @@ import { authenticateRequest } from "../../../src/features/auth/server-session.j
 import {
   executeCreateCollection,
   executeListCollections
-} from "../../../src/lib/collections/service.js";
+} from "../../../src/features/collections/service.js";
 
 export async function GET(request) {
   try {

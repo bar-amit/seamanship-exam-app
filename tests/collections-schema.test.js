@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { normalizeCollectionInput, buildCollectionDoc } from "../src/lib/collections/schema.js";
+import { normalizeCollectionInput, buildCollectionDoc } from "../src/features/collections/schema.js";
 
 test("normalizeCollectionInput validates name and de-duplicates question ids", () => {
   const out = normalizeCollectionInput({

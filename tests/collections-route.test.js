@@ -5,7 +5,7 @@ import {
   executeDeleteCollection,
   executeListCollections,
   executeUpdateCollection
-} from "../src/lib/collections/service.js";
+} from "../src/features/collections/service.js";
 
 function makeDb({ docs = [], storedDoc, onSet, onDelete } = {}) {
   return {

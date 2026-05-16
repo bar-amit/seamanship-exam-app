@@ -35,13 +35,24 @@ Canonical modules:
 
 Compatibility re-exports remain under `src/lib/auth/*` so old imports continue to work during the M2 migration.
 
+### Collections
+
+Status: migrated.
+
+Canonical modules:
+
+- `src/features/collections/add-question.js`
+- `src/features/collections/schema.js`
+- `src/features/collections/service.js`
+
+Compatibility re-exports remain under `src/lib/collections/*` so old imports continue to work during the M2 migration.
+
 ### Remaining Domains
 
 Status: pending.
 
 - Practice test logic currently lives under `src/lib/practice` and `app/practice/page.js`.
 - Tag practice logic currently shares `src/lib/practice` and `app/practice/tags/page.js`.
-- Collections service logic currently lives under `src/lib/collections`.
 - Admin service logic currently lives under `src/lib/admin`.
 
 ## Migration Rules

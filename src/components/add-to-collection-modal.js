@@ -6,7 +6,7 @@ import {
   buildCollectionCreatePayload,
   buildCollectionUpdatePayload,
   collectionHasQuestion
-} from "../lib/collections/add-question.js";
+} from "../features/collections/add-question.js";
 
 export default function AddToCollectionModal({ isOpen, questionId, onClose }) {
   const [collections, setCollections] = useState([]);

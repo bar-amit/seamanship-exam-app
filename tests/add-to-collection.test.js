@@ -6,7 +6,7 @@ import {
   buildCollectionQuestionIds,
   buildCollectionUpdatePayload,
   buildCollectionCreatePayload
-} from "../src/lib/collections/add-question.js";
+} from "../src/features/collections/add-question.js";
 
 test("normalizeQuestionIds trims and deduplicates values", () => {
   assert.deepEqual(normalizeQuestionIds([" q1 ", "q1", "", "q2"]), ["q1", "q2"]);

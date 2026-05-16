@@ -266,6 +266,7 @@ Scope:
 - Split collection route handlers into thin route/controller code and domain services.
 - Keep request/response shapes stable.
 - Preserve server-side `auth_session` verification.
+- Consolidate list/create/update/delete collection operations in `src/lib/collections/service.js`.
 
 Validation:
 

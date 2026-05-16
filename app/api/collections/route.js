@@ -1,27 +1,19 @@
 import { NextResponse } from "next/server";
-import { randomUUID } from "node:crypto";
 import { firebaseAdminDb } from "../../../src/lib/firebase/admin.js";
 import { authenticateRequest } from "../../../src/lib/auth/server-session.js";
-import { normalizeCollectionInput, buildCollectionDoc } from "../../../src/lib/collections/schema.js";
+import {
+  executeCreateCollection,
+  executeListCollections
+} from "../../../src/lib/collections/service.js";
 
 export async function GET(request) {
   try {
-    const auth = await authenticateRequest(request);
-    if (!auth.ok) {
-      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
-    }
-    const userEmail = auth.userEmail;
-
-    const snapshot = await firebaseAdminDb
-      .collection("collections")
-      .where("owner_email", "==", userEmail)
-      .get();
-
-    const collections = snapshot.docs
-      .map((doc) => ({ id: doc.id, ...doc.data() }))
-      .sort((a, b) => String(b.updated_at).localeCompare(String(a.updated_at)));
-
-    return NextResponse.json({ ok: true, collections });
+    const result = await executeListCollections({
+      request,
+      authFn: authenticateRequest,
+      db: firebaseAdminDb
+    });
+    return NextResponse.json(result.body, { status: result.status });
   } catch (error) {
     return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
   }
@@ -29,27 +21,13 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
-    const auth = await authenticateRequest(request);
-    if (!auth.ok) {
-      return NextResponse.json({ ok: false, error: auth.error }, { status: auth.status });
-    }
-    const userEmail = auth.userEmail;
-
-    const body = await request.json();
-    const normalized = normalizeCollectionInput(body);
-    const id = `col_${randomUUID()}`;
-    const nowIso = new Date().toISOString();
-    const doc = buildCollectionDoc({
-      id,
-      ownerEmail: userEmail,
-      name: normalized.name,
-      description: normalized.description,
-      questionIds: normalized.questionIds,
-      nowIso
+    const result = await executeCreateCollection({
+      request,
+      authFn: authenticateRequest,
+      db: firebaseAdminDb,
+      nowIso: new Date().toISOString()
     });
-
-    await firebaseAdminDb.collection("collections").doc(id).set(doc);
-    return NextResponse.json({ ok: true, collection: doc }, { status: 201 });
+    return NextResponse.json(result.body, { status: result.status });
   } catch (error) {
     return NextResponse.json({ ok: false, error: error.message }, { status: 400 });
   }

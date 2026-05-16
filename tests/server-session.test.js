@@ -4,8 +4,8 @@ import {
   authenticateRequest,
   authorizeAdminRequest,
   createSessionResolver
-} from "../src/lib/auth/server-session.js";
-import { AUTH_SESSION_COOKIE } from "../src/lib/auth/session.js";
+} from "../src/features/auth/server-session.js";
+import { AUTH_SESSION_COOKIE } from "../src/features/auth/session.js";
 
 function makeRequest(sessionCookieValue) {
   return {

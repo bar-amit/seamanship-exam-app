@@ -54,8 +54,12 @@ Deliverables:
 
 Deliverables:
 
-- New folder map and migration notes
+- New folder map and migration notes (`docs/domain-folder-map.md`)
 - No functional change release
+
+Initial migration branch:
+
+- `refactor/m2-feature-auth-domain`: moves auth/session modules to `src/features/auth` and keeps `src/lib/auth/*` compatibility re-exports.
 
 ### M3: UI vs Logic Separation
 

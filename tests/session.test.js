@@ -5,7 +5,7 @@ import {
   USER_EMAIL_COOKIE,
   getSessionCookieFromRequest,
   getUserEmailFromRequest
-} from "../src/lib/auth/session.js";
+} from "../src/features/auth/session.js";
 
 function makeRequestWithCookies({ userEmail, authSession } = {}) {
   return {

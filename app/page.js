@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import { uiText } from "../src/content/strings.js";
-import { AUTH_SESSION_COOKIE } from "../src/lib/auth/session.js";
+import { AUTH_SESSION_COOKIE } from "../src/features/auth/session.js";
 
 export default async function HomePage() {
   const cookieStore = await cookies();

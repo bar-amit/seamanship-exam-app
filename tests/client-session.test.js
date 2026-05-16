@@ -6,7 +6,7 @@ import {
   createServerSessionFromFirebaseUser,
   emitAuthUiChanged,
   syncServerSessionForFirebaseUser
-} from "../src/lib/auth/client-session.js";
+} from "../src/features/auth/client-session.js";
 
 function makeJsonResponse({ ok = true, payload = { ok: true } } = {}) {
   return {

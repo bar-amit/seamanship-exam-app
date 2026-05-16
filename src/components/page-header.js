@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { uiText } from "../content/strings.js";
-import { AUTH_UI_CHANGED_EVENT } from "../lib/auth/client-session.js";
-import { USER_EMAIL_COOKIE } from "../lib/auth/session.js";
+import { AUTH_UI_CHANGED_EVENT } from "../features/auth/client-session.js";
+import { USER_EMAIL_COOKIE } from "../features/auth/session.js";
 
 const NAV_LINKS = [
   { href: "/", label: uiText.nav.links.home },

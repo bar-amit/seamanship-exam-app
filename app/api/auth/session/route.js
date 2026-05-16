@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { firebaseAdminAuth } from "../../../../src/lib/firebase/admin.js";
-import { AUTH_SESSION_COOKIE, USER_EMAIL_COOKIE } from "../../../../src/lib/auth/session.js";
+import { AUTH_SESSION_COOKIE, USER_EMAIL_COOKIE } from "../../../../src/features/auth/session.js";
 
 function cookieOptions() {
   return {

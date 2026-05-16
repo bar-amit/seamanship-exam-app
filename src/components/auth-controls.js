@@ -7,7 +7,7 @@ import { firebaseAuth } from "../lib/firebase/client.js";
 import {
   emitAuthUiChanged,
   syncServerSessionForFirebaseUser
-} from "../lib/auth/client-session.js";
+} from "../features/auth/client-session.js";
 import { uiText } from "../content/strings.js";
 
 const provider = new GoogleAuthProvider();

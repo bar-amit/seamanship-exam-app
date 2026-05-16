@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { firebaseAdminDb } from "../../../../../src/lib/firebase/admin.js";
-import { authorizeAdminRequest } from "../../../../../src/lib/auth/server-session.js";
+import { authorizeAdminRequest } from "../../../../../src/features/auth/server-session.js";
 import {
   executeGetAdminQuestion,
   executeUpdateAdminQuestion

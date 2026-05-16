@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { evaluateAccess } from "../src/lib/auth/middleware-policy.js";
+import { evaluateAccess } from "../src/features/auth/middleware-policy.js";
 
 test("public paths return next action", () => {
   const decision = evaluateAccess({

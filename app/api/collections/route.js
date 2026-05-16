@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { firebaseAdminDb } from "../../../src/lib/firebase/admin.js";
-import { authenticateRequest } from "../../../src/lib/auth/server-session.js";
+import { authenticateRequest } from "../../../src/features/auth/server-session.js";
 import {
   executeCreateCollection,
   executeListCollections

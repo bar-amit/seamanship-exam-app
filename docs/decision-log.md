@@ -215,3 +215,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Pull requests run unit tests, production build, and the critical Playwright smoke suite through GitHub Actions.
 - Reason: The initial refactor sequence changed internal structure while preserving behavior, so future refactors need automated gates that protect core flows.
 - Impact: Refactor PRs should keep `npm test`, `npm run build`, and `npm run test:e2e:smoke` green or document an explicit blocker before merge.
+
+### 2026-05-16 - Domain Modules Move Under `src/features`
+
+- Status: `accepted`
+- Decision: Feature-owned business logic should move from `src/lib` into `src/features/<domain>` in small branches, starting with auth/session modules.
+- Reason: The refactor roadmap targets lower coupling and clearer ownership boundaries.
+- Impact: `src/features/auth` is the canonical auth/session location. Temporary `src/lib/auth/*` re-exports remain during migration to avoid broad import churn.

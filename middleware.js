@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { getSessionCookieFromRequest, getUserEmailFromRequest } from "./src/lib/auth/session.js";
-import { evaluateAccess } from "./src/lib/auth/middleware-policy.js";
+import { getSessionCookieFromRequest, getUserEmailFromRequest } from "./src/features/auth/session.js";
+import { evaluateAccess } from "./src/features/auth/middleware-policy.js";
 
 export function middleware(request) {
   const pathname = request.nextUrl.pathname;

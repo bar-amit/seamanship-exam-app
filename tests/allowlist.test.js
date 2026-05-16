@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { parseAdminAllowlist, isAllowlistedAdmin } from "../src/lib/auth/allowlist.js";
+import { parseAdminAllowlist, isAllowlistedAdmin } from "../src/features/auth/allowlist.js";
 
 test("parseAdminAllowlist normalizes commas, spaces and case", () => {
   const list = parseAdminAllowlist(" A@EXAMPLE.COM, b@example.com ,, c@example.com ");

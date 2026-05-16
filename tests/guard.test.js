@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { isAdminPath, requiresAuth, canAccessPath } from "../src/lib/auth/guard.js";
+import { isAdminPath, requiresAuth, canAccessPath } from "../src/features/auth/guard.js";
 
 test("requiresAuth returns false for public routes", () => {
   assert.equal(requiresAuth("/"), false);

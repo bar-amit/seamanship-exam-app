@@ -250,6 +250,7 @@ Scope:
 - Extract practice flow state transitions into pure modules or reducers.
 - Keep page/component behavior stable.
 - Add focused unit coverage for extracted logic.
+- Start with shared response creation and update helpers used by test practice and tag practice.
 
 Validation:
 

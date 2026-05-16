@@ -2,10 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 import {
+  createQuestionResponses,
   getQuestionStatus,
   hasAttempt,
   scoreQuestion,
-  scoreSession
+  scoreSession,
+  setSubGradeAtIndex,
+  updateResponseAtIndex
 } from "../../src/lib/practice/session.js";
 import {
   buildReviewSummary,
@@ -55,13 +58,6 @@ function normalizeQuestionCount(value) {
       Math.abs(current - parsed) < Math.abs(closest - parsed) ? current : closest,
     allowed[0]
   );
-}
-
-function setupResponse(question) {
-  if (question.type === "open_text") {
-    return { text: "", subGrades: {}, skipped: false };
-  }
-  return { choiceId: "", skipped: false };
 }
 
 export default function PracticePage() {
@@ -215,7 +211,7 @@ export default function PracticePage() {
         throw new Error(data.error || uiText.practice.errors.loadQuestionsFailed);
       }
       setQuestions(data.questions);
-      setResponses(data.questions.map((q) => setupResponse(q)));
+      setResponses(createQuestionResponses(data.questions));
       setCurrentIndex(0);
       setTimeLeft(questionCount * safeMinutes * 60);
       setSessionStartedAt(Date.now());
@@ -229,24 +225,11 @@ export default function PracticePage() {
   }
 
   function updateCurrentResponse(next) {
-    setResponses((prev) => prev.map((item, idx) => (idx === currentIndex ? { ...item, ...next } : item)));
+    setResponses((prev) => updateResponseAtIndex(prev, currentIndex, next));
   }
 
   function toggleSubGrade(subId, checked) {
-    setResponses((prev) =>
-      prev.map((item, idx) => {
-        if (idx !== currentIndex) {
-          return item;
-        }
-        return {
-          ...item,
-          subGrades: {
-            ...(item.subGrades ?? {}),
-            [subId]: checked
-          }
-        };
-      })
-    );
+    setResponses((prev) => setSubGradeAtIndex(prev, currentIndex, subId, checked));
   }
 
   function skipCurrent() {

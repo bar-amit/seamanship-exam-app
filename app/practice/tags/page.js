@@ -2,7 +2,12 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { CHAPTER_TAG_OPTIONS, normalizeSelectedTags } from "../../../src/lib/practice/tags.js";
-import { scoreQuestion } from "../../../src/lib/practice/session.js";
+import {
+  createQuestionResponses,
+  scoreQuestion,
+  setSubGradeAtIndex,
+  updateResponseAtIndex
+} from "../../../src/lib/practice/session.js";
 import { buildReviewSummary, getReviewStatus } from "../../../src/lib/practice/review.js";
 import {
   clearPersistedTagPractice,
@@ -19,13 +24,6 @@ import ReviewStatusBadge from "../../../src/components/practice/review-status-ba
 import AddToCollectionModal from "../../../src/components/add-to-collection-modal.js";
 import PageHeader from "../../../src/components/page-header.js";
 import { uiText } from "../../../src/content/strings.js";
-
-function createResponse(question) {
-  if (question.type === "open_text") {
-    return { text: "", subGrades: {}, revealed: false, skipped: false, studyAidsOpen: false };
-  }
-  return { choiceId: "", revealed: false, skipped: false, studyAidsOpen: false };
-}
 
 export default function TagPracticePage() {
   const [selectedTags, setSelectedTags] = useState([]);
@@ -166,7 +164,12 @@ export default function TagPracticePage() {
         throw new Error(data.error || uiText.practiceTags.errors.loadQuestionsFailed);
       }
       setQuestions(data.questions);
-      setResponses(data.questions.map((q) => createResponse(q)));
+      setResponses(
+        createQuestionResponses(data.questions, {
+          revealed: false,
+          studyAidsOpen: false
+        })
+      );
       setCurrentIndex(0);
     } catch (err) {
       setError(err.message);
@@ -176,23 +179,11 @@ export default function TagPracticePage() {
   }
 
   function updateCurrentResponse(next) {
-    setResponses((prev) => prev.map((r, idx) => (idx === currentIndex ? { ...r, ...next } : r)));
+    setResponses((prev) => updateResponseAtIndex(prev, currentIndex, next));
   }
 
   function toggleSubGrade(subId, checked) {
-    setResponses((prev) =>
-      prev.map((r, idx) =>
-        idx === currentIndex
-          ? {
-              ...r,
-              subGrades: {
-                ...(r.subGrades ?? {}),
-                [subId]: checked
-              }
-            }
-          : r
-      )
-    );
+    setResponses((prev) => setSubGradeAtIndex(prev, currentIndex, subId, checked));
   }
 
   function markReviewed() {
@@ -224,14 +215,9 @@ export default function TagPracticePage() {
 
   function toggleCurrentStudyAids() {
     setResponses((prev) =>
-      prev.map((r, idx) =>
-        idx === currentIndex
-          ? {
-              ...r,
-              studyAidsOpen: !Boolean(r?.studyAidsOpen)
-            }
-          : r
-      )
+      updateResponseAtIndex(prev, currentIndex, {
+        studyAidsOpen: !Boolean(prev[currentIndex]?.studyAidsOpen)
+      })
     );
   }
 

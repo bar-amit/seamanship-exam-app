@@ -11,6 +11,43 @@ function normalizeSubGrades(subGrades = {}, subQuestions = []) {
   return out;
 }
 
+export function createQuestionResponse(question, extraFields = {}) {
+  const base =
+    question?.type === "open_text"
+      ? { text: "", subGrades: {}, skipped: false }
+      : { choiceId: "", skipped: false };
+
+  return {
+    ...base,
+    ...extraFields
+  };
+}
+
+export function createQuestionResponses(questions, extraFields = {}) {
+  return (questions ?? []).map((question) => createQuestionResponse(question, extraFields));
+}
+
+export function updateResponseAtIndex(responses, index, next) {
+  return (responses ?? []).map((response, idx) =>
+    idx === index ? { ...response, ...next } : response
+  );
+}
+
+export function setSubGradeAtIndex(responses, index, subId, checked) {
+  return (responses ?? []).map((response, idx) => {
+    if (idx !== index) {
+      return response;
+    }
+    return {
+      ...response,
+      subGrades: {
+        ...(response?.subGrades ?? {}),
+        [subId]: checked
+      }
+    };
+  });
+}
+
 export function hasAttempt(question, response) {
   if (!response || response.skipped) {
     return false;

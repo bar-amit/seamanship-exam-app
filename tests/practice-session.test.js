@@ -1,10 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
+  createQuestionResponse,
+  createQuestionResponses,
   hasAttempt,
   scoreQuestion,
   scoreSession,
-  getQuestionStatus
+  getQuestionStatus,
+  setSubGradeAtIndex,
+  updateResponseAtIndex
 } from "../src/lib/practice/session.js";
 
 const mcq = {
@@ -24,6 +28,52 @@ test("hasAttempt supports mcq and open_text", () => {
   assert.equal(hasAttempt(mcq, { skipped: true, choiceId: "a" }), false);
   assert.equal(hasAttempt(openText, { text: "  answer  " }), true);
   assert.equal(hasAttempt(openText, { text: "   " }), false);
+});
+
+test("createQuestionResponse builds mode-specific response shape", () => {
+  assert.deepEqual(createQuestionResponse(mcq), { choiceId: "", skipped: false });
+  assert.deepEqual(createQuestionResponse(openText), {
+    text: "",
+    subGrades: {},
+    skipped: false
+  });
+  assert.deepEqual(createQuestionResponse(mcq, { revealed: false, studyAidsOpen: false }), {
+    choiceId: "",
+    skipped: false,
+    revealed: false,
+    studyAidsOpen: false
+  });
+});
+
+test("createQuestionResponses maps question list to stable response list", () => {
+  assert.deepEqual(createQuestionResponses([mcq, openText]), [
+    { choiceId: "", skipped: false },
+    { text: "", subGrades: {}, skipped: false }
+  ]);
+});
+
+test("updateResponseAtIndex patches only the selected response", () => {
+  const responses = [
+    { choiceId: "", skipped: false },
+    { text: "", subGrades: {}, skipped: false }
+  ];
+
+  assert.deepEqual(updateResponseAtIndex(responses, 0, { choiceId: "a" }), [
+    { choiceId: "a", skipped: false },
+    { text: "", subGrades: {}, skipped: false }
+  ]);
+});
+
+test("setSubGradeAtIndex patches only the selected sub grade", () => {
+  const responses = [
+    { choiceId: "", skipped: false },
+    { text: "answer", subGrades: { a: true }, skipped: false }
+  ];
+
+  assert.deepEqual(setSubGradeAtIndex(responses, 1, "b", true), [
+    { choiceId: "", skipped: false },
+    { text: "answer", subGrades: { a: true, b: true }, skipped: false }
+  ]);
 });
 
 test("scoreQuestion mcq returns 100 for correct and 0 for incorrect", () => {

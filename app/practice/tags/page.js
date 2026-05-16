@@ -7,17 +7,17 @@ import {
   scoreQuestion,
   setSubGradeAtIndex,
   updateResponseAtIndex
-} from "../../../src/lib/practice/session.js";
-import { buildReviewSummary, getReviewStatus } from "../../../src/lib/practice/review.js";
+} from "../../../src/features/practice-test/session.js";
+import { buildReviewSummary, getReviewStatus } from "../../../src/features/practice-test/review.js";
 import {
   clearPersistedTagPractice,
   loadTagPracticeSession,
   saveTagPracticeSession
-} from "../../../src/lib/practice/persistence.js";
+} from "../../../src/features/tag-practice/persistence.js";
 import {
   buildTagProgressSnapshot,
   saveTagProgressSnapshot
-} from "../../../src/lib/practice/analytics.js";
+} from "../../../src/features/tag-practice/progress.js";
 import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
 import ReviewSummary from "../../../src/components/practice/review-summary.js";
 import ReviewStatusBadge from "../../../src/components/practice/review-status-badge.js";

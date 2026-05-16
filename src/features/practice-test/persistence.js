@@ -1,5 +1,4 @@
 export const PRACTICE_TEST_STORAGE_KEY = "practice_test_session_v1";
-export const PRACTICE_TAG_STORAGE_KEY = "practice_tag_session_v1";
 const SCHEMA_VERSION = 1;
 const DEFAULT_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 
@@ -20,13 +19,6 @@ export function clearPersistedPracticeTest(storage) {
     return;
   }
   storage.removeItem(PRACTICE_TEST_STORAGE_KEY);
-}
-
-export function clearPersistedTagPractice(storage) {
-  if (!hasStorage(storage)) {
-    return;
-  }
-  storage.removeItem(PRACTICE_TAG_STORAGE_KEY);
 }
 
 export function savePracticeTestSession(storage, state, nowMs = Date.now()) {
@@ -97,49 +89,4 @@ export function loadPracticeTestSession(storage, nowMs = Date.now(), maxAgeMs = 
   }
 
   return restored;
-}
-
-export function saveTagPracticeSession(storage, state, nowMs = Date.now()) {
-  if (!hasStorage(storage)) {
-    return;
-  }
-  const payload = {
-    version: SCHEMA_VERSION,
-    savedAt: nowMs,
-    selectedTags: state.selectedTags,
-    count: state.count,
-    showStudyAids: state.showStudyAids,
-    questions: state.questions,
-    responses: state.responses,
-    currentIndex: state.currentIndex
-  };
-  storage.setItem(PRACTICE_TAG_STORAGE_KEY, JSON.stringify(payload));
-}
-
-export function loadTagPracticeSession(storage, nowMs = Date.now(), maxAgeMs = DEFAULT_MAX_AGE_MS) {
-  if (!hasStorage(storage)) {
-    return null;
-  }
-  const raw = storage.getItem(PRACTICE_TAG_STORAGE_KEY);
-  if (!raw) {
-    return null;
-  }
-  const parsed = safeParse(raw);
-  if (!parsed || parsed.version !== SCHEMA_VERSION) {
-    clearPersistedTagPractice(storage);
-    return null;
-  }
-  if (typeof parsed.savedAt === "number" && nowMs - parsed.savedAt > maxAgeMs) {
-    clearPersistedTagPractice(storage);
-    return null;
-  }
-
-  return {
-    selectedTags: Array.isArray(parsed.selectedTags) ? parsed.selectedTags : [],
-    count: Number(parsed.count ?? 30),
-    showStudyAids: Boolean(parsed.showStudyAids),
-    questions: Array.isArray(parsed.questions) ? parsed.questions : [],
-    responses: Array.isArray(parsed.responses) ? parsed.responses : [],
-    currentIndex: Number(parsed.currentIndex ?? 0)
-  };
 }

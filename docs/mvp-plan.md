@@ -13,6 +13,7 @@ Related:
 - Long-term product plan: `docs/product-plan.md`
 - Decision history: `docs/decision-log.md`
 - Staging execution checklist: `docs/staging-prerequisites.md`
+- Post-MVP refactor roadmap: `docs/refactor-plan.md`
 
 ## In Scope (MVP)
 

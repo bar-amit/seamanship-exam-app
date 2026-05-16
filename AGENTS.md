@@ -6,6 +6,7 @@ Purpose: quick operational instructions for coding agents working in this reposi
 
 - Strategy and long-term scope: `docs/product-plan.md`
 - Current implementation scope: `docs/mvp-plan.md`
+- Post-MVP refactor roadmap: `docs/refactor-plan.md`
 - Decisions and tradeoffs: `docs/decision-log.md`
 - Agent workflow references:
   - `docs/agent-workflow-guide.md`

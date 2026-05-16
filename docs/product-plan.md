@@ -11,6 +11,7 @@ Related:
 
 - MVP execution plan: `docs/mvp-plan.md`
 - Decision history: `docs/decision-log.md`
+- Refactor roadmap: `docs/refactor-plan.md`
 
 ## Goal and Purpose
 

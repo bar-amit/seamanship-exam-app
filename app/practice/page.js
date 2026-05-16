@@ -24,6 +24,12 @@ import {
   buildPracticeTestSummary,
   pushTestSummary
 } from "../../src/features/practice-test/analytics.js";
+import {
+  clampCurrentIndex,
+  clampPracticeMinutes,
+  formatPracticeSeconds,
+  normalizePracticeQuestionCount
+} from "../../src/features/practice-test/setup.js";
 import ClickableStorageImage from "../../src/components/clickable-storage-image.js";
 import ReviewSummary from "../../src/components/practice/review-summary.js";
 import ReviewControls from "../../src/components/practice/review-controls.js";
@@ -31,37 +37,6 @@ import ReviewStatusBadge from "../../src/components/practice/review-status-badge
 import AddToCollectionModal from "../../src/components/add-to-collection-modal.js";
 import PageHeader from "../../src/components/page-header.js";
 import { uiText } from "../../src/content/strings.js";
-
-function formatSeconds(totalSeconds) {
-  const safe = Math.max(0, totalSeconds);
-  const minutes = Math.floor(safe / 60);
-  const seconds = safe % 60;
-  return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-}
-
-function clampMinutes(value) {
-  if (!Number.isFinite(value)) {
-    return 6;
-  }
-  return Math.min(20, Math.max(1, Math.round(value)));
-}
-
-function normalizeQuestionCount(value) {
-  const allowed = [5, 10, 20];
-  const parsed = Number(value);
-  if (!Number.isFinite(parsed)) {
-    return 10;
-  }
-  if (allowed.includes(parsed)) {
-    return parsed;
-  }
-  // Choose nearest supported option.
-  return allowed.reduce(
-    (closest, current) =>
-      Math.abs(current - parsed) < Math.abs(closest - parsed) ? current : closest,
-    allowed[0]
-  );
-}
 
 export default function PracticePage() {
   const [phase, setPhase] = useState("setup");
@@ -108,14 +83,12 @@ export default function PracticePage() {
     const restored = loadPracticeTestSession(window.localStorage);
     if (restored) {
       setPhase(restored.phase);
-      setQuestionCount(normalizeQuestionCount(restored.questionCount));
+      setQuestionCount(normalizePracticeQuestionCount(restored.questionCount));
       setTimed(restored.timed);
-      setMinutesPerQuestion(clampMinutes(restored.minutesPerQuestion));
+      setMinutesPerQuestion(clampPracticeMinutes(restored.minutesPerQuestion));
       setQuestions(restored.questions);
       setResponses(restored.responses);
-      setCurrentIndex(
-        Math.max(0, Math.min(restored.currentIndex, Math.max(0, restored.questions.length - 1)))
-      );
+      setCurrentIndex(clampCurrentIndex(restored.currentIndex, restored.questions.length));
       setTimeLeft(Math.max(0, restored.timeLeft));
       setSessionStartedAt(restored.sessionStartedAt ?? Date.now());
       if (restored.phase === "review") {
@@ -203,7 +176,7 @@ export default function PracticePage() {
     setError("");
     setMinutesHint("");
     try {
-      const safeMinutes = clampMinutes(minutesPerQuestion);
+      const safeMinutes = clampPracticeMinutes(minutesPerQuestion);
       if (safeMinutes !== minutesPerQuestion) {
         setMinutesPerQuestion(safeMinutes);
         setMinutesHint(uiText.practice.minutesRangeHint);
@@ -309,7 +282,7 @@ export default function PracticePage() {
                   value={minutesPerQuestion}
                   onChange={(e) => {
                     const raw = Number(e.target.value);
-                    const safe = clampMinutes(raw);
+                    const safe = clampPracticeMinutes(raw);
                     setMinutesPerQuestion(safe);
                     if (!Number.isFinite(raw) || safe !== raw) {
                       setMinutesHint(uiText.practice.minutesInputHint);
@@ -338,7 +311,7 @@ export default function PracticePage() {
                 {uiText.practice.questionProgressPrefix} {currentIndex + 1} {uiText.practice.questionProgressOutOf}{" "}
                 {questions.length}
               </strong>
-              {timed && <strong>{uiText.practice.timeLeftLabel} {formatSeconds(timeLeft)}</strong>}
+              {timed && <strong>{uiText.practice.timeLeftLabel} {formatPracticeSeconds(timeLeft)}</strong>}
             </div>
             <div className="prompt-row">
               <p>{currentQuestion.text}</p>

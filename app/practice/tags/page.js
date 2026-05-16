@@ -18,6 +18,13 @@ import {
   buildTagProgressSnapshot,
   saveTagProgressSnapshot
 } from "../../../src/features/tag-practice/progress.js";
+import {
+  buildTagQuestionsQuery,
+  clampTagPracticeCount,
+  countReviewedResponses,
+  getAverageReviewedScore,
+  restoreTagPracticeResponses
+} from "../../../src/features/tag-practice/session.js";
 import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
 import ReviewSummary from "../../../src/components/practice/review-summary.js";
 import ReviewStatusBadge from "../../../src/components/practice/review-status-badge.js";
@@ -41,20 +48,10 @@ export default function TagPracticePage() {
   const showStudyAids = Boolean(currentResponse?.studyAidsOpen);
   const hasStartedSession = questions.length > 0;
 
-  const reviewedCount = useMemo(
-    () => responses.filter((r) => r?.revealed || r?.skipped).length,
-    [responses]
-  );
+  const reviewedCount = useMemo(() => countReviewedResponses(responses), [responses]);
 
   const averageReviewedScore = useMemo(() => {
-    const reviewed = questions
-      .map((q, idx) => ({ q, r: responses[idx] }))
-      .filter((item) => item.r?.revealed || item.r?.skipped);
-    if (reviewed.length === 0) {
-      return 0;
-    }
-    const total = reviewed.reduce((sum, item) => sum + scoreQuestion(item.q, item.r), 0);
-    return total / reviewed.length;
+    return getAverageReviewedScore(questions, responses);
   }, [questions, responses]);
 
   const reviewSummary = useMemo(
@@ -78,14 +75,9 @@ export default function TagPracticePage() {
     const restored = loadTagPracticeSession(window.localStorage);
     if (restored) {
       setSelectedTags(restored.selectedTags);
-      setCount(Math.max(5, Math.min(200, restored.count)));
+      setCount(clampTagPracticeCount(restored.count));
       setQuestions(restored.questions);
-      setResponses(
-        (restored.responses ?? []).map((response) => ({
-          ...response,
-          studyAidsOpen: Boolean(response?.studyAidsOpen)
-        }))
-      );
+      setResponses(restoreTagPracticeResponses(restored.responses));
       setCurrentIndex(
         Math.max(0, Math.min(restored.currentIndex, Math.max(0, restored.questions.length - 1)))
       );
@@ -151,13 +143,7 @@ export default function TagPracticePage() {
     setError("");
     try {
       const normalized = normalizeSelectedTags(selectedTags);
-      const query = new URLSearchParams();
-      query.set("count", String(count));
-      if (normalized.length > 0) {
-        query.set("tags", normalized.join(","));
-      } else {
-        query.set("tags", "all");
-      }
+      const query = buildTagQuestionsQuery({ count, selectedTags: normalized });
       const res = await fetch(`/api/practice/tag-questions?${query.toString()}`);
       const data = await res.json();
       if (!res.ok || !data.ok) {

@@ -9,7 +9,13 @@ import {
   getQuestionStatus,
   setSubGradeAtIndex,
   updateResponseAtIndex
-} from "../src/lib/practice/session.js";
+} from "../src/features/practice-test/session.js";
+import {
+  clampCurrentIndex,
+  clampPracticeMinutes,
+  formatPracticeSeconds,
+  normalizePracticeQuestionCount
+} from "../src/features/practice-test/setup.js";
 
 const mcq = {
   id: "q1",
@@ -102,4 +108,17 @@ test("getQuestionStatus reflects navigator states", () => {
   assert.equal(getQuestionStatus(mcq, { skipped: true }, false), "skipped");
   assert.equal(getQuestionStatus(mcq, { choiceId: "a" }, false), "answered");
   assert.equal(getQuestionStatus(mcq, { choiceId: "a" }, true), "current");
+});
+
+test("practice setup helpers normalize restored controls", () => {
+  assert.equal(formatPracticeSeconds(65), "01:05");
+  assert.equal(formatPracticeSeconds(-1), "00:00");
+  assert.equal(clampPracticeMinutes(Number.NaN), 6);
+  assert.equal(clampPracticeMinutes(0), 1);
+  assert.equal(clampPracticeMinutes(21), 20);
+  assert.equal(normalizePracticeQuestionCount("9"), 10);
+  assert.equal(normalizePracticeQuestionCount("18"), 20);
+  assert.equal(normalizePracticeQuestionCount("bad"), 10);
+  assert.equal(clampCurrentIndex(7, 3), 2);
+  assert.equal(clampCurrentIndex(-2, 3), 0);
 });

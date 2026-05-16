@@ -2,14 +2,16 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   PRACTICE_TEST_STORAGE_KEY,
-  PRACTICE_TAG_STORAGE_KEY,
   clearPersistedPracticeTest,
-  clearPersistedTagPractice,
   loadPracticeTestSession,
+  savePracticeTestSession
+} from "../src/features/practice-test/persistence.js";
+import {
+  PRACTICE_TAG_STORAGE_KEY,
+  clearPersistedTagPractice,
   loadTagPracticeSession,
-  savePracticeTestSession,
   saveTagPracticeSession
-} from "../src/lib/practice/persistence.js";
+} from "../src/features/tag-practice/persistence.js";
 
 function createMemoryStorage() {
   const store = new Map();

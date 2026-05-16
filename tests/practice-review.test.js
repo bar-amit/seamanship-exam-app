@@ -4,7 +4,7 @@ import {
   getReviewStatus,
   buildReviewSummary,
   shouldIncludeByFilter
-} from "../src/lib/practice/review.js";
+} from "../src/features/practice-test/review.js";
 
 const mcq = { id: "q1", type: "mcq", correct_choice_id: "b" };
 const open = { id: "q2", type: "open_text", sub_questions: [{ id: "a" }, { id: "b" }] };

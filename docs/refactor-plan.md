@@ -65,6 +65,7 @@ Initial migration branch:
 - `refactor/m2-feature-practice-domains`: starts tag-practice migration by moving tag selection/filter helpers to `src/features/tag-practice`.
 - `refactor/m2-feature-practice-test-domain`: moves shared practice test session/review/persistence/analytics helpers to `src/features/practice-test` and keeps `src/lib/practice/*` compatibility re-exports.
 - `refactor/m2-feature-tag-practice-domain`: moves tag-practice persistence/progress helpers to `src/features/tag-practice` and keeps aggregate compatibility exports under `src/lib/practice/*`.
+- `refactor/m2-practice-page-domain-wiring`: rewires `app/practice/page.js` and `app/practice/tags/page.js` to consume canonical `src/features/practice-test/*` and `src/features/tag-practice/*` modules.
 
 ### M3: UI vs Logic Separation
 

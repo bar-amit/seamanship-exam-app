@@ -1,13 +1,15 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
-  PRACTICE_TAG_PROGRESS_KEY,
   PRACTICE_TEST_HISTORY_KEY,
   buildPracticeTestSummary,
+  pushTestSummary
+} from "../src/features/practice-test/analytics.js";
+import {
+  PRACTICE_TAG_PROGRESS_KEY,
   buildTagProgressSnapshot,
-  pushTestSummary,
   saveTagProgressSnapshot
-} from "../src/lib/practice/analytics.js";
+} from "../src/features/tag-practice/progress.js";
 
 function createMemoryStorage() {
   const store = new Map();

@@ -1,10 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getDownloadURL, ref } from "firebase/storage";
 import { firebaseStorage } from "../lib/firebase/client.js";
 import { uiText } from "../content/strings.js";
-import { buildDialogProps, isDialogDismissKey } from "../lib/a11y/dialog.js";
+import {
+  buildDialogProps,
+  focusInitialDialogElement,
+  isDialogDismissKey,
+  restoreDialogFocus,
+  trapDialogFocus
+} from "../lib/a11y/dialog.js";
 
 const urlCache = new Map();
 
@@ -28,6 +34,8 @@ export default function ClickableStorageImage({
   const [url, setUrl] = useState("");
   const [failed, setFailed] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const dialogRef = useRef(null);
+  const previousFocusRef = useRef(null);
 
   useEffect(() => {
     const path = resolveStoragePath(imageStoragePath, imageRef);
@@ -70,13 +78,22 @@ export default function ClickableStorageImage({
     if (!isOpen) {
       return;
     }
+    previousFocusRef.current = document.activeElement;
+    focusInitialDialogElement(dialogRef.current);
+
     const onKeyDown = (event) => {
       if (isDialogDismissKey(event)) {
         setIsOpen(false);
+        return;
       }
+      trapDialogFocus(event, dialogRef.current);
     };
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      restoreDialogFocus(previousFocusRef.current);
+      previousFocusRef.current = null;
+    };
   }, [isOpen]);
 
   if (!imageStoragePath && !imageRef) {
@@ -95,8 +112,10 @@ export default function ClickableStorageImage({
       {isOpen && (
         <div className="image-modal-backdrop" onClick={() => setIsOpen(false)}>
           <div
+            ref={dialogRef}
             className="image-modal"
             {...buildDialogProps({ label: modalAlt || alt })}
+            tabIndex={-1}
             onClick={(e) => e.stopPropagation()}
           >
             <button

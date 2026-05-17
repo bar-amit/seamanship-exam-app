@@ -1,8 +1,14 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { uiText } from "../content/strings.js";
-import { buildDialogProps, isDialogDismissKey } from "../lib/a11y/dialog.js";
+import {
+  buildDialogProps,
+  focusInitialDialogElement,
+  isDialogDismissKey,
+  restoreDialogFocus,
+  trapDialogFocus
+} from "../lib/a11y/dialog.js";
 import {
   buildCollectionCreatePayload,
   buildCollectionUpdatePayload,
@@ -19,6 +25,8 @@ export default function AddToCollectionModal({ isOpen, questionId, onClose }) {
   const [createBusy, setCreateBusy] = useState(false);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const dialogRef = useRef(null);
+  const previousFocusRef = useRef(null);
 
   const hasQuestion = useMemo(() => Boolean(String(questionId ?? "").trim()), [questionId]);
 
@@ -56,13 +64,22 @@ export default function AddToCollectionModal({ isOpen, questionId, onClose }) {
     if (!isOpen) {
       return;
     }
+    previousFocusRef.current = document.activeElement;
+    focusInitialDialogElement(dialogRef.current);
+
     function onKeyDown(event) {
       if (isDialogDismissKey(event)) {
         onClose();
+        return;
       }
+      trapDialogFocus(event, dialogRef.current);
     }
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      restoreDialogFocus(previousFocusRef.current);
+      previousFocusRef.current = null;
+    };
   }, [isOpen, onClose]);
 
   async function addToCollection(collection) {
@@ -129,8 +146,10 @@ export default function AddToCollectionModal({ isOpen, questionId, onClose }) {
   return (
     <div className="app-modal-backdrop" onClick={onClose}>
       <div
+        ref={dialogRef}
         className="app-modal-card"
         {...buildDialogProps({ labelledBy: TITLE_ID })}
+        tabIndex={-1}
         onClick={(event) => event.stopPropagation()}
       >
         <div className="app-modal-head">

@@ -106,6 +106,7 @@ test("buildImportReport keeps the importer audit output contract", () => {
     referenced_assets: 4,
     uploaded_assets: 0,
     missing_assets: ["missing.jpg"],
-    firestore_written: 0
+    firestore_written: 0,
+    validation: null
   });
 });

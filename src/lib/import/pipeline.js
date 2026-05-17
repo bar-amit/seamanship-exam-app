@@ -90,7 +90,8 @@ export function buildImportReport({
   referencedAssets,
   uploadedAssets,
   missingAssets,
-  firestoreWritten
+  firestoreWritten,
+  validation = null
 }) {
   return {
     generated_at: generatedAt,
@@ -109,6 +110,16 @@ export function buildImportReport({
     referenced_assets: referencedAssets,
     uploaded_assets: uploadedAssets,
     missing_assets: missingAssets,
-    firestore_written: firestoreWritten
+    firestore_written: firestoreWritten,
+    validation: validation
+      ? {
+          ok: validation.ok,
+          total: validation.total,
+          error_count: validation.error_count,
+          warning_count: validation.warning_count,
+          errors: validation.errors,
+          warnings: validation.warnings
+        }
+      : null
   };
 }

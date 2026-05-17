@@ -17,6 +17,7 @@ import {
   buildImportReport,
   buildImportUploadPlan
 } from "../src/lib/import/pipeline.js";
+import { validateImportQuestions } from "../src/lib/import/validate.js";
 
 function nowIso() {
   return new Date().toISOString();
@@ -45,6 +46,7 @@ async function main() {
     .filter(Boolean);
 
   const normalized = config.limit ? normalizedAll.slice(0, config.limit) : normalizedAll;
+  const validation = validateImportQuestions(normalized);
 
   const assetRefs = collectReferencedAssets(normalized);
   const uploadPlan = buildImportUploadPlan(assetRefs, {
@@ -52,6 +54,27 @@ async function main() {
     legacyImagesDir: config.legacyImagesDir,
     storagePrefix: config.storagePrefix
   });
+
+  if (!validation.ok) {
+    const missingAssets = uploadPlan.filter((item) => !fs.existsSync(item.sourcePath)).map((item) => item.ref);
+    const report = buildImportReport({
+      generatedAt: nowIso(),
+      config,
+      sourceRecords: sourceQuestions.length,
+      normalizedRecords: normalizedAll.length,
+      importedRecords: 0,
+      referencedAssets: assetRefs.length,
+      uploadedAssets: 0,
+      missingAssets,
+      firestoreWritten: 0,
+      validation
+    });
+
+    fs.writeFileSync(config.reportPath, `${JSON.stringify(report, null, 2)}\n`);
+    console.log(JSON.stringify(report, null, 2));
+    process.exitCode = 1;
+    return;
+  }
 
   let uploaded = [];
   let missingAssets = [];
@@ -91,7 +114,8 @@ async function main() {
     referencedAssets: assetRefs.length,
     uploadedAssets: uploaded.length,
     missingAssets,
-    firestoreWritten
+    firestoreWritten,
+    validation
   });
 
   fs.writeFileSync(config.reportPath, `${JSON.stringify(report, null, 2)}\n`);

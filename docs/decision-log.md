@@ -243,3 +243,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Treat the 2026-05-17 convergence run as complete for the currently requested in-scope refactor-plan loop after API route integration coverage, import pipeline extraction, structured API logging, dialog accessibility helpers, and governance documentation updates.
 - Reason: The remaining items after these slices are operational/release validations or deeper follow-ups rather than required behavior-preserving refactor steps in this loop.
 - Impact: Future work should start from explicit follow-ups in `docs/refactor-plan.md` instead of re-opening the completed convergence loop.
+
+### 2026-05-17 - Importer Blocks Persistence on Validation Errors
+
+- Status: `accepted`
+- Decision: The phase 2 importer validates normalized questions before asset upload or Firestore writes, and writes validation results into the import audit report.
+- Reason: Importer is used for bootstrap/recovery, so invalid normalized records should fail before creating partial data writes while still leaving enough report detail to recover.
+- Impact: `scripts/import-phase2.js` must keep validation ahead of persistence. Blocking errors require data or normalization fixes before rerun; warnings may proceed when they reflect supported app behavior.

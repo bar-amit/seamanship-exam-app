@@ -71,6 +71,10 @@ Rules files in this repo:
   - `npm run import:phase2`
 - [-] Confirm expected question count and sample image accessibility.
 
+Importer recovery/audit details:
+
+- `docs/import-recovery-runbook.md`
+
 ## Quality Gates Before Promote
 
 - [-] Unit tests pass:

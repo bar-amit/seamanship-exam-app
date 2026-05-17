@@ -319,15 +319,17 @@ Completed slices:
 
 - M4/M6 API route testability: collection/admin API routes expose dependency-injectable handlers while production exports still use verified `auth_session`/admin allowlist dependencies. Added route-level integration coverage in `tests/api-route-handlers.test.js`.
 - M8 import lifecycle hardening: `scripts/import-phase2.js` delegates CLI config parsing, upload planning, and report construction to `src/lib/import/pipeline.js`. Added focused coverage in `tests/import-pipeline.test.js` and verified a dry-run limited import without Firebase credentials.
+- M8 validation/recovery hardening: import validation lives in `src/lib/import/validate.js`; the CLI stops before upload/Firestore writes on blocking validation errors and includes validation errors/warnings in the audit report. Added `tests/import-validate.test.js` and `docs/import-recovery-runbook.md`.
 - M9 observability: API route catch blocks use `src/lib/api/logging.js` for structured error events before returning the existing JSON error envelope. Added coverage in `tests/api-logging.test.js`.
 - M7 accessibility primitives: shared dialog helpers live in `src/lib/a11y/dialog.js`; collection and image modals use consistent dialog labeling and Escape dismissal behavior. Added coverage in `tests/dialog-a11y.test.js`.
 - M10 governance: `docs/domain-folder-map.md` and `docs/decision-log.md` were updated for the new shared modules and decisions.
 
 Validation baseline:
 
-- `npm test` passed with 132 tests.
+- `npm test` passed with 137 tests.
 - `npm run build` passed.
 - Import dry-run smoke passed: `node scripts/import-phase2.js --dry-run --skip-upload --skip-firestore --limit 1 --report /tmp/seamanship-import-report.json`.
+- Full import dry-run audit passed after validation-stage extraction: `node scripts/import-phase2.js --dry-run --skip-upload --skip-firestore --report /tmp/seamanship-import-report-full.json` reported 826 importable records, 46 referenced assets, no missing assets, and 14 non-blocking open-text sub-question warnings.
 
 Explicit follow-ups outside this convergence loop:
 

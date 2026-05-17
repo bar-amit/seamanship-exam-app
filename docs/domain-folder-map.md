@@ -100,11 +100,12 @@ Canonical modules:
 
 - `src/lib/import/normalize.js`
 - `src/lib/import/pipeline.js`
+- `src/lib/import/validate.js`
 - `src/lib/import/firestore.js`
 - `src/lib/import/storage.js`
 - `src/lib/import/sq3-assets.js`
 
-`scripts/import-phase2.js` remains the CLI entrypoint and delegates argument/config, upload planning, normalization, persistence, and report-building stages to import helpers.
+`scripts/import-phase2.js` remains the CLI entrypoint and delegates argument/config, upload planning, normalization, validation, persistence, and report-building stages to import helpers. Import recovery and audit workflow is documented in `docs/import-recovery-runbook.md`.
 
 ### M2 Wiring Status
 

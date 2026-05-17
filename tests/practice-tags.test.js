@@ -5,6 +5,7 @@ import {
   filterQuestionsByTags
 } from "../src/features/tag-practice/tags.js";
 import {
+  buildTagPracticeStartState,
   buildTagQuestionsQuery,
   clampTagPracticeCount,
   countReviewedResponses,
@@ -84,6 +85,21 @@ test("tag practice session helpers normalize restored state and reviewed score",
   ]);
   assert.equal(countReviewedResponses(responses), 2);
   assert.equal(getAverageReviewedScore(questions, responses), 50);
+});
+
+test("buildTagPracticeStartState creates study response state", () => {
+  const questions = [
+    { type: "mcq", correct_choice_id: "a" },
+    { type: "open_text", sub_questions: [{ id: "a" }] }
+  ];
+  const state = buildTagPracticeStartState(questions);
+
+  assert.equal(state.currentIndex, 0);
+  assert.equal(state.questions, questions);
+  assert.deepEqual(state.responses, [
+    { choiceId: "", skipped: false, revealed: false, studyAidsOpen: false },
+    { text: "", subGrades: {}, skipped: false, revealed: false, studyAidsOpen: false }
+  ]);
 });
 
 test("buildTagQuestionsQuery serializes all and selected tags", () => {

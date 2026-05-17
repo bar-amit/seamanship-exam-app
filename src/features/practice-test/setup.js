@@ -1,3 +1,5 @@
+import { createQuestionResponses } from "./session.js";
+
 const ALLOWED_QUESTION_COUNTS = [5, 10, 20];
 
 export function formatPracticeSeconds(totalSeconds) {
@@ -31,4 +33,25 @@ export function normalizePracticeQuestionCount(value) {
 
 export function clampCurrentIndex(index, questionCount) {
   return Math.max(0, Math.min(Number(index) || 0, Math.max(0, Number(questionCount) - 1)));
+}
+
+export function buildPracticeStartState({
+  questionCount,
+  minutesPerQuestion,
+  questions,
+  now = Date.now
+}) {
+  const safeMinutes = clampPracticeMinutes(minutesPerQuestion);
+
+  return {
+    safeMinutes,
+    minutesWereClamped: safeMinutes !== minutesPerQuestion,
+    questions,
+    responses: createQuestionResponses(questions),
+    currentIndex: 0,
+    timeLeft: questionCount * safeMinutes * 60,
+    sessionStartedAt: now(),
+    summarySaved: false,
+    phase: "active"
+  };
 }

@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import {
-  createQuestionResponses,
   getQuestionStatus,
   hasAttempt,
   scoreQuestion,
@@ -27,6 +26,7 @@ import {
 import {
   clampCurrentIndex,
   clampPracticeMinutes,
+  buildPracticeStartState,
   formatPracticeSeconds,
   normalizePracticeQuestionCount
 } from "../../src/features/practice-test/setup.js";
@@ -186,13 +186,18 @@ export default function PracticePage() {
         count: questionCount,
         fallbackError: uiText.practice.errors.loadQuestionsFailed
       });
-      setQuestions(loadedQuestions);
-      setResponses(createQuestionResponses(loadedQuestions));
-      setCurrentIndex(0);
-      setTimeLeft(questionCount * safeMinutes * 60);
-      setSessionStartedAt(Date.now());
-      setSummarySaved(false);
-      setPhase("active");
+      const startState = buildPracticeStartState({
+        questionCount,
+        minutesPerQuestion,
+        questions: loadedQuestions
+      });
+      setQuestions(startState.questions);
+      setResponses(startState.responses);
+      setCurrentIndex(startState.currentIndex);
+      setTimeLeft(startState.timeLeft);
+      setSessionStartedAt(startState.sessionStartedAt);
+      setSummarySaved(startState.summarySaved);
+      setPhase(startState.phase);
     } catch (err) {
       setError(err.message);
     } finally {

@@ -11,6 +11,7 @@ import {
   updateResponseAtIndex
 } from "../src/features/practice-test/session.js";
 import {
+  buildPracticeStartState,
   clampCurrentIndex,
   clampPracticeMinutes,
   formatPracticeSeconds,
@@ -148,6 +149,27 @@ test("practice setup helpers normalize restored controls", () => {
   assert.equal(normalizePracticeQuestionCount("bad"), 10);
   assert.equal(clampCurrentIndex(7, 3), 2);
   assert.equal(clampCurrentIndex(-2, 3), 0);
+});
+
+test("buildPracticeStartState creates active session state", () => {
+  const state = buildPracticeStartState({
+    questionCount: 2,
+    minutesPerQuestion: 6.2,
+    questions: [mcq, openText],
+    now: () => 1234
+  });
+
+  assert.equal(state.safeMinutes, 6);
+  assert.equal(state.minutesWereClamped, true);
+  assert.equal(state.phase, "active");
+  assert.equal(state.currentIndex, 0);
+  assert.equal(state.timeLeft, 720);
+  assert.equal(state.sessionStartedAt, 1234);
+  assert.equal(state.summarySaved, false);
+  assert.deepEqual(state.responses, [
+    { choiceId: "", skipped: false },
+    { text: "", subGrades: {}, skipped: false }
+  ]);
 });
 
 test("practice question API helpers clamp limits and select randomized questions", () => {

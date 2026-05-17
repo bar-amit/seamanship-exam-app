@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { CHAPTER_TAG_OPTIONS } from "../../../src/features/tag-practice/tags.js";
 import {
-  createQuestionResponses,
   scoreQuestion,
   setSubGradeAtIndex,
   updateResponseAtIndex
@@ -20,6 +19,7 @@ import {
 } from "../../../src/features/tag-practice/progress.js";
 import {
   clampTagPracticeCount,
+  buildTagPracticeStartState,
   countReviewedResponses,
   getAverageReviewedScore,
   restoreTagPracticeResponses
@@ -147,14 +147,10 @@ export default function TagPracticePage() {
         selectedTags,
         fallbackError: uiText.practiceTags.errors.loadQuestionsFailed
       });
-      setQuestions(loadedQuestions);
-      setResponses(
-        createQuestionResponses(loadedQuestions, {
-          revealed: false,
-          studyAidsOpen: false
-        })
-      );
-      setCurrentIndex(0);
+      const startState = buildTagPracticeStartState(loadedQuestions);
+      setQuestions(startState.questions);
+      setResponses(startState.responses);
+      setCurrentIndex(startState.currentIndex);
     } catch (err) {
       setError(err.message);
     } finally {

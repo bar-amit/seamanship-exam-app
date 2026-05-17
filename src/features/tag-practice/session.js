@@ -1,4 +1,4 @@
-import { scoreQuestion } from "../practice-test/session.js";
+import { createQuestionResponses, scoreQuestion } from "../practice-test/session.js";
 
 export function clampTagPracticeCount(value) {
   return Math.max(5, Math.min(200, Number(value)));
@@ -42,4 +42,15 @@ export function buildTagQuestionsQuery({ count, selectedTags }) {
     query.set("tags", "all");
   }
   return query;
+}
+
+export function buildTagPracticeStartState(questions) {
+  return {
+    questions,
+    responses: createQuestionResponses(questions, {
+      revealed: false,
+      studyAidsOpen: false
+    }),
+    currentIndex: 0
+  };
 }

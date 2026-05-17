@@ -4,6 +4,10 @@ export function clampTagPracticeCount(value) {
   return Math.max(5, Math.min(200, Number(value)));
 }
 
+export function clampTagPracticeIndex(index, questionCount) {
+  return Math.max(0, Math.min(Number(index) || 0, Math.max(0, Number(questionCount) - 1)));
+}
+
 export function restoreTagPracticeResponses(responses = []) {
   return responses.map((response) => ({
     ...response,

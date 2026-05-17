@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   getReviewStatus,
   buildReviewSummary,
+  getFilteredReviewIndexes,
   shouldIncludeByFilter
 } from "../src/features/practice-test/review.js";
 
@@ -39,4 +40,19 @@ test("shouldIncludeByFilter supports all filter modes", () => {
   assert.equal(shouldIncludeByFilter("correct", "mistakes"), false);
   assert.equal(shouldIncludeByFilter("skipped", "skipped"), true);
   assert.equal(shouldIncludeByFilter("correct", "correct"), true);
+});
+
+test("getFilteredReviewIndexes returns indexes matching review filter", () => {
+  const questions = [mcq, mcq, mcq, open];
+  const responses = [
+    { choiceId: "b" },
+    { choiceId: "a" },
+    { skipped: true },
+    { text: "x", subGrades: { a: true, b: false } }
+  ];
+
+  assert.deepEqual(getFilteredReviewIndexes(questions, responses, "all"), [0, 1, 2, 3]);
+  assert.deepEqual(getFilteredReviewIndexes(questions, responses, "correct"), [0]);
+  assert.deepEqual(getFilteredReviewIndexes(questions, responses, "mistakes"), [1, 3]);
+  assert.deepEqual(getFilteredReviewIndexes(questions, responses, "skipped"), [2]);
 });

@@ -8,6 +8,7 @@ import {
   buildTagPracticeStartState,
   buildTagQuestionsQuery,
   clampTagPracticeCount,
+  clampTagPracticeIndex,
   countReviewedResponses,
   getAverageReviewedScore,
   restoreTagPracticeResponses
@@ -78,6 +79,8 @@ test("tag practice session helpers normalize restored state and reviewed score",
 
   assert.equal(clampTagPracticeCount(3), 5);
   assert.equal(clampTagPracticeCount(201), 200);
+  assert.equal(clampTagPracticeIndex(-1, 3), 0);
+  assert.equal(clampTagPracticeIndex(9, 3), 2);
   assert.deepEqual(restoreTagPracticeResponses(responses).map((r) => r.studyAidsOpen), [
     true,
     false,

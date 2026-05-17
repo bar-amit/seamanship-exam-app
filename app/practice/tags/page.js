@@ -19,6 +19,7 @@ import {
 } from "../../../src/features/tag-practice/progress.js";
 import {
   clampTagPracticeCount,
+  clampTagPracticeIndex,
   buildTagPracticeStartState,
   countReviewedResponses,
   getAverageReviewedScore,
@@ -78,9 +79,7 @@ export default function TagPracticePage() {
       setCount(clampTagPracticeCount(restored.count));
       setQuestions(restored.questions);
       setResponses(restoreTagPracticeResponses(restored.responses));
-      setCurrentIndex(
-        Math.max(0, Math.min(restored.currentIndex, Math.max(0, restored.questions.length - 1)))
-      );
+      setCurrentIndex(clampTagPracticeIndex(restored.currentIndex, restored.questions.length));
     }
     setHydrated(true);
   }, []);

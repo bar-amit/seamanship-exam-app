@@ -11,8 +11,8 @@ import {
 } from "../../src/features/practice-test/session.js";
 import {
   buildReviewSummary,
+  getFilteredReviewIndexes,
   getReviewStatus,
-  shouldIncludeByFilter
 } from "../../src/features/practice-test/review.js";
 import {
   clearPersistedPracticeTest,
@@ -162,14 +162,7 @@ export default function PracticePage() {
     if (phase !== "review") {
       return [];
     }
-    const indexes = [];
-    for (let i = 0; i < questions.length; i += 1) {
-      const status = getReviewStatus(questions[i], responses[i]);
-      if (shouldIncludeByFilter(status, reviewFilter)) {
-        indexes.push(i);
-      }
-    }
-    return indexes;
+    return getFilteredReviewIndexes(questions, responses, reviewFilter);
   }, [phase, questions, responses, reviewFilter]);
 
   async function startPractice() {

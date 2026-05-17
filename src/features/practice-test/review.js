@@ -57,3 +57,14 @@ export function shouldIncludeByFilter(status, filter) {
   }
   return true;
 }
+
+export function getFilteredReviewIndexes(questions = [], responses = [], filter = "all") {
+  const indexes = [];
+  for (let i = 0; i < questions.length; i += 1) {
+    const status = getReviewStatus(questions[i], responses?.[i]);
+    if (shouldIncludeByFilter(status, filter)) {
+      indexes.push(i);
+    }
+  }
+  return indexes;
+}

@@ -13,6 +13,7 @@ import {
 } from "../src/features/tag-practice/session.js";
 import {
   executeListTagPracticeQuestions,
+  fetchTagPracticeQuestions,
   normalizeTagQuestionRequest,
   selectTagPracticeQuestions
 } from "../src/features/tag-practice/questions.js";
@@ -138,4 +139,51 @@ test("executeListTagPracticeQuestions loads docs and returns tag response payloa
     total_pool: 2,
     questions: [{ id: "c", text: "C", tags: ["mechanics"] }]
   });
+});
+
+test("fetchTagPracticeQuestions normalizes tags and loads questions through API", async () => {
+  const calls = [];
+  const result = await fetchTagPracticeQuestions({
+    count: 12,
+    selectedTags: [" Mechanics ", "mechanics"],
+    fetchImpl: async (url) => {
+      calls.push(url);
+      return {
+        ok: true,
+        async json() {
+          return { ok: true, questions: [{ id: "q1" }] };
+        }
+      };
+    }
+  });
+
+  assert.deepEqual(calls, ["/api/practice/tag-questions?count=12&tags=mechanics"]);
+  assert.deepEqual(result, {
+    questions: [{ id: "q1" }],
+    selectedTags: ["mechanics"]
+  });
+});
+
+test("fetchTagPracticeQuestions serializes all tags and throws fallback errors", async () => {
+  const calls = [];
+  await assert.rejects(
+    () =>
+      fetchTagPracticeQuestions({
+        count: 30,
+        selectedTags: [],
+        fallbackError: "Tag fallback",
+        fetchImpl: async (url) => {
+          calls.push(url);
+          return {
+            ok: false,
+            async json() {
+              return { ok: false };
+            }
+          };
+        }
+      }),
+    /Tag fallback/
+  );
+
+  assert.deepEqual(calls, ["/api/practice/tag-questions?count=30&tags=all"]);
 });

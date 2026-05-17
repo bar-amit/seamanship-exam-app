@@ -48,3 +48,26 @@ export async function executeListTagPracticeQuestions({ request, db, random }) {
     }
   };
 }
+
+export async function fetchTagPracticeQuestions({
+  count,
+  selectedTags,
+  fetchImpl = globalThis.fetch,
+  fallbackError = "Failed to fetch tag questions"
+} = {}) {
+  const normalizedTags = normalizeSelectedTags(selectedTags);
+  const query = new URLSearchParams();
+  query.set("count", String(count));
+  query.set("tags", normalizedTags.length > 0 ? normalizedTags.join(",") : "all");
+
+  const response = await fetchImpl(`/api/practice/tag-questions?${query.toString()}`);
+  const data = await response.json();
+  if (!response.ok || !data.ok) {
+    throw new Error(data.error || fallbackError);
+  }
+
+  return {
+    questions: data.questions,
+    selectedTags: normalizedTags
+  };
+}

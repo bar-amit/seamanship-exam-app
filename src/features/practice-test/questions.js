@@ -29,3 +29,16 @@ export async function executeListPracticeQuestions({ request, db, random }) {
     }
   };
 }
+
+export async function fetchPracticeQuestions({
+  count,
+  fetchImpl = globalThis.fetch,
+  fallbackError = "Failed to fetch questions"
+} = {}) {
+  const response = await fetchImpl(`/api/practice/questions?count=${count}`);
+  const data = await response.json();
+  if (!response.ok || !data.ok) {
+    throw new Error(data.error || fallbackError);
+  }
+  return data.questions;
+}

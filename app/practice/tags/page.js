@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { CHAPTER_TAG_OPTIONS, normalizeSelectedTags } from "../../../src/features/tag-practice/tags.js";
+import { CHAPTER_TAG_OPTIONS } from "../../../src/features/tag-practice/tags.js";
 import {
   createQuestionResponses,
   scoreQuestion,
@@ -19,12 +19,12 @@ import {
   saveTagProgressSnapshot
 } from "../../../src/features/tag-practice/progress.js";
 import {
-  buildTagQuestionsQuery,
   clampTagPracticeCount,
   countReviewedResponses,
   getAverageReviewedScore,
   restoreTagPracticeResponses
 } from "../../../src/features/tag-practice/session.js";
+import { fetchTagPracticeQuestions } from "../../../src/features/tag-practice/questions.js";
 import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
 import ReviewSummary from "../../../src/components/practice/review-summary.js";
 import ReviewStatusBadge from "../../../src/components/practice/review-status-badge.js";
@@ -142,16 +142,14 @@ export default function TagPracticePage() {
     setIsLoading(true);
     setError("");
     try {
-      const normalized = normalizeSelectedTags(selectedTags);
-      const query = buildTagQuestionsQuery({ count, selectedTags: normalized });
-      const res = await fetch(`/api/practice/tag-questions?${query.toString()}`);
-      const data = await res.json();
-      if (!res.ok || !data.ok) {
-        throw new Error(data.error || uiText.practiceTags.errors.loadQuestionsFailed);
-      }
-      setQuestions(data.questions);
+      const { questions: loadedQuestions } = await fetchTagPracticeQuestions({
+        count,
+        selectedTags,
+        fallbackError: uiText.practiceTags.errors.loadQuestionsFailed
+      });
+      setQuestions(loadedQuestions);
       setResponses(
-        createQuestionResponses(data.questions, {
+        createQuestionResponses(loadedQuestions, {
           revealed: false,
           studyAidsOpen: false
         })

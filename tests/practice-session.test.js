@@ -18,6 +18,7 @@ import {
 } from "../src/features/practice-test/setup.js";
 import {
   executeListPracticeQuestions,
+  fetchPracticeQuestions,
   normalizePracticeQuestionLimit,
   selectPracticeQuestions
 } from "../src/features/practice-test/questions.js";
@@ -183,4 +184,40 @@ test("executeListPracticeQuestions loads docs and returns selected question payl
       { id: "c", text: "C" }
     ]
   });
+});
+
+test("fetchPracticeQuestions loads questions through practice API", async () => {
+  const calls = [];
+  const questions = await fetchPracticeQuestions({
+    count: 20,
+    fetchImpl: async (url) => {
+      calls.push(url);
+      return {
+        ok: true,
+        async json() {
+          return { ok: true, questions: [{ id: "q1" }] };
+        }
+      };
+    }
+  });
+
+  assert.deepEqual(calls, ["/api/practice/questions?count=20"]);
+  assert.deepEqual(questions, [{ id: "q1" }]);
+});
+
+test("fetchPracticeQuestions throws API or fallback errors", async () => {
+  await assert.rejects(
+    () =>
+      fetchPracticeQuestions({
+        count: 10,
+        fallbackError: "Fallback load error",
+        fetchImpl: async () => ({
+          ok: false,
+          async json() {
+            return { ok: false, error: "" };
+          }
+        })
+      }),
+    /Fallback load error/
+  );
 });

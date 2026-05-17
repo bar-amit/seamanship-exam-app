@@ -30,6 +30,7 @@ import {
   formatPracticeSeconds,
   normalizePracticeQuestionCount
 } from "../../src/features/practice-test/setup.js";
+import { fetchPracticeQuestions } from "../../src/features/practice-test/questions.js";
 import ClickableStorageImage from "../../src/components/clickable-storage-image.js";
 import ReviewSummary from "../../src/components/practice/review-summary.js";
 import ReviewControls from "../../src/components/practice/review-controls.js";
@@ -181,13 +182,12 @@ export default function PracticePage() {
         setMinutesPerQuestion(safeMinutes);
         setMinutesHint(uiText.practice.minutesRangeHint);
       }
-      const res = await fetch(`/api/practice/questions?count=${questionCount}`);
-      const data = await res.json();
-      if (!res.ok || !data.ok) {
-        throw new Error(data.error || uiText.practice.errors.loadQuestionsFailed);
-      }
-      setQuestions(data.questions);
-      setResponses(createQuestionResponses(data.questions));
+      const loadedQuestions = await fetchPracticeQuestions({
+        count: questionCount,
+        fallbackError: uiText.practice.errors.loadQuestionsFailed
+      });
+      setQuestions(loadedQuestions);
+      setResponses(createQuestionResponses(loadedQuestions));
       setCurrentIndex(0);
       setTimeLeft(questionCount * safeMinutes * 60);
       setSessionStartedAt(Date.now());

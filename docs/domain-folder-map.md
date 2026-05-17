@@ -32,6 +32,7 @@ Canonical modules:
 - `src/features/auth/guard.js`
 - `src/features/auth/middleware-policy.js`
 - `src/features/auth/server-session.js`
+- `src/features/auth/session-route.js`
 - `src/features/auth/session.js`
 
 Compatibility re-exports remain under `src/lib/auth/*` so old imports continue to work during the M2 migration.

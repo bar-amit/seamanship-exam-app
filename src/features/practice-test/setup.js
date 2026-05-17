@@ -55,3 +55,17 @@ export function buildPracticeStartState({
     phase: "active"
   };
 }
+
+export function buildPracticeResetState() {
+  return {
+    phase: "setup",
+    questions: [],
+    responses: [],
+    currentIndex: 0,
+    timeLeft: 0,
+    error: "",
+    minutesHint: "",
+    sessionStartedAt: null,
+    summarySaved: false
+  };
+}

@@ -21,6 +21,7 @@ import {
 import {
   clampTagPracticeCount,
   clampTagPracticeIndex,
+  buildTagPracticeResetState,
   buildTagPracticeStartState,
   countReviewedResponses,
   getAverageReviewedScore,
@@ -180,10 +181,11 @@ export default function TagPracticePage() {
   }
 
   function resetToSetup() {
-    setQuestions([]);
-    setResponses([]);
-    setCurrentIndex(0);
-    setError("");
+    const resetState = buildTagPracticeResetState();
+    setQuestions(resetState.questions);
+    setResponses(resetState.responses);
+    setCurrentIndex(resetState.currentIndex);
+    setError(resetState.error);
     if (typeof window !== "undefined") {
       clearPersistedTagPractice(window.localStorage);
     }

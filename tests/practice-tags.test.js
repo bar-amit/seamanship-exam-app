@@ -5,6 +5,7 @@ import {
   filterQuestionsByTags
 } from "../src/features/tag-practice/tags.js";
 import {
+  buildTagPracticeResetState,
   buildTagPracticeStartState,
   buildTagQuestionsQuery,
   clampTagPracticeCount,
@@ -103,6 +104,15 @@ test("buildTagPracticeStartState creates study response state", () => {
     { choiceId: "", skipped: false, revealed: false, studyAidsOpen: false },
     { text: "", subGrades: {}, skipped: false, revealed: false, studyAidsOpen: false }
   ]);
+});
+
+test("buildTagPracticeResetState creates setup reset state", () => {
+  assert.deepEqual(buildTagPracticeResetState(), {
+    questions: [],
+    responses: [],
+    currentIndex: 0,
+    error: ""
+  });
 });
 
 test("buildTagQuestionsQuery serializes all and selected tags", () => {

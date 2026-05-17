@@ -58,3 +58,12 @@ export function buildTagPracticeStartState(questions) {
     currentIndex: 0
   };
 }
+
+export function buildTagPracticeResetState() {
+  return {
+    questions: [],
+    responses: [],
+    currentIndex: 0,
+    error: ""
+  };
+}

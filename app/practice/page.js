@@ -28,6 +28,7 @@ import {
   clampCurrentIndex,
   clampPracticeMinutes,
   buildPracticeStartState,
+  buildPracticeResetState,
   formatPracticeSeconds,
   normalizePracticeQuestionCount
 } from "../../src/features/practice-test/setup.js";
@@ -228,15 +229,16 @@ export default function PracticePage() {
   }
 
   function resetToSetup() {
-    setPhase("setup");
-    setQuestions([]);
-    setResponses([]);
-    setCurrentIndex(0);
-    setTimeLeft(0);
-    setError("");
-    setMinutesHint("");
-    setSessionStartedAt(null);
-    setSummarySaved(false);
+    const resetState = buildPracticeResetState();
+    setPhase(resetState.phase);
+    setQuestions(resetState.questions);
+    setResponses(resetState.responses);
+    setCurrentIndex(resetState.currentIndex);
+    setTimeLeft(resetState.timeLeft);
+    setError(resetState.error);
+    setMinutesHint(resetState.minutesHint);
+    setSessionStartedAt(resetState.sessionStartedAt);
+    setSummarySaved(resetState.summarySaved);
     if (typeof window !== "undefined") {
       clearPersistedPracticeTest(window.localStorage);
     }

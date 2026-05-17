@@ -12,6 +12,7 @@ import {
   updateResponseAtIndex
 } from "../src/features/practice-test/session.js";
 import {
+  buildPracticeResetState,
   buildPracticeStartState,
   clampCurrentIndex,
   clampPracticeMinutes,
@@ -178,6 +179,20 @@ test("buildPracticeStartState creates active session state", () => {
     { choiceId: "", skipped: false },
     { text: "", subGrades: {}, skipped: false }
   ]);
+});
+
+test("buildPracticeResetState creates setup reset state", () => {
+  assert.deepEqual(buildPracticeResetState(), {
+    phase: "setup",
+    questions: [],
+    responses: [],
+    currentIndex: 0,
+    timeLeft: 0,
+    error: "",
+    minutesHint: "",
+    sessionStartedAt: null,
+    summarySaved: false
+  });
 });
 
 test("practice question API helpers clamp limits and select randomized questions", () => {

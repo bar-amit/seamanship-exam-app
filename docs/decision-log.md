@@ -250,3 +250,10 @@ Status values: `accepted`, `superseded`.
 - Decision: The phase 2 importer validates normalized questions before asset upload or Firestore writes, and writes validation results into the import audit report.
 - Reason: Importer is used for bootstrap/recovery, so invalid normalized records should fail before creating partial data writes while still leaving enough report detail to recover.
 - Impact: `scripts/import-phase2.js` must keep validation ahead of persistence. Blocking errors require data or normalization fixes before rerun; warnings may proceed when they reflect supported app behavior.
+
+### 2026-05-17 - Modals Use Shared Focus Management
+
+- Status: `accepted`
+- Decision: App modal overlays use shared dialog helpers for initial focus, Tab focus trapping, Escape dismissal, and focus restoration.
+- Reason: Modal accessibility should be consistent across collection and image dialogs without duplicating keyboard handling in each component.
+- Impact: New modal implementations should reuse `src/lib/a11y/dialog.js` helpers or an eventual shared Modal primitive rather than hand-rolling focus behavior.

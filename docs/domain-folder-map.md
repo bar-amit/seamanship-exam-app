@@ -15,6 +15,7 @@ This document tracks the M2 domain-oriented structure migration. The migration s
 - `src/features/collections`: private collection domain services and helpers.
 - `src/features/admin`: admin question editing/listing services and helpers.
 - `src/lib`: shared infrastructure and utilities used by multiple features.
+- `src/lib/api`: shared API route response helpers.
 - `src/lib/questions`: shared question utilities used by multiple practice domains.
 - `src/components`: shared UI components and feature-neutral primitives.
 - `src/content`: centralized user-facing strings.

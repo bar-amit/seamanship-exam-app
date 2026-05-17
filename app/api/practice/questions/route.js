@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { jsonError, jsonResult } from "../../../../src/lib/api/response.js";
 import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
 import { executeListPracticeQuestions } from "../../../../src/features/practice-test/questions.js";
 
@@ -8,14 +8,8 @@ export async function GET(request) {
       request,
       db: firebaseAdminDb
     });
-    return NextResponse.json(result.body, { status: result.status });
+    return jsonResult(result);
   } catch (error) {
-    return NextResponse.json(
-      {
-        ok: false,
-        error: error.message || "Failed to fetch questions"
-      },
-      { status: 500 }
-    );
+    return jsonError(error, { status: 500, fallback: "Failed to fetch questions" });
   }
 }

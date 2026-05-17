@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { jsonError, jsonResult } from "../../../../src/lib/api/response.js";
 import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
 import { authenticateRequest } from "../../../../src/features/auth/server-session.js";
 import {
@@ -19,9 +19,9 @@ export async function putCollectionHandler(request, { params }, deps = {}) {
       db,
       nowIso
     });
-    return NextResponse.json(result.body, { status: result.status });
+    return jsonResult(result);
   } catch (error) {
-    return NextResponse.json({ ok: false, error: error.message }, { status: 400 });
+    return jsonError(error, { status: 400 });
   }
 }
 
@@ -37,8 +37,8 @@ export async function DELETE(request, { params }) {
       authFn: authenticateRequest,
       db: firebaseAdminDb
     });
-    return NextResponse.json(result.body, { status: result.status });
+    return jsonResult(result);
   } catch (error) {
-    return NextResponse.json({ ok: false, error: error.message }, { status: 400 });
+    return jsonError(error, { status: 400 });
   }
 }

@@ -15,6 +15,7 @@ This document tracks the M2 domain-oriented structure migration. The migration s
 - `src/features/collections`: private collection domain services and helpers.
 - `src/features/admin`: admin question editing/listing services and helpers.
 - `src/lib`: shared infrastructure and utilities used by multiple features.
+- `src/lib/questions`: shared question utilities used by multiple practice domains.
 - `src/components`: shared UI components and feature-neutral primitives.
 - `src/content`: centralized user-facing strings.
 
@@ -65,6 +66,7 @@ Status: migrated.
 Canonical modules:
 
 - `src/features/tag-practice/tags.js`
+- `src/features/tag-practice/questions.js`
 - `src/features/tag-practice/persistence.js`
 - `src/features/tag-practice/progress.js`
 - `src/features/tag-practice/session.js`
@@ -79,6 +81,7 @@ Canonical modules:
 
 - `src/features/practice-test/persistence.js`
 - `src/features/practice-test/analytics.js`
+- `src/features/practice-test/questions.js`
 - `src/features/practice-test/review.js`
 - `src/features/practice-test/session.js`
 - `src/features/practice-test/setup.js`

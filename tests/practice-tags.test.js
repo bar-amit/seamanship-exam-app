@@ -11,6 +11,10 @@ import {
   getAverageReviewedScore,
   restoreTagPracticeResponses
 } from "../src/features/tag-practice/session.js";
+import {
+  normalizeTagQuestionRequest,
+  selectTagPracticeQuestions
+} from "../src/features/tag-practice/questions.js";
 
 test("normalizeSelectedTags returns empty filter when all is selected", () => {
   assert.deepEqual(normalizeSelectedTags(["all", "seamanship"]), []);
@@ -64,5 +68,32 @@ test("buildTagQuestionsQuery serializes all and selected tags", () => {
   assert.equal(
     buildTagQuestionsQuery({ count: 12, selectedTags: ["navigation a", "safety"] }).toString(),
     "count=12&tags=navigation+a%2Csafety"
+  );
+});
+
+test("tag question API helpers normalize request and select filtered randomized questions", () => {
+  assert.deepEqual(normalizeTagQuestionRequest({ countParam: "bad", tagsParam: "all" }), {
+    count: 30,
+    selectedTags: []
+  });
+  assert.deepEqual(normalizeTagQuestionRequest({ countParam: "250", tagsParam: " Mechanics, mechanics " }), {
+    count: 200,
+    selectedTags: ["mechanics"]
+  });
+
+  const selection = selectTagPracticeQuestions(
+    [
+      { id: "a", tags: ["mechanics"] },
+      { id: "b", tags: ["seamanship"] },
+      { id: "c", tags: ["mechanics"] }
+    ],
+    { count: 1, selectedTags: ["mechanics"], random: () => 0 }
+  );
+
+  assert.equal(selection.totalPool, 2);
+  assert.deepEqual(selection.requestedTags, ["mechanics"]);
+  assert.deepEqual(
+    selection.questions.map((question) => question.id),
+    ["c"]
   );
 });

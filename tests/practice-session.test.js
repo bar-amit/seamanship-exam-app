@@ -16,6 +16,10 @@ import {
   formatPracticeSeconds,
   normalizePracticeQuestionCount
 } from "../src/features/practice-test/setup.js";
+import {
+  normalizePracticeQuestionLimit,
+  selectPracticeQuestions
+} from "../src/features/practice-test/questions.js";
 
 const mcq = {
   id: "q1",
@@ -121,4 +125,19 @@ test("practice setup helpers normalize restored controls", () => {
   assert.equal(normalizePracticeQuestionCount("bad"), 10);
   assert.equal(clampCurrentIndex(7, 3), 2);
   assert.equal(clampCurrentIndex(-2, 3), 0);
+});
+
+test("practice question API helpers clamp limits and select randomized questions", () => {
+  assert.equal(normalizePracticeQuestionLimit("bad"), 10);
+  assert.equal(normalizePracticeQuestionLimit("0"), 1);
+  assert.equal(normalizePracticeQuestionLimit("99"), 50);
+
+  const selected = selectPracticeQuestions(
+    [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "d" }],
+    { count: 2, random: () => 0 }
+  );
+  assert.deepEqual(
+    selected.map((question) => question.id),
+    ["b", "c"]
+  );
 });

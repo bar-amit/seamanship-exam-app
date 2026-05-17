@@ -1,26 +1,18 @@
 import { NextResponse } from "next/server";
 import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
-
-function shuffle(items) {
-  const out = [...items];
-  for (let i = out.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = out[i];
-    out[i] = out[j];
-    out[j] = temp;
-  }
-  return out;
-}
+import {
+  normalizePracticeQuestionLimit,
+  selectPracticeQuestions
+} from "../../../../src/features/practice-test/questions.js";
 
 export async function GET(request) {
   try {
     const url = new URL(request.url);
-    const countParam = Number(url.searchParams.get("count") || 10);
-    const count = Number.isFinite(countParam) ? Math.max(1, Math.min(50, countParam)) : 10;
+    const count = normalizePracticeQuestionLimit(url.searchParams.get("count"));
 
     const snapshot = await firebaseAdminDb.collection("questions").get();
     const all = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-    const selected = shuffle(all).slice(0, count);
+    const selected = selectPracticeQuestions(all, { count });
 
     return NextResponse.json({
       ok: true,

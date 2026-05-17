@@ -17,6 +17,7 @@ import {
   normalizePracticeQuestionCount
 } from "../src/features/practice-test/setup.js";
 import {
+  executeListPracticeQuestions,
   normalizePracticeQuestionLimit,
   selectPracticeQuestions
 } from "../src/features/practice-test/questions.js";
@@ -32,6 +33,27 @@ const openText = {
   type: "open_text",
   sub_questions: [{ id: "a" }, { id: "b" }, { id: "c" }, { id: "d" }]
 };
+
+function makeQuestionsDb(questions) {
+  return {
+    collection(name) {
+      assert.equal(name, "questions");
+      return {
+        async get() {
+          return {
+            docs: questions.map((question) => ({
+              id: question.id,
+              data: () => {
+                const { id, ...data } = question;
+                return data;
+              }
+            }))
+          };
+        }
+      };
+    }
+  };
+}
 
 test("hasAttempt supports mcq and open_text", () => {
   assert.equal(hasAttempt(mcq, { choiceId: "a" }), true);
@@ -140,4 +162,25 @@ test("practice question API helpers clamp limits and select randomized questions
     selected.map((question) => question.id),
     ["b", "c"]
   );
+});
+
+test("executeListPracticeQuestions loads docs and returns selected question payload", async () => {
+  const result = await executeListPracticeQuestions({
+    request: { url: "https://example.test/api/practice/questions?count=2" },
+    db: makeQuestionsDb([
+      { id: "a", text: "A" },
+      { id: "b", text: "B" },
+      { id: "c", text: "C" }
+    ]),
+    random: () => 0
+  });
+
+  assert.equal(result.status, 200);
+  assert.deepEqual(result.body, {
+    ok: true,
+    questions: [
+      { id: "b", text: "B" },
+      { id: "c", text: "C" }
+    ]
+  });
 });

@@ -12,9 +12,31 @@ import {
   restoreTagPracticeResponses
 } from "../src/features/tag-practice/session.js";
 import {
+  executeListTagPracticeQuestions,
   normalizeTagQuestionRequest,
   selectTagPracticeQuestions
 } from "../src/features/tag-practice/questions.js";
+
+function makeQuestionsDb(questions) {
+  return {
+    collection(name) {
+      assert.equal(name, "questions");
+      return {
+        async get() {
+          return {
+            docs: questions.map((question) => ({
+              id: question.id,
+              data: () => {
+                const { id, ...data } = question;
+                return data;
+              }
+            }))
+          };
+        }
+      };
+    }
+  };
+}
 
 test("normalizeSelectedTags returns empty filter when all is selected", () => {
   assert.deepEqual(normalizeSelectedTags(["all", "seamanship"]), []);
@@ -96,4 +118,24 @@ test("tag question API helpers normalize request and select filtered randomized 
     selection.questions.map((question) => question.id),
     ["c"]
   );
+});
+
+test("executeListTagPracticeQuestions loads docs and returns tag response payload", async () => {
+  const result = await executeListTagPracticeQuestions({
+    request: { url: "https://example.test/api/practice/tag-questions?count=1&tags=mechanics" },
+    db: makeQuestionsDb([
+      { id: "a", text: "A", tags: ["mechanics"] },
+      { id: "b", text: "B", tags: ["seamanship"] },
+      { id: "c", text: "C", tags: ["mechanics"] }
+    ]),
+    random: () => 0
+  });
+
+  assert.equal(result.status, 200);
+  assert.deepEqual(result.body, {
+    ok: true,
+    requested_tags: ["mechanics"],
+    total_pool: 2,
+    questions: [{ id: "c", text: "C", tags: ["mechanics"] }]
+  });
 });

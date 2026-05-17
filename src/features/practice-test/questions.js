@@ -8,3 +8,24 @@ export function normalizePracticeQuestionLimit(value) {
 export function selectPracticeQuestions(questions, { count, random } = {}) {
   return selectRandomItems(questions, { count, random });
 }
+
+function mapQuestionDocs(snapshot) {
+  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+}
+
+export async function executeListPracticeQuestions({ request, db, random }) {
+  const url = new URL(request.url);
+  const count = normalizePracticeQuestionLimit(url.searchParams.get("count"));
+
+  const snapshot = await db.collection("questions").get();
+  const all = mapQuestionDocs(snapshot);
+  const selected = selectPracticeQuestions(all, { count, random });
+
+  return {
+    status: 200,
+    body: {
+      ok: true,
+      questions: selected
+    }
+  };
+}

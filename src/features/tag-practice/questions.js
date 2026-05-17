@@ -22,3 +22,29 @@ export function selectTagPracticeQuestions(questions, { count, selectedTags, ran
     questions: selectRandomItems(filtered, { count, random })
   };
 }
+
+function mapQuestionDocs(snapshot) {
+  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+}
+
+export async function executeListTagPracticeQuestions({ request, db, random }) {
+  const url = new URL(request.url);
+  const { count, selectedTags } = normalizeTagQuestionRequest({
+    countParam: url.searchParams.get("count"),
+    tagsParam: url.searchParams.get("tags")
+  });
+
+  const snapshot = await db.collection("questions").get();
+  const all = mapQuestionDocs(snapshot);
+  const selection = selectTagPracticeQuestions(all, { count, selectedTags, random });
+
+  return {
+    status: 200,
+    body: {
+      ok: true,
+      requested_tags: selection.requestedTags,
+      total_pool: selection.totalPool,
+      questions: selection.questions
+    }
+  };
+}

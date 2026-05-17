@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {
   normalizeTagProgressSnapshot,
   buildTagProgressDoc
-} from "../src/lib/progress/tag-progress.js";
+} from "../src/features/tag-practice/progress.js";
 
 test("normalizeTagProgressSnapshot normalizes tags and clamps values", () => {
   const out = normalizeTagProgressSnapshot({

@@ -4,7 +4,7 @@ import { authenticateRequest } from "../../../../src/features/auth/server-sessio
 import {
   normalizeTagProgressSnapshot,
   buildTagProgressDoc
-} from "../../../../src/lib/progress/tag-progress.js";
+} from "../../../../src/features/tag-practice/progress.js";
 
 export async function GET(request) {
   try {

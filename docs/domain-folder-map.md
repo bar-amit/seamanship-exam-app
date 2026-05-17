@@ -69,7 +69,7 @@ Canonical modules:
 - `src/features/tag-practice/progress.js`
 - `src/features/tag-practice/session.js`
 
-Compatibility re-exports remain under `src/lib/practice/*` so old imports continue to work during the M2 migration.
+Compatibility re-exports remain under `src/lib/practice/*` and `src/lib/progress/tag-progress.js` so old imports continue to work during the M2 migration.
 
 ### Practice Test
 

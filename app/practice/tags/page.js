@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { CHAPTER_TAG_OPTIONS } from "../../../src/features/tag-practice/tags.js";
 import {
+  getNextQuestionIndex,
   scoreQuestion,
   setSubGradeAtIndex,
   updateResponseAtIndex
@@ -171,15 +172,11 @@ export default function TagPracticePage() {
 
   function markSkipped() {
     updateCurrentResponse({ skipped: true, revealed: true });
-    if (currentIndex < questions.length - 1) {
-      setCurrentIndex((idx) => idx + 1);
-    }
+    setCurrentIndex((idx) => getNextQuestionIndex(idx, questions.length));
   }
 
   function nextQuestion() {
-    if (currentIndex < questions.length - 1) {
-      setCurrentIndex((idx) => idx + 1);
-    }
+    setCurrentIndex((idx) => getNextQuestionIndex(idx, questions.length));
   }
 
   function resetToSetup() {

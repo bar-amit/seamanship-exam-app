@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   createQuestionResponse,
   createQuestionResponses,
+  getNextQuestionIndex,
   hasAttempt,
   scoreQuestion,
   scoreSession,
@@ -136,6 +137,13 @@ test("getQuestionStatus reflects navigator states", () => {
   assert.equal(getQuestionStatus(mcq, { skipped: true }, false), "skipped");
   assert.equal(getQuestionStatus(mcq, { choiceId: "a" }, false), "answered");
   assert.equal(getQuestionStatus(mcq, { choiceId: "a" }, true), "current");
+});
+
+test("getNextQuestionIndex advances without passing the last question", () => {
+  assert.equal(getNextQuestionIndex(0, 3), 1);
+  assert.equal(getNextQuestionIndex(2, 3), 2);
+  assert.equal(getNextQuestionIndex(-1, 3), 1);
+  assert.equal(getNextQuestionIndex(0, 0), 0);
 });
 
 test("practice setup helpers normalize restored controls", () => {

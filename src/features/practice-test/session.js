@@ -109,3 +109,9 @@ export function getQuestionStatus(question, response, isCurrent) {
   }
   return "unanswered";
 }
+
+export function getNextQuestionIndex(index, questionCount) {
+  const current = Math.max(0, Number(index) || 0);
+  const last = Math.max(0, Number(questionCount) - 1);
+  return Math.min(current + 1, last);
+}

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import {
+  getNextQuestionIndex,
   getQuestionStatus,
   hasAttempt,
   scoreQuestion,
@@ -208,16 +209,12 @@ export default function PracticePage() {
 
   function skipCurrent() {
     updateCurrentResponse({ skipped: true });
-    if (currentIndex < questions.length - 1) {
-      setCurrentIndex((prev) => prev + 1);
-    }
+    setCurrentIndex((prev) => getNextQuestionIndex(prev, questions.length));
   }
 
   function finalizeCurrent() {
     updateCurrentResponse({ skipped: false });
-    if (currentIndex < questions.length - 1) {
-      setCurrentIndex((prev) => prev + 1);
-    }
+    setCurrentIndex((prev) => getNextQuestionIndex(prev, questions.length));
   }
 
   function finalizeAndReview() {

@@ -229,3 +229,17 @@ Status values: `accepted`, `superseded`.
 - Decision: Route files translate service results through `src/lib/api/response.js` helpers instead of calling `NextResponse.json` directly in each handler.
 - Reason: Keep route handlers thin and make status/body/error/cookie response behavior consistent while API service modules own domain logic.
 - Impact: Route handlers should return service results with `{ status, body }` and use `jsonResult`, `jsonError`, or `jsonResultWithCookies` for the Next.js response boundary.
+
+### 2026-05-17 - API Errors Use Structured Log Payloads
+
+- Status: `accepted`
+- Decision: API route catch blocks use `src/lib/api/logging.js` to emit structured error events before returning the existing JSON error envelope.
+- Reason: The M9 reliability work needs consistent diagnostics without logging request bodies, cookies, tokens, or other sensitive data.
+- Impact: New API routes should use `jsonLoggedError` at the route boundary and include stable route/method/status metadata in log events.
+
+### 2026-05-17 - Refactor Plan Convergence Loop Completed
+
+- Status: `accepted`
+- Decision: Treat the 2026-05-17 convergence run as complete for the currently requested in-scope refactor-plan loop after API route integration coverage, import pipeline extraction, structured API logging, dialog accessibility helpers, and governance documentation updates.
+- Reason: The remaining items after these slices are operational/release validations or deeper follow-ups rather than required behavior-preserving refactor steps in this loop.
+- Impact: Future work should start from explicit follow-ups in `docs/refactor-plan.md` instead of re-opening the completed convergence loop.

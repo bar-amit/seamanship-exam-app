@@ -1,4 +1,5 @@
-import { jsonError, jsonResult } from "../../../../src/lib/api/response.js";
+import { jsonResult } from "../../../../src/lib/api/response.js";
+import { jsonLoggedError } from "../../../../src/lib/api/logging.js";
 import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
 import { authenticateRequest } from "../../../../src/features/auth/server-session.js";
 import {
@@ -15,7 +16,7 @@ export async function GET(request) {
     });
     return jsonResult(result);
   } catch (error) {
-    return jsonError(error, { status: 500 });
+    return jsonLoggedError(error, { route: "/api/progress/tag", method: "GET", status: 500 });
   }
 }
 
@@ -29,6 +30,6 @@ export async function PUT(request) {
     });
     return jsonResult(result);
   } catch (error) {
-    return jsonError(error, { status: 400 });
+    return jsonLoggedError(error, { route: "/api/progress/tag", method: "PUT", status: 400 });
   }
 }

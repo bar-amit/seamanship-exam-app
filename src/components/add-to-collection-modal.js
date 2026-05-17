@@ -2,11 +2,14 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { uiText } from "../content/strings.js";
+import { buildDialogProps, isDialogDismissKey } from "../lib/a11y/dialog.js";
 import {
   buildCollectionCreatePayload,
   buildCollectionUpdatePayload,
   collectionHasQuestion
 } from "../features/collections/add-question.js";
+
+const TITLE_ID = "add-to-collection-modal-title";
 
 export default function AddToCollectionModal({ isOpen, questionId, onClose }) {
   const [collections, setCollections] = useState([]);
@@ -48,6 +51,19 @@ export default function AddToCollectionModal({ isOpen, questionId, onClose }) {
     setDescription("");
     loadCollections();
   }, [isOpen, questionId]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+    function onKeyDown(event) {
+      if (isDialogDismissKey(event)) {
+        onClose();
+      }
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen, onClose]);
 
   async function addToCollection(collection) {
     const targetQuestionId = String(questionId ?? "").trim();
@@ -112,10 +128,14 @@ export default function AddToCollectionModal({ isOpen, questionId, onClose }) {
 
   return (
     <div className="app-modal-backdrop" onClick={onClose}>
-      <div className="app-modal-card" onClick={(event) => event.stopPropagation()}>
+      <div
+        className="app-modal-card"
+        {...buildDialogProps({ labelledBy: TITLE_ID })}
+        onClick={(event) => event.stopPropagation()}
+      >
         <div className="app-modal-head">
-          <h3>{uiText.collections.addModal.title}</h3>
-          <button type="button" onClick={onClose}>
+          <h3 id={TITLE_ID}>{uiText.collections.addModal.title}</h3>
+          <button type="button" aria-label={uiText.collections.addModal.close} onClick={onClose}>
             {uiText.collections.addModal.close}
           </button>
         </div>

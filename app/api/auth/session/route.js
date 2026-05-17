@@ -1,4 +1,5 @@
-import { jsonError, jsonResultWithCookies } from "../../../../src/lib/api/response.js";
+import { jsonResultWithCookies } from "../../../../src/lib/api/response.js";
+import { jsonLoggedError } from "../../../../src/lib/api/logging.js";
 import { firebaseAdminAuth } from "../../../../src/lib/firebase/admin.js";
 import {
   buildClearAuthSessionResult,
@@ -14,7 +15,7 @@ export async function POST(request) {
     });
     return jsonResultWithCookies(result);
   } catch (error) {
-    return jsonError(error, { status: 401 });
+    return jsonLoggedError(error, { route: "/api/auth/session", method: "POST", status: 401 });
   }
 }
 

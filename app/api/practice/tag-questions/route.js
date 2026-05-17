@@ -1,4 +1,5 @@
-import { jsonError, jsonResult } from "../../../../src/lib/api/response.js";
+import { jsonResult } from "../../../../src/lib/api/response.js";
+import { jsonLoggedError } from "../../../../src/lib/api/logging.js";
 import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
 import { executeListTagPracticeQuestions } from "../../../../src/features/tag-practice/questions.js";
 
@@ -10,6 +11,11 @@ export async function GET(request) {
     });
     return jsonResult(result);
   } catch (error) {
-    return jsonError(error, { status: 500, fallback: "Failed to fetch tag questions" });
+    return jsonLoggedError(error, {
+      route: "/api/practice/tag-questions",
+      method: "GET",
+      status: 500,
+      fallback: "Failed to fetch tag questions"
+    });
   }
 }

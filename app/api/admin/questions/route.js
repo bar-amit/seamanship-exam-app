@@ -1,17 +1,41 @@
-import { jsonError, jsonResult } from "../../../../src/lib/api/response.js";
-import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
-import { authorizeAdminRequest } from "../../../../src/features/auth/server-session.js";
+import { jsonResult } from "../../../../src/lib/api/response.js";
+import { jsonLoggedError } from "../../../../src/lib/api/logging.js";
 import { executeListAdminQuestions } from "../../../../src/features/admin/service.js";
 
-export async function GET(request) {
+async function resolveAdminRouteDeps(deps = {}) {
+  if (deps.authorizeAdminRequestFn && deps.db) {
+    return {
+      authFn: deps.authorizeAdminRequestFn,
+      db: deps.db
+    };
+  }
+
+  const [{ firebaseAdminDb }, { authorizeAdminRequest }] = await Promise.all([
+    import("../../../../src/lib/firebase/admin.js"),
+    import("../../../../src/features/auth/server-session.js")
+  ]);
+
+  return {
+    authFn: deps.authorizeAdminRequestFn ?? authorizeAdminRequest,
+    db: deps.db ?? firebaseAdminDb
+  };
+}
+
+export async function getAdminQuestionsHandler(request, deps = {}) {
+  const { authFn, db } = await resolveAdminRouteDeps(deps);
+
   try {
     const result = await executeListAdminQuestions({
       request,
-      authFn: authorizeAdminRequest,
-      db: firebaseAdminDb
+      authFn,
+      db
     });
     return jsonResult(result);
   } catch (error) {
-    return jsonError(error, { status: 500 });
+    return jsonLoggedError(error, { route: "/api/admin/questions", method: "GET", status: 500 });
   }
+}
+
+export async function GET(request) {
+  return getAdminQuestionsHandler(request);
 }

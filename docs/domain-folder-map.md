@@ -15,7 +15,9 @@ This document tracks the M2 domain-oriented structure migration. The migration s
 - `src/features/collections`: private collection domain services and helpers.
 - `src/features/admin`: admin question editing/listing services and helpers.
 - `src/lib`: shared infrastructure and utilities used by multiple features.
-- `src/lib/api`: shared API route response helpers.
+- `src/lib/a11y`: shared accessibility behavior helpers.
+- `src/lib/api`: shared API route response and logging helpers.
+- `src/lib/import`: import pipeline stages and importer infrastructure helpers.
 - `src/lib/questions`: shared question utilities used by multiple practice domains.
 - `src/components`: shared UI components and feature-neutral primitives.
 - `src/content`: centralized user-facing strings.
@@ -89,6 +91,20 @@ Canonical modules:
 - `src/features/practice-test/setup.js`
 
 Compatibility re-exports remain under `src/lib/practice/*` for shared practice helpers and old tag-practice imports.
+
+### Import Pipeline
+
+Status: partially extracted.
+
+Canonical modules:
+
+- `src/lib/import/normalize.js`
+- `src/lib/import/pipeline.js`
+- `src/lib/import/firestore.js`
+- `src/lib/import/storage.js`
+- `src/lib/import/sq3-assets.js`
+
+`scripts/import-phase2.js` remains the CLI entrypoint and delegates argument/config, upload planning, normalization, persistence, and report-building stages to import helpers.
 
 ### M2 Wiring Status
 

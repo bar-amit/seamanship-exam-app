@@ -1,14 +1,31 @@
-import { jsonError, jsonResult } from "../../../../src/lib/api/response.js";
-import { firebaseAdminDb } from "../../../../src/lib/firebase/admin.js";
-import { authenticateRequest } from "../../../../src/features/auth/server-session.js";
+import { jsonResult } from "../../../../src/lib/api/response.js";
+import { jsonLoggedError } from "../../../../src/lib/api/logging.js";
 import {
   executeDeleteCollection,
   executeUpdateCollection
 } from "../../../../src/features/collections/service.js";
 
+async function resolveCollectionRouteDeps(deps = {}) {
+  if (deps.authenticateRequestFn && deps.db) {
+    return {
+      authFn: deps.authenticateRequestFn,
+      db: deps.db
+    };
+  }
+
+  const [{ firebaseAdminDb }, { authenticateRequest }] = await Promise.all([
+    import("../../../../src/lib/firebase/admin.js"),
+    import("../../../../src/features/auth/server-session.js")
+  ]);
+
+  return {
+    authFn: deps.authenticateRequestFn ?? authenticateRequest,
+    db: deps.db ?? firebaseAdminDb
+  };
+}
+
 export async function putCollectionHandler(request, { params }, deps = {}) {
-  const authFn = deps.authenticateRequestFn ?? authenticateRequest;
-  const db = deps.db ?? firebaseAdminDb;
+  const { authFn, db } = await resolveCollectionRouteDeps(deps);
   const nowIso = deps.nowIso ?? new Date().toISOString();
 
   try {
@@ -21,7 +38,7 @@ export async function putCollectionHandler(request, { params }, deps = {}) {
     });
     return jsonResult(result);
   } catch (error) {
-    return jsonError(error, { status: 400 });
+    return jsonLoggedError(error, { route: "/api/collections/[id]", method: "PUT", status: 400 });
   }
 }
 
@@ -29,16 +46,22 @@ export async function PUT(request, ctx) {
   return putCollectionHandler(request, ctx);
 }
 
-export async function DELETE(request, { params }) {
+export async function deleteCollectionHandler(request, { params }, deps = {}) {
+  const { authFn, db } = await resolveCollectionRouteDeps(deps);
+
   try {
     const result = await executeDeleteCollection({
       request,
       params,
-      authFn: authenticateRequest,
-      db: firebaseAdminDb
+      authFn,
+      db
     });
     return jsonResult(result);
   } catch (error) {
-    return jsonError(error, { status: 400 });
+    return jsonLoggedError(error, { route: "/api/collections/[id]", method: "DELETE", status: 400 });
   }
+}
+
+export async function DELETE(request, ctx) {
+  return deleteCollectionHandler(request, ctx);
 }

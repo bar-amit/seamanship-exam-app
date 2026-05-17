@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getDownloadURL, ref } from "firebase/storage";
 import { firebaseStorage } from "../lib/firebase/client.js";
 import { uiText } from "../content/strings.js";
+import { buildDialogProps, isDialogDismissKey } from "../lib/a11y/dialog.js";
 
 const urlCache = new Map();
 
@@ -70,7 +71,7 @@ export default function ClickableStorageImage({
       return;
     }
     const onKeyDown = (event) => {
-      if (event.key === "Escape") {
+      if (isDialogDismissKey(event)) {
         setIsOpen(false);
       }
     };
@@ -93,8 +94,17 @@ export default function ClickableStorageImage({
       </button>
       {isOpen && (
         <div className="image-modal-backdrop" onClick={() => setIsOpen(false)}>
-          <div className="image-modal" role="dialog" aria-modal="true" onClick={(e) => e.stopPropagation()}>
-            <button type="button" className="image-modal-close" onClick={() => setIsOpen(false)}>
+          <div
+            className="image-modal"
+            {...buildDialogProps({ label: modalAlt || alt })}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="image-modal-close"
+              aria-label={uiText.image.close}
+              onClick={() => setIsOpen(false)}
+            >
               ×
             </button>
             <img src={url} alt={modalAlt || alt} className="image-modal-img" />

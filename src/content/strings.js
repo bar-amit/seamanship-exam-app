@@ -288,6 +288,7 @@ export const uiText = {
     }
   },
   image: {
+    close: "סגור",
     unavailable: "התמונה לא זמינה כרגע."
   }
 };

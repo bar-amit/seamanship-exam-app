@@ -222,3 +222,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Feature-owned business logic should move from `src/lib` into `src/features/<domain>` in small branches, starting with auth/session, collections, admin, practice-test, and tag-practice modules.
 - Reason: The refactor roadmap targets lower coupling and clearer ownership boundaries.
 - Impact: `src/features/auth`, `src/features/collections`, `src/features/admin`, `src/features/practice-test`, and `src/features/tag-practice` are canonical for those migrated modules. Temporary `src/lib/<domain>/*` and `src/lib/practice/*` re-exports remain during migration to avoid broad import churn.
+
+### 2026-05-17 - API Routes Use Shared Response Helpers
+
+- Status: `accepted`
+- Decision: Route files translate service results through `src/lib/api/response.js` helpers instead of calling `NextResponse.json` directly in each handler.
+- Reason: Keep route handlers thin and make status/body/error/cookie response behavior consistent while API service modules own domain logic.
+- Impact: Route handlers should return service results with `{ status, body }` and use `jsonResult`, `jsonError`, or `jsonResultWithCookies` for the Next.js response boundary.

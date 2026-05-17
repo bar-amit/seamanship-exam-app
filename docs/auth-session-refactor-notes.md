@@ -15,7 +15,7 @@ Server APIs remain the authorization source of truth:
 
 ## Client Session Boundary
 
-`src/lib/auth/client-session.js` owns browser session synchronization:
+`src/features/auth/client-session.js` owns browser session synchronization:
 
 - Create server session from a Firebase user ID token.
 - Clear server session when Firebase user is signed out.

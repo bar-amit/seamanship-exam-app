@@ -278,7 +278,7 @@ Scope:
 - Split collection route handlers into thin route/controller code and domain services.
 - Keep request/response shapes stable.
 - Preserve server-side `auth_session` verification.
-- Consolidate list/create/update/delete collection operations in `src/lib/collections/service.js`.
+- Consolidate list/create/update/delete collection operations in `src/features/collections/service.js`.
 
 Validation:
 
@@ -294,7 +294,7 @@ Scope:
 - Split admin question route handlers into route/controller code and admin domain services.
 - Keep admin allowlist checks based on verified email claims.
 - Keep editor payload shape stable.
-- Consolidate admin question list/get/update operations in `src/lib/admin/service.js`.
+- Consolidate admin question list/get/update operations in `src/features/admin/service.js`.
 
 Validation:
 

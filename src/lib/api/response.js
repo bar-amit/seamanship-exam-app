@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from "next/server.js";
 
 export function jsonResult(result) {
   return NextResponse.json(result.body, { status: result.status });

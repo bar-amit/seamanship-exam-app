@@ -135,3 +135,41 @@ export function buildTagProgressDoc({ ownerEmail, snapshot, nowIso }) {
     updated_at: nowIso
   };
 }
+
+export async function executeGetTagProgress({ request, authFn, db }) {
+  const auth = await authFn(request);
+  if (!auth.ok) {
+    return { status: auth.status, body: { ok: false, error: auth.error } };
+  }
+
+  const ref = db.collection("tag_progress").doc(auth.userEmail);
+  const snap = await ref.get();
+  if (!snap.exists) {
+    return { status: 200, body: { ok: true, progress: null } };
+  }
+
+  const data = snap.data();
+  if (data.owner_email !== auth.userEmail) {
+    return { status: 200, body: { ok: true, progress: null } };
+  }
+
+  return { status: 200, body: { ok: true, progress: data } };
+}
+
+export async function executePutTagProgress({ request, authFn, db, nowIso }) {
+  const auth = await authFn(request);
+  if (!auth.ok) {
+    return { status: auth.status, body: { ok: false, error: auth.error } };
+  }
+
+  const body = await request.json();
+  const snapshot = normalizeTagProgressSnapshot(body);
+  const doc = buildTagProgressDoc({
+    ownerEmail: auth.userEmail,
+    snapshot,
+    nowIso
+  });
+
+  await db.collection("tag_progress").doc(auth.userEmail).set(doc, { merge: true });
+  return { status: 200, body: { ok: true, progress: doc } };
+}

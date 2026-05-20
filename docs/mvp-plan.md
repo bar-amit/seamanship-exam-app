@@ -47,6 +47,8 @@ Related:
 - `sub_questions[]` item: `id`, `label`, `text`, `order`
 - `sub_answers[]` item: `id`, `label`, `text`, `order`
 - `image_refs[]` is the canonical ordered question image list; `image_ref` is retained as the primary/backward-compatible image.
+- Open-text questions with `sub_questions[]` render one answer field per section and show aligned `sub_answers[]` as section-level model answers when explanations/study aids are visible.
+- Open-text questions without `sub_questions[]` remain single-prompt answers using the legacy `text` response field.
 - Import rule: normalize `sub_questions[].id` to lowercase Latin (`a`, `b`, `c`, `d`)
 - UI rule: render Hebrew labels (`א`, `ב`, `ג`, `ד`) via `label`
 - Tag baseline rule for MVP: every question gets a default chapter tag (`seamanship`, `navigation a`, `navigation b`, `mechanics`)

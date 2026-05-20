@@ -8,6 +8,7 @@ import {
   scoreQuestion,
   scoreSession,
   getQuestionStatus,
+  setSubAnswerTextAtIndex,
   setSubGradeAtIndex,
   updateResponseAtIndex
 } from "../src/features/practice-test/session.js";
@@ -63,13 +64,16 @@ test("hasAttempt supports mcq and open_text", () => {
   assert.equal(hasAttempt(mcq, { choiceId: "a" }), true);
   assert.equal(hasAttempt(mcq, { skipped: true, choiceId: "a" }), false);
   assert.equal(hasAttempt(openText, { text: "  answer  " }), true);
+  assert.equal(hasAttempt(openText, { subAnswerTexts: { a: " section answer " } }), true);
   assert.equal(hasAttempt(openText, { text: "   " }), false);
+  assert.equal(hasAttempt(openText, { subAnswerTexts: { a: "   " } }), false);
 });
 
 test("createQuestionResponse builds mode-specific response shape", () => {
   assert.deepEqual(createQuestionResponse(mcq), { choiceId: "", skipped: false });
   assert.deepEqual(createQuestionResponse(openText), {
     text: "",
+    subAnswerTexts: {},
     subGrades: {},
     skipped: false
   });
@@ -84,19 +88,19 @@ test("createQuestionResponse builds mode-specific response shape", () => {
 test("createQuestionResponses maps question list to stable response list", () => {
   assert.deepEqual(createQuestionResponses([mcq, openText]), [
     { choiceId: "", skipped: false },
-    { text: "", subGrades: {}, skipped: false }
+    { text: "", subAnswerTexts: {}, subGrades: {}, skipped: false }
   ]);
 });
 
 test("updateResponseAtIndex patches only the selected response", () => {
   const responses = [
     { choiceId: "", skipped: false },
-    { text: "", subGrades: {}, skipped: false }
+    { text: "", subAnswerTexts: {}, subGrades: {}, skipped: false }
   ];
 
   assert.deepEqual(updateResponseAtIndex(responses, 0, { choiceId: "a" }), [
     { choiceId: "a", skipped: false },
-    { text: "", subGrades: {}, skipped: false }
+    { text: "", subAnswerTexts: {}, subGrades: {}, skipped: false }
   ]);
 });
 
@@ -109,6 +113,23 @@ test("setSubGradeAtIndex patches only the selected sub grade", () => {
   assert.deepEqual(setSubGradeAtIndex(responses, 1, "b", true), [
     { choiceId: "", skipped: false },
     { text: "answer", subGrades: { a: true, b: true }, skipped: false }
+  ]);
+});
+
+test("setSubAnswerTextAtIndex patches only the selected section answer", () => {
+  const responses = [
+    { choiceId: "", skipped: false },
+    { text: "", subAnswerTexts: { a: "old" }, subGrades: {}, skipped: true }
+  ];
+
+  assert.deepEqual(setSubAnswerTextAtIndex(responses, 1, "b", "new answer"), [
+    { choiceId: "", skipped: false },
+    {
+      text: "",
+      subAnswerTexts: { a: "old", b: "new answer" },
+      subGrades: {},
+      skipped: false
+    }
   ]);
 });
 
@@ -184,7 +205,7 @@ test("buildPracticeStartState creates active session state", () => {
   assert.equal(state.summarySaved, false);
   assert.deepEqual(state.responses, [
     { choiceId: "", skipped: false },
-    { text: "", subGrades: {}, skipped: false }
+    { text: "", subAnswerTexts: {}, subGrades: {}, skipped: false }
   ]);
 });
 

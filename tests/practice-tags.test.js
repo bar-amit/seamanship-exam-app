@@ -102,7 +102,7 @@ test("buildTagPracticeStartState creates study response state", () => {
   assert.equal(state.questions, questions);
   assert.deepEqual(state.responses, [
     { choiceId: "", skipped: false, revealed: false, studyAidsOpen: false },
-    { text: "", subGrades: {}, skipped: false, revealed: false, studyAidsOpen: false }
+    { text: "", subAnswerTexts: {}, subGrades: {}, skipped: false, revealed: false, studyAidsOpen: false }
   ]);
 });
 

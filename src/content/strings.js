@@ -140,6 +140,14 @@ export const uiText = {
     questionProgressOutOf: "מתוך",
     timeLeftLabel: "זמן נותר:",
     openTextPlaceholder: "הקלד תשובה...",
+    openText: {
+      openTextPlaceholder: "הקלד תשובה...",
+      subAnswerPlaceholder: "כתוב תשובה לסעיף זה...",
+      sectionInstruction: "ענה על הסעיפים:",
+      subGradeInstruction: "סימנתי שעניתי נכון לסעיף",
+      yourAnswerLabel: "התשובה שלך:",
+      unanswered: "לא נענה"
+    },
     buttons: {
       skip: "דלג",
       skipAndFinish: "דלג וסיים",
@@ -180,6 +188,14 @@ export const uiText = {
     reviewedPrefix: "נסקרו",
     openTextPlaceholder: "כתוב תשובה חופשית",
     subGradeInstruction: "סמן אם ענית נכון",
+    openText: {
+      openTextPlaceholder: "כתוב תשובה חופשית",
+      subAnswerPlaceholder: "כתוב תשובה לסעיף זה...",
+      sectionInstruction: "ענה על הסעיפים:",
+      subGradeInstruction: "סימנתי שעניתי נכון לסעיף",
+      yourAnswerLabel: "התשובה שלך:",
+      unanswered: "לא נענה"
+    },
     buttons: {
       markReviewed: "בדוק שאלה",
       skip: "דלג",

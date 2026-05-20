@@ -5,6 +5,7 @@ import { CHAPTER_TAG_OPTIONS } from "../../../src/features/tag-practice/tags.js"
 import {
   getNextQuestionIndex,
   scoreQuestion,
+  setSubAnswerTextAtIndex,
   setSubGradeAtIndex,
   updateResponseAtIndex
 } from "../../../src/features/practice-test/session.js";
@@ -28,9 +29,9 @@ import {
   restoreTagPracticeResponses
 } from "../../../src/features/tag-practice/session.js";
 import { fetchTagPracticeQuestions } from "../../../src/features/tag-practice/questions.js";
-import { getSubAnswerForQuestion } from "../../../src/features/practice-test/open-text.js";
 import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
 import QuestionImageList from "../../../src/components/question-image-list.js";
+import OpenTextResponse from "../../../src/components/practice/open-text-response.js";
 import ReviewSummary from "../../../src/components/practice/review-summary.js";
 import ReviewStatusBadge from "../../../src/components/practice/review-status-badge.js";
 import AddToCollectionModal from "../../../src/components/add-to-collection-modal.js";
@@ -167,6 +168,10 @@ export default function TagPracticePage() {
 
   function toggleSubGrade(subId, checked) {
     setResponses((prev) => setSubGradeAtIndex(prev, currentIndex, subId, checked));
+  }
+
+  function updateSubAnswerText(subId, text) {
+    setResponses((prev) => setSubAnswerTextAtIndex(prev, currentIndex, subId, text));
   }
 
   function markReviewed() {
@@ -313,33 +318,15 @@ export default function TagPracticePage() {
 
             {currentQuestion.type === "open_text" && (
               <>
-                <textarea
-                  rows={5}
-                  value={currentResponse?.text ?? ""}
-                  onChange={(e) => updateCurrentResponse({ text: e.target.value, skipped: false })}
-                  placeholder={uiText.practiceTags.openTextPlaceholder}
+                <OpenTextResponse
+                  question={currentQuestion}
+                  response={currentResponse}
+                  labels={uiText.practiceTags.openText}
+                  showSectionAnswers={showStudyAids || currentResponse?.revealed}
+                  onTextChange={(text) => updateCurrentResponse({ text, skipped: false })}
+                  onSubAnswerTextChange={updateSubAnswerText}
+                  onSubGradeChange={toggleSubGrade}
                 />
-                <div className="subgrade-list">
-                  <strong>{uiText.practiceTags.subGradeInstruction}</strong>
-                  {(currentQuestion.sub_questions ?? []).map((sub, subIndex) => {
-                    const subAnswer = getSubAnswerForQuestion(currentQuestion, sub, subIndex);
-                    return (
-                      <label key={`${sub.id}-${subIndex}`} className="practice-inline">
-                        <input
-                          type="checkbox"
-                          checked={Boolean(currentResponse?.subGrades?.[sub.id])}
-                          onChange={(e) => toggleSubGrade(sub.id, e.target.checked)}
-                        />
-                        <span>
-                          {sub.label}. {sub.text}
-                          {(showStudyAids || currentResponse?.revealed) && subAnswer?.text && (
-                            <small className="sub-answer-text">{subAnswer.text}</small>
-                          )}
-                        </span>
-                      </label>
-                    );
-                  })}
-                </div>
               </>
             )}
 

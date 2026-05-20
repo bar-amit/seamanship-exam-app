@@ -2,6 +2,10 @@ function isNonEmptyText(value) {
   return typeof value === "string" && value.trim().length > 0;
 }
 
+function hasSubQuestionAnswers(response) {
+  return Object.values(response?.subAnswerTexts ?? {}).some(isNonEmptyText);
+}
+
 function normalizeSubGrades(subGrades = {}, subQuestions = []) {
   const out = {};
   for (const sub of subQuestions) {
@@ -14,7 +18,7 @@ function normalizeSubGrades(subGrades = {}, subQuestions = []) {
 export function createQuestionResponse(question, extraFields = {}) {
   const base =
     question?.type === "open_text"
-      ? { text: "", subGrades: {}, skipped: false }
+      ? { text: "", subAnswerTexts: {}, subGrades: {}, skipped: false }
       : { choiceId: "", skipped: false };
 
   return {
@@ -48,6 +52,22 @@ export function setSubGradeAtIndex(responses, index, subId, checked) {
   });
 }
 
+export function setSubAnswerTextAtIndex(responses, index, subId, text) {
+  return (responses ?? []).map((response, idx) => {
+    if (idx !== index) {
+      return response;
+    }
+    return {
+      ...response,
+      subAnswerTexts: {
+        ...(response?.subAnswerTexts ?? {}),
+        [subId]: text
+      },
+      skipped: false
+    };
+  });
+}
+
 export function hasAttempt(question, response) {
   if (!response || response.skipped) {
     return false;
@@ -58,7 +78,7 @@ export function hasAttempt(question, response) {
   }
 
   if (question.type === "open_text") {
-    return isNonEmptyText(response.text);
+    return isNonEmptyText(response.text) || hasSubQuestionAnswers(response);
   }
 
   return false;

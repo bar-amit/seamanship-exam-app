@@ -412,6 +412,35 @@ main {
   gap: 8px;
 }
 
+.open-section-list {
+  display: grid;
+  gap: 12px;
+}
+
+.open-section-card {
+  display: grid;
+  gap: 10px;
+  border: 1px solid #c7d9cf;
+  border-radius: 12px;
+  background: #f8fcf9;
+  padding: 12px;
+}
+
+.open-section-prompt {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.45;
+}
+
+.open-section-user-answer {
+  margin: 0;
+}
+
+.open-section-grade {
+  align-items: center;
+}
+
 .choice-item {
   display: grid;
   grid-template-columns: 1fr auto;

@@ -7,6 +7,7 @@ import {
   hasAttempt,
   scoreQuestion,
   scoreSession,
+  setSubAnswerTextAtIndex,
   setSubGradeAtIndex,
   updateResponseAtIndex
 } from "../../src/features/practice-test/session.js";
@@ -33,9 +34,9 @@ import {
   normalizePracticeQuestionCount
 } from "../../src/features/practice-test/setup.js";
 import { fetchPracticeQuestions } from "../../src/features/practice-test/questions.js";
-import { getSubAnswerForQuestion } from "../../src/features/practice-test/open-text.js";
 import ClickableStorageImage from "../../src/components/clickable-storage-image.js";
 import QuestionImageList from "../../src/components/question-image-list.js";
+import OpenTextResponse from "../../src/components/practice/open-text-response.js";
 import ReviewSummary from "../../src/components/practice/review-summary.js";
 import ReviewControls from "../../src/components/practice/review-controls.js";
 import ReviewStatusBadge from "../../src/components/practice/review-status-badge.js";
@@ -210,6 +211,10 @@ export default function PracticePage() {
     setResponses((prev) => setSubGradeAtIndex(prev, currentIndex, subId, checked));
   }
 
+  function updateSubAnswerText(subId, text) {
+    setResponses((prev) => setSubAnswerTextAtIndex(prev, currentIndex, subId, text));
+  }
+
   function skipCurrent() {
     updateCurrentResponse({ skipped: true });
     setCurrentIndex((prev) => getNextQuestionIndex(prev, questions.length));
@@ -347,14 +352,14 @@ export default function PracticePage() {
             )}
 
             {currentQuestion.type === "open_text" && (
-              <div className="open-text-block">
-                <textarea
-                  rows={5}
-                  value={currentResponse?.text ?? ""}
-                  onChange={(e) => updateCurrentResponse({ text: e.target.value, skipped: false })}
-                  placeholder={uiText.practice.openTextPlaceholder}
-                />
-              </div>
+              <OpenTextResponse
+                question={currentQuestion}
+                response={currentResponse}
+                labels={uiText.practice.openText}
+                onTextChange={(text) => updateCurrentResponse({ text, skipped: false })}
+                onSubAnswerTextChange={updateSubAnswerText}
+                onSubGradeChange={toggleSubGrade}
+              />
             )}
 
             <div className="practice-actions">
@@ -474,31 +479,16 @@ export default function PracticePage() {
 
                   {q.type === "open_text" && (
                     <>
-                      <p>{uiText.practice.yourAnswerLabel} {response?.text?.trim() || uiText.practice.unanswered}</p>
-                      <div className="subgrade-list">
-                        <strong>{uiText.practice.subGradesLabel}</strong>
-                        {(q.sub_questions ?? []).map((sub, subIndex) => {
-                          const subAnswer = getSubAnswerForQuestion(q, sub, subIndex);
-                          return (
-                            <label key={`${sub.id}-${subIndex}`} className="practice-inline">
-                              <input
-                                type="checkbox"
-                                checked={Boolean(response?.subGrades?.[sub.id])}
-                                onChange={(e) => {
-                                  setCurrentIndex(idx);
-                                  toggleSubGrade(sub.id, e.target.checked);
-                                }}
-                              />
-                              <span>
-                                {sub.label}. {sub.text}
-                                {showExplanations && subAnswer?.text && (
-                                  <small className="sub-answer-text">{subAnswer.text}</small>
-                                )}
-                              </span>
-                            </label>
-                          );
-                        })}
-                      </div>
+                      <OpenTextResponse
+                        question={q}
+                        response={response}
+                        labels={uiText.practice.openText}
+                        showSectionAnswers={showExplanations}
+                        readOnly
+                        onSubGradeChange={(subId, checked) => {
+                          setResponses((prev) => setSubGradeAtIndex(prev, idx, subId, checked));
+                        }}
+                      />
                     </>
                   )}
 

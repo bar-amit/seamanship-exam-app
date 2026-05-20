@@ -93,6 +93,7 @@ Subject scope:
 - Navigation A uses open-text answers and user self-evaluation.
 - Navigation B uses standard multiple-choice questions.
 - Navigation A can include section-based sub-questions (`sub_questions`).
+- Navigation A multi-section questions render each section with its own answer field, self-grade control, and optional aligned model answer from `sub_answers[]`.
 
 ### Mechanics
 

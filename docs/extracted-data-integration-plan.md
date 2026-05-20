@@ -188,3 +188,21 @@ Remaining:
 - Run `npm run import:phase2:staging` after explicit approval because it writes Storage and Firestore.
 - Deploy/verify staging app if not already deployed.
 - Execute `docs/staging-smoke-checklist.md` against staging, including admin metadata edits and asset rendering.
+
+### Phase 5: Multi-Section Open-Text UI
+
+Status: completed on 2026-05-20.
+
+Scope:
+
+- Render `open_text` questions with `sub_questions[]` as multi-section prompts in `/practice` and `/practice/tags`.
+- Capture per-section user answer text while preserving the existing single-answer fallback for open-text questions without sections.
+- Show aligned `sub_answers[]` beside each section when explanations/study aids are visible.
+- Keep self-grading based on per-section checkboxes and preserve equal-weight scoring.
+- Treat any non-empty per-section answer as an attempted question.
+- Update tests and docs for the multi-section response shape.
+
+Implementation notes:
+
+- Response objects for open-text questions support `subAnswerTexts` keyed by `sub_questions[].id`.
+- `response.text` remains the fallback field for single-prompt open-text questions and backward-compatible restored sessions.

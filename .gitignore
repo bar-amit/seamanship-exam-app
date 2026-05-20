@@ -1,6 +1,7 @@
 .last_codex_session
 /node_modules
 todo
+/extracted_data
 
 # Next.js build output
 /.next

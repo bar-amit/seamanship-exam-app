@@ -257,3 +257,24 @@ Status values: `accepted`, `superseded`.
 - Decision: App modal overlays use shared dialog helpers for initial focus, Tab focus trapping, Escape dismissal, and focus restoration.
 - Reason: Modal accessibility should be consistent across collection and image dialogs without duplicating keyboard handling in each component.
 - Impact: New modal implementations should reuse `src/lib/a11y/dialog.js` helpers or an eventual shared Modal primitive rather than hand-rolling focus behavior.
+
+### 2026-05-20 - Extracted Data Becomes Import Source
+
+- Status: `accepted`
+- Decision: Use `test_material/data/questions-all.json` as the canonical importer source for the next data migration slice, with `image_refs[]`, `sub_answers[]`, and extracted asset directories supported by the importer.
+- Reason: The improved extraction pipeline reports zero validation errors, no review queue items, passing language quality gates, complete sq4 sub-answer alignment, and resolves all referenced assets locally.
+- Impact: Importer defaults point to `test_material/data`; question documents preserve backward-compatible `image_ref` while adding canonical `image_refs[]` and `image_storage_paths[]`. UI/admin work must follow to fully expose the richer data.
+
+### 2026-05-20 - Single-Prompt Open Questions Are Valid Practice Items
+
+- Status: `accepted`
+- Decision: Open-text questions without `sub_questions` are treated as valid single-prompt questions. If the user provides answer text, the question scores as complete for current self-grading flows.
+- Reason: The improved extracted dataset intentionally includes open navigation questions with no sub-question breakdown, and blocking or always-zero scoring would make valid records unusable in practice.
+- Impact: Import validation warns rather than errors for missing `sub_questions`; practice scoring handles empty `sub_questions` as single-prompt completion. Future UX may add explicit self-grade controls for these records.
+
+### 2026-05-20 - Imported Sub-Question IDs Are Order-Normalized
+
+- Status: `accepted`
+- Decision: During import normalization, `sub_questions[]` and aligned `sub_answers[]` get stable lowercase Latin IDs by order.
+- Reason: Some extracted records contain duplicate source labels/IDs, but app self-grading stores checkbox state by sub-question ID and requires unique keys.
+- Impact: UI displays normalized labels for imported sub-questions; sub-answer alignment is preserved by index. Source provenance remains available on the full question record.

@@ -134,9 +134,6 @@ export function normalizeAdminQuestionUpdate(input, existingQuestion) {
     const subQuestions = normalizeSubQuestions(
       input?.sub_questions ?? existingQuestion?.sub_questions ?? []
     );
-    if (subQuestions.length === 0) {
-      throw new Error("Open-text question requires at least one sub-question.");
-    }
     update.sub_questions = subQuestions;
   }
 

@@ -1,0 +1,164 @@
+{
+  "generated": 11,
+  "manual_crop_dir_used": "data/assets/sq3-inline-images/manual_crop",
+  "false_positive_questions_excluded": [
+    169,
+    179
+  ],
+  "items": [
+    {
+      "map_id": "01",
+      "question_numbers": [
+        181
+      ],
+      "representative_question_number": 181,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-01.jpg",
+      "page": 25,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 19-54-17.png"
+    },
+    {
+      "map_id": "02",
+      "question_numbers": [
+        190,
+        191,
+        192
+      ],
+      "representative_question_number": 190,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-02.jpg",
+      "page": 27,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 19-55-21.png"
+    },
+    {
+      "map_id": "03",
+      "question_numbers": [
+        196
+      ],
+      "representative_question_number": 196,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-03.jpg",
+      "page": 28,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 19-56-01.png"
+    },
+    {
+      "map_id": "04",
+      "question_numbers": [
+        233,
+        234,
+        235
+      ],
+      "representative_question_number": 233,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-04.jpg",
+      "page": 34,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 19-57-16.png"
+    },
+    {
+      "map_id": "05",
+      "question_numbers": [
+        236
+      ],
+      "representative_question_number": 236,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-05.jpg",
+      "page": 35,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 19-58-00.png"
+    },
+    {
+      "map_id": "06",
+      "question_numbers": [
+        237
+      ],
+      "representative_question_number": 237,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-06.jpg",
+      "page": 35,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 19-58-31.png"
+    },
+    {
+      "map_id": "07",
+      "question_numbers": [
+        240,
+        241,
+        242,
+        243
+      ],
+      "representative_question_number": 240,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-07.jpg",
+      "page": 36,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 19-59-09.png"
+    },
+    {
+      "map_id": "08",
+      "question_numbers": [
+        258
+      ],
+      "representative_question_number": 258,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-08.jpg",
+      "page": 38,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 20-01-00.png"
+    },
+    {
+      "map_id": "09",
+      "question_numbers": [
+        275,
+        276,
+        277
+      ],
+      "representative_question_number": 275,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-09.jpg",
+      "page": 41,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 20-01-47.png"
+    },
+    {
+      "map_id": "10",
+      "question_numbers": [
+        298
+      ],
+      "representative_question_number": 298,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-10.jpg",
+      "page": 45,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 20-03-11.png"
+    },
+    {
+      "map_id": "11",
+      "question_numbers": [
+        305,
+        306,
+        307
+      ],
+      "representative_question_number": 305,
+      "source_pdf": "sq3.pdf",
+      "image_ref": "sq3-inline-images/map-11.jpg",
+      "page": 46,
+      "crop_box_pt": null,
+      "method": "manual-crop-timestamp-order",
+      "manual_source_file": "Screenshot from 2026-02-28 20-03-49.png"
+    }
+  ]
+}

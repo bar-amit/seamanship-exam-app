@@ -111,16 +111,22 @@ test("normalizeAdminQuestionUpdate throws on missing required fields", () => {
       ),
     /required/i
   );
+});
 
-  assert.throws(
-    () =>
-      normalizeAdminQuestionUpdate(
-        {
-          text: "valid",
-          sub_questions: []
-        },
-        existing
-      ),
-    /sub-question/i
+test("normalizeAdminQuestionUpdate allows open-text single-prompt questions without sub questions", () => {
+  const out = normalizeAdminQuestionUpdate(
+    {
+      text: "valid",
+      sub_questions: []
+    },
+    {
+      id: "sq4-q096",
+      type: "open_text",
+      chapter: "navigation_a",
+      text: "old",
+      model_answer: "answer"
+    }
   );
+
+  assert.deepEqual(out.sub_questions, []);
 });

@@ -101,8 +101,9 @@ Subject scope:
 ### Seamanship
 
 - Sailing rules and conventions, multiple-choice questions.
-- Some questions include images.
-- Image descriptions appear in review mode only.
+- Some questions include one or more images via `image_refs[]`.
+- Some answer choices include image assets via `choices[].image_ref`.
+- `references_sq11_positioning_diagram` marks questions that refer to sq11 positioning-diagram material.
 
 ## Technical Requirements
 

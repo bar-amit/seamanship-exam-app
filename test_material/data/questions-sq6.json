@@ -28,22 +28,22 @@
       {
         "id": "d",
         "label": "ד",
-        "text": "לספק אויר \"טרי\" בלחץ לצילינדר,לפינוי גזים ולשריפה.",
+        "text": "לספק אויר \"טרי\" בלחץ לצילינדר, לפינוי גזים ולשריפה.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 1
+    "source_question_number": 1,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q002",
@@ -79,17 +79,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 2
+    "source_question_number": 2,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q003",
@@ -102,40 +102,40 @@
       {
         "id": "a",
         "label": "א",
-        "text": "שריפה מהירה יותר.",
+        "text": "אפשרות א (שחזור אוטומטי)",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "פעולה רועשת.",
+        "text": "אפשרות ב (שחזור אוטומטי)",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "שריפת שסתום הפליטה.",
+        "text": "א. שריפה מהירה יותר. שריפת שסתום היניקה.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "שריפת שסתום היניקה.",
+        "text": "ב. פעולה רועשת.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 3
+    "source_question_number": 3,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q004",
@@ -171,17 +171,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 4
+    "source_question_number": 4,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q005",
@@ -217,17 +217,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 5
+    "source_question_number": 5,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q006",
@@ -263,17 +263,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 6
+    "source_question_number": 6,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q007",
@@ -309,17 +309,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 7
+    "source_question_number": 7,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q008",
@@ -332,7 +332,7 @@
       {
         "id": "a",
         "label": "א",
-        "text": "אין שום השפעה לכמות הצילינדרים,אלא למשקל.",
+        "text": "אין שום השפעה לכמות הצילינדרים, אלא למשקל.",
         "image_ref": null
       },
       {
@@ -355,17 +355,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 8
+    "source_question_number": 8,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q009",
@@ -401,17 +401,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 9
+    "source_question_number": 9,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q010",
@@ -447,17 +447,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 11
+    "source_question_number": 11,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q011",
@@ -482,7 +482,7 @@
       {
         "id": "c",
         "label": "ג",
-        "text": "בדיקת מפלס הנוזלים ומילוי בהתאם לצורך (שמן,דלק,מים).",
+        "text": "בדיקת מפלס הנוזלים ומילוי בהתאם לצורך (שמן, דלק, מים).",
         "image_ref": null
       },
       {
@@ -493,17 +493,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 11
+    "source_question_number": 11,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q012",
@@ -539,17 +539,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 12
+    "source_question_number": 12,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q013",
@@ -585,17 +585,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 13
+    "source_question_number": 13,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q014",
@@ -631,17 +631,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 14
+    "source_question_number": 14,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q015",
@@ -677,17 +677,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 15
+    "source_question_number": 15,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q016",
@@ -700,40 +700,40 @@
       {
         "id": "a",
         "label": "א",
-        "text": "יניקה,עבודה,דחיסה,פליטה.",
+        "text": "יניקה, עבודה, דחיסה, פליטה.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "דחיסה,עבודה,יניקה,פליטה.",
+        "text": "דחיסה, עבודה, יניקה, פליטה.",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "עבודה,יניקה,דחיסה,פליטה.",
+        "text": "עבודה, יניקה, דחיסה, פליטה.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "יניקה,דחיסה,עבודה,פליטה.",
+        "text": "יניקה, דחיסה, עבודה, פליטה.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 16
+    "source_question_number": 16,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q017",
@@ -752,7 +752,7 @@
       {
         "id": "b",
         "label": "ב",
-        "text": "גלגל התנופה.",
+        "text": "אפשרות ב (שחזור אוטומטי)",
         "image_ref": null
       },
       {
@@ -764,22 +764,22 @@
       {
         "id": "d",
         "label": "ד",
-        "text": "שרשרת התזמון.",
+        "text": "גלגל התנופה.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 17
+    "source_question_number": 17,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q018",
@@ -815,17 +815,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 18
+    "source_question_number": 18,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q019",
@@ -861,17 +861,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 19
+    "source_question_number": 19,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q020",
@@ -907,17 +907,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 21
+    "source_question_number": 21,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q021",
@@ -953,17 +953,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 21
+    "source_question_number": 21,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q022",
@@ -999,17 +999,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 22
+    "source_question_number": 22,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q023",
@@ -1045,17 +1045,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 23
+    "source_question_number": 23,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q024",
@@ -1091,17 +1091,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 24
+    "source_question_number": 24,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q025",
@@ -1137,17 +1137,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 25
+    "source_question_number": 25,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q026",
@@ -1183,17 +1183,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 26
+    "source_question_number": 26,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q027",
@@ -1229,17 +1229,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 27
+    "source_question_number": 27,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q028",
@@ -1275,17 +1275,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 28
+    "source_question_number": 28,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q029",
@@ -1321,17 +1321,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 29
+    "source_question_number": 29,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q030",
@@ -1367,17 +1367,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 31
+    "source_question_number": 31,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q031",
@@ -1413,17 +1413,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 31
+    "source_question_number": 31,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q032",
@@ -1459,17 +1459,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 32
+    "source_question_number": 32,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q033",
@@ -1505,17 +1505,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 33
+    "source_question_number": 33,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q034",
@@ -1551,17 +1551,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 34
+    "source_question_number": 34,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q035",
@@ -1597,17 +1597,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 35
+    "source_question_number": 35,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q036",
@@ -1643,17 +1643,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 36
+    "source_question_number": 36,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q037",
@@ -1666,40 +1666,40 @@
       {
         "id": "a",
         "label": "א",
-        "text": "כיבוי,תפוקה נמוכה,תפוקה גבוהה.",
+        "text": "כיבוי, תפוקה נמוכה, תפוקה גבוהה.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "כיבוי,מופעל ידנית,מופעל אוטומטית (מצוף).",
+        "text": "כיבוי, מופעל ידנית, מופעל אוטומטית (מצוף).",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "כיבוי,מופעל מצוף,מופעל אוטומטית.",
+        "text": "כיבוי, מופעל מצוף, מופעל אוטומטית.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "כיבוי,נעול,מופעל אוטומטית.",
+        "text": "כיבוי, נעול, מופעל אוטומטית.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 37
+    "source_question_number": 37,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q038",
@@ -1735,17 +1735,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 38
+    "source_question_number": 38,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q039",
@@ -1753,45 +1753,45 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מהו עקרון הפעולה של משאבה צנטריפוגלית?",
+    "text": "מהו עקרון הפעולה של משאבה צנטריפוגלית? המהירות הצנטריפוגלית הופכת לתנועה סיבובית.",
     "choices": [
       {
         "id": "a",
         "label": "א",
-        "text": "המהירות הצנטריפוגלית הופכת לתנועה סיבובית.",
+        "text": "הנוזל נזרק למרכז המשאבה עקב התנועה הסיבובית.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "הנוזל נזרק למרכז המשאבה עקב התנועה הסיבובית.",
+        "text": "הנוזל נזרק לדפנות המשאבה עקב התנועה הסיבובית.",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "הנוזל נזרק לדפנות המשאבה עקב התנועה הסיבובית.",
+        "text": "המהירות הצנטריפוגלית הופכת לכוח.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "המהירות הצנטריפוגלית הופכת לכוח.",
+        "text": "אפשרות ד (שחזור אוטומטי)",
         "image_ref": null
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 39
+    "source_question_number": 39,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q040",
@@ -1827,17 +1827,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 41
+    "source_question_number": 41,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q041",
@@ -1873,17 +1873,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 41
+    "source_question_number": 41,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q042",
@@ -1919,17 +1919,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 42
+    "source_question_number": 42,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q043",
@@ -1965,17 +1965,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 43
+    "source_question_number": 43,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q044",
@@ -1983,7 +1983,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "במערכת סגורה,מהו תפקידה של משאבת המים המתוקים (מטופלים) במערכת הקירור של המנוע?",
+    "text": "במערכת סגורה, מהו תפקידה של משאבת המים המתוקים (מטופלים) במערכת הקירור של המנוע?",
     "choices": [
       {
         "id": "a",
@@ -2011,17 +2011,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 44
+    "source_question_number": 44,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q045",
@@ -2057,17 +2057,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 45
+    "source_question_number": 45,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q046",
@@ -2075,7 +2075,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "כאשר היניקה נקייה מסתימות -והמשאבה צנטריפוגלית אינה מסוגלת לשאוב,מה הסיבה?",
+    "text": "כאשר היניקה נקייה מסתימות -והמשאבה צנטריפוגלית אינה מסוגלת לשאוב, מה הסיבה?",
     "choices": [
       {
         "id": "a",
@@ -2103,17 +2103,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 46
+    "source_question_number": 46,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q047",
@@ -2149,17 +2149,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 47
+    "source_question_number": 47,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q048",
@@ -2172,7 +2172,7 @@
       {
         "id": "a",
         "label": "א",
-        "text": "אחרי משאבת ההזרקה,בקו החזרה למיכל.",
+        "text": "אחרי משאבת ההזרקה, בקו החזרה למיכל.",
         "image_ref": null
       },
       {
@@ -2195,17 +2195,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 48
+    "source_question_number": 48,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q049",
@@ -2241,17 +2241,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 49
+    "source_question_number": 49,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q050",
@@ -2287,17 +2287,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 51
+    "source_question_number": 51,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q051",
@@ -2333,17 +2333,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 51
+    "source_question_number": 51,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q052",
@@ -2379,17 +2379,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 52
+    "source_question_number": 52,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q053",
@@ -2397,7 +2397,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מה תהיה ההשפעה,באם נחליף את המדחף למדחף בעל פסיעה גדולה יותר?",
+    "text": "מה תהיה ההשפעה, באם נחליף את המדחף למדחף בעל פסיעה גדולה יותר?",
     "choices": [
       {
         "id": "a",
@@ -2425,17 +2425,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 53
+    "source_question_number": 53,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q054",
@@ -2448,40 +2448,40 @@
       {
         "id": "a",
         "label": "א",
-        "text": "טמפ',לחץ שמן,סיבובי מדחף.",
+        "text": "טמפ', לחץ שמן, סיבובי מדחף.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "לחץ השמן,זרימת מי קירור,זרם טעינה.",
+        "text": "לחץ השמן, זרימת מי קירור, זרם טעינה.",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "זרימת מי קירור,זרימת שמן,פליטת גזים.",
+        "text": "זרימת מי קירור, זרימת שמן, פליטת גזים.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "זרימת שמן,זרם טעינה,וויברציות.",
+        "text": "זרימת שמן, זרם טעינה, וויברציות.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 54
+    "source_question_number": 54,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q055",
@@ -2494,40 +2494,40 @@
       {
         "id": "a",
         "label": "א",
-        "text": "מרססים,רצועות,אימפלורים,אטמים,מסננים.",
+        "text": "מרססים, רצועות, אימפלורים, אטמים, מסננים.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "מדחף,מסבים רלוונטיים,ברגים,אטמים.",
+        "text": "מדחף, מסבים רלוונטיים, ברגים, אטמים.",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "בוכנות,אטמים,צינוריות,אימפלורים.",
+        "text": "בוכנות, אטמים, צינוריות, אימפלורים.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "שסתומים,ווסתים,אטמים,רצועות רלוונטיות.",
+        "text": "שסתומים, ווסתים, אטמים, רצועות רלוונטיות.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 55
+    "source_question_number": 55,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q056",
@@ -2563,17 +2563,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 56
+    "source_question_number": 56,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q057",
@@ -2609,17 +2609,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 57
+    "source_question_number": 57,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q058",
@@ -2655,17 +2655,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 58
+    "source_question_number": 58,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q059",
@@ -2701,17 +2701,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 59
+    "source_question_number": 59,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q060",
@@ -2747,17 +2747,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 61
+    "source_question_number": 61,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q061",
@@ -2793,17 +2793,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 61
+    "source_question_number": 61,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q062",
@@ -2839,17 +2839,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 62
+    "source_question_number": 62,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q063",
@@ -2885,17 +2885,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 63
+    "source_question_number": 63,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q064",
@@ -2931,17 +2931,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 64
+    "source_question_number": 64,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q065",
@@ -2977,17 +2977,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 65
+    "source_question_number": 65,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q066",
@@ -3006,13 +3006,13 @@
       {
         "id": "b",
         "label": "ב",
-        "text": "ניתוק דלק וחשמל,פתיחת התא וכיבוי בעזרת מטפה.",
+        "text": "ניתוק דלק וחשמל, פתיחת התא וכיבוי בעזרת מטפה.",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "סגירת דלק,אטימת פתחי האוורור לחניקת האש והפעלת מטפה דרך חרך צר.",
+        "text": "סגירת דלק, אטימת פתחי האוורור לחניקת האש והפעלת מטפה דרך חרך צר.",
         "image_ref": null
       },
       {
@@ -3023,17 +3023,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 66
+    "source_question_number": 66,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q067",
@@ -3069,17 +3069,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 67
+    "source_question_number": 67,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q068",
@@ -3092,40 +3092,40 @@
       {
         "id": "a",
         "label": "א",
-        "text": "11.ליטרים.",
+        "text": "11. ליטרים.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "1,111.ליטרים.",
+        "text": "1, 111. ליטרים.",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "111.ליטרים.",
+        "text": "111. ליטרים.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "11,111.ליטרים.",
+        "text": "11, 111. ליטרים.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 68
+    "source_question_number": 68,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q069",
@@ -3161,17 +3161,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 69
+    "source_question_number": 69,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q070",
@@ -3179,7 +3179,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "במיכל נותר רבע מטר מעוקב סולר.המנוע צורך 8ליטרים דלק בשעה.כמה זמן בקירוב ניתן עוד להפעיל את המנוע?",
+    "text": "במיכל נותר רבע מטר מעוקב סולר. המנוע צורך 8ליטרים דלק בשעה. כמה זמן בקירוב ניתן עוד להפעיל את המנוע?",
     "choices": [
       {
         "id": "a",
@@ -3207,17 +3207,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 71
+    "source_question_number": 71,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q071",
@@ -3230,40 +3230,40 @@
       {
         "id": "a",
         "label": "א",
-        "text": "לא,הוא עלול רק להפריע.",
+        "text": "לא, הוא עלול רק להפריע.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "רצוי,כדי לעזור באספקת הזרם.",
+        "text": "רצוי, כדי לעזור באספקת הזרם.",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "לא,חבל העוגן עלול להסתבך במדחף.",
+        "text": "לא, חבל העוגן עלול להסתבך במדחף.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "כן,כדי למתוח את שרשרת העוגן בעזרת המדחף.",
+        "text": "כן, כדי למתוח את שרשרת העוגן בעזרת המדחף.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 71
+    "source_question_number": 71,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q072",
@@ -3299,17 +3299,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 72
+    "source_question_number": 72,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q073",
@@ -3345,17 +3345,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 73
+    "source_question_number": 73,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q074",
@@ -3391,17 +3391,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 74
+    "source_question_number": 74,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q075",
@@ -3437,17 +3437,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 75
+    "source_question_number": 75,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q076",
@@ -3483,17 +3483,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 76
+    "source_question_number": 76,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q077",
@@ -3529,17 +3529,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 77
+    "source_question_number": 77,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q078",
@@ -3575,17 +3575,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 78
+    "source_question_number": 78,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q079",
@@ -3621,17 +3621,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 79
+    "source_question_number": 79,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q080",
@@ -3667,17 +3667,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 81
+    "source_question_number": 81,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q081",
@@ -3713,17 +3713,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 81
+    "source_question_number": 81,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q082",
@@ -3759,17 +3759,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 82
+    "source_question_number": 82,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q083",
@@ -3805,17 +3805,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 83
+    "source_question_number": 83,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q084",
@@ -3851,17 +3851,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 84
+    "source_question_number": 84,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q085",
@@ -3897,17 +3897,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 85
+    "source_question_number": 85,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q086",
@@ -3943,17 +3943,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 86
+    "source_question_number": 86,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q087",
@@ -3989,17 +3989,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 87
+    "source_question_number": 87,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q088",
@@ -4035,17 +4035,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 88
+    "source_question_number": 88,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q089",
@@ -4053,7 +4053,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "בשעות היום,כשהמנוע עובד ללא שימוש בצרכני חשמל,מד הזרם מראה 5אמפר לאורך זמן,מה המשמעות?",
+    "text": "בשעות היום, כשהמנוע עובד ללא שימוש בצרכני חשמל, מד הזרם מראה 5אמפר לאורך זמן, מה המשמעות?",
     "choices": [
       {
         "id": "a",
@@ -4081,17 +4081,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 89
+    "source_question_number": 89,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q090",
@@ -4099,7 +4099,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "בעת הפעלה ושידור במכשירי קשר,מד המתח יורד מ - 13.5וולט ל - 12.5וולט,מה המשמעות?",
+    "text": "בעת הפעלה ושידור במכשירי קשר, מד המתח יורד מ - 13. 5וולט ל - 12. 5וולט, מה המשמעות?",
     "choices": [
       {
         "id": "a",
@@ -4127,17 +4127,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 91
+    "source_question_number": 91,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q091",
@@ -4150,7 +4150,7 @@
       {
         "id": "a",
         "label": "א",
-        "text": "למנוע חיכוך יתר של הנדנדים,על ידי גזי השריפה.",
+        "text": "למנוע חיכוך יתר של הנדנדים, על ידי גזי השריפה.",
         "image_ref": null
       },
       {
@@ -4173,17 +4173,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 91
+    "source_question_number": 91,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q092",
@@ -4191,45 +4191,45 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "הטמפרטורה היא 176מעלות פרנהייט,מהי הטמפרטורה בקירוב במעלות צלזיוס?",
+    "text": "הטמפרטורה היא 176מעלות פרנהייט, מהי הטמפרטורה בקירוב במעלות צלזיוס?",
     "choices": [
       {
         "id": "a",
         "label": "א",
-        "text": "מעלות.C",
+        "text": "מעלות. C",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "מעלות.C",
+        "text": "מעלות. C",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "מעלות.C",
+        "text": "מעלות. C",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "מעלות.C",
+        "text": "מעלות. C",
         "image_ref": null
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 92
+    "source_question_number": 92,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q093",
@@ -4237,18 +4237,18 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מתי תהיה סכנת פיצוץ במיכל הדלק,גדולה יותר?",
+    "text": "מתי תהיה סכנת פיצוץ במיכל הדלק, גדולה יותר?",
     "choices": [
       {
         "id": "a",
         "label": "א",
-        "text": "כאשר המיכל כמעט ריק.",
+        "text": "כאשר המיכל כמעט ריק. ה. כל התשובות נכונות.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "כאשר המיכל מלא במחציתו.",
+        "text": "אפשרות ב (שחזור אוטומטי)",
         "image_ref": null
       },
       {
@@ -4260,22 +4260,22 @@
       {
         "id": "d",
         "label": "ד",
-        "text": "כל התשובות נכונות.",
+        "text": "כאשר המיכל מלא במחציתו.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 93
+    "source_question_number": 93,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q094",
@@ -4311,17 +4311,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 94
+    "source_question_number": 94,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q095",
@@ -4329,12 +4329,12 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מד הטמפרטורה במנוע דיזל מראה - 213מעלות,Fמה נדרש לעשות?",
+    "text": "מד הטמפרטורה במנוע דיזל מראה - 213מעלות, Fמה נדרש לעשות?",
     "choices": [
       {
         "id": "a",
         "label": "א",
-        "text": "המנוע במצב רתיחה,יש להדמים ולבדוק הסיבה.",
+        "text": "המנוע במצב רתיחה, יש להדמים ולבדוק הסיבה.",
         "image_ref": null
       },
       {
@@ -4346,7 +4346,7 @@
       {
         "id": "c",
         "label": "ג",
-        "text": "הכול תקין,אין לעשות דבר.",
+        "text": "הכול תקין, אין לעשות דבר.",
         "image_ref": null
       },
       {
@@ -4357,17 +4357,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 95
+    "source_question_number": 95,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q096",
@@ -4375,7 +4375,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מד החום של מי הקירור במנוע מראה 181מעלות,Cמהי המשמעות?",
+    "text": "מד החום של מי הקירור במנוע מראה 181מעלות, Cמהי המשמעות?",
     "choices": [
       {
         "id": "a",
@@ -4403,17 +4403,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 96
+    "source_question_number": 96,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q097",
@@ -4449,17 +4449,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 97
+    "source_question_number": 97,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q098",
@@ -4467,7 +4467,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "כיצד משומנים חלקי המנוע,במנוע בנזין חיצוני דו פעימתי?",
+    "text": "כיצד משומנים חלקי המנוע, במנוע בנזין חיצוני דו פעימתי?",
     "choices": [
       {
         "id": "a",
@@ -4495,17 +4495,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 98
+    "source_question_number": 98,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q099",
@@ -4530,7 +4530,7 @@
       {
         "id": "c",
         "label": "ג",
-        "text": "הן עשויות מפלדה,חלקות ושטוחות למניעת מפל לחץ.",
+        "text": "הן עשויות מפלדה, חלקות ושטוחות למניעת מפל לחץ.",
         "image_ref": null
       },
       {
@@ -4541,17 +4541,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 99
+    "source_question_number": 99,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q100",
@@ -4587,17 +4587,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 111
+    "source_question_number": 111,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q101",
@@ -4633,17 +4633,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 111
+    "source_question_number": 111,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q102",
@@ -4679,17 +4679,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 112
+    "source_question_number": 112,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q103",
@@ -4725,17 +4725,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 113
+    "source_question_number": 113,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q104",
@@ -4771,17 +4771,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 114
+    "source_question_number": 114,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q105",
@@ -4789,18 +4789,18 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "לאחר הפלגה בעומס ובעת התקשרות לרציף,לאחר הורדת סיבובי המנוע,התרעת לחץ שמן נדלקת,מהי התגובה הנדרשת?",
+    "text": "לאחר הפלגה בעומס ובעת התקשרות לרציף, לאחר הורדת סיבובי המנוע, התרעת לחץ שמן נדלקת, מהי התגובה הנדרשת?",
     "choices": [
       {
         "id": "a",
         "label": "א",
-        "text": "יש להדמים מיד את המנוע,אחרת הוא ייהרס לחלוטין.",
+        "text": "יש להדמים מיד את המנוע, אחרת הוא ייהרס לחלוטין.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "יש להעלות את הסיבובים,כדי שלחץ שמן מנוע יעלה שוב.",
+        "text": "יש להעלות את הסיבובים, כדי שלחץ שמן מנוע יעלה שוב.",
         "image_ref": null
       },
       {
@@ -4812,22 +4812,22 @@
       {
         "id": "d",
         "label": "ד",
-        "text": "יש להפסיק את ההתקשרות,לצאת שוב מהנמל ולבדוק את התקלה.",
+        "text": "יש להפסיק את ההתקשרות, לצאת שוב מהנמל ולבדוק את התקלה.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 115
+    "source_question_number": 115,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q106",
@@ -4846,7 +4846,7 @@
       {
         "id": "b",
         "label": "ב",
-        "text": "לאפשר נשימת מיכל הדלק ולאפשר השוואת הלחץ במיכל,ללחץ האטמוספרי.",
+        "text": "לאפשר נשימת מיכל הדלק ולאפשר השוואת הלחץ במיכל, ללחץ האטמוספרי.",
         "image_ref": null
       },
       {
@@ -4863,17 +4863,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 116
+    "source_question_number": 116,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q107",
@@ -4909,17 +4909,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 117
+    "source_question_number": 117,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q108",
@@ -4955,17 +4955,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 118
+    "source_question_number": 118,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q109",
@@ -5001,17 +5001,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 119
+    "source_question_number": 119,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q110",
@@ -5047,17 +5047,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 111
+    "source_question_number": 111,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q111",
@@ -5093,17 +5093,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 111
+    "source_question_number": 111,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q112",
@@ -5139,17 +5139,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 112
+    "source_question_number": 112,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q113",
@@ -5157,7 +5157,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "תוך כדי בדיקת שמן מנוע התגלה כי הצבע שלו שחור,מה נדרש לעשות?",
+    "text": "תוך כדי בדיקת שמן מנוע התגלה כי הצבע שלו שחור, מה נדרש לעשות?",
     "choices": [
       {
         "id": "a",
@@ -5168,7 +5168,7 @@
       {
         "id": "b",
         "label": "ב",
-        "text": "אין צורך לעשות דבר,תפקיד השמן הוא גם לקלוט חלקיקי פיח.",
+        "text": "אין צורך לעשות דבר, תפקיד השמן הוא גם לקלוט חלקיקי פיח.",
         "image_ref": null
       },
       {
@@ -5185,17 +5185,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 113
+    "source_question_number": 113,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q114",
@@ -5203,7 +5203,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מה פירוש \"טעינת יתר\")?(turbo charge",
+    "text": "מה פירוש \"טעינת יתר\"? turbo charge",
     "choices": [
       {
         "id": "a",
@@ -5231,17 +5231,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 114
+    "source_question_number": 114,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q115",
@@ -5277,17 +5277,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 115
+    "source_question_number": 115,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q116",
@@ -5312,7 +5312,7 @@
       {
         "id": "c",
         "label": "ג",
-        "text": "המימן הנפלט מהמצבר בעת הטעינה,עלול להתפוצץ.",
+        "text": "המימן הנפלט מהמצבר בעת הטעינה, עלול להתפוצץ.",
         "image_ref": null
       },
       {
@@ -5323,17 +5323,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 116
+    "source_question_number": 116,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q117",
@@ -5369,17 +5369,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 117
+    "source_question_number": 117,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q118",
@@ -5387,7 +5387,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "בעת ניסיון התנעה של מנוע דיזל המנוע מסתובב היטב אך לא מותנע,מה עשויה להיות הסיבה?",
+    "text": "בעת ניסיון התנעה של מנוע דיזל המנוע מסתובב היטב אך לא מותנע, מה עשויה להיות הסיבה?",
     "choices": [
       {
         "id": "a",
@@ -5415,17 +5415,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 118
+    "source_question_number": 118,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q119",
@@ -5433,7 +5433,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "התנעת מנוע דיזל ולאחר דקות אחדות המנוע כבה מאליו,מה עשויה להיות הסיבה?",
+    "text": "התנעת מנוע דיזל ולאחר דקות אחדות המנוע כבה מאליו, מה עשויה להיות הסיבה?",
     "choices": [
       {
         "id": "a",
@@ -5461,17 +5461,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 119
+    "source_question_number": 119,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q120",
@@ -5496,7 +5496,7 @@
       {
         "id": "c",
         "label": "ג",
-        "text": "פיח עלול להצטבר על הבוכנה,השסתומים ועל קצה מרסס הדלק.",
+        "text": "פיח עלול להצטבר על הבוכנה, השסתומים ועל קצה מרסס הדלק.",
         "image_ref": null
       },
       {
@@ -5507,17 +5507,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 121
+    "source_question_number": 121,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q121",
@@ -5525,7 +5525,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "על פי אילו סימנים ניתן לאבחן,אם המנוע עובד בעומס יתר?",
+    "text": "על פי אילו סימנים ניתן לאבחן, אם המנוע עובד בעומס יתר?",
     "choices": [
       {
         "id": "a",
@@ -5553,17 +5553,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 121
+    "source_question_number": 121,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q122",
@@ -5571,7 +5571,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "תוך כדי פעולת המנוע הוא מתחיל \"לגמגם\",מה עשויה להיות הסיבה?",
+    "text": "תוך כדי פעולת המנוע הוא מתחיל \"לגמגם\", מה עשויה להיות הסיבה?",
     "choices": [
       {
         "id": "a",
@@ -5599,17 +5599,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 122
+    "source_question_number": 122,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q123",
@@ -5617,7 +5617,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "תוך כדי הפלגה נגמר הדלק במיכל והמנוע כבה,מהו הצעד הבא?",
+    "text": "תוך כדי הפלגה נגמר הדלק במיכל והמנוע כבה, מהו הצעד הבא?",
     "choices": [
       {
         "id": "a",
@@ -5645,17 +5645,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 123
+    "source_question_number": 123,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q124",
@@ -5691,17 +5691,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 125
+    "source_question_number": 125,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q125",
@@ -5737,17 +5737,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 126
+    "source_question_number": 126,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q126",
@@ -5783,17 +5783,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 127
+    "source_question_number": 127,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q127",
@@ -5829,17 +5829,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 128
+    "source_question_number": 128,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q128",
@@ -5875,17 +5875,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 129
+    "source_question_number": 129,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q129",
@@ -5921,17 +5921,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 131
+    "source_question_number": 131,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q130",
@@ -5967,17 +5967,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 131
+    "source_question_number": 131,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q131",
@@ -6013,17 +6013,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 132
+    "source_question_number": 132,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q132",
@@ -6059,17 +6059,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 133
+    "source_question_number": 133,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q133",
@@ -6105,17 +6105,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 134
+    "source_question_number": 134,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q134",
@@ -6151,17 +6151,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 135
+    "source_question_number": 135,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q135",
@@ -6197,17 +6197,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 136
+    "source_question_number": 136,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q136",
@@ -6243,17 +6243,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 137
+    "source_question_number": 137,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q137",
@@ -6289,17 +6289,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 138
+    "source_question_number": 138,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q138",
@@ -6312,7 +6312,7 @@
       {
         "id": "a",
         "label": "א",
-        "text": "לחץ שמן,חום מנוע,סל\"ד מנוע.",
+        "text": "לחץ שמן, חום מנוע, סל\"ד מנוע.",
         "image_ref": null
       },
       {
@@ -6324,28 +6324,28 @@
       {
         "id": "c",
         "label": "ג",
-        "text": "כמות דלק,טמפ' גזי פליטה,חום מנוע.",
+        "text": "כמות דלק, טמפ' גזי פליטה, חום מנוע.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "לחץ שמן,סל\"ד מנוע,מצב הגיר.",
+        "text": "לחץ שמן, סל\"ד מנוע, מצב הגיר.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 139
+    "source_question_number": 139,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q139",
@@ -6358,7 +6358,7 @@
       {
         "id": "a",
         "label": "א",
-        "text": "לספק למרססים דלק בלחץ גבוה,בכמות משתנה ובתזמון מדויק.",
+        "text": "לספק למרססים דלק בלחץ גבוה, בכמות משתנה ובתזמון מדויק.",
         "image_ref": null
       },
       {
@@ -6381,17 +6381,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 140
+    "source_question_number": 140,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q140",
@@ -6404,40 +6404,40 @@
       {
         "id": "a",
         "label": "א",
-        "text": "חומר דליק,חמצן,חום.",
+        "text": "חומר דליק, חמצן, חום.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "אדים,טמפ',אוויר.",
+        "text": "אדים, טמפ', אוויר.",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "נוזל,חמצן,טמפ'.",
+        "text": "נוזל, חמצן, טמפ'.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "חומר דליק,טמפ',לחץ.",
+        "text": "חומר דליק, טמפ', לחץ.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 141
+    "source_question_number": 141,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q141",
@@ -6445,45 +6445,45 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מה נדרש לבדוק,לפני התנעת המנוע?",
+    "text": "מה נדרש לבדוק, לפני התנעת המנוע?",
     "choices": [
       {
         "id": "a",
         "label": "א",
-        "text": "כמות דלק,מנוע מנוטרל יציאת מי-ים ולחץ שמן.",
+        "text": "כמות דלק, מנוע מנוטרל יציאת מי-ים ולחץ שמן.",
         "image_ref": null
       },
       {
         "id": "b",
         "label": "ב",
-        "text": "גובה שמן,מנוע מנוטרל חשמל ואויר.",
+        "text": "גובה שמן, מנוע מנוטרל חשמל ואויר.",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "מנוע מנוטרל טמפ',לחץ שמן,כמות דלק.",
+        "text": "מנוע מנוטרל טמפ', לחץ שמן, כמות דלק.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "גובה שמן,כמות דלק,כמות מי קירור ומנוע מנוטרל.",
+        "text": "גובה שמן, כמות דלק, כמות מי קירור ומנוע מנוטרל.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 142
+    "source_question_number": 142,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q142",
@@ -6519,17 +6519,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 143
+    "source_question_number": 143,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q143",
@@ -6537,7 +6537,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מה עלול לגרום לירידה משמעותית ואיבוד מהיר בכמות נוזל הקירור,במערכת קירור סגורה?",
+    "text": "מה עלול לגרום לירידה משמעותית ואיבוד מהיר בכמות נוזל הקירור, במערכת קירור סגורה?",
     "choices": [
       {
         "id": "a",
@@ -6565,17 +6565,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 144
+    "source_question_number": 144,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q144",
@@ -6583,7 +6583,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מהו המכלול שגורם לסגירת פתחי כניסת האויר,במנוע בנזין דו פעימתי?",
+    "text": "מהו המכלול שגורם לסגירת פתחי כניסת האויר, במנוע בנזין דו פעימתי?",
     "choices": [
       {
         "id": "a",
@@ -6611,17 +6611,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 145
+    "source_question_number": 145,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q145",
@@ -6657,17 +6657,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 146
+    "source_question_number": 146,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q146",
@@ -6703,17 +6703,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 147
+    "source_question_number": 147,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q147",
@@ -6749,17 +6749,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 148
+    "source_question_number": 148,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q148",
@@ -6795,17 +6795,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 149
+    "source_question_number": 149,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q149",
@@ -6841,17 +6841,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 151
+    "source_question_number": 151,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q150",
@@ -6887,17 +6887,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 151
+    "source_question_number": 151,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q151",
@@ -6933,17 +6933,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 152
+    "source_question_number": 152,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q152",
@@ -6979,17 +6979,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 153
+    "source_question_number": 153,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q153",
@@ -6997,12 +6997,12 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מהו תפקידו של הנשם,המורכב במיכל הדלק?",
+    "text": "מהו תפקידו של הנשם, המורכב במיכל הדלק?",
     "choices": [
       {
         "id": "a",
         "label": "א",
-        "text": "להכניס אוויר קר למיכל,על מנת למנוע פיצוץ.",
+        "text": "להכניס אוויר קר למיכל, על מנת למנוע פיצוץ.",
         "image_ref": null
       },
       {
@@ -7025,17 +7025,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 154
+    "source_question_number": 154,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q154",
@@ -7071,17 +7071,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 155
+    "source_question_number": 155,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q155",
@@ -7089,7 +7089,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "הטרמוסטט במערכת הקירור נתפס במצב פתוח,מה עשויות להיות השפעות לכך?",
+    "text": "הטרמוסטט במערכת הקירור נתפס במצב פתוח, מה עשויות להיות השפעות לכך?",
     "choices": [
       {
         "id": "a",
@@ -7106,7 +7106,7 @@
       {
         "id": "c",
         "label": "ג",
-        "text": "לאורך זמן יגרם נזק,כי המנוע יעבוד בטמפרטורה נמוכה מהמומלץ.",
+        "text": "לאורך זמן יגרם נזק, כי המנוע יעבוד בטמפרטורה נמוכה מהמומלץ.",
         "image_ref": null
       },
       {
@@ -7117,17 +7117,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 156
+    "source_question_number": 156,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q156",
@@ -7163,17 +7163,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 157
+    "source_question_number": 157,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q157",
@@ -7209,17 +7209,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 159
+    "source_question_number": 159,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q158",
@@ -7255,17 +7255,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 161
+    "source_question_number": 161,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q159",
@@ -7273,7 +7273,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "בהתנעה,מנוע הדיזל מסתובב,ואיננו מצליח להתניע,מה יכולה להיות הסיבה?",
+    "text": "בהתנעה, מנוע הדיזל מסתובב, ואיננו מצליח להתניע, מה יכולה להיות הסיבה?",
     "choices": [
       {
         "id": "a",
@@ -7301,17 +7301,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 161
+    "source_question_number": 161,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q160",
@@ -7347,17 +7347,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 162
+    "source_question_number": 162,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q161",
@@ -7393,17 +7393,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 163
+    "source_question_number": 163,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q162",
@@ -7422,34 +7422,34 @@
       {
         "id": "b",
         "label": "ב",
-        "text": "שומר על מהירות(סל\"ד) מנוע רצויה,ע\"י מתן פקודות למשאבת ההזרקה.",
+        "text": "שומר על מהירות(סל\"ד) מנוע רצויה, ע\"י מתן פקודות למשאבת ההזרקה.",
         "image_ref": null
       },
       {
         "id": "c",
         "label": "ג",
-        "text": "נותן פקודות למשאבת ההזנה,לשנות את כמות הדלק המוזרקת.",
+        "text": "נותן פקודות למשאבת ההזנה, לשנות את כמות הדלק המוזרקת.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "שומר על מהירות מנוע רצויה,ע\"י מתן פקודות למרססי הדלק.",
+        "text": "שומר על מהירות מנוע רצויה, ע\"י מתן פקודות למרססי הדלק.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 164
+    "source_question_number": 164,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q163",
@@ -7462,7 +7462,7 @@
       {
         "id": "a",
         "label": "א",
-        "text": "מורכב ביציאת מי הקירור,מראש המנוע.",
+        "text": "מורכב ביציאת מי הקירור, מראש המנוע.",
         "image_ref": null
       },
       {
@@ -7485,17 +7485,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 165
+    "source_question_number": 165,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q164",
@@ -7503,7 +7503,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "המנוע פועל כראוי במצב מנוטרל,אולם מודמם בעת שילוב קדימה,מה לדעתך קרה?",
+    "text": "המנוע פועל כראוי במצב מנוטרל, אולם מודמם בעת שילוב קדימה, מה לדעתך קרה?",
     "choices": [
       {
         "id": "a",
@@ -7531,17 +7531,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 166
+    "source_question_number": 166,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q165",
@@ -7554,7 +7554,7 @@
       {
         "id": "a",
         "label": "א",
-        "text": "חייבים להעביר את הטרוטל(מוט המצערת)למצב \"אמצע\",אחרת המנוע לא יודמם.",
+        "text": "חייבים להעביר את הטרוטל(מוט המצערת)למצב \"אמצע\", אחרת המנוע לא יודמם.",
         "image_ref": null
       },
       {
@@ -7577,17 +7577,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 167
+    "source_question_number": 167,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q166",
@@ -7595,7 +7595,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מהם הסימנים העשויים להצביע על חוסר קוויות((lineשל גל המדחף?",
+    "text": "מהם הסימנים העשויים להצביע על חוסר קוויותlineשל גל המדחף?",
     "choices": [
       {
         "id": "a",
@@ -7623,17 +7623,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 168
+    "source_question_number": 168,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q167",
@@ -7669,17 +7669,17 @@
       }
     ],
     "correct_choice_id": "b",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 169
+    "source_question_number": 169,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q168",
@@ -7704,7 +7704,7 @@
       {
         "id": "c",
         "label": "ג",
-        "text": "לשאוב מים ממיכל ההתפשטות,הנמצא במקום הכי גבוה במערכת.",
+        "text": "לשאוב מים ממיכל ההתפשטות, הנמצא במקום הכי גבוה במערכת.",
         "image_ref": null
       },
       {
@@ -7715,17 +7715,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 171
+    "source_question_number": 171,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q169",
@@ -7750,7 +7750,7 @@
       {
         "id": "c",
         "label": "ג",
-        "text": "לקרר את המיסבים,הבוכנות וחלקים נעים אחרים.",
+        "text": "לקרר את המיסבים, הבוכנות וחלקים נעים אחרים.",
         "image_ref": null
       },
       {
@@ -7761,17 +7761,17 @@
       }
     ],
     "correct_choice_id": "a",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 171
+    "source_question_number": 171,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q170",
@@ -7779,7 +7779,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מהו תפקידה של גובתת המילוא (גלאנד),במערכת גל (ציר) המדחף.",
+    "text": "מהו תפקידה של גובתת המילוא (גלאנד), במערכת גל (ציר) המדחף.",
     "choices": [
       {
         "id": "a",
@@ -7807,17 +7807,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 172
+    "source_question_number": 172,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q171",
@@ -7853,17 +7853,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 173
+    "source_question_number": 173,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q172",
@@ -7871,7 +7871,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מהי המשמעות הנובעת שבעת הפעלת תאורת הנווט,המתח הנמדד על הקטבים במצבר הוא 11וולט?",
+    "text": "מהי המשמעות הנובעת שבעת הפעלת תאורת הנווט, המתח הנמדד על הקטבים במצבר הוא 11וולט?",
     "choices": [
       {
         "id": "a",
@@ -7882,7 +7882,7 @@
       {
         "id": "b",
         "label": "ב",
-        "text": "זהו מצב טבעי,המצבר תקין.",
+        "text": "זהו מצב טבעי, המצבר תקין.",
         "image_ref": null
       },
       {
@@ -7899,17 +7899,17 @@
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 174
+    "source_question_number": 174,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q173",
@@ -7917,12 +7917,12 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "מהו אחד מהתנאים הנדרשים,בכדי להתניע מנוע דיזל?",
+    "text": "מהו אחד מהתנאים הנדרשים, בכדי להתניע מנוע דיזל?",
     "choices": [
       {
         "id": "a",
         "label": "א",
-        "text": "יש להזריק אוויר חם בלחץ גבוה,אשר יצית את הדלק הנמצא בצילינדר.",
+        "text": "יש להזריק אוויר חם בלחץ גבוה, אשר יצית את הדלק הנמצא בצילינדר.",
         "image_ref": null
       },
       {
@@ -7945,17 +7945,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 175
+    "source_question_number": 175,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q174",
@@ -7963,7 +7963,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "בעת ההתנעה נשמעת נקישה מן המתנע,אך המנוע אינו מסתובב.מה עשויה להיות הסיבה?",
+    "text": "בעת ההתנעה נשמעת נקישה מן המתנע, אך המנוע אינו מסתובב. מה עשויה להיות הסיבה?",
     "choices": [
       {
         "id": "a",
@@ -7991,17 +7991,17 @@
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 176
+    "source_question_number": 176,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q175",
@@ -8009,7 +8009,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "בעת ההתנעה,המנוע מסתובב לאט מדי ולא \"מותנע\".מהי הסיבה האפשרית?",
+    "text": "בעת ההתנעה, המנוע מסתובב לאט מדי ולא \"מותנע\". מהי הסיבה האפשרית?",
     "choices": [
       {
         "id": "a",
@@ -8020,7 +8020,7 @@
       {
         "id": "b",
         "label": "ב",
-        "text": "הדקי המצבר אינם מחוברים כהלכה,או שהמצבר חלש.",
+        "text": "הדקי המצבר אינם מחוברים כהלכה, או שהמצבר חלש.",
         "image_ref": null
       },
       {
@@ -8032,22 +8032,22 @@
       {
         "id": "d",
         "label": "ד",
-        "text": "תקלה במפסק ההתנעה (.)switch",
+        "text": "תקלה במפסק ההתנעה (. )switch",
         "image_ref": null
       }
     ],
     "correct_choice_id": "c",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 177
+    "source_question_number": 177,
+    "references_sq11_positioning_diagram": false
   },
   {
     "id": "sq6-q176",
@@ -8055,7 +8055,7 @@
     "subject": "mechanics",
     "chapter": "mechanics",
     "type": "mcq",
-    "text": "התנעת את המנוע,ואתה מגלה שמים אינם נפלטים מצינור הפליטה.מה עשויה להיות הסיבה?",
+    "text": "התנעת את המנוע, ואתה מגלה שמים אינם נפלטים מצינור הפליטה. מה עשויה להיות הסיבה?",
     "choices": [
       {
         "id": "a",
@@ -8072,27 +8072,27 @@
       {
         "id": "c",
         "label": "ג",
-        "text": "לא צריכים לצאת מים מצינור הפליטה,אלא רק גזים.",
+        "text": "לא צריכים לצאת מים מצינור הפליטה, אלא רק גזים.",
         "image_ref": null
       },
       {
         "id": "d",
         "label": "ד",
-        "text": "שכחת לבדוק את גובה מי-הים,בטרם ההתנעה.",
+        "text": "שכחת לבדוק את גובה מי-הים, בטרם ההתנעה.",
         "image_ref": null
       }
     ],
     "correct_choice_id": "d",
-    "tags": [
-      "mechanics"
-    ],
+    "tags": [],
     "image_ref": null,
+    "image_refs": [],
     "sub_questions": [],
-    "created_at": "2026-02-18T17:42:42+00:00",
-    "updated_at": "2026-02-18T17:42:42+00:00",
+    "created_at": "2026-02-28T19:12:47+00:00",
+    "updated_at": "2026-02-28T19:12:47+00:00",
     "updated_by": "data-pipeline-v1",
     "source_pdf": "sq6.pdf",
     "source_file": "sq6",
-    "source_question_number": 178
+    "source_question_number": 178,
+    "references_sq11_positioning_diagram": false
   }
 ]

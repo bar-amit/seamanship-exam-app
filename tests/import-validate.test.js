@@ -61,3 +61,42 @@ test("validateImportQuestion warns on missing chapter metadata", () => {
   assert.equal(result.ok, true);
   assert.equal(result.warnings.some((warning) => warning.code === "missing_chapter"), true);
 });
+
+test("validateImportQuestion requires storage paths for each image_refs entry", () => {
+  const result = validateImportQuestion({
+    ...validMcq,
+    image_refs: ["sq11-images/image_36.jpg"],
+    image_storage_paths: []
+  });
+
+  assert.equal(result.ok, false);
+  assert.equal(result.errors.some((error) => error.code === "missing_image_storage_path"), true);
+});
+
+test("validateImportQuestion rejects misaligned sub_answers when provided", () => {
+  const result = validateImportQuestion({
+    ...validOpenText,
+    sub_questions: [
+      { id: "a", text: "first" },
+      { id: "b", text: "second" }
+    ],
+    sub_answers: [{ id: "a", text: "answer" }]
+  });
+
+  assert.equal(result.ok, false);
+  assert.equal(result.errors.some((error) => error.code === "sub_answer_alignment_mismatch"), true);
+});
+
+test("validateImportQuestion rejects duplicate open-text sub-question ids", () => {
+  const result = validateImportQuestion({
+    ...validOpenText,
+    sub_questions: [
+      { id: "a", text: "first" },
+      { id: "a", text: "second" }
+    ],
+    sub_answers: []
+  });
+
+  assert.equal(result.ok, false);
+  assert.equal(result.errors.some((error) => error.code === "duplicate_sub_question_ids"), true);
+});

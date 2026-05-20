@@ -6,6 +6,7 @@ export const DEFAULT_IMPORT_CONFIG = {
   legacySq3Path: "test_material/questions/seamanship_questions.json",
   legacyImagesMetadataPath: "test_material/test_images/images.json",
   dataAssetsDir: "test_material/data/assets",
+  rawAssetsDir: "test_material/data/assets",
   legacyImagesDir: "test_material/test_images/images",
   reportPath: "test_material/data/reports/import-report.json",
   collectionName: "questions",
@@ -53,6 +54,7 @@ export function buildImportConfig(argv) {
     legacyImagesMetadataPath:
       args.get("--legacy-images-metadata") ?? DEFAULT_IMPORT_CONFIG.legacyImagesMetadataPath,
     dataAssetsDir: args.get("--assets-dir") ?? DEFAULT_IMPORT_CONFIG.dataAssetsDir,
+    rawAssetsDir: args.get("--raw-assets-dir") ?? DEFAULT_IMPORT_CONFIG.rawAssetsDir,
     legacyImagesDir: args.get("--legacy-images-dir") ?? DEFAULT_IMPORT_CONFIG.legacyImagesDir,
     reportPath: args.get("--report") ?? DEFAULT_IMPORT_CONFIG.reportPath,
     collectionName: args.get("--collection") ?? DEFAULT_IMPORT_CONFIG.collectionName,
@@ -64,8 +66,11 @@ export function buildImportConfig(argv) {
   };
 }
 
-export function resolveAssetSourcePath(ref, { dataAssetsDir, legacyImagesDir }) {
-  // Temporary dual-source lookup: normalized sq5 assets and legacy sq3 images.
+export function resolveAssetSourcePath(ref, { dataAssetsDir, rawAssetsDir, legacyImagesDir }) {
+  // New extracted data keeps sq11 assets under raw/, while curated crops live under assets/.
+  if (ref.startsWith("sq11-images/")) {
+    return path.join(rawAssetsDir, ref);
+  }
   if (ref.startsWith("legacy-images/")) {
     const fileName = ref.slice("legacy-images/".length);
     return path.join(legacyImagesDir, fileName);
@@ -73,10 +78,10 @@ export function resolveAssetSourcePath(ref, { dataAssetsDir, legacyImagesDir }) 
   return path.join(dataAssetsDir, ref);
 }
 
-export function buildImportUploadPlan(assetRefs, { dataAssetsDir, legacyImagesDir, storagePrefix }) {
+export function buildImportUploadPlan(assetRefs, { dataAssetsDir, rawAssetsDir, legacyImagesDir, storagePrefix }) {
   return assetRefs.map((ref) => ({
     ref,
-    sourcePath: resolveAssetSourcePath(ref, { dataAssetsDir, legacyImagesDir }),
+    sourcePath: resolveAssetSourcePath(ref, { dataAssetsDir, rawAssetsDir, legacyImagesDir }),
     destinationPath: `${storagePrefix}/${ref}`.replace(/\/+/g, "/")
   }));
 }
@@ -101,6 +106,7 @@ export function buildImportReport({
     legacy_sq3_path: config.legacySq3Path,
     legacy_images_metadata_path: config.legacyImagesMetadataPath,
     data_assets_dir: config.dataAssetsDir,
+    raw_assets_dir: config.rawAssetsDir,
     legacy_images_dir: config.legacyImagesDir,
     collection: config.collectionName,
     storage_prefix: config.storagePrefix,

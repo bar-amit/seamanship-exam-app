@@ -105,7 +105,7 @@ Canonical modules:
 - `src/lib/import/storage.js`
 - `src/lib/import/sq3-assets.js`
 
-`scripts/import-phase2.js` remains the CLI entrypoint and delegates argument/config, upload planning, normalization, validation, persistence, and report-building stages to import helpers. Import recovery and audit workflow is documented in `docs/import-recovery-runbook.md`.
+`scripts/import-phase2.js` remains the CLI entrypoint and delegates argument/config, upload planning, normalization, validation, persistence, and report-building stages to import helpers. Import defaults now target the improved extracted dataset under `test_material/data`, including `image_refs[]`, `sub_answers[]`, and extracted assets under `test_material/data/assets`. Import recovery and audit workflow is documented in `docs/import-recovery-runbook.md`.
 
 ### M2 Wiring Status
 

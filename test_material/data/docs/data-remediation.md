@@ -1,44 +1,51 @@
 # Data Remediation Workflow
 
-Last updated: 2026-02-18
+Last updated: 2026-02-28
 
 ## Goal
 
-Close all blockers in `data/reports/review-queue.json` so `data/questions-all.json` is import-ready for MVP Phase 2.
+Keep extraction quality high in fully automated mode and reach import-ready `data/questions-all.json`.
 
 ## Workflow
 
-1. Run extraction/build pipeline.
-2. Open `data/reports/review-queue.json`.
-3. Check `data/reports/ocr-autofill-report.json` and spot-review autofilled `sq6` answers.
-4. For special cases, apply rules from `docs/data-edge-cases.md`.
-5. Resolve issues by source in this order:
-   1. `sq6` missing answers (highest impact)
-   2. `sq5` missing MCQ options
-   3. `sq3` missing MCQ options/answers
-   4. `sq4` malformed open-question splits
-6. Re-run `python3 scripts/build_data.py` after each correction batch.
-7. Stop only when validation errors are 0 or explicitly accepted with documented exceptions.
+1. Run extraction/build pipeline:
+   - `bash scripts/extract_to_data_raw.sh`
+   - `python3 scripts/build_data.py`
+2. Check automated gates:
+   - `data/reports/validation-report.json`
+   - `data/reports/language-quality-report.json`
+   - `data/reports/sq4-subanswer-report.json`
+   - `data/reports/summary.json`
+3. If gates fail, improve parser/normalization rules in scripts (not manual edits).
+4. Re-run pipeline and compare metrics trend until gates pass.
 
-## Recommended remediation artifacts
+## Source errata (always-on)
 
-Store manual corrections in explicit override files:
+For known mistakes in source answer tables, use:
+
+- `data/reference/answer-errata.json`
+
+This is applied automatically by `build_data.py` (without `--use-overrides`).
+
+## Optional manual fallback (disabled by default)
+
+Manual overrides are optional and should be used only as last resort:
 
 - `data/overrides/sq3.overrides.json`
 - `data/overrides/sq4.overrides.json`
 - `data/overrides/sq5.overrides.json`
 - `data/overrides/sq6.overrides.json`
 
-Generate stubs from current queue:
+Generate stubs from queue (if queue mode is enabled):
 
 ```bash
 python3 scripts/generate_override_stubs.py
 ```
 
-Apply overrides by rebuilding:
+Apply overrides by rebuilding with opt-in flag:
 
 ```bash
-python3 scripts/build_data.py
+python3 scripts/build_data.py --use-overrides --emit-review-queue
 ```
 
 Inspect override application status:
@@ -52,10 +59,6 @@ Inspect override application status:
 - `set.skip_question = true`
   - Exclude source-broken question from output/queue/validation.
 
-Current status note:
-
-- `sq4-q096` is already excluded from the current canonical output datasets.
-
 Each override should include:
 
 - source question number
@@ -64,4 +67,4 @@ Each override should include:
 - reviewer
 - date
 
-This keeps a clean audit trail and allows deterministic rebuilds.
+Automated-first remains the default strategy.

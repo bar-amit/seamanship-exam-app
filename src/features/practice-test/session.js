@@ -76,7 +76,7 @@ export function scoreQuestion(question, response) {
   if (question.type === "open_text") {
     const subQuestions = question.sub_questions ?? [];
     if (subQuestions.length === 0) {
-      return 0;
+      return isNonEmptyText(response.text) ? 100 : 0;
     }
     const normalized = normalizeSubGrades(response.subGrades, subQuestions);
     const correct = Object.values(normalized).filter(Boolean).length;

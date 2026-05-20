@@ -1,0 +1,783 @@
+{
+  "summary": {
+    "generated_at": "2026-02-28T19:12:47+00:00",
+    "total_sq4_questions": 96,
+    "questions_with_subquestions": 77,
+    "questions_without_subquestions": 19,
+    "fully_aligned_questions": 96,
+    "alignment_rate": 1.0,
+    "alignment_rate_with_subquestions": 1.0,
+    "misaligned_questions": 0,
+    "misaligned_questions_with_subquestions": 0
+  },
+  "items": [
+    {
+      "id": "sq4-q001",
+      "question_number": 1,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q002",
+      "question_number": 2,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q003",
+      "question_number": 3,
+      "sub_questions_count": 4,
+      "sub_answers_count": 4,
+      "answered_sub_answers_count": 4,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q004",
+      "question_number": 4,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q005",
+      "question_number": 5,
+      "sub_questions_count": 4,
+      "sub_answers_count": 4,
+      "answered_sub_answers_count": 4,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q006",
+      "question_number": 6,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q007",
+      "question_number": 7,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q008",
+      "question_number": 8,
+      "sub_questions_count": 4,
+      "sub_answers_count": 4,
+      "answered_sub_answers_count": 4,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q009",
+      "question_number": 9,
+      "sub_questions_count": 4,
+      "sub_answers_count": 4,
+      "answered_sub_answers_count": 4,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q010",
+      "question_number": 10,
+      "sub_questions_count": 4,
+      "sub_answers_count": 4,
+      "answered_sub_answers_count": 4,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q011",
+      "question_number": 11,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q012",
+      "question_number": 12,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q013",
+      "question_number": 13,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q014",
+      "question_number": 14,
+      "sub_questions_count": 4,
+      "sub_answers_count": 4,
+      "answered_sub_answers_count": 4,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q015",
+      "question_number": 15,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q016",
+      "question_number": 16,
+      "sub_questions_count": 4,
+      "sub_answers_count": 4,
+      "answered_sub_answers_count": 4,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q017",
+      "question_number": 17,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q018",
+      "question_number": 18,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q019",
+      "question_number": 19,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q020",
+      "question_number": 20,
+      "sub_questions_count": 6,
+      "sub_answers_count": 6,
+      "answered_sub_answers_count": 6,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q021",
+      "question_number": 21,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q022",
+      "question_number": 22,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q023",
+      "question_number": 23,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q024",
+      "question_number": 24,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q025",
+      "question_number": 25,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q026",
+      "question_number": 26,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q027",
+      "question_number": 27,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q028",
+      "question_number": 28,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q029",
+      "question_number": 29,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q030",
+      "question_number": 30,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q031",
+      "question_number": 31,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q032",
+      "question_number": 32,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q033",
+      "question_number": 33,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q034",
+      "question_number": 34,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q035",
+      "question_number": 35,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q036",
+      "question_number": 36,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q037",
+      "question_number": 37,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q038",
+      "question_number": 38,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q039",
+      "question_number": 39,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q040",
+      "question_number": 40,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q041",
+      "question_number": 41,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q042",
+      "question_number": 42,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q043",
+      "question_number": 43,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q044",
+      "question_number": 44,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q045",
+      "question_number": 45,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q046",
+      "question_number": 46,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q047",
+      "question_number": 47,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q048",
+      "question_number": 48,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q049",
+      "question_number": 49,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q050",
+      "question_number": 50,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q051",
+      "question_number": 51,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q052",
+      "question_number": 52,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q053",
+      "question_number": 53,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q054",
+      "question_number": 54,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q055",
+      "question_number": 55,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q056",
+      "question_number": 56,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q057",
+      "question_number": 57,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q058",
+      "question_number": 58,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q059",
+      "question_number": 59,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q060",
+      "question_number": 60,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q061",
+      "question_number": 61,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q062",
+      "question_number": 62,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q063",
+      "question_number": 63,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q064",
+      "question_number": 64,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q065",
+      "question_number": 65,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q066",
+      "question_number": 66,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q067",
+      "question_number": 67,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q068",
+      "question_number": 68,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q069",
+      "question_number": 69,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q070",
+      "question_number": 70,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q071",
+      "question_number": 71,
+      "sub_questions_count": 1,
+      "sub_answers_count": 1,
+      "answered_sub_answers_count": 1,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q072",
+      "question_number": 72,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q073",
+      "question_number": 73,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q074",
+      "question_number": 74,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q075",
+      "question_number": 75,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q076",
+      "question_number": 76,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q077",
+      "question_number": 77,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q078",
+      "question_number": 78,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q079",
+      "question_number": 79,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q080",
+      "question_number": 80,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q081",
+      "question_number": 81,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q082",
+      "question_number": 82,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q083",
+      "question_number": 83,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q084",
+      "question_number": 84,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q085",
+      "question_number": 85,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q086",
+      "question_number": 86,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q087",
+      "question_number": 87,
+      "sub_questions_count": 3,
+      "sub_answers_count": 3,
+      "answered_sub_answers_count": 3,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q088",
+      "question_number": 88,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q089",
+      "question_number": 89,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q090",
+      "question_number": 90,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q091",
+      "question_number": 91,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q092",
+      "question_number": 92,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q093",
+      "question_number": 93,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q094",
+      "question_number": 94,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q095",
+      "question_number": 95,
+      "sub_questions_count": 2,
+      "sub_answers_count": 2,
+      "answered_sub_answers_count": 2,
+      "is_fully_aligned": true
+    },
+    {
+      "id": "sq4-q096",
+      "question_number": 96,
+      "sub_questions_count": 0,
+      "sub_answers_count": 0,
+      "answered_sub_answers_count": 0,
+      "is_fully_aligned": true
+    }
+  ]
+}

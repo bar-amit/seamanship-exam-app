@@ -21,13 +21,13 @@ node scripts/import-phase2.js --dry-run --skip-upload --skip-firestore --report 
 
 Expected current baseline:
 
-- `source_records`: `826`
-- `normalized_records`: `826`
-- `imported_records`: `826`
-- `referenced_assets`: `46`
+- `source_records`: `827`
+- `normalized_records`: `827`
+- `imported_records`: `827`
+- `referenced_assets`: `77`
 - `missing_assets`: `[]`
 - `validation.ok`: `true`
-- `validation.warning_count`: `14` for open-text questions without `sub_questions`
+- `validation.warning_count`: `19` for open-text questions without `sub_questions`
 
 ## Staging Import
 
@@ -67,7 +67,7 @@ If `validation.ok` is `false`:
 
 If `missing_assets` is not empty:
 
-- Confirm whether each reference should resolve under `test_material/data/assets` or `test_material/test_images/images`.
+- Confirm whether each reference should resolve under `test_material/data/assets` or the legacy fallback asset directories.
 - Restore missing files or fix the source question image reference.
 - Re-run the local audit before staging import.
 

@@ -17,6 +17,8 @@ Existing files under `questions/` and `answers/` are not modified.
 - `data/reports/ocr-autofill-report.json`
 - `data/reports/sq6-csv-report.json`
 - `data/reports/overrides-report.json`
+- `data/reports/language-quality-report.json`
+- `data/reports/sq4-subanswer-report.json`
 - `data/reports/summary.json`
 - raw extraction artifacts under `data/raw/`
 - edge-case policy: `docs/data-edge-cases.md`
@@ -48,7 +50,7 @@ bash scripts/extract_to_data_raw.sh
 python3 scripts/build_data.py
 ```
 
-To scaffold override files from the current review queue:
+To scaffold override files from the current review queue (optional):
 
 ```bash
 python3 scripts/generate_override_stubs.py
@@ -65,6 +67,11 @@ If `sq6-answers.csv` exists, build uses it as authoritative for `sq6` questions 
 - precedence: `sq6 CSV` > extracted answers > OCR hints
 - CSV validation report: `data/reports/sq6-csv-report.json`
 - reference copy: `data/reference/sq6-answers.csv`
+
+Source errata can be applied for known source-book answer mistakes via:
+
+- `data/reference/answer-errata.json`
+- precedence: source errata overrides extracted answers (and can override sq6 CSV where explicitly defined)
 
 `extract_to_data_raw.sh` also generates image-option crops for sq5 edge cases:
 
@@ -84,25 +91,14 @@ Normalized output follows the MVP core contract fields:
 - `correct_choice_id`
 - `tags[]`
 - `image_ref`
+- `image_refs[]`
 - `sub_questions[]`
+- `sub_answers[]` (for open questions)
 - `created_at`
 - `updated_at`
 - `updated_by`
 
 `sub_questions[]` are normalized to lowercase Latin IDs (`a,b,c,d`) and keep Hebrew label in `label`.
-
-Current normalized type values:
-
-- `mcq`
-- `open_text`
-
-Tag baseline for MVP imports:
-
-- `tags[]` is populated with one chapter-derived tag per question:
-  - `seamanship`
-  - `navigation a`
-  - `navigation b`
-  - `mechanics`
 
 Additional provenance fields are included for traceability:
 
@@ -111,24 +107,32 @@ Additional provenance fields are included for traceability:
 - `source_question_number`
 
 For open questions (`sq4`), `model_answer` is included from extracted answer blocks.
+For `sq4`, `sub_answers[]` is derived from `model_answer` so each sub-question has a corresponding answer slot.
 For rare image-option MCQ, `choices[]` may include optional `image_ref`.
-`sq5` questions `102-103` are expected to include per-choice `image_ref` from `data/assets/sq5-option-images.json`.
+`image_refs[]` is the canonical question-level image field. `image_ref` is retained for backward compatibility.
 
-## Review queue policy (answer to your item 1)
+## Review queue policy
 
-"Automated output + review queue" means:
+Current default mode is fully automated:
 
-- Pipeline does not silently fix questionable records.
-- Any missing/invalid critical data is added to `data/reports/review-queue.json`.
-- Manual fixes should be applied in a follow-up controlled step (with explicit audit trail).
-
-This keeps extraction reproducible and prevents accidental source drift.
+- Manual override application is disabled by default.
+- Review queue output is produced in disabled mode unless explicitly enabled.
+- Pipeline quality is gated by validation + language-quality reports.
 
 ## OCR fallback behavior (sq6)
 
 - OCR hints are applied only when answer is missing and OCR produced a single unambiguous letter.
 - Applied autofills are listed in `data/reports/ocr-autofill-report.json`.
-- Any unresolved records remain in `data/reports/review-queue.json`.
+- Any unresolved records are reflected in validation and language quality reports.
+
+## Language quality evaluation
+
+`build_data.py` now generates `data/reports/language-quality-report.json` with:
+
+- `spelling_issues_count`
+- `grammar_issues_count`
+- `coherence_score`
+- `quality_status` (`pass` / `warn` / `fail`)
 
 ## Known limitations
 
@@ -136,4 +140,4 @@ This keeps extraction reproducible and prevents accidental source drift.
 - Some MCQ records in `sq3/sq5/sq6` have option text corruption from PDF text extraction.
 - `sq4` has complex mixed formatting; some prompts/sub-question boundaries remain imperfect.
 
-Use `validation-report.json` + `review-queue.json` as the mandatory gate before importing into Firebase.
+Use `validation-report.json` + `language-quality-report.json` + `summary.json` as the import gate before Firebase import.

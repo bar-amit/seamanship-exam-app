@@ -33,7 +33,9 @@ import {
   normalizePracticeQuestionCount
 } from "../../src/features/practice-test/setup.js";
 import { fetchPracticeQuestions } from "../../src/features/practice-test/questions.js";
+import { getSubAnswerForQuestion } from "../../src/features/practice-test/open-text.js";
 import ClickableStorageImage from "../../src/components/clickable-storage-image.js";
+import QuestionImageList from "../../src/components/question-image-list.js";
 import ReviewSummary from "../../src/components/practice/review-summary.js";
 import ReviewControls from "../../src/components/practice/review-controls.js";
 import ReviewStatusBadge from "../../src/components/practice/review-status-badge.js";
@@ -312,11 +314,11 @@ export default function PracticePage() {
             </div>
             <div className="prompt-row">
               <p>{currentQuestion.text}</p>
-              <ClickableStorageImage
-                imageStoragePath={currentQuestion.image_storage_path}
-                imageRef={currentQuestion.image_ref}
-                alt={uiText.practice.altQuestionImage(currentQuestion.id)}
-                className="question-image inline-thumb"
+              <QuestionImageList
+                question={currentQuestion}
+                altForImage={(imageRef, index) =>
+                  `${uiText.practice.altQuestionImage(currentQuestion.id)} ${index + 1}`
+                }
               />
             </div>
 
@@ -426,11 +428,11 @@ export default function PracticePage() {
                     <h3>
                       {idx + 1}. {q.text}
                     </h3>
-                    <ClickableStorageImage
-                      imageStoragePath={q.image_storage_path}
-                      imageRef={q.image_ref}
-                      alt={uiText.practice.altQuestionImage(q.id)}
-                      className="question-image inline-thumb"
+                    <QuestionImageList
+                      question={q}
+                      altForImage={(imageRef, imageIndex) =>
+                        `${uiText.practice.altQuestionImage(q.id)} ${imageIndex + 1}`
+                      }
                     />
                   </div>
                   <p>{uiText.practice.tagsLabel} {(q.tags ?? []).join(", ") || uiText.common.notAvailable}</p>
@@ -475,19 +477,27 @@ export default function PracticePage() {
                       <p>{uiText.practice.yourAnswerLabel} {response?.text?.trim() || uiText.practice.unanswered}</p>
                       <div className="subgrade-list">
                         <strong>{uiText.practice.subGradesLabel}</strong>
-                        {(q.sub_questions ?? []).map((sub) => (
-                          <label key={sub.id} className="practice-inline">
-                            <input
-                              type="checkbox"
-                              checked={Boolean(response?.subGrades?.[sub.id])}
-                              onChange={(e) => {
-                                setCurrentIndex(idx);
-                                toggleSubGrade(sub.id, e.target.checked);
-                              }}
-                            />
-                            {sub.label}. {sub.text}
-                          </label>
-                        ))}
+                        {(q.sub_questions ?? []).map((sub, subIndex) => {
+                          const subAnswer = getSubAnswerForQuestion(q, sub, subIndex);
+                          return (
+                            <label key={`${sub.id}-${subIndex}`} className="practice-inline">
+                              <input
+                                type="checkbox"
+                                checked={Boolean(response?.subGrades?.[sub.id])}
+                                onChange={(e) => {
+                                  setCurrentIndex(idx);
+                                  toggleSubGrade(sub.id, e.target.checked);
+                                }}
+                              />
+                              <span>
+                                {sub.label}. {sub.text}
+                                {showExplanations && subAnswer?.text && (
+                                  <small className="sub-answer-text">{subAnswer.text}</small>
+                                )}
+                              </span>
+                            </label>
+                          );
+                        })}
                       </div>
                     </>
                   )}

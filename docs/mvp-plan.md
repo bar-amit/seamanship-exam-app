@@ -42,15 +42,17 @@ Related:
 
 ## Core Data Contract (MVP)
 
-- `questions`: `id`, `subject`, `chapter`, `type`, `text`, `choices[]`, `correct_choice_id`, `tags[]`, `image_ref`, `sub_questions[]`, `created_at`, `updated_at`, `updated_by`
+- `questions`: `id`, `subject`, `chapter`, `type`, `text`, `choices[]`, `correct_choice_id`, `tags[]`, `image_ref`, `image_refs[]`, `sub_questions[]`, `sub_answers[]`, `created_at`, `updated_at`, `updated_by`
 - `type` values used by current dataset: `mcq`, `open_text`
 - `sub_questions[]` item: `id`, `label`, `text`, `order`
+- `sub_answers[]` item: `id`, `label`, `text`, `order`
+- `image_refs[]` is the canonical ordered question image list; `image_ref` is retained as the primary/backward-compatible image.
 - Import rule: normalize `sub_questions[].id` to lowercase Latin (`a`, `b`, `c`, `d`)
 - UI rule: render Hebrew labels (`א`, `ב`, `ג`, `ד`) via `label`
 - Tag baseline rule for MVP: every question gets a default chapter tag (`seamanship`, `navigation a`, `navigation b`, `mechanics`)
-- `sq4-q096` is excluded from import (repeated/source-broken question)
+- Improved extracted data includes `sq4-q096`; it is no longer hard-excluded by the importer.
 - `sq5-q102` and `sq5-q103` use per-choice image refs from `test_material/data/assets/sq5-option-images.json`
-- Temporary asset dual-source note: importer currently reads from both `test_material/data/assets` and `test_material/test_images/images` (sq3 legacy). Post-MVP task: consolidate to one canonical assets source.
+- Extracted data assets resolve from `test_material/data/assets`.
 - `attempts`: `id`, `uid` (nullable), `mode`, `question_ids[]`, `answers[]`, `self_graded_flags[]`, `sub_question_grades[]`, `score_percent`, `created_at`
 - `sub_question_grades[]` item: `question_id`, `sub_question_id`, `is_correct`
 
@@ -58,6 +60,7 @@ Scoring rules:
 
 - Navigation A question score:
 - `question_score_percent = (successful_sub_question_answers / sub_questions_amount) * 100`
+- Navigation A questions without sub-questions are treated as single-prompt open answers and score as complete when the user provides answer text.
 - Final test scoring keeps equal overall weight per question.
 
 ## Implementation Plan

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-18T17:42:42+00:00",
+  "generated_at": "2026-02-28T19:12:47+00:00",
   "output_files": [
     "data/questions-sq3.json",
     "data/questions-sq4.json",
@@ -10,10 +10,18 @@
     "data/reports/review-queue.json",
     "data/reports/ocr-autofill-report.json",
     "data/reports/sq6-csv-report.json",
-    "data/reports/overrides-report.json"
+    "data/reports/overrides-report.json",
+    "data/reports/language-quality-report.json",
+    "data/reports/sq4-subanswer-report.json"
   ],
   "validation_errors": 0,
   "review_queue_items": 0,
   "ocr_autofills": 0,
-  "overrides_applied": 62
+  "overrides_applied": 0,
+  "language_quality_gate_pass": true,
+  "avg_coherence_score": 99.77,
+  "spelling_issue_rate": 0.0,
+  "grammar_issue_rate": 0.0,
+  "sq4_subanswer_alignment_rate": 1.0,
+  "sq4_subanswer_misaligned_questions": 0
 }

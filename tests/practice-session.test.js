@@ -125,6 +125,13 @@ test("scoreQuestion open_text supports equal-weight partial grading", () => {
   assert.equal(score, 75);
 });
 
+test("scoreQuestion open_text without subquestions scores a completed single prompt", () => {
+  const singlePrompt = { id: "q3", type: "open_text", sub_questions: [] };
+
+  assert.equal(scoreQuestion(singlePrompt, { text: "answer" }), 100);
+  assert.equal(scoreQuestion(singlePrompt, { text: "   " }), 0);
+});
+
 test("scoreSession averages per-question scores equally", () => {
   const score = scoreSession(
     [mcq, openText],

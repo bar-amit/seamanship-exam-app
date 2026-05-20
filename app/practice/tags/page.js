@@ -28,7 +28,9 @@ import {
   restoreTagPracticeResponses
 } from "../../../src/features/tag-practice/session.js";
 import { fetchTagPracticeQuestions } from "../../../src/features/tag-practice/questions.js";
+import { getSubAnswerForQuestion } from "../../../src/features/practice-test/open-text.js";
 import ClickableStorageImage from "../../../src/components/clickable-storage-image.js";
+import QuestionImageList from "../../../src/components/question-image-list.js";
 import ReviewSummary from "../../../src/components/practice/review-summary.js";
 import ReviewStatusBadge from "../../../src/components/practice/review-status-badge.js";
 import AddToCollectionModal from "../../../src/components/add-to-collection-modal.js";
@@ -277,11 +279,11 @@ export default function TagPracticePage() {
             </div>
             <div className="prompt-row">
               <p>{currentQuestion.text}</p>
-              <ClickableStorageImage
-                imageStoragePath={currentQuestion.image_storage_path}
-                imageRef={currentQuestion.image_ref}
-                alt={uiText.practiceTags.altQuestionImage(currentQuestion.id)}
-                className="question-image inline-thumb"
+              <QuestionImageList
+                question={currentQuestion}
+                altForImage={(imageRef, index) =>
+                  `${uiText.practiceTags.altQuestionImage(currentQuestion.id)} ${index + 1}`
+                }
               />
             </div>
 
@@ -319,16 +321,24 @@ export default function TagPracticePage() {
                 />
                 <div className="subgrade-list">
                   <strong>{uiText.practiceTags.subGradeInstruction}</strong>
-                  {(currentQuestion.sub_questions ?? []).map((sub) => (
-                    <label key={sub.id} className="practice-inline">
-                      <input
-                        type="checkbox"
-                        checked={Boolean(currentResponse?.subGrades?.[sub.id])}
-                        onChange={(e) => toggleSubGrade(sub.id, e.target.checked)}
-                      />
-                      {sub.label}. {sub.text}
-                    </label>
-                  ))}
+                  {(currentQuestion.sub_questions ?? []).map((sub, subIndex) => {
+                    const subAnswer = getSubAnswerForQuestion(currentQuestion, sub, subIndex);
+                    return (
+                      <label key={`${sub.id}-${subIndex}`} className="practice-inline">
+                        <input
+                          type="checkbox"
+                          checked={Boolean(currentResponse?.subGrades?.[sub.id])}
+                          onChange={(e) => toggleSubGrade(sub.id, e.target.checked)}
+                        />
+                        <span>
+                          {sub.label}. {sub.text}
+                          {(showStudyAids || currentResponse?.revealed) && subAnswer?.text && (
+                            <small className="sub-answer-text">{subAnswer.text}</small>
+                          )}
+                        </span>
+                      </label>
+                    );
+                  })}
                 </div>
               </>
             )}

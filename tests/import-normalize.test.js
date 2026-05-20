@@ -62,16 +62,18 @@ test("normalizeQuestionForImport injects sq5 per-choice image refs from manifest
   assert.equal(normalized.choices[1].image_ref, "sq5-option-images/q102-b.jpg");
 });
 
-test("normalizeQuestionForImport skips q96 safety rule", () => {
+test("normalizeQuestionForImport includes q96 from improved extracted data", () => {
   const q = {
     id: "sq4-q096",
     chapter: "navigation_a",
     type: "open_text",
+    text: "prompt",
     tags: [],
-    choices: []
+    choices: [],
+    model_answer: "answer"
   };
   const normalized = normalizeQuestionForImport(q);
-  assert.equal(normalized, null);
+  assert.equal(normalized.id, "sq4-q096");
 });
 
 test("normalizeQuestionForImport backfills sq3 image ref and description from legacy maps", () => {
@@ -102,13 +104,78 @@ test("collectReferencedAssets and upload plan include question + choice refs", (
     {
       id: "q1",
       image_ref: "images/q1.jpg",
+      image_refs: ["images/q1.jpg", "images/q1-detail.jpg"],
       choices: [{ id: "a", image_ref: "choices/q1-a.jpg" }]
     }
   ];
 
   const refs = collectReferencedAssets(questions);
-  assert.deepEqual(refs, ["choices/q1-a.jpg", "images/q1.jpg"]);
+  assert.deepEqual(refs, ["choices/q1-a.jpg", "images/q1-detail.jpg", "images/q1.jpg"]);
 
   const plan = buildAssetUploadPlan(refs, "test_material/data/assets", "question-assets");
   assert.equal(plan[0].destinationPath, "question-assets/choices/q1-a.jpg");
+});
+
+test("normalizeQuestionForImport preserves multi-image and open-answer metadata", () => {
+  const normalized = normalizeQuestionForImport(
+    {
+      id: "sq4-q001",
+      question_number: 1,
+      chapter: "navigation_a",
+      type: "open_text",
+      text: "prompt",
+      tags: [],
+      choices: [],
+      image_ref: "sq11-images/image_36.jpg",
+      image_refs: ["sq11-images/image_36.jpg", "sq3-inline-images/map-01.jpg"],
+      sub_questions: [{ id: "a", label: "א", text: "Explain", order: 1 }],
+      sub_answers: [{ id: "a", label: "א", text: "Answer", order: 1 }],
+      model_answer: "Answer",
+      references_sq11_positioning_diagram: true
+    },
+    { storagePrefix: "question-assets" }
+  );
+
+  assert.deepEqual(normalized.image_refs, ["sq11-images/image_36.jpg", "sq3-inline-images/map-01.jpg"]);
+  assert.deepEqual(normalized.image_storage_paths, [
+    "question-assets/sq11-images/image_36.jpg",
+    "question-assets/sq3-inline-images/map-01.jpg"
+  ]);
+  assert.deepEqual(normalized.sub_answers, [{ id: "a", label: "א", text: "Answer", order: 1 }]);
+  assert.equal(normalized.references_sq11_positioning_diagram, true);
+});
+
+test("normalizeQuestionForImport makes sub-question and sub-answer ids unique by order", () => {
+  const normalized = normalizeQuestionForImport({
+    id: "sq4-q003",
+    chapter: "navigation_a",
+    type: "open_text",
+    text: "prompt",
+    tags: [],
+    choices: [],
+    sub_questions: [
+      { id: "b", label: "ב", text: "first", order: 1 },
+      { id: "b", label: "ב", text: "second", order: 2 }
+    ],
+    sub_answers: [
+      { id: "b", label: "ב", text: "first answer", order: 1 },
+      { id: "b", label: "ב", text: "second answer", order: 2 }
+    ],
+    model_answer: "answer"
+  });
+
+  assert.deepEqual(
+    normalized.sub_questions.map((sub) => [sub.id, sub.label, sub.order]),
+    [
+      ["a", "א", 1],
+      ["b", "ב", 2]
+    ]
+  );
+  assert.deepEqual(
+    normalized.sub_answers.map((sub) => [sub.id, sub.label, sub.order]),
+    [
+      ["a", "א", 1],
+      ["b", "ב", 2]
+    ]
+  );
 });

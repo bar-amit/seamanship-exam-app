@@ -54,6 +54,27 @@ export function validateImportQuestion(question) {
     );
   }
 
+  if (Array.isArray(question?.image_refs)) {
+    question.image_refs.forEach((imageRef, index) => {
+      if (!isNonEmptyString(imageRef)) {
+        errors.push(
+          makeFinding("error", "invalid_image_ref", "image_refs entries must be non-empty strings.", questionId, `image_refs.${index}`)
+        );
+      }
+      if (!isNonEmptyString(question?.image_storage_paths?.[index])) {
+        errors.push(
+          makeFinding(
+            "error",
+            "missing_image_storage_path",
+            "Each image_refs entry requires a matching image_storage_paths entry.",
+            questionId,
+            `image_storage_paths.${index}`
+          )
+        );
+      }
+    });
+  }
+
   if (Array.isArray(question?.choices)) {
     for (const [index, choice] of question.choices.entries()) {
       if (!isNonEmptyString(choice?.id)) {
@@ -118,6 +139,35 @@ export function validateImportQuestion(question) {
     if (!isNonEmptyString(question.model_answer)) {
       errors.push(
         makeFinding("error", "missing_model_answer", "Open text question must include model_answer.", questionId, "model_answer")
+      );
+    }
+    if (
+      Array.isArray(question.sub_answers) &&
+      question.sub_answers.length > 0 &&
+      Array.isArray(question.sub_questions) &&
+      question.sub_questions.length > 0 &&
+      question.sub_answers.length !== question.sub_questions.length
+    ) {
+      errors.push(
+        makeFinding(
+          "error",
+          "sub_answer_alignment_mismatch",
+          "Open text sub_answers must align one-to-one with sub_questions when provided.",
+          questionId,
+          "sub_answers"
+        )
+      );
+    }
+    const subQuestionIds = (question.sub_questions ?? []).map((subQuestion) => subQuestion?.id).filter(isNonEmptyString);
+    if (new Set(subQuestionIds).size !== subQuestionIds.length) {
+      errors.push(
+        makeFinding(
+          "error",
+          "duplicate_sub_question_ids",
+          "Open text sub_questions must have unique ids for self-grading.",
+          questionId,
+          "sub_questions"
+        )
       );
     }
   }

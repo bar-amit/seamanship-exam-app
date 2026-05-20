@@ -1,12 +1,12 @@
 {
-  "total_records": 826,
+  "total_records": 827,
   "errors_count": 0,
   "records_per_source": {
     "sq3": 362,
-    "sq4": 95,
+    "sq4": 96,
     "sq5": 193,
     "sq6": 176
   },
   "errors": [],
-  "generated_at": "2026-02-18T17:42:42+00:00"
+  "generated_at": "2026-02-28T19:12:47+00:00"
 }

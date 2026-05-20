@@ -196,13 +196,23 @@ main {
 
 .practice-inline {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   border: 1px solid #aac3b6;
   border-radius: 8px;
   background: #eaf4ee;
   padding: 8px 12px;
   width: auto;
+}
+
+.practice-inline span {
+  display: grid;
+  gap: 4px;
+}
+
+.sub-answer-text {
+  color: var(--muted);
+  line-height: 1.35;
 }
 
 .timer-label {
@@ -588,6 +598,13 @@ main {
   border: 1px solid var(--line);
   border-radius: 8px;
   display: block;
+}
+
+.question-image-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
 }
 
 .choice-image {

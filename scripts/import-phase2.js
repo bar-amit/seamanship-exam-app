@@ -23,13 +23,20 @@ function nowIso() {
   return new Date().toISOString();
 }
 
+function readJsonFile(filePath, fallback = null) {
+  if (fallback !== null && !fs.existsSync(filePath)) {
+    return fallback;
+  }
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
 async function main() {
   const config = buildImportConfig(process.argv.slice(2));
 
-  const sourceQuestions = JSON.parse(fs.readFileSync(config.inputPath, "utf8"));
-  const sq5Manifest = JSON.parse(fs.readFileSync(config.manifestPath, "utf8"));
-  const legacySq3 = JSON.parse(fs.readFileSync(config.legacySq3Path, "utf8"));
-  const legacyImagesMetadata = JSON.parse(fs.readFileSync(config.legacyImagesMetadataPath, "utf8"));
+  const sourceQuestions = readJsonFile(config.inputPath);
+  const sq5Manifest = readJsonFile(config.manifestPath);
+  const legacySq3 = readJsonFile(config.legacySq3Path, []);
+  const legacyImagesMetadata = readJsonFile(config.legacyImagesMetadataPath, []);
   const sq5ChoiceImageMap = buildSq5ChoiceImageMap(sq5Manifest);
   const sq3AssetByQuestionNumber = buildSq3AssetByQuestionNumber(legacySq3);
   const legacyImageDescriptionByFile = buildLegacyImageDescriptionByFile(legacyImagesMetadata);
@@ -51,6 +58,7 @@ async function main() {
   const assetRefs = collectReferencedAssets(normalized);
   const uploadPlan = buildImportUploadPlan(assetRefs, {
     dataAssetsDir: config.dataAssetsDir,
+    rawAssetsDir: config.rawAssetsDir,
     legacyImagesDir: config.legacyImagesDir,
     storagePrefix: config.storagePrefix
   });

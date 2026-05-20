@@ -46,22 +46,38 @@ test("buildImportConfig applies defaults and typed overrides", () => {
   assert.equal(config.skipFirestore, true);
 });
 
-test("buildImportUploadPlan preserves legacy and normalized asset source lookup", () => {
+test("buildImportUploadPlan resolves extracted and legacy asset source lookup", () => {
+  assert.equal(
+    resolveAssetSourcePath("sq11-images/image_36.jpg", {
+      dataAssetsDir: "data/assets",
+      rawAssetsDir: "data/raw",
+      legacyImagesDir: "legacy/images"
+    }),
+    "data/raw/sq11-images/image_36.jpg"
+  );
+
   assert.equal(
     resolveAssetSourcePath("legacy-images/image_36.jpg", {
       dataAssetsDir: "data/assets",
+      rawAssetsDir: "data/raw",
       legacyImagesDir: "legacy/images"
     }),
     "legacy/images/image_36.jpg"
   );
 
-  const plan = buildImportUploadPlan(["legacy-images/image_36.jpg", "sq5/q102-a.jpg"], {
+  const plan = buildImportUploadPlan(["sq11-images/image_36.jpg", "legacy-images/image_36.jpg", "sq5/q102-a.jpg"], {
     dataAssetsDir: "data/assets",
+    rawAssetsDir: "data/raw",
     legacyImagesDir: "legacy/images",
     storagePrefix: "question-assets"
   });
 
   assert.deepEqual(plan, [
+    {
+      ref: "sq11-images/image_36.jpg",
+      sourcePath: "data/raw/sq11-images/image_36.jpg",
+      destinationPath: "question-assets/sq11-images/image_36.jpg"
+    },
     {
       ref: "legacy-images/image_36.jpg",
       sourcePath: "legacy/images/image_36.jpg",
@@ -97,6 +113,7 @@ test("buildImportReport keeps the importer audit output contract", () => {
     legacy_sq3_path: "test_material/questions/seamanship_questions.json",
     legacy_images_metadata_path: "test_material/test_images/images.json",
     data_assets_dir: "test_material/data/assets",
+    raw_assets_dir: "test_material/data/assets",
     legacy_images_dir: "test_material/test_images/images",
     collection: "staging_questions",
     storage_prefix: "question-assets",

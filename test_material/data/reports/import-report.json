@@ -1,19 +1,162 @@
 {
-  "generated_at": "2026-02-25T05:42:21.067Z",
+  "generated_at": "2026-05-20T17:19:06.628Z",
   "dry_run": false,
   "input_path": "test_material/data/questions-all.json",
   "manifest_path": "test_material/data/assets/sq5-option-images.json",
   "legacy_sq3_path": "test_material/questions/seamanship_questions.json",
   "legacy_images_metadata_path": "test_material/test_images/images.json",
   "data_assets_dir": "test_material/data/assets",
+  "raw_assets_dir": "test_material/data/assets",
   "legacy_images_dir": "test_material/test_images/images",
   "collection": "questions",
   "storage_prefix": "question-assets",
-  "source_records": 826,
-  "normalized_records": 826,
-  "imported_records": 826,
-  "referenced_assets": 46,
-  "uploaded_assets": 46,
+  "source_records": 827,
+  "normalized_records": 827,
+  "imported_records": 827,
+  "referenced_assets": 78,
+  "uploaded_assets": 78,
   "missing_assets": [],
-  "firestore_written": 826
+  "firestore_written": 827,
+  "validation": {
+    "ok": true,
+    "total": 827,
+    "error_count": 0,
+    "warning_count": 19,
+    "errors": [],
+    "warnings": [
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q019",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q030",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q032",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q034",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q036",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q038",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q039",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q060",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q061",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q062",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q063",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q067",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q072",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q073",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q074",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q075",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q077",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q079",
+        "path": "sub_questions"
+      },
+      {
+        "severity": "warning",
+        "code": "missing_sub_questions",
+        "message": "Open text question has no sub_questions and will be answered as a single prompt.",
+        "question_id": "sq4-q096",
+        "path": "sub_questions"
+      }
+    ]
+  }
 }

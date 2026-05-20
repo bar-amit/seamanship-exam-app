@@ -1,13 +1,14 @@
 # Staging Smoke Checklist
 
-Last updated: 2026-02-25  
+Last updated: 2026-05-20  
 Owner: Bar Amit
 
 Run this after staging deploy + data import.
 
 ## Preconditions
 
-- [-] Staging env validated: `npm run validate:env:staging`
+- [x] Staging env validated: `npm run validate:env:staging` on 2026-05-20
+- [x] Staging import dry-run passed: `npm run import:phase2:staging:dry` on 2026-05-20
 - [-] Firestore/Storage rules deployed
 - [-] Staging data imported
 
@@ -54,12 +55,16 @@ Run this after staging deploy + data import.
 - [ ] Edit question text / model answer / tags
 - [ ] Edit MCQ options and correct choice id
 - [ ] Edit open-text sub-questions
+- [ ] Edit question `image_refs[]` metadata
+- [ ] Edit sq11 positioning-diagram metadata
+- [ ] Edit open-text `sub_answers[]` metadata
 - [ ] JSON toggles (loaded doc + payload) work
 - [ ] Save writes update successfully
 
 ## Assets and Media
 
 - [ ] Question images render in practice/review
+- [ ] Positioning diagram renders for questions with `references_sq11_positioning_diagram`
 - [ ] Option images render where expected
 - [ ] Click image opens modal preview
 

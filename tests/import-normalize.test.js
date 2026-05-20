@@ -105,12 +105,13 @@ test("collectReferencedAssets and upload plan include question + choice refs", (
       id: "q1",
       image_ref: "images/q1.jpg",
       image_refs: ["images/q1.jpg", "images/q1-detail.jpg"],
-      choices: [{ id: "a", image_ref: "choices/q1-a.jpg" }]
+      choices: [{ id: "a", image_ref: "choices/q1-a.jpg" }],
+      references_sq11_positioning_diagram: true
     }
   ];
 
   const refs = collectReferencedAssets(questions);
-  assert.deepEqual(refs, ["choices/q1-a.jpg", "images/q1-detail.jpg", "images/q1.jpg"]);
+  assert.deepEqual(refs, ["choices/q1-a.jpg", "images/q1-detail.jpg", "images/q1.jpg", "position_diagram.png"]);
 
   const plan = buildAssetUploadPlan(refs, "test_material/data/assets", "question-assets");
   assert.equal(plan[0].destinationPath, "question-assets/choices/q1-a.jpg");

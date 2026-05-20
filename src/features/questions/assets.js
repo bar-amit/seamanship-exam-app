@@ -1,3 +1,5 @@
+export const POSITIONING_DIAGRAM_IMAGE_REF = "position_diagram.png";
+
 function normalizeRef(value) {
   return typeof value === "string" ? value.trim() : "";
 }
@@ -34,9 +36,12 @@ export function getQuestionImageItems(question, { excludeChoiceImages = true } =
   const imageRefs = Array.isArray(question?.image_refs) && question.image_refs.length > 0
     ? question.image_refs
     : [question?.image_ref];
+  const imageRefsWithDiagram = question?.references_sq11_positioning_diagram
+    ? [...imageRefs, POSITIONING_DIAGRAM_IMAGE_REF]
+    : imageRefs;
   const choiceImageRefs = excludeChoiceImages ? getChoiceImageRefs(question) : new Set();
 
-  return uniqueRefs(imageRefs)
+  return uniqueRefs(imageRefsWithDiagram)
     .filter((imageRef) => !choiceImageRefs.has(imageRef))
     .map((imageRef) => {
       const imageRefsIndex = Array.isArray(question?.image_refs) ? question.image_refs.indexOf(imageRef) : -1;

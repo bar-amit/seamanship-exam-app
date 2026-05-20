@@ -278,3 +278,10 @@ Status values: `accepted`, `superseded`.
 - Decision: During import normalization, `sub_questions[]` and aligned `sub_answers[]` get stable lowercase Latin IDs by order.
 - Reason: Some extracted records contain duplicate source labels/IDs, but app self-grading stores checkbox state by sub-question ID and requires unique keys.
 - Impact: UI displays normalized labels for imported sub-questions; sub-answer alignment is preserved by index. Source provenance remains available on the full question record.
+
+### 2026-05-20 - Positioning Diagram Is User-Visible Asset
+
+- Status: `accepted`
+- Decision: Questions with `references_sq11_positioning_diagram` render the shared `test_material/data/assets/position_diagram.png` asset in practice and review surfaces.
+- Reason: These questions depend on a common positioning diagram; keeping the flag as provenance-only would make the question incomplete for users.
+- Impact: Import asset planning includes `position_diagram.png` and uploads it to `question-assets/position_diagram.png`. The question document keeps the boolean metadata instead of duplicating the shared diagram in each `image_refs[]` list.

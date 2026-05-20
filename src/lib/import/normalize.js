@@ -1,6 +1,7 @@
 import path from "node:path";
 
 const HEBREW_LABELS_BY_INDEX = ["א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט", "י"];
+export const POSITIONING_DIAGRAM_IMAGE_REF = "position_diagram.png";
 
 export function toChapterTag(chapter) {
   if (!chapter) {
@@ -150,6 +151,9 @@ export function collectReferencedAssets(questions) {
       if (choice?.image_ref) {
         refs.add(choice.image_ref);
       }
+    }
+    if (q?.references_sq11_positioning_diagram) {
+      refs.add(POSITIONING_DIAGRAM_IMAGE_REF);
     }
   }
 

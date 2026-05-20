@@ -48,7 +48,7 @@ Compared with the previous import source:
 - `sq4-q096` is present in the improved data.
 - Question-level assets expand from single `image_ref` assumptions to canonical `image_refs[]`.
 - Unique referenced assets in raw extracted records are `73` and resolve locally with no missing files.
-- Import normalization backfills complete sq5 option-image refs from the manifest, so the importer dry-run baseline references `77` assets.
+- Import normalization backfills complete sq5 option-image refs from the manifest and adds the shared positioning diagram asset, so the importer dry-run baseline references `78` assets.
 - Asset prefixes are `sq11-images`, `sq3-inline-images`, and `sq5-option-images`.
 - `sub_answers[]` is available for aligned `sq4` sub-question answers.
 - `references_sq11_positioning_diagram` is available on relevant seamanship questions.
@@ -75,6 +75,7 @@ Question documents should support:
 - `sub_answers[]`: per-sub-question answer text for `open_text` questions.
 - `model_answer`: full open-text model answer fallback.
 - `references_sq11_positioning_diagram`: boolean metadata for questions that reference the sq11 positioning diagram.
+- `position_diagram.png`: shared positioning diagram asset shown when `references_sq11_positioning_diagram` is true.
 
 Compatibility rule:
 
@@ -126,6 +127,7 @@ Status: completed on 2026-05-20.
 Scope:
 
 - Render all question-level `image_refs[]` in practice and review surfaces.
+- Render the shared positioning diagram for questions with `references_sq11_positioning_diagram`.
 - Avoid duplicate image display when an asset appears both as question-level and choice-level metadata.
 - Keep existing choice image rendering.
 - Display `sub_answers[]` beside sub-questions in review when available, falling back to `model_answer`.
@@ -134,6 +136,7 @@ Scope:
 Implementation notes:
 
 - `QuestionImageList` renders `image_refs[]` through existing clickable image previews.
+- `QuestionImageList` appends the shared `position_diagram.png` image when `references_sq11_positioning_diagram` is true.
 - Choice-level images are excluded from question-level rendering to avoid duplicate display.
 - Practice and tag-practice surfaces show `sub_answers[]` next to sub-questions when review/study aids are visible.
 - Open-text questions without sub-questions score as completed single prompts when the user provides text.
@@ -141,7 +144,7 @@ Implementation notes:
 
 ### Phase 3: Admin Preservation and Editing
 
-Status: partially completed on 2026-05-20.
+Status: completed on 2026-05-20.
 
 Scope:
 
@@ -154,14 +157,13 @@ Completed:
 
 - Admin updates now allow open-text questions with zero `sub_questions`.
 - Admin saves still merge patches with the existing document, so imported `image_refs[]`, `image_storage_paths[]`, `sub_answers[]`, and `references_sq11_positioning_diagram` are preserved when not explicitly edited.
-
-Remaining:
-
-- Add explicit admin display/edit affordances for `image_refs[]`, `image_storage_paths[]`, `sub_answers[]`, and `references_sq11_positioning_diagram`.
+- Admin editor exposes newline-based `image_refs[]` editing and derives primary `image_ref` plus `image_storage_paths[]` on save.
+- Admin editor exposes `references_sq11_positioning_diagram` as a checkbox.
+- Admin editor exposes `sub_answers[]` beside open-text sub-question rows and aligns answers to normalized sub-question IDs/orders on save.
 
 ### Phase 4: Staging Import and Smoke Validation
 
-Status: pending.
+Status: partially completed on 2026-05-20.
 
 Scope:
 
@@ -169,6 +171,20 @@ Scope:
 - Run full staging import only after approval because it writes Storage and Firestore.
 - Smoke test practice, tag practice, review, collections, admin edit, and asset rendering.
 
-## Open Decisions
+Completed:
 
-- Whether `references_sq11_positioning_diagram` should render a user-visible note or remain admin/provenance metadata for now.
+- `npm run validate:env:staging` passes with the local staging env.
+- `npm run import:phase2:staging:dry` passes against the tracked extracted dataset:
+  - `source_records`: `827`
+  - `normalized_records`: `827`
+  - `imported_records`: `827`
+  - `referenced_assets`: `78`
+  - `missing_assets`: `[]`
+  - validation errors: `0`
+  - validation warnings: `19` intentional open-text single-prompt questions
+
+Remaining:
+
+- Run `npm run import:phase2:staging` after explicit approval because it writes Storage and Firestore.
+- Deploy/verify staging app if not already deployed.
+- Execute `docs/staging-smoke-checklist.md` against staging, including admin metadata edits and asset rendering.

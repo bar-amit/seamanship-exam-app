@@ -1,6 +1,6 @@
 # Staging Prerequisites
 
-Last updated: 2026-02-19  
+Last updated: 2026-05-20  
 Owner: Bar Amit
 
 This checklist is the execution companion for the staging section in `docs/mvp-plan.md`.
@@ -25,6 +25,7 @@ Notes:
 
 - `FIREBASE_PROJECT_ID` must match `NEXT_PUBLIC_FIREBASE_PROJECT_ID`.
 - `FIREBASE_PRIVATE_KEY` can include escaped newlines (`\\n`), app code normalizes it.
+- 2026-05-20: local `.env.staging` validation passed with `npm run validate:env:staging`.
 
 ## Firebase Project Setup
 
@@ -65,10 +66,11 @@ Rules files in this repo:
 
 ## Data and Assets
 
-- [-] Dry-run importer with staging env settings first:
-  - `npm run import:phase2:dry`
+- [x] Dry-run importer with staging env settings first:
+  - `npm run import:phase2:staging:dry`
+  - 2026-05-20 result after positioning-diagram rendering: `827` records, `78` referenced assets, no missing assets, validation errors `0`, expected warnings `19`.
 - [-] Run full importer against staging project:
-  - `npm run import:phase2`
+  - `npm run import:phase2:staging`
 - [-] Confirm expected question count and sample image accessibility.
 
 Importer recovery/audit details:

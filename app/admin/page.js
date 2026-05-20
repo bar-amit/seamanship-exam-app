@@ -14,6 +14,30 @@ function subQuestionsToDraft(subQuestions) {
   }));
 }
 
+function subAnswersToDraft(subAnswers, subQuestions = []) {
+  const rows = Array.isArray(subAnswers) ? subAnswers : [];
+  const questionRows = Array.isArray(subQuestions) ? subQuestions : [];
+
+  if (questionRows.length > 0) {
+    return questionRows.map((subQuestion, index) => {
+      const row = rows[index] ?? {};
+      return {
+        id: subQuestion.id ?? row.id ?? String.fromCharCode("a".charCodeAt(0) + index),
+        label: subQuestion.label ?? row.label ?? "",
+        text: row.text ?? "",
+        order: subQuestion.order ?? row.order ?? index + 1
+      };
+    });
+  }
+
+  return rows.map((row, index) => ({
+    id: row.id ?? String.fromCharCode("a".charCodeAt(0) + index),
+    label: row.label ?? "",
+    text: row.text ?? "",
+    order: row.order ?? index + 1
+  }));
+}
+
 function choicesToDraft(choices) {
   const rows = Array.isArray(choices) ? choices : [];
   return rows.map((row, index) => ({
@@ -29,6 +53,13 @@ function parseTags(tags) {
     return tags.join(", ");
   }
   return "";
+}
+
+function imageRefsToDraft(question) {
+  const refs = Array.isArray(question?.image_refs) && question.image_refs.length > 0
+    ? question.image_refs
+    : [question?.image_ref].filter(Boolean);
+  return refs.join("\n");
 }
 
 export default function AdminPage() {
@@ -55,6 +86,9 @@ export default function AdminPage() {
   const [correctChoiceId, setCorrectChoiceId] = useState("");
   const [choicesDraft, setChoicesDraft] = useState([]);
   const [subQuestionsDraft, setSubQuestionsDraft] = useState([]);
+  const [subAnswersDraft, setSubAnswersDraft] = useState([]);
+  const [imageRefsDraft, setImageRefsDraft] = useState("");
+  const [referencesDiagramDraft, setReferencesDiagramDraft] = useState(false);
 
   async function fetchList(nextQuery = "", nextPage = 1, nextPageSize = pageSize) {
     setIsLoadingList(true);
@@ -114,6 +148,9 @@ export default function AdminPage() {
       setCorrectChoiceId(q.correct_choice_id ?? "");
       setChoicesDraft(choicesToDraft(q.choices));
       setSubQuestionsDraft(subQuestionsToDraft(q.sub_questions));
+      setSubAnswersDraft(subAnswersToDraft(q.sub_answers, q.sub_questions));
+      setImageRefsDraft(imageRefsToDraft(q));
+      setReferencesDiagramDraft(Boolean(q.references_sq11_positioning_diagram));
     } catch (err) {
       setError(err.message);
     } finally {
@@ -141,9 +178,22 @@ export default function AdminPage() {
       tags: tagsDraft,
       correct_choice_id: correctChoiceId,
       choices: choicesDraft,
-      sub_questions: subQuestionsDraft
+      sub_questions: subQuestionsDraft,
+      sub_answers: subAnswersDraft,
+      image_refs: imageRefsDraft,
+      references_sq11_positioning_diagram: referencesDiagramDraft
     }),
-    [questionText, modelAnswer, tagsDraft, correctChoiceId, choicesDraft, subQuestionsDraft]
+    [
+      questionText,
+      modelAnswer,
+      tagsDraft,
+      correctChoiceId,
+      choicesDraft,
+      subQuestionsDraft,
+      subAnswersDraft,
+      imageRefsDraft,
+      referencesDiagramDraft
+    ]
   );
 
   function addSubQuestionRow() {
@@ -156,16 +206,42 @@ export default function AdminPage() {
         order: prev.length + 1
       }
     ]);
+    setSubAnswersDraft((prev) => [
+      ...prev,
+      {
+        id: "",
+        label: "",
+        text: "",
+        order: prev.length + 1
+      }
+    ]);
   }
 
   function removeSubQuestionRow(index) {
     setSubQuestionsDraft((prev) => prev.filter((_, i) => i !== index));
+    setSubAnswersDraft((prev) => prev.filter((_, i) => i !== index));
   }
 
   function updateSubQuestionField(index, field, value) {
     setSubQuestionsDraft((prev) =>
       prev.map((row, i) => (i === index ? { ...row, [field]: value } : row))
     );
+  }
+
+  function updateSubAnswerField(index, value) {
+    setSubAnswersDraft((prev) => {
+      const next = [...prev];
+      while (next.length <= index) {
+        next.push({
+          id: "",
+          label: "",
+          text: "",
+          order: next.length + 1
+        });
+      }
+      next[index] = { ...next[index], text: value };
+      return next;
+    });
   }
 
   function addChoiceRow() {
@@ -321,6 +397,27 @@ export default function AdminPage() {
               <input value={tagsDraft} onChange={(e) => setTagsDraft(e.target.value)} />
             </label>
 
+            <div className="practice-block">
+              <h3>{uiText.admin.assetMetadataTitle}</h3>
+              <label>
+                {uiText.admin.imageRefsLabel}
+                <textarea
+                  rows={4}
+                  value={imageRefsDraft}
+                  onChange={(e) => setImageRefsDraft(e.target.value)}
+                  placeholder={uiText.admin.imageRefsPlaceholder}
+                />
+              </label>
+              <label className="practice-inline">
+                <input
+                  type="checkbox"
+                  checked={referencesDiagramDraft}
+                  onChange={(e) => setReferencesDiagramDraft(e.target.checked)}
+                />
+                <span>{uiText.admin.referencesDiagramLabel}</span>
+              </label>
+            </div>
+
             {questionType === "mcq" && (
               <div className="practice-block">
                 <h3>{uiText.admin.mcqTitle}</h3>
@@ -412,6 +509,14 @@ export default function AdminPage() {
                         rows={3}
                         value={sub.text}
                         onChange={(e) => updateSubQuestionField(index, "text", e.target.value)}
+                      />
+                    </label>
+                    <label>
+                      {uiText.admin.subAnswerTextLabel}
+                      <textarea
+                        rows={3}
+                        value={subAnswersDraft[index]?.text ?? ""}
+                        onChange={(e) => updateSubAnswerField(index, e.target.value)}
                       />
                     </label>
                     <button type="button" onClick={() => removeSubQuestionRow(index)}>

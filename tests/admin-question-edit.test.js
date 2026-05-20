@@ -130,3 +130,61 @@ test("normalizeAdminQuestionUpdate allows open-text single-prompt questions with
 
   assert.deepEqual(out.sub_questions, []);
 });
+
+test("normalizeAdminQuestionUpdate normalizes question image metadata", () => {
+  const out = normalizeAdminQuestionUpdate(
+    {
+      text: "question",
+      image_refs: " sq11-images/image_36.jpg\nsq3-inline-images/map-01.jpg\nsq11-images/image_36.jpg ",
+      references_sq11_positioning_diagram: true
+    },
+    {
+      id: "sq3-q001",
+      type: "mcq",
+      chapter: "seamanship",
+      text: "old",
+      choices: [
+        { id: "a", label: "א", text: "one" },
+        { id: "b", label: "ב", text: "two" }
+      ],
+      correct_choice_id: "a"
+    }
+  );
+
+  assert.deepEqual(out.image_refs, ["sq11-images/image_36.jpg", "sq3-inline-images/map-01.jpg"]);
+  assert.deepEqual(out.image_storage_paths, [
+    "question-assets/sq11-images/image_36.jpg",
+    "question-assets/sq3-inline-images/map-01.jpg"
+  ]);
+  assert.equal(out.image_ref, "sq11-images/image_36.jpg");
+  assert.equal(out.image_storage_path, "question-assets/sq11-images/image_36.jpg");
+  assert.equal(out.references_sq11_positioning_diagram, true);
+});
+
+test("normalizeAdminQuestionUpdate aligns sub answers to normalized sub questions", () => {
+  const out = normalizeAdminQuestionUpdate(
+    {
+      text: "q",
+      sub_questions: [
+        { id: "A", label: "", text: " first ", order: "2" },
+        { id: "", label: "", text: "second", order: null }
+      ],
+      sub_answers: [
+        { text: " first answer " },
+        { text: "second answer" }
+      ]
+    },
+    {
+      id: "sq4-q010",
+      type: "open_text",
+      chapter: "navigation_a",
+      text: "old",
+      model_answer: "answer"
+    }
+  );
+
+  assert.deepEqual(out.sub_answers, [
+    { id: "a", label: "א", text: "first answer", order: 2 },
+    { id: "b", label: "ב", text: "second answer", order: 1 }
+  ]);
+});

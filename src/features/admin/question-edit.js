@@ -45,6 +45,22 @@ function normalizeTagList(value, chapter) {
   return ["general"];
 }
 
+function normalizeStringList(value) {
+  const rawValues = Array.isArray(value)
+    ? value
+    : String(value ?? "")
+        .split(/[\n,]/)
+        .map((item) => item.trim());
+
+  return Array.from(
+    new Set(
+      rawValues
+        .map((item) => normalizeText(item))
+        .filter(Boolean)
+    )
+  );
+}
+
 function normalizeSubQuestionId(value, index) {
   const parsed = normalizeText(value).toLowerCase();
   if (parsed) {
@@ -73,6 +89,36 @@ function normalizeSubQuestions(subQuestions) {
   }
 
   return out;
+}
+
+function normalizeSubAnswers(subAnswers, subQuestions) {
+  const rows = Array.isArray(subAnswers) ? subAnswers : [];
+
+  if (subQuestions.length > 0) {
+    return subQuestions.map((subQuestion, index) => {
+      const row = rows[index] ?? {};
+      return {
+        id: subQuestion.id,
+        label: subQuestion.label,
+        text: normalizeText(row?.text),
+        order: subQuestion.order
+      };
+    });
+  }
+
+  return rows
+    .map((row, index) => {
+      const text = normalizeText(row?.text);
+      if (!text) {
+        return null;
+      }
+      const id = normalizeSubQuestionId(row?.id, index);
+      const label = normalizeText(row?.label) || HEBREW_LABELS[id] || id.toUpperCase();
+      const rawOrder = Number(row?.order);
+      const order = Number.isFinite(rawOrder) ? Math.max(1, Math.round(rawOrder)) : index + 1;
+      return { id, label, text, order };
+    })
+    .filter(Boolean);
 }
 
 function normalizeChoiceId(value, index) {
@@ -130,11 +176,26 @@ export function normalizeAdminQuestionUpdate(input, existingQuestion) {
     tags
   };
 
+  if (input?.image_refs !== undefined) {
+    const imageRefs = normalizeStringList(input.image_refs);
+    update.image_refs = imageRefs;
+    update.image_storage_paths = imageRefs.map((imageRef) => toStoragePath(imageRef));
+    update.image_ref = imageRefs[0] ?? null;
+    update.image_storage_path = imageRefs[0] ? toStoragePath(imageRefs[0]) : null;
+  }
+
+  if (input?.references_sq11_positioning_diagram !== undefined) {
+    update.references_sq11_positioning_diagram = Boolean(input.references_sq11_positioning_diagram);
+  }
+
   if (existingQuestion?.type === "open_text") {
     const subQuestions = normalizeSubQuestions(
       input?.sub_questions ?? existingQuestion?.sub_questions ?? []
     );
     update.sub_questions = subQuestions;
+    if (input?.sub_answers !== undefined) {
+      update.sub_answers = normalizeSubAnswers(input.sub_answers, subQuestions);
+    }
   }
 
   if (existingQuestion?.type === "mcq") {

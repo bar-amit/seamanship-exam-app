@@ -59,6 +59,26 @@ test("getQuestionImageItems falls back to legacy image_ref", () => {
   ]);
 });
 
+test("getQuestionImageItems appends positioning diagram for flagged questions", () => {
+  assert.deepEqual(
+    getQuestionImageItems({
+      image_refs: ["sq11-images/image_1.jpg"],
+      image_storage_paths: ["question-assets/sq11-images/image_1.jpg"],
+      references_sq11_positioning_diagram: true
+    }),
+    [
+      {
+        imageRef: "sq11-images/image_1.jpg",
+        imageStoragePath: "question-assets/sq11-images/image_1.jpg"
+      },
+      {
+        imageRef: "position_diagram.png",
+        imageStoragePath: "question-assets/position_diagram.png"
+      }
+    ]
+  );
+});
+
 test("getSubAnswerForQuestion prefers order alignment and falls back to id", () => {
   const question = {
     sub_answers: [

@@ -3,9 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   getNextQuestionIndex,
-  getQuestionStatus,
   hasAttempt,
-  scoreQuestion,
   scoreSession,
   setSubAnswerTextAtIndex,
   setSubGradeAtIndex,
@@ -13,8 +11,7 @@ import {
 } from "../../src/features/practice-test/session.js";
 import {
   buildReviewSummary,
-  getFilteredReviewIndexes,
-  getReviewStatus,
+  getFilteredReviewIndexes
 } from "../../src/features/practice-test/review.js";
 import {
   clearPersistedPracticeTest,
@@ -26,23 +23,19 @@ import {
   pushTestSummary
 } from "../../src/features/practice-test/analytics.js";
 import {
+  buildPracticeResetState,
+  buildPracticeStartState,
   clampCurrentIndex,
   clampPracticeMinutes,
-  buildPracticeStartState,
-  buildPracticeResetState,
-  formatPracticeSeconds,
   normalizePracticeQuestionCount
 } from "../../src/features/practice-test/setup.js";
 import { fetchPracticeQuestions } from "../../src/features/practice-test/questions.js";
-import ClickableStorageImage from "../../src/components/clickable-storage-image.js";
-import QuestionImageList from "../../src/components/question-image-list.js";
-import OpenTextResponse from "../../src/components/practice/open-text-response.js";
-import ReviewSummary from "../../src/components/practice/review-summary.js";
-import ReviewControls from "../../src/components/practice/review-controls.js";
-import ReviewStatusBadge from "../../src/components/practice/review-status-badge.js";
-import AddToCollectionModal from "../../src/components/add-to-collection-modal.js";
 import PageHeader from "../../src/components/page-header.js";
 import { uiText } from "../../src/content/strings.js";
+import ActivePracticePanel from "./_components/active-practice-panel.js";
+import PracticeReviewPanel from "./_components/practice-review-panel.js";
+import PracticeSetupPanel from "./_components/practice-setup-panel.js";
+import QuestionNavigator from "./_components/question-navigator.js";
 
 export default function PracticePage() {
   const [phase, setPhase] = useState("setup");
@@ -151,24 +144,20 @@ export default function PracticePage() {
     setSummarySaved(true);
   }, [hydrated, phase, summarySaved, questions, responses, sessionStartedAt]);
 
-  const overallScore = useMemo(() => {
-    if (phase !== "review") {
-      return 0;
-    }
-    return scoreSession(questions, responses);
-  }, [phase, questions, responses]);
+  const overallScore = useMemo(
+    () => (phase === "review" ? scoreSession(questions, responses) : 0),
+    [phase, questions, responses]
+  );
 
   const reviewSummary = useMemo(
     () => (phase === "review" ? buildReviewSummary(questions, responses) : null),
     [phase, questions, responses]
   );
 
-  const reviewIndexes = useMemo(() => {
-    if (phase !== "review") {
-      return [];
-    }
-    return getFilteredReviewIndexes(questions, responses, reviewFilter);
-  }, [phase, questions, responses, reviewFilter]);
+  const reviewIndexes = useMemo(
+    () => (phase === "review" ? getFilteredReviewIndexes(questions, responses, reviewFilter) : []),
+    [phase, questions, responses, reviewFilter]
+  );
 
   async function startPractice() {
     setIsLoading(true);
@@ -207,14 +196,6 @@ export default function PracticePage() {
     setResponses((prev) => updateResponseAtIndex(prev, currentIndex, next));
   }
 
-  function toggleSubGrade(subId, checked) {
-    setResponses((prev) => setSubGradeAtIndex(prev, currentIndex, subId, checked));
-  }
-
-  function updateSubAnswerText(subId, text) {
-    setResponses((prev) => setSubAnswerTextAtIndex(prev, currentIndex, subId, text));
-  }
-
   function skipCurrent() {
     updateCurrentResponse({ skipped: true });
     setCurrentIndex((prev) => getNextQuestionIndex(prev, questions.length));
@@ -223,16 +204,6 @@ export default function PracticePage() {
   function finalizeCurrent() {
     updateCurrentResponse({ skipped: false });
     setCurrentIndex((prev) => getNextQuestionIndex(prev, questions.length));
-  }
-
-  function finalizeAndReview() {
-    updateCurrentResponse({ skipped: false });
-    setPhase("review");
-  }
-
-  function skipAndReview() {
-    updateCurrentResponse({ skipped: true });
-    setPhase("review");
   }
 
   function resetToSetup() {
@@ -260,258 +231,76 @@ export default function PracticePage() {
       </PageHeader>
 
       {phase === "setup" && (
-        <section className="card practice-block">
-          <h2>{uiText.practice.setupTitle}</h2>
-          <div className="setup-controls">
-            <label>
-              {uiText.practice.questionCountLabel}
-              <select value={questionCount} onChange={(e) => setQuestionCount(Number(e.target.value))}>
-                <option value={5}>5</option>
-                <option value={10}>10</option>
-                <option value={20}>20</option>
-              </select>
-            </label>
-
-            <div className="timer-setting-container">
-              <label className="timer-toggle">
-                <input type="checkbox" checked={timed} onChange={(e) => setTimed(e.target.checked)} />
-                {uiText.practice.minutesPerQuestionLabel}
-              </label>
-              <label className="timer-label">
-                <p className="minutes-toast">{uiText.practice.minutesText(minutesPerQuestion)}</p>
-                <input
-                  type="range"
-                  min={1}
-                  max={20}
-                  value={minutesPerQuestion}
-                  onChange={(e) => {
-                    const raw = Number(e.target.value);
-                    const safe = clampPracticeMinutes(raw);
-                    setMinutesPerQuestion(safe);
-                    if (!Number.isFinite(raw) || safe !== raw) {
-                      setMinutesHint(uiText.practice.minutesInputHint);
-                    } else {
-                      setMinutesHint("");
-                    }
-                  }}
-                  disabled={!timed}
-                />
-              </label>
-            </div>
-            {minutesHint && <p className="muted">{minutesHint}</p>}
-          </div>
-          <button disabled={isLoading} onClick={startPractice}>
-            {isLoading ? uiText.practice.startLoading : uiText.practice.start}
-          </button>
-          {error && <p className="error">{error}</p>}
-        </section>
+        <PracticeSetupPanel
+          questionCount={questionCount}
+          setQuestionCount={setQuestionCount}
+          timed={timed}
+          setTimed={setTimed}
+          minutesPerQuestion={minutesPerQuestion}
+          setMinutesPerQuestion={setMinutesPerQuestion}
+          minutesHint={minutesHint}
+          setMinutesHint={setMinutesHint}
+          isLoading={isLoading}
+          error={error}
+          onStart={startPractice}
+        />
       )}
 
       {phase === "active" && currentQuestion && (
         <>
-          <section className="card practice-block">
-            <div className="practice-topbar">
-              <strong>
-                {uiText.practice.questionProgressPrefix} {currentIndex + 1} {uiText.practice.questionProgressOutOf}{" "}
-                {questions.length}
-              </strong>
-              {timed && <strong>{uiText.practice.timeLeftLabel} {formatPracticeSeconds(timeLeft)}</strong>}
-            </div>
-            <div className="prompt-row">
-              <p>{currentQuestion.text}</p>
-              <QuestionImageList
-                question={currentQuestion}
-                altForImage={(imageRef, index) =>
-                  `${uiText.practice.altQuestionImage(currentQuestion.id)} ${index + 1}`
-                }
-              />
-            </div>
-
-            {currentQuestion.type === "mcq" && (
-              <div className="choices-list">
-                {currentQuestion.choices.map((choice) => (
-                  <label key={choice.id} className="choice-item">
-                    <input
-                      type="radio"
-                      name={`q-${currentQuestion.id}`}
-                      checked={currentResponse?.choiceId === choice.id}
-                      onChange={() => updateCurrentResponse({ choiceId: choice.id, skipped: false })}
-                    />
-                    <span className="choice-text">
-                      {choice.label}. {choice.text}
-                    </span>
-                    <ClickableStorageImage
-                      imageStoragePath={choice.image_storage_path}
-                      imageRef={choice.image_ref}
-                      alt={uiText.practice.altChoiceImage(choice.label)}
-                      className="choice-image inline-thumb"
-                    />
-                  </label>
-                ))}
-              </div>
-            )}
-
-            {currentQuestion.type === "open_text" && (
-              <OpenTextResponse
-                question={currentQuestion}
-                response={currentResponse}
-                labels={uiText.practice.openText}
-                onTextChange={(text) => updateCurrentResponse({ text, skipped: false })}
-                onSubAnswerTextChange={updateSubAnswerText}
-                onSubGradeChange={toggleSubGrade}
-              />
-            )}
-
-            <div className="practice-actions">
-              {isLastQuestion ? (
-                <>
-                  <button type="button" onClick={skipAndReview}>
-                    {uiText.practice.buttons.skipAndFinish}
-                  </button>
-                  <button type="button" onClick={finalizeAndReview} disabled={!canSubmitCurrent}>
-                    {uiText.practice.buttons.finishAndReview}
-                  </button>
-                </>
-              ) : (
-                <>
-                  <button type="button" onClick={skipCurrent}>
-                    {uiText.practice.buttons.skip}
-                  </button>
-                  <button type="button" onClick={finalizeCurrent} disabled={!canSubmitCurrent}>
-                    {uiText.practice.buttons.saveAndNext}
-                  </button>
-                </>
-              )}
-            </div>
-          </section>
-
-          <section className="card practice-block">
-            <h3>{uiText.practice.navigationTitle}</h3>
-            <div className="navigator-grid">
-              {questions.map((q, idx) => {
-                const status = getQuestionStatus(q, responses[idx], idx === currentIndex);
-                return (
-                  <button
-                    key={q.id}
-                    className={`navigator-dot status-${status}`}
-                    onClick={() => setCurrentIndex(idx)}
-                    aria-label={uiText.practice.ariaQuestion(idx + 1)}
-                  >
-                    {idx + 1}
-                  </button>
-                );
-              })}
-            </div>
-          </section>
+          <ActivePracticePanel
+            question={currentQuestion}
+            response={currentResponse}
+            currentIndex={currentIndex}
+            questionTotal={questions.length}
+            timed={timed}
+            timeLeft={timeLeft}
+            isLastQuestion={isLastQuestion}
+            canSubmitCurrent={canSubmitCurrent}
+            onResponseChange={updateCurrentResponse}
+            onSubAnswerTextChange={(subId, text) =>
+              setResponses((prev) => setSubAnswerTextAtIndex(prev, currentIndex, subId, text))
+            }
+            onSubGradeChange={(subId, checked) =>
+              setResponses((prev) => setSubGradeAtIndex(prev, currentIndex, subId, checked))
+            }
+            onSkip={skipCurrent}
+            onFinalize={finalizeCurrent}
+            onSkipAndReview={() => {
+              updateCurrentResponse({ skipped: true });
+              setPhase("review");
+            }}
+            onFinalizeAndReview={() => {
+              updateCurrentResponse({ skipped: false });
+              setPhase("review");
+            }}
+          />
+          <QuestionNavigator
+            questions={questions}
+            responses={responses}
+            currentIndex={currentIndex}
+            onSelectQuestion={setCurrentIndex}
+          />
         </>
       )}
 
       {phase === "review" && (
-        <section className="card practice-block">
-          <h2>{uiText.practice.reviewTitle}</h2>
-          <p>
-            {uiText.practice.finalScoreLabel} <strong>{overallScore.toFixed(1)}%</strong>
-          </p>
-          <ReviewSummary summary={reviewSummary} />
-          <ReviewControls
-            reviewFilter={reviewFilter}
-            setReviewFilter={setReviewFilter}
-            showExplanations={showExplanations}
-            setShowExplanations={setShowExplanations}
-          />
-          <div className="review-list">
-            {reviewIndexes.map((idx) => {
-              const q = questions[idx];
-              const response = responses[idx];
-              const attempted = hasAttempt(q, response);
-              const perQuestionScore = scoreQuestion(q, response);
-              const reviewStatus = getReviewStatus(q, response);
-              return (
-                <article key={q.id} className="review-item">
-                  <ReviewStatusBadge status={reviewStatus} />
-                  <div className="prompt-row">
-                    <h3>
-                      {idx + 1}. {q.text}
-                    </h3>
-                    <QuestionImageList
-                      question={q}
-                      altForImage={(imageRef, imageIndex) =>
-                        `${uiText.practice.altQuestionImage(q.id)} ${imageIndex + 1}`
-                      }
-                    />
-                  </div>
-                  <p>{uiText.practice.tagsLabel} {(q.tags ?? []).join(", ") || uiText.common.notAvailable}</p>
-                  <p>{uiText.practice.questionScoreLabel} {perQuestionScore.toFixed(1)}%</p>
-                  <button type="button" onClick={() => setCollectionTargetQuestionId(q.id)}>
-                    {uiText.collections.addModal.trigger}
-                  </button>
-
-                  {q.type === "mcq" && (
-                    <>
-                      <p>{uiText.practice.yourAnswerMcqLabel} {response?.choiceId || uiText.practice.unanswered}</p>
-                      {attempted && <p>{uiText.practice.correctAnswerLabel} {q.correct_choice_id}</p>}
-                      <div className="review-choice-list">
-                        {q.choices?.map((choice) => {
-                          const isCorrect = choice.id === q.correct_choice_id;
-                          const isSelected = choice.id === response?.choiceId;
-                          return (
-                            <div
-                              key={`${q.id}-review-choice-${choice.id}`}
-                              className={`review-choice-bar${isCorrect ? " is-correct" : ""}${
-                                isSelected ? " is-selected" : ""
-                              }`}
-                            >
-                              <span className="choice-text">
-                                {choice.label}. {choice.text}
-                              </span>
-                              <ClickableStorageImage
-                                imageStoragePath={choice.image_storage_path}
-                                imageRef={choice.image_ref}
-                                alt={uiText.practice.altChoiceImage(choice.label)}
-                                className="choice-image inline-thumb"
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </>
-                  )}
-
-                  {q.type === "open_text" && (
-                    <>
-                      <OpenTextResponse
-                        question={q}
-                        response={response}
-                        labels={uiText.practice.openText}
-                        showSectionAnswers={showExplanations}
-                        readOnly
-                        onSubGradeChange={(subId, checked) => {
-                          setResponses((prev) => setSubGradeAtIndex(prev, idx, subId, checked));
-                        }}
-                      />
-                    </>
-                  )}
-
-                  {showExplanations && attempted && q.model_answer && (
-                    <div>
-                      <strong>{uiText.practice.explanationLabel}</strong>
-                      <p>{q.model_answer}</p>
-                    </div>
-                  )}
-                </article>
-              );
-            })}
-          </div>
-          <button type="button" onClick={resetToSetup}>
-            {uiText.practice.buttons.newTest}
-          </button>
-        </section>
+        <PracticeReviewPanel
+          questions={questions}
+          responses={responses}
+          reviewIndexes={reviewIndexes}
+          reviewSummary={reviewSummary}
+          overallScore={overallScore}
+          reviewFilter={reviewFilter}
+          setReviewFilter={setReviewFilter}
+          showExplanations={showExplanations}
+          setShowExplanations={setShowExplanations}
+          collectionTargetQuestionId={collectionTargetQuestionId}
+          setCollectionTargetQuestionId={setCollectionTargetQuestionId}
+          setResponses={setResponses}
+          onReset={resetToSetup}
+        />
       )}
-      <AddToCollectionModal
-        isOpen={Boolean(collectionTargetQuestionId)}
-        questionId={collectionTargetQuestionId}
-        onClose={() => setCollectionTargetQuestionId("")}
-      />
     </main>
   );
 }

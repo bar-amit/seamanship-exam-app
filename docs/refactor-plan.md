@@ -66,6 +66,7 @@ Initial migration branch:
 - `refactor/m2-feature-practice-test-domain`: moves shared practice test session/review/persistence/analytics helpers to `src/features/practice-test` and keeps `src/lib/practice/*` compatibility re-exports.
 - `refactor/m2-feature-tag-practice-domain`: moves tag-practice persistence/progress helpers to `src/features/tag-practice` and keeps aggregate compatibility exports under `src/lib/practice/*`.
 - `refactor/m2-practice-page-domain-wiring`: rewires `app/practice/page.js` and `app/practice/tags/page.js` to consume canonical `src/features/practice-test/*` and `src/features/tag-practice/*` modules.
+- `refactor/m3-ui-page-component-split`: extracts the oversized practice and admin page rendering blocks into route-local components and moves admin question draft helpers into `src/features/admin/question-draft.js`.
 
 ### M3: UI vs Logic Separation
 
@@ -77,6 +78,12 @@ Deliverables:
 
 - Pure logic modules with unit coverage
 - Reduced state complexity in page files
+
+Initial UI split:
+
+- `app/practice/page.js` remains the practice test state/effect orchestrator while setup, active-question, navigation, and review rendering live in `app/practice/_components/*`.
+- `app/admin/page.js` remains the admin data loading/save orchestrator while search/list and editor rendering live in `app/admin/_components/*`.
+- Admin draft conversion and row-edit helpers live in `src/features/admin/question-draft.js` for focused unit coverage and reuse outside the route component.
 
 ### M4: API Contract and Handler Refactor
 
@@ -335,3 +342,20 @@ Validation baseline:
 Explicit follow-ups outside this convergence loop:
 
 - Live Firebase import/upload/firestore execution still depends on staging credentials and should be validated with the staging import commands before operational use.
+
+## 2026-06-05 UI Page Separation Slice
+
+Status: completed as an M3/M7 behavior-preserving refactor slice.
+
+Scope:
+
+- Split `app/practice/page.js` into a route-level orchestrator plus setup, active practice, question navigator, and review components under `app/practice/_components`.
+- Split `app/admin/page.js` into a route-level orchestrator plus search/list and editor components under `app/admin/_components`.
+- Move admin draft shaping and row update helpers into `src/features/admin/question-draft.js`.
+- Keep route paths, API calls, auth boundaries, string keys, and user-facing behavior unchanged.
+
+Validation:
+
+- `wc -l app/practice/page.js app/admin/page.js` confirms both page files are below 500 lines.
+- `npm test`
+- `npm run build`

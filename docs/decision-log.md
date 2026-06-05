@@ -285,3 +285,10 @@ Status values: `accepted`, `superseded`.
 - Decision: Questions with `references_sq11_positioning_diagram` render the shared `test_material/data/assets/position_diagram.png` asset in practice and review surfaces.
 - Reason: These questions depend on a common positioning diagram; keeping the flag as provenance-only would make the question incomplete for users.
 - Impact: Import asset planning includes `position_diagram.png` and uploads it to `question-assets/position_diagram.png`. The question document keeps the boolean metadata instead of duplicating the shared diagram in each `image_refs[]` list.
+
+### 2026-06-05 - Page Routes Own Orchestration, Route Components Own UI
+
+- Status: `accepted`
+- Decision: Oversized App Router page files should keep route-level state, effects, and side-effect wiring, while substantial rendering sections move into route-local `_components` folders. Pure draft/row shaping belongs in the matching feature domain.
+- Reason: `app/practice/page.js` and `app/admin/page.js` had grown past 500 lines by mixing workflow state, fetch/persistence behavior, and large JSX sections, making review and future refactors harder.
+- Impact: Practice setup/active/review/navigation UI now lives under `app/practice/_components`; admin search/editor UI lives under `app/admin/_components`; admin question draft helpers live in `src/features/admin/question-draft.js`. Future page work should preserve thin route orchestrators and avoid re-growing page files with large JSX blocks.

@@ -1,0 +1,15 @@
+{
+  "task": "Refactor oversized practice and admin page UI code into smaller components and feature helpers without changing behavior.",
+  "targetFiles": [
+    "app/practice/page.js",
+    "app/admin/page.js"
+  ],
+  "requirements": [
+    "Reduce app/practice/page.js and app/admin/page.js from 500+ line mixed modules to smaller page orchestrators.",
+    "Extract rendering blocks into focused route-adjacent UI components.",
+    "Move reusable admin draft conversion/edit helpers into src/features/admin.",
+    "Preserve current route paths, API calls, auth boundaries, text strings, and user-facing behavior.",
+    "Update refactor documentation and decision log for the M3/M7 UI separation slice.",
+    "Run npm test and npm run build; run targeted E2E if feasible."
+  ]
+}

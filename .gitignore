@@ -1,5 +1,7 @@
 .last_codex_session
 /node_modules
+.a5c/node_modules
+.a5c/runs
 todo
 /extracted_data
 
